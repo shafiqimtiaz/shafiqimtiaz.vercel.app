@@ -7,25 +7,25 @@ export const navLinks = [
 
 export const externalNodes = [
   {
-    label: 'EMAIL',
+    label: 'Email',
     icon: 'alternate_email',
     href: 'mailto:shafiqimtiaz@gmail.com',
     accent: 'text-[var(--theme-primary-dim)]',
   },
   {
-    label: 'LINKEDIN',
+    label: 'LinkedIn',
     icon: 'share_reviews',
     href: 'https://linkedin.com/in/shafiqimtiaz',
     accent: 'text-[var(--theme-secondary)]',
   },
   {
-    label: 'GITHUB',
+    label: 'GitHub',
     icon: 'terminal',
     href: 'https://github.com/shafiqimtiaz',
     accent: 'text-[var(--theme-primary)]',
   },
   {
-    label: 'WEBSITE',
+    label: 'Website',
     icon: 'language',
     href: 'https://shafiqimtiaz.vercel.app',
     accent: 'text-[var(--theme-tertiary)]',
@@ -33,29 +33,29 @@ export const externalNodes = [
 ];
 
 export const systemStatus = [
-  { label: 'AVAILABILITY', value: 'ONLINE [OPEN]', accent: 'text-[var(--theme-primary)]' },
-  { label: 'LOC_COORDINATES', value: 'OTTAWA, ON', accent: 'text-[var(--theme-secondary)]' },
-  { label: 'RESPONSE_LATENCY', value: '< 24_HOURS', accent: 'text-[var(--theme-tertiary)]' },
+  { label: 'Availability', value: 'ONLINE [OPEN]', accent: 'text-[var(--theme-primary)]' },
+  { label: 'Location', value: 'OTTAWA, ON', accent: 'text-[var(--theme-secondary)]' },
+  { label: 'Response Latency', value: '< 24 Hours', accent: 'text-[var(--theme-tertiary)]' },
 ];
 
 export const infoColumns = [
   {
-    heading: 'DIRECT_COMMS',
-    lines: ['SECURE_VOICE: +1 800-SYS-OPER', 'SECURE_MAIL: OPS@SYSTEM.IO'],
+    heading: 'Direct Comms',
+    lines: ['Secure Voice: +1 800-SYS-OPER', 'Secure Mail: OPS@SYSTEM.IO'],
   },
   {
-    heading: 'OFFICE_HQ',
+    heading: 'Office HQ',
     lines: ['NEO_DISTRICT 07', 'BUILD_01, FLOOR_99'],
   },
   {
-    heading: 'SYSTEM_CLOCK',
-    lines: ['UTC_ZULU [CURRENT_TIMESTAMP]', 'UPTIME: 99.98%_SINCE_BOOT'],
+    heading: 'System Clock',
+    lines: ['UTC ZULU [CURRENT_TIMESTAMP]', 'UPTIME: 99.98% SINCE_BOOT'],
   },
 ];
 
 export const contactPageText = {
-  badge: 'Direct_Channel / Open_Port',
-  title: 'Establish Connection_',
+  badge: 'Direct Channel / Open Port',
+  title: 'Establish Connection',
   highlight: 'Connection',
   description:
     'Open a direct channel for software development, cloud modernization, backend engineering, or AI-focused collaboration. The fastest routes are email and LinkedIn.',

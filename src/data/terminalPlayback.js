@@ -4,12 +4,12 @@ export const HOME_TERMINAL_PLAYBACK = {
   id: 'home',
   session: 'HOME_TERMINAL_PLAYBACK',
   prompt: 'guest@system:~$',
-  label: 'cli_header',
+  label: 'CLI Header',
   fallbackOutput: 'command not found: only predefined session actions are executable',
   actions: [
     {
       id: 'whoami',
-      label: 'WHOAMI',
+      label: 'Who Am I',
       command: 'whoami',
       delayMs: DEFAULT_PLAYBACK_DELAY_MS,
       output: [
@@ -18,7 +18,7 @@ export const HOME_TERMINAL_PLAYBACK = {
     },
     {
       id: 'stack',
-      label: 'STACK_MATRIX',
+      label: 'Stack Matrix',
       command: 'cat stack.matrix',
       delayMs: DEFAULT_PLAYBACK_DELAY_MS,
       output: [
@@ -30,7 +30,7 @@ export const HOME_TERMINAL_PLAYBACK = {
     },
     {
       id: 'impact',
-      label: 'TAIL_IMPACT',
+      label: 'Tail Impact',
       command: 'tail -n 4 impact.log',
       delayMs: DEFAULT_PLAYBACK_DELAY_MS,
       output: [
@@ -42,7 +42,7 @@ export const HOME_TERMINAL_PLAYBACK = {
     },
     {
       id: 'hex_payload',
-      label: 'CAT_HEX_PAYLOAD',
+      label: 'Cat Hex Payload',
       command: 'cat hex_payload.bin',
       delayMs: DEFAULT_PLAYBACK_DELAY_MS,
       output: [

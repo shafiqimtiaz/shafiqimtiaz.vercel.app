@@ -3,35 +3,35 @@ export const techStack = [
     icon: 'terminal',
     accent: 'text-[var(--theme-primary)]',
     code: '001',
-    title: 'LANGUAGE_CORE',
+    title: 'Language Core',
     items: ['Java 17', 'TypeScript', 'JavaScript (ES2022+)', 'Python', 'SQL', 'HTML / CSS'],
   },
   {
     icon: 'layers',
     accent: 'text-[var(--theme-secondary)]',
     code: '002',
-    title: 'FRAMEWORK_STACK',
+    title: 'Framework Stack',
     items: ['Spring Boot 3', 'Quarkus', 'React 18', 'Node.js', 'Bootstrap / Swagger / JUnit'],
   },
   {
     icon: 'database',
     accent: 'text-[var(--theme-tertiary)]',
     code: '003',
-    title: 'DATA_AND_CLOUD',
+    title: 'Data and Cloud',
     items: ['MySQL', 'MongoDB', 'AWS S3 / SQS', 'JMS / ActiveMQ', 'Docker / Redis'],
   },
   {
     icon: 'manufacturing',
     accent: 'text-[var(--theme-primary)]',
     code: '004',
-    title: 'DELIVERY_TOOLING',
+    title: 'Delivery Tooling',
     items: ['Jenkins', 'Git / GitHub / Bitbucket', 'Postman / Kibana / Sentry', 'Linux / Ubuntu'],
   },
   {
     icon: 'sync_alt',
     accent: 'text-[var(--theme-secondary)]',
     code: '005',
-    title: 'ENGINEERING_PRACTICE',
+    title: 'Engineering Practice',
     items: [
       'Agile / Scrum',
       'CI/CD',
@@ -44,7 +44,7 @@ export const techStack = [
     icon: 'psychology',
     accent: 'text-[var(--theme-tertiary)]',
     code: '006',
-    title: 'AI_EMERGING_TECH',
+    title: 'AI Emerging Tech',
     items: [
       'LiteLLM (model-agnostic LLM)',
       'AI Agent Architecture',
@@ -57,7 +57,7 @@ export const techStack = [
 export const timeline = [
   {
     date: 'NOV 2025',
-    title: 'AWS_CERTIFIED_AI_PRACTITIONER',
+    title: 'AWS Certified AI Practitioner',
     org: 'Amazon Web Services',
     accent: 'text-[var(--theme-primary)] border-[var(--theme-primary)]',
     icon: 'workspace_premium',
@@ -69,7 +69,7 @@ export const timeline = [
   },
   {
     date: 'AUG 2024 - PRESENT',
-    title: 'SOFTWARE_ENGINEER',
+    title: 'Software Engineer',
     org: 'Flexspring | Ottawa, ON',
     accent: 'text-[var(--theme-primary)] border-[var(--theme-primary)]',
     icon: 'work',
@@ -88,7 +88,7 @@ export const timeline = [
   },
   {
     date: 'MAY 2023 - AUG 2024',
-    title: 'SOFTWARE_ENGINEER_INTERN',
+    title: 'Software Engineer Intern',
     org: 'Flexspring | Montreal, QC',
     accent: 'text-[var(--theme-secondary)] border-[var(--theme-secondary)]',
     icon: 'monitoring',
@@ -105,7 +105,7 @@ export const timeline = [
   },
   {
     date: 'OCT 2022 - APR 2023',
-    title: 'DIRECTOR_OF_SPONSORSHIP',
+    title: 'Director of Sponsorship',
     org: 'HackConcordia | Montreal, QC',
     accent: 'text-[var(--theme-secondary)] border-[var(--theme-secondary)]',
     icon: 'groups',
@@ -115,7 +115,7 @@ export const timeline = [
   },
   {
     date: 'SEP 2022 - APR 2024',
-    title: 'MASTER_OF_ENGINEERING',
+    title: 'Master of Engineering',
     org: 'Concordia University | Software Engineering | GPA 3.77 / 4.30',
     accent: 'text-[var(--theme-tertiary)] border-[var(--theme-tertiary)]',
     icon: 'school',
@@ -126,7 +126,7 @@ export const timeline = [
   },
   {
     date: 'APR 2019 - JUN 2021',
-    title: 'FULL_STACK_SOFTWARE_DEVELOPER',
+    title: 'Full Stack Software Developer',
     org: 'BSRM | Chittagong, Bangladesh',
     accent: 'text-[var(--theme-tertiary)] border-[var(--theme-tertiary)]',
     icon: 'work',

@@ -1,8 +1,8 @@
 export const homeStats = [
-  { value: '500+', label: 'Concurrent_Requests', accent: 'text-[var(--theme-primary)]' },
-  { value: '99.97%', label: 'Platform_Uptime', accent: 'text-[var(--theme-secondary)]' },
-  { value: '$200K+', label: 'Upsell_Revenue_Influenced', accent: 'text-[var(--theme-tertiary)]' },
-  { value: '85%+', label: 'JUnit_Coverage', accent: 'text-[var(--theme-primary-dim)]' },
+  { value: '500+', label: 'Concurrent Requests', accent: 'text-[var(--theme-primary)]' },
+  { value: '99.97%', label: 'Platform Uptime', accent: 'text-[var(--theme-secondary)]' },
+  { value: '$200K+', label: 'Upsell Revenue Influenced', accent: 'text-[var(--theme-tertiary)]' },
+  { value: '85%+', label: 'JUnit Coverage', accent: 'text-[var(--theme-primary-dim)]' },
 ];
 
 export const aboutStats = [
