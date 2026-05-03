@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "last_run": "2026-05-03T15:57:14.477575Z",
+    "root": "D:\\Github\\shafiqimtiaz.vercel.app",
+    "include_patterns": [
+      "src/**/*.js",
+      "src/**/*.jsx"
+    ],
+    "exclude_patterns": [
+      "**/*.test.{js,jsx}",
+      "dist/**",
+      "node_modules/**"
+    ],
+    "exceptions": []
+  },
+  "file_hashes": {
+    "src\\App.jsx": "b8080b0bcf1cd6492a15cb8ca67513ef",
+    "src\\components\\Footer.jsx": "83e05f027fa90ebc9a3316e96de7faf8",
+    "src\\components\\layout\\index.js": "dc8642af17d345b39f33dacdc766f882",
+    "src\\components\\layout\\PageShell.jsx": "90be590d3544a49259f63f2db4ce5c5a",
+    "src\\components\\Navbar.jsx": "5f3738e57a35b420048a5fb9c6a9e98a",
+    "src\\components\\ThemeToggle.jsx": "96f5118c8551080532764dcb994d0285",
+    "src\\components\\ui\\Button.jsx": "2025fae450d40073f17bf30e88c37353",
+    "src\\components\\ui\\index.js": "cafa1c8cc8bd0b295dabbe6c9d75e5e0",
+    "src\\components\\ui\\SectionHeader.jsx": "8dd32cbc04431a7863acb4e55e5c16cf",
+    "src\\components\\ui\\TerminalPanel.jsx": "e77e9f10e1f444ff9f72ef0d947aa767",
+    "src\\components\\ui\\TerminalPlayback.jsx": "fadb561f68d7b151bd16c85b8aa0f015",
+    "src\\data\\contactForm.js": "55c2bb53b9d8d9273ad9580db5a3989e",
+    "src\\data\\experience.js": "ae836766de4d9eb0ba5614702cd618f8",
+    "src\\data\\links.js": "9093686a611b4ca3b4aba883b3e3849c",
+    "src\\data\\projects.js": "d786439535db7dcd4070dd9da89ec40b",
+    "src\\data\\stats.js": "43ef1cadf62b231673475f73902621bb",
+    "src\\data\\terminalPlayback.js": "267ea4f558c51d189a7a0b1c55cc0e2c",
+    "src\\hooks\\useTerminalPlayback.js": "888f95cc2fd330ee32e5c8fc9129d98e",
+    "src\\hooks\\useTheme.js": "cca359c5189215c90e424460f5642855",
+    "src\\main.jsx": "c87235a18e7ea1174c3bbf11caa7be2b",
+    "src\\pages\\About\\index.jsx": "42ea1d78909bffa71f9b3df6ec804983",
+    "src\\pages\\About\\ProfileSection.jsx": "03ade62cbe9b44c900689079c47cb3c1",
+    "src\\pages\\About\\TechStackSection.jsx": "84308cd13989b795da30d905a520cd55",
+    "src\\pages\\About\\TimelineSection.jsx": "3d986b068097ae16a808c0c9e187811a",
+    "src\\pages\\Contact\\ContactFormSection.jsx": "3527a6261b413151d15bfa9f39d70428",
+    "src\\pages\\Contact\\index.jsx": "2842e6e104984559f4b5ea90f54acc55",
+    "src\\pages\\Contact\\StatusSection.jsx": "804c0ec8f65dd6b8f7b0fafb2003a745",
+    "src\\pages\\Home\\HeroSection.jsx": "4937fe9739536163b20129d1d849efa5",
+    "src\\pages\\Home\\HistorySection.jsx": "6be83f6641617b0d782a378be4b97d4f",
+    "src\\pages\\Home\\index.jsx": "de1c673c7d58ebfc1560ee0e878ccc7e",
+    "src\\pages\\Home\\StatsSection.jsx": "818f7c0f1a380cda8917befae2eaa75b",
+    "src\\pages\\Home\\TerminalSection.jsx": "11fd3c4f15cdacd168cbfe656890e26b",
+    "src\\pages\\Projects\\CaseStudiesSection.jsx": "fdb45138b5aac997fdc30c428fde13d8",
+    "src\\pages\\Projects\\index.jsx": "8d188b4c3a8e5b6d523809df7e3a5bd0",
+    "src\\pages\\Projects\\MiniProjectsSection.jsx": "b3ce2b3327529f6daaf7dd9d59047c40",
+    "src\\pages\\Projects\\PublicRepositoriesSection.jsx": "88427b62678df28390517a0b7f0fc693"
+  },
+  "folder_hashes": {
+    "src/data": "",
+    "src": "",
+    "src/pages/About": "",
+    "src/components/ui": "",
+    "src/components/layout": "",
+    "src/pages/Projects": "",
+    ".": "f73ddc4c6cebf9a8d2648032741ad971",
+    "src/pages/Home": "",
+    "src/components": "",
+    "src/pages/Contact": "",
+    "src/pages": "",
+    "src/hooks": ""
+  }
+}
