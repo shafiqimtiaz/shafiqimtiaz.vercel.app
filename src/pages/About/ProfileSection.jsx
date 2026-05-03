@@ -32,7 +32,7 @@ export default function ProfileSection() {
               leadership, and building reliable software across backend, frontend, and cloud layers.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-[var(--theme-text-muted)]">
-              Built and launched a Quarkus microservice with AWS S3/SQS and MongoDB, cutting
+              Built and launched a Quarkus microservice with AWS S3 and MongoDB, cutting
               file-processing latency by 40% while scaling to 500+ concurrent requests. Led Java and
               Spring Boot modernization that improved CI/CD efficiency by 35%, reduced production
               incidents by 60%, and supported 99.97% uptime for core products.

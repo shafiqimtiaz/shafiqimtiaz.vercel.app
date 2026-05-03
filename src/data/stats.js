@@ -12,7 +12,7 @@ export const aboutStats = [
 ];
 
 export const profileStats = [
-  { value: '08', label: 'YEARS UPTIME', accent: 'text-[var(--theme-primary)]' },
+  { value: '05+', label: 'YEARS UPTIME', accent: 'text-[var(--theme-primary)]' },
   { value: '42', label: 'DEPLOYMENTS FINALIZED', accent: 'text-[var(--theme-secondary)]' },
   { value: '00', label: 'UNRESOLVED INCIDENTS', accent: 'text-[var(--theme-tertiary)]' },
 ];

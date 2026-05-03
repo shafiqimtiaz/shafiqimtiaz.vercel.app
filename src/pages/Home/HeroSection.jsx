@@ -13,7 +13,7 @@ export default function HeroSection() {
         Developer by Passion, Engineer by Mind
       </p>
       <p className="mt-4 max-w-[38rem] text-lg text-[var(--theme-text-muted)]">
-        Full-stack software developer and AWS Certified AI Practitioner focused on scalable backend
+        Full-stack Software Engineer and AWS Certified AI Practitioner focused on scalable backend
         systems, enterprise modernization, and AI-driven product delivery across Java, React, cloud,
         and microservice ecosystems.
       </p>
