@@ -4,7 +4,7 @@ export default function StatsSection() {
   const headline = 'font-headline';
 
   return (
-    <section className="relative left-1/2 mt-8 w-[100vw] max-w-[100vw] -translate-x-1/2 overflow-hidden bg-[var(--theme-surface-low)] py-10">
+    <section className="relative mt-8 bg-[var(--theme-surface-low)] py-10">
       <div className="mx-auto grid w-[min(100%-2rem,var(--container-width))] gap-6 sm:grid-cols-2 xl:grid-cols-4">
         {homeStats.map((stat) => (
           <div key={stat.label} className="grid gap-2">

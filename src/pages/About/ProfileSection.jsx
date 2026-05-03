@@ -2,13 +2,13 @@ import { profileStats } from '../../data/stats';
 
 export default function ProfileSection() {
   return (
-    <section className="mb-20">
-      <div className="grid gap-6 py-12">
+    <section className="mb-16">
+      <div className="grid gap-6 py-10">
         <div className="font-headline inline-flex w-fit border-l-4 border-[var(--theme-primary)] bg-[var(--theme-surface-high)] px-3 py-2 text-[0.72rem] tracking-[0.16em] text-[var(--theme-primary)] uppercase">
           Developer_Profile / Identity_Records
         </div>
-        <h2 className="font-headline text-[clamp(3rem,6vw,5.4rem)] leading-[0.95] font-bold tracking-[-0.07em] text-[var(--theme-text)] uppercase">
-          Developer <span className="text-[var(--theme-primary)]">Profile</span>_
+        <h2 className="font-headline text-[clamp(3rem,6vw,5.4rem)] leading-[0.95] font-bold tracking-[-0.03em] text-[var(--theme-text)]">
+          Developer <span className="text-[var(--theme-primary)]">Profile</span>
         </h2>
       </div>
 
@@ -19,7 +19,7 @@ export default function ProfileSection() {
             <p className="font-headline text-[0.66rem] tracking-[0.17em] text-[var(--theme-primary)] uppercase">
               // MISSION_MANIFESTO
             </p>
-            <p className="mt-4 text-lg leading-relaxed text-[var(--theme-text-muted)]">
+            <p className="mt-4 text-base leading-relaxed text-[var(--theme-text-muted)]">
               Full-stack software developer and{' '}
               <span className="font-semibold text-[var(--theme-primary)]">
                 AWS Certified AI Practitioner
@@ -31,7 +31,7 @@ export default function ProfileSection() {
               , enterprise modernization, and AI-driven delivery. I focus on ownership, technical
               leadership, and building reliable software across backend, frontend, and cloud layers.
             </p>
-            <p className="mt-4 text-lg leading-relaxed text-[var(--theme-text-muted)]">
+            <p className="mt-4 text-base leading-relaxed text-[var(--theme-text-muted)]">
               Built and launched a Quarkus microservice with AWS S3 and MongoDB, cutting
               file-processing latency by 40% while scaling to 500+ concurrent requests. Led Java and
               Spring Boot modernization that improved CI/CD efficiency by 35%, reduced production

@@ -1,31 +1,35 @@
 import { useEffect } from 'react';
-import { Route, Routes, useLocation } from 'react-router';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import About from './pages/About';
-import Contact from './pages/Contact';
 import Home from './pages/Home';
-import Projects from './pages/Projects';
 
 export default function App() {
-  const location = useLocation();
-
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
+    // Handle hash navigation on initial load
+    const handleHashChange = () => {
+      const hash = window.location.hash.slice(1);
+      if (hash) {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    };
+
+    // Run on mount if there's a hash
+    handleHashChange();
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
 
   return (
     <>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<Home />} />
-      </Routes>
+      <Home />
       <Footer />
       <Analytics />
       <SpeedInsights />

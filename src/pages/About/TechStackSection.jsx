@@ -36,7 +36,7 @@ export default function TechStackSection() {
               <h3 className="font-headline mb-4 text-lg font-bold tracking-[0.02em] uppercase">
                 {category.title}
               </h3>
-              <div className="grid gap-3 text-sm text-[var(--theme-text-muted)]">
+              <div className="grid gap-3 text-base text-[var(--theme-text-muted)]">
                 {category.items.map((item) => (
                   <div key={item}>{item}</div>
                 ))}

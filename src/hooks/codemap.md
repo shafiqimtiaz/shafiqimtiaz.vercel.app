@@ -4,11 +4,13 @@
 
 ## Responsibility
 
-This directory contains two custom React hooks that encapsulate reusable stateful logic for the portfolio application:
+This directory contains three custom React hooks that encapsulate reusable stateful logic for the portfolio application:
 
 1. **`useTheme.js`** - Theme management hook that provides light/dark mode toggle functionality with localStorage persistence and automatic CSS class application to the document root.
 
 2. **`useTerminalPlayback.js`** - Terminal playback hook that implements a state machine for simulating interactive CLI sessions, managing command execution, suggestion visibility, and timed output rendering.
+
+3. **`useScrollProgress.js`** - Scroll tracking hook that provides scroll progress percentage and active section detection for single-page navigation.
 
 ---
 
@@ -183,6 +185,21 @@ useEffect(() => clearTimer, [clearTimer]) ──► cleanup timeout
    - Embeds ThemeToggle component in header navigation bar
    - Theme state affects entire application via CSS variables
 
+### useScrollProgress Integration
+
+**Consumer Components**:
+1. **`src/components/Navbar.jsx`** (primary consumer)
+   - Imports: `import useScrollProgress from '../hooks/useScrollProgress'`
+   - Usage: `const { progress, activeSection } = useScrollProgress()`
+   - Renders scroll progress bar in header
+   - Highlights active nav link based on current section
+
+**Navigation Features**:
+- Progress bar shows scroll position (0-100%)
+- Section-based nav links: HOME, PROJECTS, ABOUT, CONTACT
+- Smooth scroll to sections via hash links
+- Active state sync with scroll position
+
 **CSS Integration**:
 - Theme classes applied to `document.documentElement` (root element)
 - CSS variables referenced throughout components: `var(--theme-primary)`, `var(--theme-surface)`, `var(--theme-text)`, etc.
@@ -230,5 +247,27 @@ useEffect(() => clearTimer, [clearTimer]) ──► cleanup timeout
 |------|---------|------------|--------------|-----------|
 | `useTheme` | Theme toggle | Single value (light/dark) | localStorage, DOM classes | ThemeToggle, Navbar |
 | `useTerminalPlayback` | Terminal simulation | State machine (4 states) | setTimeout, state transitions | TerminalPlayback, TerminalSection |
+| `useScrollProgress` | Scroll tracking | Progress % + active section | scroll event listener | Navbar |
+
+### useScrollProgress Hook
+
+**State Management Pattern**: Passive scroll listener with derived state.
+
+**Returned State**:
+- `progress` (number 0-100): Scroll percentage through entire document
+- `activeSection` (string): Current section ID based on scroll position
+
+**Section Detection Logic**:
+| Section | Trigger Point |
+|---------|---------------|
+| `hero` | Scroll top |
+| `about` | 50vh from top |
+| `projects` | 150vh from top |
+| `contact` | 150vh from bottom |
+
+**Key Design Decisions**:
+- Passive scroll listener for performance
+- Debounced section detection using viewport-based thresholds
+- Cleanup on unmount to prevent memory leaks
 
 Both hooks follow React hooks conventions: return objects with state and functions, use useEffect for side effects, and encapsulate logic that would otherwise duplicate across components.

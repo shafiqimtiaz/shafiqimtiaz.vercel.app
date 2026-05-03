@@ -65,5 +65,4 @@ export const footerLinks = [
   { label: 'GITHUB', href: 'https://github.com/shafiqimtiaz' },
   { label: 'LINKEDIN', href: 'https://linkedin.com/in/shafiqimtiaz' },
   { label: 'RESUME', href: '/docs/Shafiq-Imtiaz-Resume.pdf' },
-  { label: 'CONTACT', to: '/contact' },
 ];

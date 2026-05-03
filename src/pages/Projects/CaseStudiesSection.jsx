@@ -4,17 +4,17 @@ import { Button } from '../../components/ui';
 export default function CaseStudiesSection() {
   return (
     <>
-      <section className="grid gap-6 py-12">
+      <section className="grid gap-6 py-10">
         <div className="font-headline inline-flex w-fit border-l-4 border-[var(--theme-primary)] bg-[var(--theme-surface-high)] px-3 py-2 text-[0.72rem] tracking-[0.16em] text-[var(--theme-primary)] uppercase">
           Professional_Telemetry / Job_Results
         </div>
-        <h1 className="font-headline text-[clamp(3rem,6vw,5.4rem)] leading-[0.95] font-bold tracking-[-0.07em] text-[var(--theme-text)] uppercase">
-          Career <span className="text-[var(--theme-primary)]">Milestones</span>_
+        <h1 className="font-headline text-[clamp(3rem,6vw,5.4rem)] leading-[0.95] font-bold tracking-[-0.03em] text-[var(--theme-text)]">
+          Career <span className="text-[var(--theme-primary)]">Milestones</span>
         </h1>
-        <div className="max-w-[38rem] text-lg text-[var(--theme-text-muted)]">
+        <p className="max-w-[38rem] text-base text-[var(--theme-text-muted)]">
           Professional project achievements backed by on-the-job delivery, engineering impact, and
           product outcomes across enterprise and academic environments.
-        </div>
+        </p>
       </section>
 
       <section className="grid gap-8 pb-8 md:grid-cols-2">
@@ -39,7 +39,7 @@ export default function CaseStudiesSection() {
               <h2 className="font-headline text-[clamp(2rem,3vw,2.6rem)] font-bold tracking-[-0.05em] break-words whitespace-normal text-[var(--theme-text)] uppercase transition-colors duration-200 group-hover:text-[var(--theme-primary)]">
                 {project.title}
               </h2>
-              <p className="mt-4 text-lg text-[var(--theme-text-muted)]">{project.description}</p>
+              <p className="mt-4 text-base text-[var(--theme-text-muted)]">{project.description}</p>
               <div className="mt-6 w-full">
                 <div className="w-full border border-[rgba(73,72,71,0.3)] bg-[var(--theme-surface-high)] p-6">
                   <div className="font-headline text-[0.72rem] tracking-[0.18em] text-[var(--theme-primary)] uppercase">
