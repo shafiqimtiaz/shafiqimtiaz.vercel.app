@@ -15,10 +15,6 @@ const navLinkBase =
 const mobileLinkBase =
   'font-headline text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--theme-text-muted)] transition-colors hover:text-[var(--theme-primary)]';
 
-function isActiveSection(activeSection, sectionId) {
-  return activeSection === sectionId;
-}
-
 export default function Navbar() {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -64,11 +60,7 @@ export default function Navbar() {
                 key={section.id}
                 href={`#${section.id}`}
                 onClick={(e) => scrollToSection(e, section.id)}
-                className={`${navLinkBase} ${
-                  isActiveSection(activeSection, section.id)
-                    ? 'text-[var(--theme-primary)] after:absolute after:inset-x-0 after:-bottom-2 after:h-0.5 after:bg-[var(--theme-primary)]'
-                    : ''
-                }`}
+                className={`${navLinkBase} ${activeSection === section.id ? 'text-[var(--theme-primary)] after:absolute after:inset-x-0 after:-bottom-2 after:h-0.5 after:bg-[var(--theme-primary)]' : ''}`}
               >
                 {section.label}
               </a>
@@ -107,9 +99,7 @@ export default function Navbar() {
                   key={section.id}
                   href={`#${section.id}`}
                   onClick={(e) => scrollToSection(e, section.id)}
-                  className={`${mobileLinkBase} ${
-                    isActiveSection(activeSection, section.id) ? 'text-[var(--theme-primary)]' : ''
-                  }`}
+                  className={`${mobileLinkBase} ${activeSection === section.id ? 'text-[var(--theme-primary)]' : ''}`}
                 >
                   {section.label}
                 </a>
