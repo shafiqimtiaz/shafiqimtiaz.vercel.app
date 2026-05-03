@@ -104,6 +104,7 @@ Sections are identified by IDs: `#hero`, `#projects`, `#about`, `#contact`
 ### 3. Scroll Progress + Active Section Tracking
 
 `useScrollProgress` hook provides:
+
 - `progress`: 0-100 scroll percentage for progress bar
 - `activeSection`: Current section ID based on scroll position
 
@@ -135,7 +136,7 @@ Light/dark mode toggled via `useTheme` hook which sets `html.theme-light` class.
 Tailwind utilities reference CSS custom properties:
 
 ```jsx
-className="bg-[var(--theme-surface-low)] text-[var(--theme-primary)]"
+className = 'bg-[var(--theme-surface-low)] text-[var(--theme-primary)]';
 ```
 
 ---
@@ -162,20 +163,20 @@ Navbar (uses useScrollProgress for active state)
 
 ## Integration Points
 
-| Component | Depends On | Provides |
-|-----------|------------|----------|
-| `Navbar` | `useScrollProgress`, `useTheme` | Section nav, theme toggle |
-| `Home/index.jsx` | All section components | Single-page layout |
-| `ThemeToggle` | `useTheme` | Light/dark toggle |
-| `TerminalSection` | `useTerminalPlayback`, `terminalPlayback.js` | Interactive terminal |
+| Component         | Depends On                                   | Provides                  |
+| ----------------- | -------------------------------------------- | ------------------------- |
+| `Navbar`          | `useScrollProgress`, `useTheme`              | Section nav, theme toggle |
+| `Home/index.jsx`  | All section components                       | Single-page layout        |
+| `ThemeToggle`     | `useTheme`                                   | Light/dark toggle         |
+| `TerminalSection` | `useTerminalPlayback`, `terminalPlayback.js` | Interactive terminal      |
 
 ---
 
 ## Key Files
 
-| File | Purpose |
-|------|---------|
-| `App.jsx` | Root component, renders Navbar + Home + Footer |
-| `pages/Home/index.jsx` | Single-page shell with all sections |
-| `hooks/useScrollProgress.js` | Scroll tracking for nav highlighting |
-| `styles/theme.css` | CSS custom properties for theming |
+| File                         | Purpose                                        |
+| ---------------------------- | ---------------------------------------------- |
+| `App.jsx`                    | Root component, renders Navbar + Home + Footer |
+| `pages/Home/index.jsx`       | Single-page shell with all sections            |
+| `hooks/useScrollProgress.js` | Scroll tracking for nav highlighting           |
+| `styles/theme.css`           | CSS custom properties for theming              |

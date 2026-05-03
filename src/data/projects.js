@@ -42,7 +42,7 @@ export const caseStudies = [
     ],
     title: 'AI_Chatbot_Initiative',
     description:
-      'Won runners-up and $1,000 team prize at Flexspring internal hackathon, designing a RAG-powered chatbot using Crewdle AI and Flexspring data — which seeded the company\'s ongoing AI initiative.',
+      "Won runners-up and $1,000 team prize at Flexspring internal hackathon, designing a RAG-powered chatbot using Crewdle AI and Flexspring data — which seeded the company's ongoing AI initiative.",
     tags: ['RAG', 'AI_CHATBOT', 'CREWDLE_AI', 'LLM'],
     primary: { label: 'VIEW_RESUME_', to: '/about' },
     secondary: { label: 'VIEW_RESUME_', to: '/contact' },
@@ -58,7 +58,7 @@ export const caseStudies = [
     ],
     title: 'Platform_Modernisation',
     description:
-      'Led Spring Boot 3 migrations for two production services and upgraded Monitor\'s full front-end stack (React 18.3, React Router v7, Vite 7). Modernised the platform\'s core runtime and build toolchain.',
+      "Led Spring Boot 3 migrations for two production services and upgraded Monitor's full front-end stack (React 18.3, React Router v7, Vite 7). Modernised the platform's core runtime and build toolchain.",
     tags: ['JAVA_17', 'SPRING_BOOT_3', 'REACT_18', 'VITE_7'],
     primary: { label: 'VIEW_RESUME_', href: '/docs/Shafiq-Imtiaz-Resume.pdf', external: true },
     secondary: { label: 'VIEW_RESUME_', to: '/contact' },
@@ -210,7 +210,7 @@ export const historyCards = [
     label: 'AI_INFRASTRUCTURE',
     title: 'flexspring-agent-core',
     description:
-      'Architected and developed the platform\'s foundational TypeScript/Node.js AI agent library integrating LiteLLM for model-agnostic LLM access — enabling reusable, spec-driven LLM agent construction across services.',
+      "Architected and developed the platform's foundational TypeScript/Node.js AI agent library integrating LiteLLM for model-agnostic LLM access — enabling reusable, spec-driven LLM agent construction across services.",
     tags: ['#TYPESCRIPT', '#LITELLM', '#AI_AGENTS', '#SPEC_DRIVEN'],
   },
   {
@@ -239,7 +239,7 @@ export const historyCards = [
     label: 'PLATFORM_MODERNISATION',
     title: 'Spring_Boot_3_Migration',
     description:
-      'Led Spring Boot 3 migrations for two production services and upgraded Monitor\'s full front-end stack (React 18.3, React Router v7, Vite 7).',
+      "Led Spring Boot 3 migrations for two production services and upgraded Monitor's full front-end stack (React 18.3, React Router v7, Vite 7).",
     tags: ['#JAVA_17', '#SPRING_BOOT_3', '#REACT_18', '#VITE'],
   },
   {
@@ -263,7 +263,7 @@ export const historyCards = [
     label: 'ENTERPRISE_DELIVERY',
     title: 'BSRM_SCM_Applications',
     description:
-      'Delivered SCM web applications for one of Bangladesh\'s largest steel manufacturers, replacing manual workflows with scalable, API-driven solutions. Built ETL pipelines connecting 40+ supplier systems.',
+      "Delivered SCM web applications for one of Bangladesh's largest steel manufacturers, replacing manual workflows with scalable, API-driven solutions. Built ETL pipelines connecting 40+ supplier systems.",
     tags: ['#REACT', '#SPRING_BOOT', '#POSTGRESQL', '#ETL'],
   },
 ];

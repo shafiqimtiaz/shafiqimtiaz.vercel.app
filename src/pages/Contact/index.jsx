@@ -27,7 +27,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="mt-8">
+      <section className="mt-8 pb-24">
         <InfoColumnsSection />
       </section>
     </PageShell>

@@ -54,7 +54,10 @@ export default function Navbar() {
             SHAFIQ_IMTIAZ
           </Link>
 
-          <nav className="ml-auto hidden items-center gap-6 md:flex" aria-label="Primary navigation">
+          <nav
+            className="ml-auto hidden items-center gap-6 md:flex"
+            aria-label="Primary navigation"
+          >
             {navSections.map((section) => (
               <a
                 key={section.id}

@@ -5,7 +5,7 @@ function actionTone(line) {
 }
 
 export default function TerminalPlayback({ sessionConfig }) {
-  const { prompt, label, actions } = sessionConfig;
+  const { prompt, actions } = sessionConfig;
   const { state, activeCommand, outputLines, revealSuggestions, hideSuggestions, executeCommand } =
     useTerminalPlayback(sessionConfig);
 

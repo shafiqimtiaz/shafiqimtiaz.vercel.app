@@ -9,7 +9,7 @@ function normalizeTheme(theme) {
 function readStoredTheme() {
   try {
     return normalizeTheme(localStorage.getItem(STORAGE_KEY));
-  } catch (error) {
+  } catch {
     return 'dark';
   }
 }
@@ -29,7 +29,7 @@ export default function useTheme() {
 
     try {
       localStorage.setItem(STORAGE_KEY, theme);
-    } catch (error) {}
+    } catch {}
   }, [theme]);
 
   return {

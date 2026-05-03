@@ -37,24 +37,24 @@ src/pages/
 
 The application uses **hash-based single-page navigation**. `Home/index.jsx` is the main entry point that renders all sections:
 
-| Section ID | Component | Content |
-|------------|-----------|---------|
-| `#hero` | `HeroSection` + `TerminalSection` | Personal branding, terminal demo |
-| (none) | `StatsSection` | Quantitative metrics |
-| `#projects` | `CaseStudiesSection` | Professional achievements |
-| `#about` | `ProfileSection` + `TechStackSection` + `HistorySection` | Profile, tech stack, history |
-| `#contact` | `ContactFormSection` + links | Contact form and external links |
+| Section ID  | Component                                                | Content                          |
+| ----------- | -------------------------------------------------------- | -------------------------------- |
+| `#hero`     | `HeroSection` + `TerminalSection`                        | Personal branding, terminal demo |
+| (none)      | `StatsSection`                                           | Quantitative metrics             |
+| `#projects` | `CaseStudiesSection`                                     | Professional achievements        |
+| `#about`    | `ProfileSection` + `TechStackSection` + `HistorySection` | Profile, tech stack, history     |
+| `#contact`  | `ContactFormSection` + links                             | Contact form and external links  |
 
 ```jsx
 // Home/index.jsx - Single Page Shell
 export default function Home() {
   return (
     <main className="pt-[var(--header-height)]">
-      <section id="hero">...</section>      {/* Hero + Terminal */}
-      <StatsSection />                        {/* Full-width stats bar */}
-      <section id="projects">...</section>    {/* Case studies */}
-      <section id="about">...</section>      {/* Profile + Tech + History */}
-      <section id="contact">...</section>    {/* Contact form + links */}
+      <section id="hero">...</section> {/* Hero + Terminal */}
+      <StatsSection /> {/* Full-width stats bar */}
+      <section id="projects">...</section> {/* Case studies */}
+      <section id="about">...</section> {/* Profile + Tech + History */}
+      <section id="contact">...</section> {/* Contact form + links */}
     </main>
   );
 }
@@ -81,6 +81,7 @@ const navSections = [
 ### Component Composition Pattern
 
 Sections are **pure functional React components** that:
+
 - Receive no props (fully data-driven from static imports)
 - Return JSX with semantic HTML elements (`<section>`, `<article>`, `<div>`)
 - Use CSS custom properties for theming
@@ -91,14 +92,14 @@ Sections are **pure functional React components** that:
 
 Sections consume static data from `src/data/` modules:
 
-| Data File | Consumed By | Data Type |
-|----------|-------------|-----------|
-| `src/data/stats.js` | `ProfileSection`, `StatsSection` | Profile statistics (years, projects, etc.) |
-| `src/data/projects.js` | `CaseStudiesSection`, `HistorySection` | Projects, case studies |
-| `src/data/links.js` | `Home/contact section` | External links, contact text |
-| `src/data/experience.js` | `TechStackSection` | Tech stack categories |
-| `src/data/terminalPlayback.js` | `TerminalSection` | Terminal playback session config |
-| `src/data/contactForm.js` | `ContactFormSection` | Form field definitions |
+| Data File                      | Consumed By                            | Data Type                                  |
+| ------------------------------ | -------------------------------------- | ------------------------------------------ |
+| `src/data/stats.js`            | `ProfileSection`, `StatsSection`       | Profile statistics (years, projects, etc.) |
+| `src/data/projects.js`         | `CaseStudiesSection`, `HistorySection` | Projects, case studies                     |
+| `src/data/links.js`            | `Home/contact section`                 | External links, contact text               |
+| `src/data/experience.js`       | `TechStackSection`                     | Tech stack categories                      |
+| `src/data/terminalPlayback.js` | `TerminalSection`                      | Terminal playback session config           |
+| `src/data/contactForm.js`      | `ContactFormSection`                   | Form field definitions                     |
 
 ## Flow
 
@@ -209,14 +210,14 @@ App.jsx
 
 Sections use CSS custom properties for theming:
 
-| Property | Usage | Examples |
-|----------|-------|----------|
-| `--theme-primary` | Main accent (green) | `#9CFF93` |
-| `--theme-secondary` | Secondary accent (cyan) | `#00E3FD` |
-| `--theme-text` | Primary text | `#FFFFFF` / `#0F172A` (light mode) |
-| `--theme-surface` | Card backgrounds | varies by depth |
-| `--header-height` | Fixed header height | `88px` |
-| `--container-width` | Max content width | `1180px` |
+| Property            | Usage                   | Examples                           |
+| ------------------- | ----------------------- | ---------------------------------- |
+| `--theme-primary`   | Main accent (green)     | `#9CFF93`                          |
+| `--theme-secondary` | Secondary accent (cyan) | `#00E3FD`                          |
+| `--theme-text`      | Primary text            | `#FFFFFF` / `#0F172A` (light mode) |
+| `--theme-surface`   | Card backgrounds        | varies by depth                    |
+| `--header-height`   | Fixed header height     | `88px`                             |
+| `--container-width` | Max content width       | `1180px`                           |
 
 ## Summary
 

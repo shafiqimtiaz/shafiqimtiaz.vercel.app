@@ -74,6 +74,7 @@ import { PageShell } from '../components/layout';
 All colors reference CSS variables like `var(--theme-primary)`, `var(--theme-surface)`, `var(--theme-text-muted)`. The theme system is defined in the global CSS and switched via a class on the root element (handled by useTheme hook).
 
 **Theme Variables** (defined in global CSS):
+
 - `--theme-primary` — Main accent color (cyan/teal)
 - `--theme-secondary` — Secondary accent (orange/amber)
 - `--theme-tertiary` — Tertiary accent (orange)
@@ -138,19 +139,22 @@ All colors reference CSS variables like `var(--theme-primary)`, `var(--theme-sur
 ### Control Flow
 
 **Page Rendering**:
+
 1. Page component (e.g., /src/app/Sections/+page.jsx) renders
 2. Imports UI components from src/components/ui/
 3. Passes data (e.g., sessionConfig) as props
 4. Page wraps content in PageShell from src/components/layout/
-5. Layout wraps in _app.jsx which includes Navbar and Footer globally
+5. Layout wraps in \_app.jsx which includes Navbar and Footer globally
 
 **Navigation Interaction**:
+
 1. User clicks Navbar link or internal Link
 2. React Router handles route change
 3. Navbar useEffect detects location change, closes mobile menu
 4. New page renders with fresh data
 
 **Terminal Playback Flow**:
+
 1. TerminalPlayback receives sessionConfig (prompt, label, actions array)
 2. Uses useTerminalPlayback hook internally
 3. States: idle → suggesting (on hover/focus) → executing (on click)
@@ -158,6 +162,7 @@ All colors reference CSS variables like `var(--theme-primary)`, `var(--theme-sur
 5. Output displayed with left border accent
 
 **Theme Toggle Flow**:
+
 1. User clicks ThemeToggle button
 2. Calls toggleTheme() from useTheme hook
 3. Hook updates localStorage and document class
@@ -167,6 +172,7 @@ All colors reference CSS variables like `var(--theme-primary)`, `var(--theme-sur
 ### Component Composition Examples
 
 **Terminal Panel Composition**:
+
 ```jsx
 <TerminalPanel title="ssh root@614.514.183">
   <TerminalPlayback sessionConfig={section.commands.one} />
@@ -175,16 +181,11 @@ All colors reference CSS variables like `var(--theme-primary)`, `var(--theme-sur
 ```
 
 **Section Composition**:
+
 ```jsx
 <PageShell>
-  <SectionHeader
-    label="01"
-    title="Projects"
-    description="Full-stack applications..."
-  />
-  <TerminalPanel>
-    {/* content */}
-  </TerminalPanel>
+  <SectionHeader label="01" title="Projects" description="Full-stack applications..." />
+  <TerminalPanel>{/* content */}</TerminalPanel>
 </PageShell>
 ```
 
@@ -211,7 +212,7 @@ export default function SectionsPage() {
         description="Full-stack applications built with modern frameworks."
       />
       <TerminalPanel title="ssh root@614.514.183">
-        {projectsSession.commands.map(cmd => (
+        {projectsSession.commands.map((cmd) => (
           <TerminalPlayback key={cmd.id} sessionConfig={cmd} />
         ))}
       </TerminalPanel>
@@ -234,9 +235,9 @@ No direct database or API connections exist in components—they receive all dat
 
 Two custom hooks provide core functionality:
 
-| Hook | Used By | Purpose |
-|------|---------|---------|
-| `useTheme` | ThemeToggle | Manages light/dark mode, persists to localStorage |
+| Hook                  | Used By          | Purpose                                                                      |
+| --------------------- | ---------------- | ---------------------------------------------------------------------------- |
+| `useTheme`            | ThemeToggle      | Manages light/dark mode, persists to localStorage                            |
 | `useTerminalPlayback` | TerminalPlayback | State machine for terminal interaction (states: idle, suggesting, executing) |
 
 These hooks live in `src/hooks/` and are the only non-component logic that components depend on.
@@ -261,6 +262,7 @@ Page content wraps in `PageShell` for consistent max-width and header offset. Pa
 ### Global Elements
 
 **Always Present**:
+
 - Navbar (fixed header)
 - Footer
 - ThemeToggle (in Navbar)
@@ -281,12 +283,12 @@ The CRT overlay effect on TerminalPanel uses a custom `.crt-overlay` class with 
 
 ## Key Dependencies
 
-| Location | Purpose |
-|----------|---------|
-| `../data/links.js` | Navigation and footer link definitions |
-| `../../hooks/useTerminalPlayback` | Terminal state management |
-| `../hooks/useTheme` | Theme state and toggling |
-| React Router | Link component for internal navigation |
-| material-symbols-outlined | Icon font (Google Fonts) |
+| Location                          | Purpose                                |
+| --------------------------------- | -------------------------------------- |
+| `../data/links.js`                | Navigation and footer link definitions |
+| `../../hooks/useTerminalPlayback` | Terminal state management              |
+| `../hooks/useTheme`               | Theme state and toggling               |
+| React Router                      | Link component for internal navigation |
+| material-symbols-outlined         | Icon font (Google Fonts)               |
 
 No external npm packages are directly imported in components—they rely on framework primitives (React, React Router) and tooling (Tailwind).

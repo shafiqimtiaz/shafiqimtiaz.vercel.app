@@ -1,0 +1,3 @@
+# Automatically format and lint on commit
+
+npx lint-staged

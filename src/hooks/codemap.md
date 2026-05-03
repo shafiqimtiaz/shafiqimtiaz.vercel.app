@@ -26,11 +26,13 @@ This directory contains three custom React hooks that encapsulate reusable state
 - **Side Effects**: CSS class toggling on `document.documentElement` via `classList` and `data-theme` attribute
 
 **Key Design Decisions**:
+
 - Normalization function ensures only `'light'` or `'dark'` values are stored
 - Error swallowing on localStorage read/write to prevent SSR/incognito mode crashes
 - CSS classes applied: `theme-light` / `dark` (mutually exclusive), plus `data-theme` attribute for CSS variable targeting
 
 **Returned API**:
+
 ```javascript
 {
   theme: string,           // 'light' | 'dark'
@@ -53,21 +55,25 @@ This directory contains three custom React hooks that encapsulate reusable state
 | `rendered` | Output displayed after delay |
 
 **Internal State**:
+
 - `state`: Current playback state (PLAYBACK_STATES enum)
 - `activeCommand`: Currently executing command string
 - `outputLines`: Array of output strings to display
 
 **Key Design Decisions**:
+
 - **Action Lookup**: Memoized hash map (`actionLookup`) for O(1) command-to-action resolution
 - **Timer Management**: Ref-based timer with cleanup to prevent memory leaks and race conditions
 - **Delay Configuration**: Per-action `delayMs` (default 2000ms) for variable timing
 - **Fallback Output**: Default message when command not found in lookup
 
 **Exported Utilities**:
+
 - `PLAYBACK_STATES` - Enum object for state constants
 - `createActionLookup(actions)` - Pure function to build command lookup table
 
 **Returned API**:
+
 ```javascript
 {
   actions: array,              // original actions config
@@ -175,6 +181,7 @@ useEffect(() => clearTimer, [clearTimer]) ──► cleanup timeout
 ### useTheme Integration
 
 **Consumer Components**:
+
 1. **`src/components/ThemeToggle.jsx`** (primary consumer)
    - Imports: `import useTheme from '../hooks/useTheme'`
    - Usage: `const { isDark, toggleTheme } = useTheme()`
@@ -188,6 +195,7 @@ useEffect(() => clearTimer, [clearTimer]) ──► cleanup timeout
 ### useScrollProgress Integration
 
 **Consumer Components**:
+
 1. **`src/components/Navbar.jsx`** (primary consumer)
    - Imports: `import useScrollProgress from '../hooks/useScrollProgress'`
    - Usage: `const { progress, activeSection } = useScrollProgress()`
@@ -195,12 +203,14 @@ useEffect(() => clearTimer, [clearTimer]) ──► cleanup timeout
    - Highlights active nav link based on current section
 
 **Navigation Features**:
+
 - Progress bar shows scroll position (0-100%)
 - Section-based nav links: HOME, PROJECTS, ABOUT, CONTACT
 - Smooth scroll to sections via hash links
 - Active state sync with scroll position
 
 **CSS Integration**:
+
 - Theme classes applied to `document.documentElement` (root element)
 - CSS variables referenced throughout components: `var(--theme-primary)`, `var(--theme-surface)`, `var(--theme-text)`, etc.
 - Theme-specific styles defined in global CSS (likely in `index.css` or Tailwind config)
@@ -208,6 +218,7 @@ useEffect(() => clearTimer, [clearTimer]) ──► cleanup timeout
 ### useTerminalPlayback Integration
 
 **Consumer Components**:
+
 1. **`src/components/ui/TerminalPlayback.jsx`** (primary consumer)
    - Imports: `import useTerminalPlayback, { PLAYBACK_STATES } from '../../hooks/useTerminalPlayback'`
    - Usage: `const { state, activeCommand, outputLines, revealSuggestions, hideSuggestions, executeCommand } = useTerminalPlayback(sessionConfig)`
@@ -219,6 +230,7 @@ useEffect(() => clearTimer, [clearTimer]) ──► cleanup timeout
    - Embeds TerminalPlayback on the Home page hero section
 
 **Data Configuration**:
+
 - **`src/data/terminalPlayback.js`** provides session configuration
 - `HOME_TERMINAL_PLAYBACK` object structure:
   ```javascript
@@ -234,6 +246,7 @@ useEffect(() => clearTimer, [clearTimer]) ──► cleanup timeout
   ```
 
 **Interaction Flow**:
+
 - TerminalSection passes sessionConfig to TerminalPlayback component
 - TerminalPlayback invokes useTerminalPlayback with config
 - User interacts via hover/focus (revealSuggestions) and click (executeCommand)
@@ -243,26 +256,29 @@ useEffect(() => clearTimer, [clearTimer]) ──► cleanup timeout
 
 ## Architecture Summary
 
-| Hook | Purpose | State Type | Side Effects | Consumers |
-|------|---------|------------|--------------|-----------|
-| `useTheme` | Theme toggle | Single value (light/dark) | localStorage, DOM classes | ThemeToggle, Navbar |
-| `useTerminalPlayback` | Terminal simulation | State machine (4 states) | setTimeout, state transitions | TerminalPlayback, TerminalSection |
-| `useScrollProgress` | Scroll tracking | Progress % + active section | scroll event listener | Navbar |
+| Hook                  | Purpose             | State Type                  | Side Effects                  | Consumers                         |
+| --------------------- | ------------------- | --------------------------- | ----------------------------- | --------------------------------- |
+| `useTheme`            | Theme toggle        | Single value (light/dark)   | localStorage, DOM classes     | ThemeToggle, Navbar               |
+| `useTerminalPlayback` | Terminal simulation | State machine (4 states)    | setTimeout, state transitions | TerminalPlayback, TerminalSection |
+| `useScrollProgress`   | Scroll tracking     | Progress % + active section | scroll event listener         | Navbar                            |
 
 ### useScrollProgress Hook
 
 **State Management Pattern**: Passive scroll listener with derived state.
 
 **Returned State**:
+
 - `progress` (number 0-100): Scroll percentage through entire document
 - `activeSection` (string): Current section ID based on scroll position
 
 **Section Detection Logic**:
+
 - Iterates top-to-bottom: `['hero', 'projects', 'about', 'contact']`
 - Section is active when its top edge ≤ 120px from viewport top
 - Last qualifying section wins (current visible section)
 
 **Key Design Decisions**:
+
 - Passive scroll listener for performance
 - Top-to-bottom iteration with running `active` variable
 - Cleanup on unmount to prevent memory leaks

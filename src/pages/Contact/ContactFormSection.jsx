@@ -15,7 +15,8 @@ export default function ContactFormSection() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const CONTACT_FORM_RECIPIENT = import.meta.env.VITE_CONTACT_FORM_RECIPIENT || 'shafiqimtiaz@gmail.com';
+  const CONTACT_FORM_RECIPIENT =
+    import.meta.env.VITE_CONTACT_FORM_RECIPIENT || 'shafiqimtiaz@gmail.com';
   const CONTACT_FORM_ENDPOINT = import.meta.env.VITE_CONTACT_FORM_ENDPOINT || '';
 
   const handleSubmit = async (event) => {

@@ -3,15 +3,8 @@
     "version": "1.0.0",
     "last_run": "2026-05-03T18:13:23.038Z",
     "root": "D:\\Github\\shafiqimtiaz.vercel.app",
-    "include_patterns": [
-      "src/**/*.js",
-      "src/**/*.jsx"
-    ],
-    "exclude_patterns": [
-      "**/*.test.{js,jsx}",
-      "dist/**",
-      "node_modules/**"
-    ],
+    "include_patterns": ["src/**/*.js", "src/**/*.jsx"],
+    "exclude_patterns": ["**/*.test.{js,jsx}", "dist/**", "node_modules/**"],
     "exceptions": []
   },
   "file_hashes": {

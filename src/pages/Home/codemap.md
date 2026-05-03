@@ -66,7 +66,7 @@ The terminal playback animation runs automatically on page load without user int
 
 The Home page integrates several components from the shared component library located in src/components/. The PageShell component from src/components/layout provides the page wrapper with consistent header, navigation, and footer structure across all pages. The Button component from src/components/ui provides styled button elements with primary and secondary variants for the call-to-action buttons. The TerminalPanel and TerminalPlayback components from src/components/ui provide the terminal interface rendering and animation logic.
 
-The page also integrates with react-router for navigation through the Link component imported from react-router. This enables client-side navigation without full page reloads when users click internal links to /contact or /projects routes. External links to the resume PDF use standard anchor tag behavior with target="_blank" for new tab opening.
+The page also integrates with react-router for navigation through the Link component imported from react-router. This enables client-side navigation without full page reloads when users click internal links to /contact or /projects routes. External links to the resume PDF use standard anchor tag behavior with target="\_blank" for new tab opening.
 
 ### Data Integration
 

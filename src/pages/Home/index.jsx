@@ -38,7 +38,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="pb-20 pt-16 md:pb-32">
+      <section id="contact" className="pt-16 pb-20 md:pb-32">
         <div className="mx-auto grid w-[min(100%-2rem,var(--container-width))] gap-12 lg:grid-cols-2 lg:items-start">
           {/* Left: Header */}
           <div className="grid gap-6">
@@ -49,8 +49,8 @@ export default function Home() {
               Establish <span className="text-[var(--theme-primary)]">Connection</span>
             </h2>
             <p className="max-w-[38rem] text-base text-[var(--theme-text-muted)]">
-              Open a direct channel for software development, cloud modernization, backend engineering,
-              or AI-focused collaboration. The fastest routes are email and LinkedIn.
+              Open a direct channel for software development, cloud modernization, backend
+              engineering, or AI-focused collaboration. The fastest routes are email and LinkedIn.
             </p>
 
             {/* External Links */}

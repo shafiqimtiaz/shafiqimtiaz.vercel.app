@@ -5,6 +5,7 @@
 The layout module provides the foundational page wrapper component that ensures consistent visual structure across all pages in the application. Its single responsibility is to position page content correctly beneath the fixed header while constraining content width for readability.
 
 **Components:**
+
 - `PageShell` - The primary layout wrapper component
 
 ## Design
@@ -64,6 +65,7 @@ export { default as PageShell } from './PageShell';
 ```
 
 This allows consumers to import via:
+
 ```js
 import { PageShell } from '../../components/layout';
 ```
@@ -125,12 +127,12 @@ theme.css
 
 The `PageShell` component is used by **4 page components**:
 
-| Page | File Path | Usage |
-|------|-----------|-------|
-| **Home** | `src/pages/Home/index.jsx` | Wraps hero section, content sections |
-| **About** | `src/pages/About/index.jsx` | Wraps bio content, skills sections |
-| **Contact** | `src/pages/Contact/index.jsx` | Wraps contact form, info sections |
-| **Projects** | `src/pages/Projects/index.jsx` | Wraps project gallery/grid |
+| Page         | File Path                      | Usage                                |
+| ------------ | ------------------------------ | ------------------------------------ |
+| **Home**     | `src/pages/Home/index.jsx`     | Wraps hero section, content sections |
+| **About**    | `src/pages/About/index.jsx`    | Wraps bio content, skills sections   |
+| **Contact**  | `src/pages/Contact/index.jsx`  | Wraps contact form, info sections    |
+| **Projects** | `src/pages/Projects/index.jsx` | Wraps project gallery/grid           |
 
 ### Import Pattern
 
@@ -140,9 +142,7 @@ All consuming pages use the same import pattern:
 import { PageShell } from '../../components/layout';
 
 // Usage in render:
-<PageShell>
-  {/* page-specific content */}
-</PageShell>
+<PageShell>{/* page-specific content */}</PageShell>;
 ```
 
 ### Integration with Header

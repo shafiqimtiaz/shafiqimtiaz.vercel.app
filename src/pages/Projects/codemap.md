@@ -60,6 +60,7 @@ The components leverage a consistent design vocabulary:
 Each project category uses a distinct data shape:
 
 **Case Studies** (`caseStudies` array):
+
 ```javascript
 {
   code: '001',                    // Zero-padded identifier
@@ -75,6 +76,7 @@ Each project category uses a distinct data shape:
 ```
 
 **Public Repositories** (`publicRepositories` array):
+
 ```javascript
 {
   title: 'RecycleVision',
@@ -86,6 +88,7 @@ Each project category uses a distinct data shape:
 ```
 
 **Mini Projects** (`miniProjects` array):
+
 ```javascript
 {
   name: 'Task List',
@@ -141,8 +144,8 @@ Each project category uses a distinct data shape:
 
 3. **Interaction Flow**:
    - **Case Studies**: Primary button links to external PDF (`/docs/Shafiq-Imtiaz-Resume.pdf`) or internal route (`/about`); secondary button routes to `/contact`
-   - **Public Repositories**: LIVE_DEMO_ button (if `demoUrl` exists) opens external URL; VIEW_REPO_ always links to GitHub
-   - **Mini Projects**: VIEW_PROJECT_ opens the standalone HTML file in a new tab
+   - **Public Repositories**: LIVE*DEMO* button (if `demoUrl` exists) opens external URL; VIEW*REPO* always links to GitHub
+   - **Mini Projects**: VIEW*PROJECT* opens the standalone HTML file in a new tab
 
 ### Component Lifecycle
 
@@ -156,13 +159,13 @@ Each project category uses a distinct data shape:
 
 ### External Dependencies
 
-| Dependency | Source | Usage |
-|------------|--------|-------|
-| `PageShell` | `src/components/layout/index.jsx` | Page wrapper providing layout structure, metadata |
-| `Button` | `src/components/ui/index.jsx` | Action buttons with variant support (`primary`, `secondary`, `ghost`) |
-| `caseStudies` | `src/data/projects.js` | Professional project data (4 entries) |
-| `publicRepositories` | `src/data/projects.js` | GitHub repository data (11 entries) |
-| `miniProjects` | `src/data/projects.js` | Standalone demo data (7 entries) |
+| Dependency           | Source                            | Usage                                                                 |
+| -------------------- | --------------------------------- | --------------------------------------------------------------------- |
+| `PageShell`          | `src/components/layout/index.jsx` | Page wrapper providing layout structure, metadata                     |
+| `Button`             | `src/components/ui/index.jsx`     | Action buttons with variant support (`primary`, `secondary`, `ghost`) |
+| `caseStudies`        | `src/data/projects.js`            | Professional project data (4 entries)                                 |
+| `publicRepositories` | `src/data/projects.js`            | GitHub repository data (11 entries)                                   |
+| `miniProjects`       | `src/data/projects.js`            | Standalone demo data (7 entries)                                      |
 
 ### CSS/Tailwind Integration
 

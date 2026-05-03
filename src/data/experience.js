@@ -32,7 +32,13 @@ export const techStack = [
     accent: 'text-[var(--theme-secondary)]',
     code: '005',
     title: 'ENGINEERING_PRACTICE',
-    items: ['Agile / Scrum', 'CI/CD', 'Microservices', 'CLEAN Architecture', 'Unit Testing / Debugging'],
+    items: [
+      'Agile / Scrum',
+      'CI/CD',
+      'Microservices',
+      'CLEAN Architecture',
+      'Unit Testing / Debugging',
+    ],
   },
   {
     icon: 'psychology',

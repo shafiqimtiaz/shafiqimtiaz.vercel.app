@@ -5,6 +5,7 @@
 The `src/data/` directory serves as the **centralized static data layer** for the portfolio application. It contains all hardcoded content, configuration constants, and structured data that drives the UI across all pages. This folder acts as the single source of truth for content that does not require dynamic fetching or API integration — essentially the "content database" for a statically generated portfolio site.
 
 The data folder is responsible for:
+
 - **Content Management**: All visible text, labels, and messaging that appears on the site
 - **Configuration**: Navigation structure, theme-aware styling tokens, playback timing constants
 - **Structured Data**: Complex nested objects representing career history, projects, tech stack, and statistics
@@ -23,10 +24,12 @@ The folder contains 6 JavaScript modules, each serving a distinct content domain
 #### 1. `experience.js` — Career and Technical Skills Data
 
 **Exports:**
+
 - `techStack` (Array): 6-category technical skills taxonomy
 - `timeline` (Array): Chronological career/education entries
 
 **Structure — techStack:**
+
 ```javascript
 {
   icon: string,           // Material Icon name
@@ -38,6 +41,7 @@ The folder contains 6 JavaScript modules, each serving a distinct content domain
 ```
 
 **Structure — timeline:**
+
 ```javascript
 {
   date: string,          // Date range or single date
@@ -57,12 +61,14 @@ The folder contains 6 JavaScript modules, each serving a distinct content domain
 #### 2. `projects.js` — Project Portfolio Data
 
 **Exports:**
+
 - `caseStudies` (Array): Major work achievements (4 entries)
 - `miniProjects` (Array): Small standalone demos (7 entries)
 - `publicRepositories` (Array): GitHub repositories (12 entries)
 - `historyCards` (Array): Highlight cards for home page (6 entries)
 
 **Structure — caseStudies:**
+
 ```javascript
 {
   code: string,                    // Identifier (e.g., '001')
@@ -78,6 +84,7 @@ The folder contains 6 JavaScript modules, each serving a distinct content domain
 ```
 
 **Structure — miniProjects:**
+
 ```javascript
 {
   name: string,
@@ -88,6 +95,7 @@ The folder contains 6 JavaScript modules, each serving a distinct content domain
 ```
 
 **Structure — publicRepositories:**
+
 ```javascript
 {
   title: string,
@@ -99,6 +107,7 @@ The folder contains 6 JavaScript modules, each serving a distinct content domain
 ```
 
 **Structure — historyCards:**
+
 ```javascript
 {
   type: 'compact' | 'split',  // Layout variant
@@ -119,11 +128,13 @@ The folder contains 6 JavaScript modules, each serving a distinct content domain
 #### 3. `stats.js` — Quantitative Metrics Data
 
 **Exports:**
+
 - `homeStats` (Array): Stats displayed on home page (4 entries)
 - `aboutStats` (Array): Stats displayed on about page (3 entries)
 - `profileStats` (Array): Stats displayed in profile section (3 entries)
 
 **Structure:**
+
 ```javascript
 {
   value: string,      // Display value (e.g., '500+', '99.97%')
@@ -139,10 +150,12 @@ The folder contains 6 JavaScript modules, each serving a distinct content domain
 #### 4. `terminalPlayback.js` — Terminal Animation Data
 
 **Exports:**
+
 - `DEFAULT_PLAYBACK_DELAY_MS` (Number): Global timing constant (2000ms)
 - `HOME_TERMINAL_PLAYBACK` (Object): Terminal session configuration
 
 **Structure:**
+
 ```javascript
 {
   id: string,
@@ -169,6 +182,7 @@ The folder contains 6 JavaScript modules, each serving a distinct content domain
 #### 5. `links.js` — Navigation and External References
 
 **Exports:**
+
 - `navLinks` (Array): Primary navigation items
 - `externalNodes` (Array): Social/external link icons
 - `systemStatus` (Array): Status indicators for contact page
@@ -177,11 +191,13 @@ The folder contains 6 JavaScript modules, each serving a distinct content domain
 - `footerLinks` (Array): Footer navigation links
 
 **Structure — navLinks:**
+
 ```javascript
 { label: string, to: string }  // React Router path
 ```
 
 **Structure — externalNodes:**
+
 ```javascript
 {
   label: string,
@@ -192,11 +208,13 @@ The folder contains 6 JavaScript modules, each serving a distinct content domain
 ```
 
 **Structure — systemStatus:**
+
 ```javascript
 { label: string, value: string, accent: string }
 ```
 
 **Structure — infoColumns:**
+
 ```javascript
 {
   heading: string,
@@ -205,6 +223,7 @@ The folder contains 6 JavaScript modules, each serving a distinct content domain
 ```
 
 **Structure — contactPageText:**
+
 ```javascript
 {
   badge: string,
@@ -221,9 +240,11 @@ The folder contains 6 JavaScript modules, each serving a distinct content domain
 #### 6. `contactForm.js` — Form Field Configuration
 
 **Exports:**
+
 - `contactFormFields` (Array): Form input definitions
 
 **Structure:**
+
 ```javascript
 {
   name: string,           // Input name attribute
@@ -277,14 +298,14 @@ src/data/*.js (Static Data)
 
 ### Import Relationships
 
-| Data Module | Imported By | Usage Context |
-|-------------|-------------|---------------|
-| `experience.js` | `TechStackSection.jsx`, `TimelineSection.jsx` | About page — tech skills grid and career timeline |
-| `projects.js` | `CaseStudiesSection.jsx`, `MiniProjectsSection.jsx`, `PublicRepositoriesSection.jsx`, `HistorySection.jsx` | Projects page (case studies, mini projects, repos) and Home page (history cards) |
-| `stats.js` | `StatsSection.jsx` (Home), `ProfileSection.jsx` (About) | Home and About page metric displays |
-| `terminalPlayback.js` | `TerminalSection.jsx` | Home page terminal animation |
-| `links.js` | `Navbar.jsx`, `Footer.jsx`, `StatusSection.jsx` (Contact), `Contact/index.jsx` | Global navigation, footer, and contact page content |
-| `contactForm.js` | `ContactFormSection.jsx` | Contact page form field configuration |
+| Data Module           | Imported By                                                                                                | Usage Context                                                                    |
+| --------------------- | ---------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `experience.js`       | `TechStackSection.jsx`, `TimelineSection.jsx`                                                              | About page — tech skills grid and career timeline                                |
+| `projects.js`         | `CaseStudiesSection.jsx`, `MiniProjectsSection.jsx`, `PublicRepositoriesSection.jsx`, `HistorySection.jsx` | Projects page (case studies, mini projects, repos) and Home page (history cards) |
+| `stats.js`            | `StatsSection.jsx` (Home), `ProfileSection.jsx` (About)                                                    | Home and About page metric displays                                              |
+| `terminalPlayback.js` | `TerminalSection.jsx`                                                                                      | Home page terminal animation                                                     |
+| `links.js`            | `Navbar.jsx`, `Footer.jsx`, `StatusSection.jsx` (Contact), `Contact/index.jsx`                             | Global navigation, footer, and contact page content                              |
+| `contactForm.js`      | `ContactFormSection.jsx`                                                                                   | Contact page form field configuration                                            |
 
 ### Data Flow Example: Home Page
 
@@ -317,43 +338,49 @@ contactFormFields (contactForm.js) ──► ContactFormSection.jsx ──► Co
 ### Consumer Components and Pages
 
 #### Home Page (`/`)
+
 - **StatsSection.jsx**: Consumes `homeStats` — displays 4 metric cards (concurrent requests, uptime, revenue, test coverage)
 - **HistorySection.jsx**: Consumes `historyCards` — displays 6 highlight cards in a grid
 - **TerminalSection.jsx**: Consumes `HOME_TERMINAL_PLAYBACK` — renders animated terminal with 4 sequential command outputs
 
 #### About Page (`/about`)
+
 - **TechStackSection.jsx**: Consumes `techStack` — renders 6-category skill grid with icons and technology lists
 - **TimelineSection.jsx**: Consumes `timeline` — renders chronological career/education entries (5 positions + 1 certification)
 - **ProfileSection.jsx**: Consumes `profileStats` — displays 3 profile metrics (years uptime, deployments, incidents)
 
 #### Projects Page (`/projects`)
+
 - **CaseStudiesSection.jsx**: Consumes `caseStudies` — renders 4 major work case studies with tags and CTAs
 - **MiniProjectsSection.jsx**: Consumes `miniProjects` — renders 7 standalone demo project cards
 - **PublicRepositoriesSection.jsx**: Consumes `publicRepositories` — renders 12 GitHub repository cards with tech stack tags
 
 #### Contact Page (`/contact`)
+
 - **StatusSection.jsx**: Consumes `externalNodes`, `systemStatus`, `infoColumns` — renders social links, availability status, and info columns
 - **Contact/index.jsx**: Consumes `contactPageText` — renders page title, badge, and description
 - **ContactFormSection.jsx**: Consumes `contactFormFields` — renders form with dynamically configured fields
 
 #### Global Components
+
 - **Navbar.jsx**: Consumes `navLinks` — renders primary navigation menu (Home, Projects, About, Contact)
 - **Footer.jsx**: Consumes `footerLinks` — renders footer links (GitHub, LinkedIn, Resume, Contact)
 
 ### Integration Summary
 
-| Page/Component | Route | Data Imports |
-|----------------|-------|--------------|
-| Home Page | `/` | `homeStats`, `historyCards`, `HOME_TERMINAL_PLAYBACK` |
-| About Page | `/about` | `techStack`, `timeline`, `profileStats` |
-| Projects Page | `/projects` | `caseStudies`, `miniProjects`, `publicRepositories` |
-| Contact Page | `/contact` | `contactPageText`, `externalNodes`, `systemStatus`, `infoColumns`, `contactFormFields` |
-| Navbar | Global | `navLinks` |
-| Footer | Global | `footerLinks` |
+| Page/Component | Route       | Data Imports                                                                           |
+| -------------- | ----------- | -------------------------------------------------------------------------------------- |
+| Home Page      | `/`         | `homeStats`, `historyCards`, `HOME_TERMINAL_PLAYBACK`                                  |
+| About Page     | `/about`    | `techStack`, `timeline`, `profileStats`                                                |
+| Projects Page  | `/projects` | `caseStudies`, `miniProjects`, `publicRepositories`                                    |
+| Contact Page   | `/contact`  | `contactPageText`, `externalNodes`, `systemStatus`, `infoColumns`, `contactFormFields` |
+| Navbar         | Global      | `navLinks`                                                                             |
+| Footer         | Global      | `footerLinks`                                                                          |
 
 ### No-Build-Time Data
 
 All data in this folder is **static at build time**. There is no:
+
 - API fetching
 - Database connection
 - Environment variable interpolation
