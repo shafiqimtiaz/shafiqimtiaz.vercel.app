@@ -6,8 +6,8 @@ Personal portfolio website built with React + Vite, deployed on Vercel. Showcase
 ## System Entry Points
 | File | Purpose |
 |------|---------|
-| `src/main.jsx` | React DOM entry, wraps app in BrowserRouter |
-| `src/App.jsx` | Root component with routes, Navbar, Footer, Analytics |
+| `src/main.jsx` | React DOM entry, wraps app with context |
+| `src/App.jsx` | Single-page layout rendering all sections sequentially with hash nav |
 | `package.json` | Dependencies: React 18, React Router v7, Vite, Tailwind v4, Vercel analytics/speed-insights |
 | `vite.config.js` | Vite + React plugin + Tailwind v4 plugin |
 | `vercel.json` | SPA fallback routing (all routes → index.html) |
@@ -21,8 +21,8 @@ Personal portfolio website built with React + Vite, deployed on Vercel. Showcase
 | `src/components/ui/` | Reusable UI primitives: Button (multi-variant), TerminalPanel (CRT overlay), SectionHeader | [View Map](src/components/ui/codemap.md) |
 | `src/components/layout/` | PageShell wrapper providing consistent page structure with max-width constraint | [View Map](src/components/layout/codemap.md) |
 | `src/data/` | Centralized static content: experience, projects, stats, links, contactForm, terminalPlayback sequences | [View Map](src/data/codemap.md) |
-| `src/hooks/` | Custom React hooks: useTheme (localStorage-persisted dark/light), useTerminalPlayback (CLI simulation state machine) | [View Map](src/hooks/codemap.md) |
-| `src/pages/` | Route pages (Home, About, Projects, Contact) + section components | [View Map](src/pages/codemap.md) |
+| `src/hooks/` | Custom React hooks: useTheme, useTerminalPlayback, useScrollProgress | [View Map](src/hooks/codemap.md) |
+| `src/pages/` | Layout modules combining section components | [View Map](src/pages/codemap.md) |
 | `src/pages/Home/` | Landing page: HeroSection, TerminalSection, HistorySection, StatsSection | [View Map](src/pages/Home/codemap.md) |
 | `src/pages/About/` | About page: ProfileSection, TechStackSection, TimelineSection | [View Map](src/pages/About/codemap.md) |
 | `src/pages/Projects/` | Projects showcase: CaseStudiesSection, PublicRepositoriesSection, MiniProjectsSection | [View Map](src/pages/Projects/codemap.md) |
@@ -34,16 +34,17 @@ Personal portfolio website built with React + Vite, deployed on Vercel. Showcase
 ```
 index.html
   └── src/main.jsx
-        └── src/App.jsx (BrowserRouter)
-              ├── Navbar (persistent)
-              ├── Routes → PageShell wrapping sections:
-              │     ├── / → Home/index.jsx → HeroSection, TerminalSection, HistorySection, StatsSection
-              │     ├── /about → About/index.jsx → ProfileSection, TechStackSection, TimelineSection
-              │     ├── /projects → Projects/index.jsx → CaseStudiesSection, PublicRepositoriesSection, MiniProjectsSection
-              │     └── /contact → Contact/index.jsx → ContactFormSection, StatusSection
+        └── src/App.jsx
+              ├── Navbar (persistent, sticky, scroll progress)
+              ├── Home/index.jsx (Single Page Shell)
+              │     ├── #hero → HeroSection, TerminalSection
+              │     ├── StatsSection
+              │     ├── #projects → CaseStudiesSection
+              │     ├── #about → ProfileSection, TechStackSection, HistorySection
+              │     └── #contact → ContactFormSection, StatusSection
               ├── Footer (persistent)
               ├── Analytics + SpeedInsights (Vercel)
-              └── scroll-to-top on route change
+              └── scroll hash routing
 ```
 
 ## Tech Stack
@@ -51,7 +52,7 @@ index.html
 | Category | Technology |
 |----------|------------|
 | Framework | React 18.3 |
-| Router | React Router v7 |
+| Router | Hash navigation (Single Page) |
 | Bundler | Vite 5 |
 | Styling | Tailwind CSS v4 + CSS custom properties |
 | Deployment | Vercel (SPA fallback) |

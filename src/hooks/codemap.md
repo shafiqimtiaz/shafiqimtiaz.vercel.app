@@ -258,16 +258,13 @@ useEffect(() => clearTimer, [clearTimer]) ──► cleanup timeout
 - `activeSection` (string): Current section ID based on scroll position
 
 **Section Detection Logic**:
-| Section | Trigger Point |
-|---------|---------------|
-| `hero` | Scroll top |
-| `about` | 50vh from top |
-| `projects` | 150vh from top |
-| `contact` | 150vh from bottom |
+- Iterates top-to-bottom: `['hero', 'projects', 'about', 'contact']`
+- Section is active when its top edge ≤ 120px from viewport top
+- Last qualifying section wins (current visible section)
 
 **Key Design Decisions**:
 - Passive scroll listener for performance
-- Debounced section detection using viewport-based thresholds
+- Top-to-bottom iteration with running `active` variable
 - Cleanup on unmount to prevent memory leaks
 
 Both hooks follow React hooks conventions: return objects with state and functions, use useEffect for side effects, and encapsulate logic that would otherwise duplicate across components.
