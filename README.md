@@ -17,7 +17,7 @@ Senior Software Engineer &nbsp;·&nbsp; AWS Certified AI Practitioner &nbsp;·&n
 ### 👨‍💻 &nbsp;Current Role
 
 **Senior Software Engineer · [Flexspring](https://flexspring.com)** &nbsp;`May 2026 – Present` &nbsp;·&nbsp; Ottawa, ON
-*B2B HR integration platform serving 2,500+ client configurations*
+_B2B HR integration platform serving 2,500+ client configurations_
 
 - **Data Mapping (AI)** — Built an AI-driven field recommendation system: embedding-based reranking, cosine-similarity matching, Redisson caching, and LiteLLM fallback — shipped as a self-service spec tool replacing manual spreadsheet workflows
 - **LLM integration hardening** — Productionized platform-wide LLM use (unit tests, SonarQube fixes, secret removal → secure config layer) into a reusable service adopted across Monitor, Studio, and shared libraries
@@ -29,14 +29,14 @@ Senior Software Engineer &nbsp;·&nbsp; AWS Certified AI Practitioner &nbsp;·&n
 
 ### 🛠️ &nbsp;Tech Stack
 
-| Layer | Technologies |
-|-------|-------------|
-| **AI & LLM** | ![LiteLLM](https://img.shields.io/badge/LiteLLM-000000?style=flat-square) ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white) `LangGraph` &nbsp;`RAG` &nbsp;`MCP` &nbsp;`Embeddings` &nbsp;`Spec-Driven Dev` |
-| **Backend** | ![Java 17](https://img.shields.io/badge/Java_17-ED8B00?style=flat-square&logo=openjdk&logoColor=white) ![Spring Boot 3](https://img.shields.io/badge/Spring_Boot_3-6DB33F?style=flat-square&logo=spring-boot&logoColor=white) ![Quarkus](https://img.shields.io/badge/Quarkus-4695EB?style=flat-square&logo=quarkus&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) |
-| **Frontend** | ![React 18](https://img.shields.io/badge/React_18-20232A?style=flat-square&logo=react&logoColor=61DAFB) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white) ![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white) |
-| **Data** | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL_/_pgvector-316192?style=flat-square&logo=postgresql&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white) ![Redis](https://img.shields.io/badge/Redis_/_Redisson-DC382D?style=flat-square&logo=redis&logoColor=white) |
-| **Cloud & Infra** | ![AWS](https://img.shields.io/badge/AWS_S3%2FSQS-FF9900?style=flat-square&logo=amazon-aws&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white) ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white) ![Sentry](https://img.shields.io/badge/Sentry-362D59?style=flat-square&logo=sentry&logoColor=white) |
-| **Messaging & API** | ![JMS/ActiveMQ](https://img.shields.io/badge/JMS%2FActiveMQ-C71A36?style=flat-square&logo=apache&logoColor=white) ![OpenAPI](https://img.shields.io/badge/OpenAPI_3-6BA539?style=flat-square&logo=openapiinitiative&logoColor=white) |
+| Layer               | Technologies                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **AI & LLM**        | ![LiteLLM](https://img.shields.io/badge/LiteLLM-000000?style=flat-square) ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white) `LangGraph` &nbsp;`RAG` &nbsp;`MCP` &nbsp;`Embeddings` &nbsp;`Spec-Driven Dev`                                                                                                                                                                                                                                                                             |
+| **Backend**         | ![Java 17](https://img.shields.io/badge/Java_17-ED8B00?style=flat-square&logo=openjdk&logoColor=white) ![Spring Boot 3](https://img.shields.io/badge/Spring_Boot_3-6DB33F?style=flat-square&logo=spring-boot&logoColor=white) ![Quarkus](https://img.shields.io/badge/Quarkus-4695EB?style=flat-square&logo=quarkus&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) |
+| **Frontend**        | ![React 18](https://img.shields.io/badge/React_18-20232A?style=flat-square&logo=react&logoColor=61DAFB) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white) ![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)                                                                                                                |
+| **Data**            | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL_/_pgvector-316192?style=flat-square&logo=postgresql&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white) ![Redis](https://img.shields.io/badge/Redis_/_Redisson-DC382D?style=flat-square&logo=redis&logoColor=white)                                                                                                    |
+| **Cloud & Infra**   | ![AWS](https://img.shields.io/badge/AWS_S3%2FSQS-FF9900?style=flat-square&logo=amazon-aws&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white) ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white) ![Sentry](https://img.shields.io/badge/Sentry-362D59?style=flat-square&logo=sentry&logoColor=white)         |
+| **Messaging & API** | ![JMS/ActiveMQ](https://img.shields.io/badge/JMS%2FActiveMQ-C71A36?style=flat-square&logo=apache&logoColor=white) ![OpenAPI](https://img.shields.io/badge/OpenAPI_3-6BA539?style=flat-square&logo=openapiinitiative&logoColor=white)                                                                                                                                                                                                                                                                                                              |
 
 ---
 
@@ -52,14 +52,14 @@ Senior Software Engineer &nbsp;·&nbsp; AWS Certified AI Practitioner &nbsp;·&n
 
 ### 🚀 &nbsp;Featured Projects
 
-| Project | Stack | |
-|---------|-------|--|
-| [flexspring-agent-core](https://shafiqimtiaz.vercel.app/#projects) | TypeScript · Node.js · LiteLLM · MCP | `private` |
-| [Data Mapping](https://shafiqimtiaz.vercel.app/#projects) | LiteLLM · Embeddings · Redisson · React | `private` |
-| [flexspring-file-manager](https://shafiqimtiaz.vercel.app/#projects) | Quarkus · AWS S3 · MongoDB · React | `private` |
-| [RecycleVision](https://github.com/shafiqimtiaz/RecycleVision) | Python · TensorFlow · Computer Vision | |
-| [GenAI4SE](https://github.com/shafiqimtiaz/GenAI4SE) | Python · LLMs · Prompt Engineering | |
-| [Medical Appointment System](https://github.com/shafiqimtiaz/Medical-Appointment-System) | MERN · MongoDB · React | |
+| Project                                                                                  | Stack                                   |           |
+| ---------------------------------------------------------------------------------------- | --------------------------------------- | --------- |
+| [flexspring-agent-core](https://shafiqimtiaz.vercel.app/#projects)                       | TypeScript · Node.js · LiteLLM · MCP    | `private` |
+| [Data Mapping](https://shafiqimtiaz.vercel.app/#projects)                                | LiteLLM · Embeddings · Redisson · React | `private` |
+| [flexspring-file-manager](https://shafiqimtiaz.vercel.app/#projects)                     | Quarkus · AWS S3 · MongoDB · React      | `private` |
+| [RecycleVision](https://github.com/shafiqimtiaz/RecycleVision)                           | Python · TensorFlow · Computer Vision   |           |
+| [GenAI4SE](https://github.com/shafiqimtiaz/GenAI4SE)                                     | Python · LLMs · Prompt Engineering      |           |
+| [Medical Appointment System](https://github.com/shafiqimtiaz/Medical-Appointment-System) | MERN · MongoDB · React                  |           |
 
 ---
 
