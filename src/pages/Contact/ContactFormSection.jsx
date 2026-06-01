@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { TerminalPanel, Button } from '../../components/ui';
 import { contactFormFields } from '../../data/contactForm';
 
+const CONTACT_RECIPIENT = 'shafiqimtiaz@gmail.com';
+
 export default function ContactFormSection() {
   const initialFormData = contactFormFields.reduce(
     (acc, field) => ({ ...acc, [field.name]: '' }),
@@ -13,73 +15,49 @@ export default function ContactFormSection() {
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    if (status === 'error') setStatus('idle');
   };
 
-  const CONTACT_FORM_RECIPIENT =
-    import.meta.env.VITE_CONTACT_FORM_RECIPIENT || 'shafiqimtiaz@gmail.com';
-  const CONTACT_FORM_ENDPOINT = import.meta.env.VITE_CONTACT_FORM_ENDPOINT || '';
-
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    setStatus('sending');
 
-    const payload = contactFormFields.reduce((acc, field) => {
-      const value = (formData[field.name] || '').toString().trim();
-      return { ...acc, [field.name]: value };
-    }, {});
+    const name = (formData.name || '').trim();
+    const email = (formData.email || '').trim();
+    const message = (formData.message || '').trim();
 
-    if (!payload.name || !payload.email || !payload.message) {
+    if (!name || !email || !message) {
       setStatus('error');
       return;
     }
 
-    try {
-      if (CONTACT_FORM_ENDPOINT) {
-        const res = await fetch(CONTACT_FORM_ENDPOINT, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            ...payload,
-            recipient: CONTACT_FORM_RECIPIENT,
-          }),
-        });
+    const subject = `Portfolio contact — ${name}`;
+    const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+    const mailto = `mailto:${CONTACT_RECIPIENT}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
 
-        if (!res.ok) {
-          throw new Error(`Contact endpoint failed with status ${res.status}`);
-        }
+    // Open the visitor's default mail app with the message prefilled.
+    window.location.href = mailto;
 
-        setStatus('sent');
-        setFormData(initialFormData);
-        return;
-      }
-
-      const subject = `New contact form message from ${payload.name}`;
-      const body = `Name: ${payload.name}%0D%0AEmail: ${payload.email}%0D%0AMessage:%0D%0A${payload.message}`;
-      window.location.href = `mailto:${encodeURIComponent(CONTACT_FORM_RECIPIENT)}?subject=${encodeURIComponent(subject)}&body=${body}`;
-
-      setStatus('sent');
-      setFormData(initialFormData);
-    } catch (error) {
-      console.error('Contact form submit error', error);
-      setStatus('error');
-    }
+    setStatus('opened');
+    setFormData(initialFormData);
   };
 
   return (
-    <div className="h-full min-w-0">
+    <div className="min-w-0">
       <TerminalPanel
-        title="ssh root@614.514.183 > CONTACT_FORM"
-        className="h-full shadow-[var(--shadow-soft)]"
-        bodyClassName="grid h-full gap-0 p-5 text-[0.95rem] md:p-6"
+        title="shafiq@flexspring: ~/contact"
+        bodyClassName="grid gap-0 p-6 text-[0.95rem] md:p-7"
       >
-        <form className="space-y-10" onSubmit={handleSubmit}>
+        <form className="flex flex-col gap-7" onSubmit={handleSubmit}>
           {contactFormFields.map((field) => {
             const isTextarea = field.type === 'textarea';
             return (
               <div key={field.name} className="group/input">
-                <label className="mb-2 block text-[0.85rem] text-[var(--theme-text-muted)] opacity-80">
+                <label
+                  htmlFor={`contact-${field.name}`}
+                  className="font-body mb-2 block text-[0.8rem] text-[var(--theme-text-muted)]"
+                >
                   <span className="text-[var(--theme-primary)]">{field.prefix}</span>{' '}
                   <span className="text-[var(--theme-text)]">{field.label}</span>
                 </label>
@@ -89,29 +67,34 @@ export default function ContactFormSection() {
                     isTextarea ? 'items-start' : 'items-center'
                   }`}
                 >
-                  <span className={`text-[var(--theme-primary)] ${isTextarea ? 'mt-2' : ''}`}>
+                  <span
+                    className={`text-[var(--theme-primary)] ${isTextarea ? 'mt-2.5' : ''}`}
+                    aria-hidden="true"
+                  >
                     ❯
                   </span>
 
                   {isTextarea ? (
                     <textarea
+                      id={`contact-${field.name}`}
                       name={field.name}
                       value={formData[field.name]}
                       onChange={handleChange}
                       required={field.required}
                       rows={field.rows || 4}
                       placeholder={field.placeholder}
-                      className="w-full resize-none border-none bg-transparent py-2 text-[var(--theme-text)] outline-none placeholder:text-[var(--theme-text-muted)] focus:ring-0 focus:outline-none"
+                      className="font-body w-full resize-none border-none bg-transparent py-2 text-[var(--theme-text)] outline-none placeholder:text-[var(--theme-outline)] focus:ring-0 focus:outline-none"
                     />
                   ) : (
                     <input
+                      id={`contact-${field.name}`}
                       name={field.name}
                       type={field.type}
                       value={formData[field.name]}
                       onChange={handleChange}
                       required={field.required}
                       placeholder={field.placeholder}
-                      className="w-full border-none bg-transparent py-2 text-[var(--theme-text)] outline-none placeholder:text-[var(--theme-text-muted)] focus:ring-0 focus:outline-none"
+                      className="font-body w-full border-none bg-transparent py-2 text-[var(--theme-text)] outline-none placeholder:text-[var(--theme-outline)] focus:ring-0 focus:outline-none"
                     />
                   )}
                 </div>
@@ -119,34 +102,34 @@ export default function ContactFormSection() {
             );
           })}
 
-          <div className="pt-4">
-            <Button
-              type="submit"
-              variant="primary"
-              disabled={status === 'sending'}
-              className="min-h-14 px-8 text-[0.76rem]"
-            >
-              {status === 'sending'
-                ? 'IN_PROCESS...'
-                : status === 'sent'
-                  ? 'SEND_COMPLETE'
-                  : status === 'error'
-                    ? 'RETRY_SEND'
-                    : 'EXECUTE_SEND'}
+          <div className="pt-1">
+            <Button type="submit" variant="primary" className="min-h-13 w-full px-8 text-[0.72rem]">
+              <span>{status === 'opened' ? 'Opening mail app…' : 'Open mail app'}</span>
+              <span className="material-symbols-outlined text-[1.1rem]" aria-hidden="true">
+                send
+              </span>
             </Button>
+
+            {status === 'opened' && (
+              <p className="font-body mt-3 text-[0.78rem] text-[var(--theme-secondary)]">
+                Your email client should be opening with the message prefilled. Didn&apos;t open?
+                Email me directly at{' '}
+                <a
+                  href={`mailto:${CONTACT_RECIPIENT}`}
+                  className="text-[var(--theme-primary)] underline"
+                >
+                  {CONTACT_RECIPIENT}
+                </a>
+                .
+              </p>
+            )}
+
+            {status === 'error' && (
+              <p className="font-body mt-3 text-[0.78rem] text-[var(--theme-error-dim)]">
+                Please fill in your name, email, and message.
+              </p>
+            )}
           </div>
-
-          {status === 'sent' && (
-            <p className="text-sm text-[var(--theme-secondary)]">
-              Message sent successfully. I’ll respond in 24h or less.
-            </p>
-          )}
-
-          {status === 'error' && (
-            <p className="text-sm text-[var(--theme-error)]">
-              Failed to send message. Please check your internet connection and try again.
-            </p>
-          )}
         </form>
       </TerminalPanel>
     </div>

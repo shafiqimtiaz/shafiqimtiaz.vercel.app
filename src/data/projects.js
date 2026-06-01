@@ -1,117 +1,63 @@
 export const caseStudies = [
   {
     code: '001',
-    label: 'Microservice Ownership',
-    highlights: 'File Manager Service',
+    label: 'AI Platform',
+    highlights: 'Data Mapping',
     details: [
-      'Sole engineer: Quarkus microservice with AWS S3, MongoDB, full CRUD REST API, React UI',
-      'Event-driven S3 ↔ MongoDB sync via AWS S3 event notifications',
-      'EU-region S3 bucket support for data residency requirements',
+      'AI field recommendations: embedding reranking + cosine similarity',
+      'Redisson caching with LiteLLM fallback',
+      'Read-only governance enforced on Technical Review sign-off',
     ],
-    title: 'Flexspring File Manager',
+    title: 'Data Mapping',
     description:
-      'Built flexspring-file-manager from scratch — a standalone Quarkus microservice with AWS S3 file storage, MongoDB metadata layer, full CRUD REST API, and Sentry observability. Served as sole engineer across service, API gateway, and React UI.',
-    tags: ['Quarkus', 'AWS S3', 'MongoDB', 'Sentry'],
-    primary: { label: 'View Resume', href: '/docs/Shafiq-Imtiaz-Resume.pdf', external: true },
-    secondary: { label: 'View Resume', to: '/contact' },
+      'A self-service specification tool powered by AI field recommendations — replacing manual, spreadsheet-based mapping workflows. Per-target suggestions, bulk recommendation, and role-based AI gating, with a debounced/abortable frontend hook.',
+    tags: ['LiteLLM', 'Embeddings', 'Redisson', 'React'],
+    link: { label: 'View Résumé', href: '/docs/Shafiq-Imtiaz-Resume.pdf' },
   },
   {
     code: '002',
-    label: 'Revenue Enablement',
-    highlights: 'Monitor Pilot',
+    label: 'AI Infrastructure',
+    highlights: 'flexspring-agent-core',
     details: [
-      'Accelerated onboarding by 50%',
-      'Generated $200K+ in upsell revenue',
-      'Modernized UI performance by 65%',
+      'Model-agnostic LLM orchestration via LiteLLM',
+      'MCP server schemas + Spec-Driven access boundaries',
+      'Reusable agent library adopted across services',
     ],
-    title: 'Monitor Pilot',
+    title: 'Agent Core',
     description:
-      'Built and deployed a React and TypeScript dashboard used to improve customer onboarding and visibility. The project combined stronger UX, faster load performance, and measurable commercial impact.',
-    tags: ['React', 'TypeScript', 'Bootstrap 5', 'REST APIs'],
-    primary: { label: 'View Resume', to: '/about' },
-    secondary: { label: 'View Resume', to: '/contact' },
+      "The platform's foundational TypeScript/Node.js agentic AI library — integrating LiteLLM for model-agnostic LLM orchestration so agents operate against defined API contracts, with MCP server schemas for safe, scalable tool use.",
+    tags: ['TypeScript', 'LiteLLM', 'MCP', 'Spec-Driven'],
+    link: { label: 'View Résumé', href: '/docs/Shafiq-Imtiaz-Resume.pdf' },
   },
   {
     code: '003',
-    label: 'AI Initiative',
-    highlights: 'RAG Chatbot',
+    label: 'Microservice Ownership',
+    highlights: 'File Manager Service',
     details: [
-      'Runner-up + $1,000 team prize at Flexspring Hackathon',
-      'Built with Crewdle AI and company data',
-      'Foundation for future AI-powered features',
+      'Sole engineer: Quarkus service + API gateway + React UI',
+      'Multi-region AWS S3 (US/EU) + per-item READ/WRITE/DELETE permissions',
+      'SQS event reconciliation; OIDC auth via AWS Cognito',
     ],
-    title: 'AI Chatbot Initiative',
+    title: 'File Manager',
     description:
-      "Won runners-up and $1,000 team prize at Flexspring internal hackathon, designing a RAG-powered chatbot using Crewdle AI and Flexspring data — which seeded the company's ongoing AI initiative.",
-    tags: ['RAG', 'AI Chatbot', 'Crewdle AI', 'LLM'],
-    primary: { label: 'View Resume', to: '/about' },
-    secondary: { label: 'View Resume', to: '/contact' },
+      'Built flexspring-file-manager from scratch — a standalone Quarkus microservice with multi-region AWS S3 storage (US/EU), a MongoDB metadata layer, per-item permissions, SQS event reconciliation, and Sentry observability. Sole engineer across service, API gateway, and React UI.',
+    tags: ['Quarkus', 'AWS S3', 'MongoDB', 'Sentry'],
+    link: { label: 'View Résumé', href: '/docs/Shafiq-Imtiaz-Resume.pdf' },
   },
   {
     code: '004',
     label: 'Platform Modernisation',
-    highlights: 'Spring Boot 3 Migration',
+    highlights: 'Migrations',
     details: [
-      'Led Spring Boot 3 migration for Flexspring Studio (Java 17), deployed to production without regression',
-      'Upgraded Monitor UI to React 18.3, React Router v7, and Vite 7 — significantly improved HMR build speeds',
-      'Refactored MongoDB aggregation queries for project loading, achieving measurable load time improvements',
+      'Led Spring Boot 3 migration of Studio — zero regression',
+      'Java 8 → 17 and Spring Boot 2 → 3 (Alcatraz)',
+      'Monitor UI to React 18.3, React Router v7, Vite',
     ],
     title: 'Platform Modernisation',
     description:
-      "Led Spring Boot 3 migrations for two production services and upgraded Monitor's full front-end stack (React 18.3, React Router v7, Vite 7). Modernised the platform's core runtime and build toolchain.",
-    tags: ['Java 17', 'Spring Boot 3', 'React 18', 'Vite 7'],
-    primary: { label: 'View Resume', href: '/docs/Shafiq-Imtiaz-Resume.pdf', external: true },
-    secondary: { label: 'View Resume', to: '/contact' },
-  },
-];
-
-export const miniProjects = [
-  {
-    name: 'Task List',
-    description:
-      'Standalone task manager for adding, tracking, and clearing day-to-day work items.',
-    href: '/projects/1%20Task%20List/index.html',
-    tags: ['HTML', 'CSS', 'Vanilla JS'],
-  },
-  {
-    name: 'Book List',
-    description:
-      'Small CRUD-style book tracker for capturing title, author, and ISBN entries in the browser.',
-    href: '/projects/2%20Book%20List/index.html',
-    tags: ['HTML', 'CSS', 'Vanilla JS'],
-  },
-  {
-    name: 'Github Finder',
-    description:
-      'Search interface for looking up GitHub users and surfacing profile details quickly.',
-    href: '/projects/3%20GitHub%20Finder/index.html',
-    tags: ['HTML', 'CSS', 'Vanilla JS', 'API'],
-  },
-  {
-    name: 'Shopping Cart',
-    description: 'Client-side shopping flow for selecting items and reviewing a live cart summary.',
-    href: '/projects/Ex1%20Shopping%20Cart/index.html',
-    tags: ['HTML', 'CSS', 'Vanilla JS'],
-  },
-  {
-    name: 'REG-EX Validator',
-    description:
-      'Interactive validator for testing form patterns and common regular-expression rules.',
-    href: '/projects/Ex2%20REG-EX%20Validator/index.html',
-    tags: ['HTML', 'CSS', 'Vanilla JS', 'Regex'],
-  },
-  {
-    name: 'Number Guessing Game',
-    description: 'Browser guessing game with input validation and simple game-state feedback.',
-    href: '/projects/Ex3%20Number%20Game/index.html',
-    tags: ['HTML', 'CSS', 'Vanilla JS'],
-  },
-  {
-    name: 'Colorize',
-    description:
-      'Visual UI experiment showcasing Glass and Neo styling directions in a standalone demo.',
-    href: '/projects/UI%20Colorize%20GlassNeo/index.html',
-    tags: ['HTML', 'CSS', 'UI/UX'],
+      "Led Spring Boot 3 / Java 17 migrations for production services and modernised Monitor's front-end stack (React 18.3, React Router v7, Vite) — establishing the runtime foundation for platform-wide LLM integration.",
+    tags: ['Java 17', 'Spring Boot 3', 'React 18', 'Vite'],
+    link: { label: 'View Résumé', href: '/docs/Shafiq-Imtiaz-Resume.pdf' },
   },
 ];
 
@@ -119,52 +65,52 @@ export const publicRepositories = [
   {
     title: 'RecycleVision',
     description:
-      'Engineered a computer vision application designed to identify and categorize recyclable materials. Built robust image classification models to improve automated sorting efficiency and sustainability efforts.',
+      'Computer vision application that identifies and categorizes recyclable materials. Built image classification models to improve automated sorting efficiency.',
     repoUrl: 'https://github.com/shafiqimtiaz/RecycleVision',
     techStack: ['Python', 'TensorFlow', 'Computer Vision'],
   },
   {
     title: 'GenAI for Software Engineering',
     description:
-      'Developed an automated pipeline leveraging Generative AI models to assist with software engineering tasks. Investigated prompt engineering techniques to optimize code generation and automate documentation workflows.',
+      'Automated pipeline leveraging generative AI to assist with software engineering tasks. Investigated prompt engineering to optimize code generation and documentation workflows.',
     repoUrl: 'https://github.com/shafiqimtiaz/GenAI4SE',
     techStack: ['Generative AI', 'Python', 'LLMs', 'Prompt Engineering'],
   },
   {
     title: 'Retinal Vessel Extraction',
     description:
-      'Architected a medical image processing solution to extract continuous blood vessel networks from retinal fundus images. Implemented advanced segmentation algorithms to aid in the preliminary diagnosis of ocular diseases.',
+      'Medical image processing solution to extract continuous blood-vessel networks from retinal fundus images, aiding preliminary diagnosis of ocular diseases.',
     repoUrl: 'https://github.com/shafiqimtiaz/Retinal-Vessel-Extraction',
-    techStack: ['Python', 'OpenCV', 'Image Processing', 'Machine Learning'],
+    techStack: ['Python', 'OpenCV', 'Image Processing', 'ML'],
   },
   {
     title: 'Medical Appointment System',
     description:
-      'Developed a full-stack healthcare platform to streamline scheduling, patient management, and clinic workflows. Engineered secure APIs and intuitive interfaces to handle appointment lifecycles efficiently.',
+      'Full-stack healthcare platform streamlining scheduling, patient management, and clinic workflows with secure APIs and intuitive interfaces.',
     demoUrl: 'https://med-spm-app.netlify.app/',
     repoUrl: 'https://github.com/shafiqimtiaz/Medical-Appointment-System',
-    techStack: ['MERN Stack', 'MongoDB', 'Express', 'React', 'Node.js'],
+    techStack: ['MERN', 'MongoDB', 'Express', 'React'],
   },
   {
     title: 'BSRM Warehouse Management',
     description:
-      'Architected a comprehensive tracking system for monitoring industrial stock levels and generating real-time inventory analytics. Deployed robust RESTful APIs to ensure accurate, instantaneous product and material management.',
+      'Tracking system for industrial stock levels with real-time inventory analytics and RESTful APIs for accurate product and material management.',
     demoUrl: 'https://bsrm-warehouse-management.netlify.app/',
     repoUrl: 'https://github.com/shafiqimtiaz/bsrm-warehouse-management',
-    techStack: ['Full-Stack', 'RESTful APIs', 'Database Management'],
+    techStack: ['Full-Stack', 'REST APIs', 'Databases'],
   },
   {
     title: 'BSRM Trading E-Commerce',
     description:
-      'Engineered a complete B2B online platform featuring dynamic product catalogs and secure transaction workflows for steel trading. Designed a scalable state management architecture to handle enterprise-level order volume.',
+      'B2B platform with dynamic product catalogs and secure transaction workflows for steel trading, with scalable state management for enterprise order volume.',
     demoUrl: 'https://bsrm-trading-ecommerce.netlify.app/',
     repoUrl: 'https://github.com/shafiqimtiaz/bsrm-trading-ecommerce',
-    techStack: ['React', 'Node.js', 'State Management', 'Enterprise UI'],
+    techStack: ['React', 'Node.js', 'State Management'],
   },
   {
     title: 'GPS Location Fetcher',
     description:
-      'Built an Android utility application that periodically fetches and tracks GPS coordinates for remote field workers. Implemented GPX file export functionality and robust state tracking using the native Android SDK.',
+      'Android utility that periodically fetches and tracks GPS coordinates for remote field workers, with GPX export and robust state tracking.',
     demoUrl: 'https://www.youtube.com/watch?v=fXOIVhYaTOk',
     repoUrl: 'https://github.com/shafiqimtiaz/GPS-Location-App',
     techStack: ['Java', 'Android SDK', 'Location Services'],
@@ -172,98 +118,32 @@ export const publicRepositories = [
   {
     title: 'MERN Exercise Tracker',
     description:
-      'Created a personal fitness and health management tool enabling users to log daily exercises and track workout routines. Designed intuitive data models to manage user progress and history seamlessly.',
+      'Fitness and health management tool to log daily exercises and track routines, with intuitive data models for user progress and history.',
     demoUrl: 'https://mern-ex-tracker.netlify.app/',
     repoUrl: 'https://github.com/shafiqimtiaz/mern-exercise-tracker',
-    techStack: ['MERN Stack', 'REST API', 'React'],
+    techStack: ['MERN', 'REST API', 'React'],
   },
   {
     title: 'Movie Watchlist',
     description:
-      'Constructed a dynamic front-end application allowing users to search, discover, and curate personalized movie watchlists. Integrated external APIs (TMDB/OMDb) to deliver rich, real-time cinematic data.',
+      'Front-end application to search, discover, and curate personalized movie watchlists, integrating TMDB/OMDb for rich, real-time data.',
     demoUrl: 'https://movie-watchlist-imdb.netlify.app/',
     repoUrl: 'https://github.com/shafiqimtiaz/movie-watchlist',
-    techStack: ['React', 'External APIs', 'Responsive Design'],
+    techStack: ['React', 'External APIs', 'Responsive'],
   },
   {
     title: 'Birdhaus',
     description:
-      'Developed an interactive web application with a focus on delivering a responsive, content-rich user experience. Architected a clean, decoupled UI component structure for enhanced maintainability and scalability.',
+      'Interactive web application focused on a responsive, content-rich experience with a clean, decoupled UI component structure.',
     demoUrl: 'https://birdhaus.netlify.app/',
     repoUrl: 'https://github.com/shafiqimtiaz/birdhaus',
-    techStack: ['Frontend Framework', 'UI/UX Design', 'CSS Framework'],
+    techStack: ['Frontend', 'UI/UX', 'CSS'],
   },
   {
-    title: 'Course Group Assistant (CGA)',
+    title: 'Course Group Assistant',
     description:
-      'Deployed an academic tool designed to streamline student collaboration and manage course group logistics. Engineered features for team formation, task delegation, and centralized academic project management.',
+      'Academic tool to streamline student collaboration and course-group logistics — team formation, task delegation, and centralized project management.',
     repoUrl: 'https://github.com/shafiqimtiaz/Course-Group-Assistant-CGA',
-    techStack: ['Full-Stack', 'Real-time Sync', 'Education Tech'],
-  },
-];
-
-export const historyCards = [
-  {
-    type: 'compact',
-    accent: 'border-[var(--theme-primary)] text-[var(--theme-primary)]',
-    icon: 'smart_toy',
-    label: 'AI Infrastructure',
-    title: 'flexspring-agent-core',
-    description:
-      "Architected and developed the platform's foundational TypeScript/Node.js AI agent library integrating LiteLLM for model-agnostic LLM access — enabling reusable, spec-driven LLM agent construction across services.",
-    tags: ['#TypeScript', '#LiteLLM', '#AI Agents', '#Spec Driven'],
-  },
-  {
-    type: 'compact',
-    accent: 'border-[var(--theme-primary)] text-[var(--theme-primary)]',
-    icon: 'folder_open',
-    label: 'Microservice Ownership',
-    title: 'Flexspring File Manager',
-    description:
-      'Sole engineer on flexspring-file-manager, delivering a production microservice with S3 storage, MongoDB metadata layer, full CRUD REST API, and React UI — end-to-end.',
-    tags: ['#Spring Boot', '#AWS S3', '#MongoDB', '#Sentry'],
-  },
-  {
-    type: 'compact',
-    accent: 'border-[var(--theme-secondary)] text-[var(--theme-secondary)]',
-    icon: 'smart_toy',
-    label: 'AI Initiative',
-    title: 'RAG Chatbot Prototype',
-    description:
-      'Runner-up + $1,000 team prize at Flexspring Hackathon — built with Crewdle AI and retrieval-augmented generation, then evolved into a broader AI initiative for future product features.',
-  },
-  {
-    type: 'compact',
-    accent: 'border-[var(--theme-tertiary)] text-[var(--theme-tertiary)]',
-    icon: 'upgrade',
-    label: 'Platform Modernisation',
-    title: 'Spring Boot 3 Migration',
-    description:
-      "Led Spring Boot 3 migrations for two production services and upgraded Monitor's full front-end stack (React 18.3, React Router v7, Vite 7).",
-    tags: ['#Java 17', '#Spring Boot 3', '#React 18', '#Vite'],
-  },
-  {
-    type: 'split',
-    label: 'Production Incident Resolution',
-    title: 'Database Correction Scripts',
-    metrics: [
-      'Diagnosed production database incident',
-      'Authored idempotent correction scripts',
-      'Restored client integrations',
-      'Cross-database: PostgreSQL + MongoDB',
-    ],
-    description:
-      'Diagnosed and resolved corrupted database records blocking client integrations, authoring idempotent correction scripts across PostgreSQL and MongoDB under live production conditions.',
-    tags: ['#PostgreSQL', '#MongoDB', '#Incident Resolution'],
-  },
-  {
-    type: 'compact',
-    accent: 'border-[var(--theme-tertiary)] text-[var(--theme-tertiary)]',
-    icon: 'factory',
-    label: 'Enterprise Delivery',
-    title: 'BSRM SCM Applications',
-    description:
-      "Delivered SCM web applications for one of Bangladesh's largest steel manufacturers, replacing manual workflows with scalable, API-driven solutions. Built ETL pipelines connecting 40+ supplier systems.",
-    tags: ['#React', '#Spring Boot', '#PostgreSQL', '#ETL'],
+    techStack: ['Full-Stack', 'Real-time Sync', 'EdTech'],
   },
 ];

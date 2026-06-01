@@ -6,9 +6,8 @@ export default function TerminalSection() {
   return (
     <div className="min-w-0">
       <TerminalPanel
-        title="ssh root@614.514.183 > developer details"
-        className="shadow-[var(--shadow-soft)]"
-        bodyClassName="grid gap-0 p-5 text-[0.95rem] md:p-6"
+        title="shafiq@flexspring: ~/whoami"
+        bodyClassName="grid gap-0 p-5 text-[0.92rem] md:p-6"
       >
         <TerminalPlayback sessionConfig={HOME_TERMINAL_PLAYBACK} />
       </TerminalPanel>

@@ -1,119 +1,102 @@
 import HeroSection from './HeroSection';
 import TerminalSection from './TerminalSection';
-import HistorySection from './HistorySection';
 import StatsSection from './StatsSection';
 import ProfileSection from '../About/ProfileSection';
 import TechStackSection from '../About/TechStackSection';
+import TimelineSection from '../About/TimelineSection';
 import CaseStudiesSection from '../Projects/CaseStudiesSection';
+import PublicRepositoriesSection from '../Projects/PublicRepositoriesSection';
 import ContactFormSection from '../Contact/ContactFormSection';
+import { Reveal } from '../../components/ui';
+import { externalNodes } from '../../data/links';
+
+const container = 'mx-auto w-[min(100%-2rem,var(--container-width))]';
 
 export default function Home() {
   return (
     <main className="pt-[var(--header-height)]">
-      {/* Hero Section */}
-      <section id="hero" className="py-16 lg:py-20">
-        <div className="mx-auto grid w-[min(100%-2rem,1100px)] gap-12 lg:grid-cols-2 lg:items-start">
+      {/* Hero */}
+      <section id="hero" className="py-16 lg:py-24">
+        <div className={`${container} grid gap-12 lg:grid-cols-2 lg:items-center`}>
           <HeroSection />
           <TerminalSection />
         </div>
       </section>
 
-      {/* Stats Section */}
       <StatsSection />
 
-      {/* Projects Section */}
-      <section id="projects" className="px-4 py-20">
-        <div className="mx-auto w-[min(100%-2rem,var(--container-width))]">
+      {/* Projects */}
+      <section id="projects" className="py-24 md:py-28">
+        <div className={container}>
           <CaseStudiesSection />
+          <PublicRepositoriesSection />
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="px-4 py-20">
-        <div className="mx-auto w-[min(100%-2rem,var(--container-width))]">
+      {/* About */}
+      <section id="about" className="py-24 md:py-28">
+        <div className={container}>
           <ProfileSection />
           <TechStackSection />
-          <HistorySection />
+          <TimelineSection />
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="pt-16 pb-20 md:pb-32">
-        <div className="mx-auto grid w-[min(100%-2rem,var(--container-width))] gap-12 lg:grid-cols-2 lg:items-start">
-          {/* Left: Header */}
-          <div className="grid gap-6">
-            <div className="font-headline inline-flex w-fit border-l-4 border-[var(--theme-primary)] bg-[var(--theme-surface-high)] px-3 py-2 text-[0.72rem] tracking-[0.16em] text-[var(--theme-primary)] uppercase">
-              Direct_Channel / Open_Port
-            </div>
-            <h2 className="font-headline text-[clamp(3rem,6vw,5.4rem)] leading-[0.95] font-bold tracking-[-0.03em] text-[var(--theme-text)]">
-              Establish <span className="text-[var(--theme-primary)]">Connection</span>
-            </h2>
-            <p className="max-w-[38rem] text-base text-[var(--theme-text-muted)]">
-              Open a direct channel for software development, cloud modernization, backend
-              engineering, or AI-focused collaboration. The fastest routes are email and LinkedIn.
-            </p>
+      {/* Contact */}
+      <section id="contact" className="py-24 md:py-28">
+        <div className={`${container} grid gap-12 lg:grid-cols-2 lg:items-start`}>
+          <div className="flex flex-col gap-8">
+            <Reveal>
+              <p className="font-body text-[0.7rem] tracking-[0.2em] text-[var(--theme-primary)] uppercase">
+                // Open Channel
+              </p>
+              <h2 className="font-headline mt-4 text-[clamp(2.4rem,5vw,4rem)] leading-[0.95] font-extrabold tracking-[-0.04em] text-[var(--theme-text)]">
+                Let&apos;s <span className="text-[var(--theme-primary)]">connect</span>
+              </h2>
+              <p className="mt-5 max-w-[34rem] text-base leading-relaxed text-[var(--theme-text-muted)]">
+                Open to senior engineering roles and collaboration on AI platform infrastructure,
+                backend systems, and cloud modernisation. The form opens your mail app with the
+                message ready to send.
+              </p>
+            </Reveal>
 
-            {/* External Links */}
-            <div className="mt-8 grid gap-4">
-              <a
-                href="mailto:shafiqimtiaz@gmail.com"
-                className="group inline-flex items-center gap-4 border-l-4 border-[var(--theme-primary)] bg-[var(--theme-surface-low)] px-5 py-4 transition-all hover:-translate-y-0.5 hover:bg-[var(--theme-surface)]"
-              >
-                <span className="material-symbols-outlined text-2xl text-[var(--theme-primary-dim)]">
-                  alternate_email
-                </span>
-                <div className="grid gap-1">
-                  <span className="font-headline text-[0.62rem] tracking-[0.18em] text-[var(--theme-primary)] uppercase">
-                    EMAIL
+            <Reveal delay={120} className="grid gap-3">
+              {externalNodes.map((node) => (
+                <a
+                  key={node.label}
+                  href={node.href}
+                  target={node.href.startsWith('http') ? '_blank' : undefined}
+                  rel={node.href.startsWith('http') ? 'noreferrer' : undefined}
+                  className="group flex items-center gap-4 rounded-lg border border-[var(--theme-outline-variant)] bg-[var(--theme-surface-low)] px-5 py-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--theme-primary)]"
+                >
+                  <span
+                    className={`material-symbols-outlined text-2xl ${node.accent}`}
+                    aria-hidden="true"
+                  >
+                    {node.icon}
                   </span>
-                  <span className="font-headline text-sm text-[var(--theme-text-muted)]">
-                    shafiqimtiaz@gmail.com
+                  <span className="grid gap-0.5">
+                    <span className="font-body text-[0.62rem] tracking-[0.18em] text-[var(--theme-text-muted)] uppercase">
+                      {node.label}
+                    </span>
+                    <span className="font-headline text-sm font-semibold text-[var(--theme-text)]">
+                      {node.handle}
+                    </span>
                   </span>
-                </div>
-              </a>
-
-              <a
-                href="https://linkedin.com/in/shafiqimtiaz"
-                target="_blank"
-                rel="noreferrer"
-                className="group inline-flex items-center gap-4 border-l-4 border-[var(--theme-secondary)] bg-[var(--theme-surface-low)] px-5 py-4 transition-all hover:-translate-y-0.5 hover:bg-[var(--theme-surface)]"
-              >
-                <span className="material-symbols-outlined text-2xl text-[var(--theme-secondary)]">
-                  share_reviews
-                </span>
-                <div className="grid gap-1">
-                  <span className="font-headline text-[0.62rem] tracking-[0.18em] text-[var(--theme-secondary)] uppercase">
-                    LINKEDIN
+                  <span
+                    className="material-symbols-outlined ml-auto text-[var(--theme-outline)] transition-colors group-hover:text-[var(--theme-primary)]"
+                    aria-hidden="true"
+                  >
+                    arrow_outward
                   </span>
-                  <span className="font-headline text-sm text-[var(--theme-text-muted)]">
-                    linkedin.com/in/shafiqimtiaz
-                  </span>
-                </div>
-              </a>
-
-              <a
-                href="https://github.com/shafiqimtiaz"
-                target="_blank"
-                rel="noreferrer"
-                className="group inline-flex items-center gap-4 border-l-4 border-[var(--theme-primary)] bg-[var(--theme-surface-low)] px-5 py-4 transition-all hover:-translate-y-0.5 hover:bg-[var(--theme-surface)]"
-              >
-                <span className="material-symbols-outlined text-2xl text-[var(--theme-primary)]">
-                  terminal
-                </span>
-                <div className="grid gap-1">
-                  <span className="font-headline text-[0.62rem] tracking-[0.18em] text-[var(--theme-primary)] uppercase">
-                    GITHUB
-                  </span>
-                  <span className="font-headline text-sm text-[var(--theme-text-muted)]">
-                    github.com/shafiqimtiaz
-                  </span>
-                </div>
-              </a>
-            </div>
+                </a>
+              ))}
+            </Reveal>
           </div>
 
-          {/* Right: Contact Form */}
-          <ContactFormSection />
+          <Reveal delay={80}>
+            <ContactFormSection />
+          </Reveal>
         </div>
       </section>
     </main>

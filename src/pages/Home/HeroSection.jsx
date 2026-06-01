@@ -2,49 +2,85 @@ import { Button } from '../../components/ui';
 
 export default function HeroSection() {
   return (
-    <div className="min-w-0">
-      <div className="font-headline ml-0 inline-flex items-center border-l-4 border-[var(--theme-primary)] bg-[var(--theme-surface-high)] px-3 py-2 text-[0.72rem] tracking-[0.16em] text-[var(--theme-primary)] uppercase">
-        System Status: Shipping Cloud-Native Software
+    <div className="rise min-w-0">
+      <div className="font-body inline-flex items-center gap-2.5 rounded-full border border-[var(--theme-outline-variant)] bg-[var(--theme-surface-low)] px-4 py-1.5 text-[0.68rem] tracking-[0.14em] text-[var(--theme-text-muted)] uppercase">
+        <span className="relative flex h-2 w-2">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--theme-primary)] opacity-60"></span>
+          <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--theme-primary)]"></span>
+        </span>
+        Senior Software Engineer · Open to work
       </div>
-      <h1 className="font-headline mt-6 ml-0 text-[clamp(3rem,6vw,5.4rem)] leading-[0.95] font-bold tracking-[-0.03em] text-[var(--theme-text)]">
-        Shafiq <span className="text-[var(--theme-primary)]">Imtiaz</span>
+
+      <h1 className="font-headline mt-7 text-[clamp(3.2rem,7vw,6rem)] leading-[0.92] font-extrabold tracking-[-0.04em] text-[var(--theme-text)]">
+        Shafiq
+        <br />
+        <span className="text-glow text-[var(--theme-primary)]">Imtiaz</span>
       </h1>
-      <p className="mt-6 ml-0 text-base font-medium tracking-[0.08em] text-[var(--theme-text-muted)] uppercase">
-        Developer by Passion, Engineer by Mind
+
+      <p className="font-body mt-6 text-sm tracking-[0.06em] text-[var(--theme-text-muted)]">
+        <span className="text-[var(--theme-primary)]">&gt;</span> AI Platform Infrastructure{'  '}
+        <span className="text-[var(--theme-outline-variant)]">//</span> Enterprise Microservices
       </p>
-      <p className="mt-5 text-base text-[var(--theme-text-muted)]">
-        Full-stack Software Engineer and AWS Certified AI Practitioner focused on scalable backend
-        systems, enterprise modernization, and AI-driven product delivery across Java, React, cloud,
-        and microservice ecosystems.
+
+      <p className="mt-6 max-w-[36rem] text-base leading-relaxed text-[var(--theme-text-muted)]">
+        I architect LLM integration layers, agentic frameworks, and event-driven systems — and
+        productionize AI features with caching, fallback, and governance. Currently building AI
+        platform infrastructure at Flexspring, serving 2,500+ client configurations.
       </p>
-      <div className="mt-8 flex flex-wrap gap-4">
+
+      <div className="mt-9 flex flex-wrap gap-4">
         <Button
           variant="primary"
           href="/docs/Shafiq-Imtiaz-Resume.pdf"
           target="_blank"
           rel="noreferrer"
-          className="min-h-14 px-6 text-[0.76rem]"
+          className="min-h-13 px-6 text-[0.72rem]"
         >
-          <span>VIEW_RESUME_</span>
-          <span className="material-symbols-outlined" aria-hidden="true">
+          <span>View Résumé</span>
+          <span className="material-symbols-outlined text-[1.1rem]" aria-hidden="true">
             description
           </span>
         </Button>
         <Button
           variant="secondary"
           href="#contact"
-          className="min-h-14 px-6 text-[0.76rem]"
+          className="min-h-13 px-6 text-[0.72rem]"
           onClick={(e) => {
             e.preventDefault();
             document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
           }}
         >
-          <span>OPEN_CONTACT_</span>
-          <span className="material-symbols-outlined" aria-hidden="true">
-            mail
+          <span>Get in touch</span>
+          <span className="material-symbols-outlined text-[1.1rem]" aria-hidden="true">
+            arrow_outward
           </span>
         </Button>
       </div>
+
+      <dl className="mt-10 flex flex-wrap gap-x-8 gap-y-4 border-t border-[var(--theme-outline-variant)] pt-6 text-sm">
+        <div>
+          <dt className="font-body text-[0.6rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
+            Location
+          </dt>
+          <dd className="font-headline mt-1 font-semibold text-[var(--theme-text)]">Ottawa, ON</dd>
+        </div>
+        <div>
+          <dt className="font-body text-[0.6rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
+            Certified
+          </dt>
+          <dd className="font-headline mt-1 font-semibold text-[var(--theme-text)]">
+            AWS AI Practitioner
+          </dd>
+        </div>
+        <div>
+          <dt className="font-body text-[0.6rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
+            Focus
+          </dt>
+          <dd className="font-headline mt-1 font-semibold text-[var(--theme-text)]">
+            LLM · Java · React
+          </dd>
+        </div>
+      </dl>
     </div>
   );
 }

@@ -2,15 +2,15 @@ export const contactFormFields = [
   {
     name: 'name',
     label: 'Name',
-    prefix: 'guest@system:~$',
+    prefix: '~/name $',
     type: 'text',
-    placeholder: 'Enter your name',
+    placeholder: 'Your name',
     required: true,
   },
   {
     name: 'email',
     label: 'Email',
-    prefix: 'visitor@portfolio:~$',
+    prefix: '~/email $',
     type: 'email',
     placeholder: 'your.email@example.com',
     required: true,
@@ -18,10 +18,10 @@ export const contactFormFields = [
   {
     name: 'message',
     label: 'Message',
-    prefix: 'visitor@portfolio:~$',
+    prefix: '~/message $',
     type: 'textarea',
     placeholder: 'Tell me about your project or question',
-    rows: 4,
+    rows: 5,
     required: true,
   },
 ];

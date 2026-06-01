@@ -11,9 +11,9 @@ const navSections = [
 ];
 
 const navLinkBase =
-  'font-headline relative text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-[var(--theme-text-muted)] transition-colors hover:text-[var(--theme-primary)]';
+  'font-body relative text-[0.68rem] font-medium uppercase tracking-[0.16em] text-[var(--theme-text-muted)] transition-colors hover:text-[var(--theme-primary)]';
 const mobileLinkBase =
-  'font-headline text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[var(--theme-text-muted)] transition-colors hover:text-[var(--theme-primary)]';
+  'font-body text-[0.72rem] font-medium uppercase tracking-[0.16em] text-[var(--theme-text-muted)] transition-colors hover:text-[var(--theme-primary)]';
 
 export default function Navbar() {
   const location = useLocation();
@@ -47,11 +47,12 @@ export default function Navbar() {
       <div className="border-b border-[rgba(73,72,71,0.5)] bg-[var(--theme-surface-low)]/95 shadow-[var(--shadow-primary)] backdrop-blur-xl">
         <div className="mx-auto flex min-h-[var(--header-height)] w-[min(100%-2rem,var(--container-width))] items-center gap-5">
           <Link
-            className="font-headline text-lg font-bold tracking-[-0.05em] text-[var(--theme-primary)]"
+            className="font-body text-base font-bold tracking-[-0.01em] text-[var(--theme-text)] transition-colors hover:text-[var(--theme-primary)]"
             to="/"
             onClick={(e) => scrollToSection(e, 'hero')}
           >
-            SHAFIQ_IMTIAZ
+            <span className="text-[var(--theme-primary)]">~/</span>shafiq
+            <span className="cursor-block text-[var(--theme-primary)]">_</span>
           </Link>
 
           <nav

@@ -3,7 +3,7 @@ export const DEFAULT_PLAYBACK_DELAY_MS = 2000;
 export const HOME_TERMINAL_PLAYBACK = {
   id: 'home',
   session: 'HOME_TERMINAL_PLAYBACK',
-  prompt: 'guest@system:~$',
+  prompt: 'shafiq@flexspring:~$',
   label: 'CLI Header',
   fallbackOutput: 'command not found: only predefined session actions are executable',
   actions: [
@@ -13,7 +13,7 @@ export const HOME_TERMINAL_PLAYBACK = {
       command: 'whoami',
       delayMs: DEFAULT_PLAYBACK_DELAY_MS,
       output: [
-        'Software developer at Flexspring delivering cloud-native systems and modernization initiatives.',
+        'Senior Software Engineer at Flexspring — building AI platform infrastructure and enterprise microservices.',
       ],
     },
     {
@@ -22,10 +22,10 @@ export const HOME_TERMINAL_PLAYBACK = {
       command: 'cat stack.matrix',
       delayMs: DEFAULT_PLAYBACK_DELAY_MS,
       output: [
-        '> LANGUAGES: Java, JavaScript, TypeScript, SQL',
-        '> FRONTEND: React, Bootstrap, HTML, CSS',
-        '> BACKEND: Spring Boot, Quarkus, NodeJS',
-        '> CLOUD: AWS S3, SQS, Docker, MongoDB, PostgreSQL',
+        '> AI/LLM: LiteLLM, LangChain/LangGraph, RAG, MCP, pgvector',
+        '> BACKEND: Java 17, Spring Boot 3, Quarkus, Node.js',
+        '> FRONTEND: React 18, React Router v7, Vite, TanStack Query',
+        '> DATA/CLOUD: PostgreSQL, MongoDB, Redis, AWS, Docker, K8s',
       ],
     },
     {
@@ -34,10 +34,10 @@ export const HOME_TERMINAL_PLAYBACK = {
       command: 'tail -n 4 impact.log',
       delayMs: DEFAULT_PLAYBACK_DELAY_MS,
       output: [
-        '> File Manager microservice scaled to 500+ concurrent requests.',
-        '> Platform uptime improved to 99.97% across core products.',
-        '> Monitor Pilot helped generate $200K+ in upsell revenue.',
-        '> Test coverage raised to 85%+ across backend services.',
+        '> Hardened platform-wide LLM integration across Monitor, Studio, shared libs.',
+        '> Shipped Data Mapping — AI field recommendations replacing spreadsheet workflows.',
+        '> Led Spring Boot 3 + Java 17 migrations; deployed to prod with zero regression.',
+        '> Serving 2,500+ client integration configurations.',
       ],
     },
     {

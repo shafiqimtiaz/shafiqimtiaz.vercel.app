@@ -1,73 +1,79 @@
 import { timeline } from '../../data/experience';
+import { Reveal } from '../../components/ui';
 
 export default function TimelineSection() {
   return (
-    <section className="mb-8">
-      <div className="mb-8">
-        <h2 className="font-headline text-[clamp(2rem,3.8vw,2.4rem)] font-bold tracking-[-0.04em] uppercase">
-          SYSTEM_HISTORY_LOG
-        </h2>
-        <p className="font-headline mt-2 text-[0.62rem] tracking-[0.18em] text-[var(--theme-text-muted)] uppercase">
-          CHRONOLOGICAL_EXPERIENCE_RECORDS
+    <section>
+      <Reveal as="header" className="mb-12 max-w-3xl">
+        <p className="font-body text-[0.7rem] tracking-[0.2em] text-[var(--theme-tertiary)] uppercase">
+          // Experience Log
         </p>
-      </div>
+        <h2 className="font-headline mt-4 text-[clamp(2rem,4vw,3rem)] leading-none font-extrabold tracking-[-0.04em] text-[var(--theme-text)]">
+          Career <span className="text-[var(--theme-tertiary)]">timeline</span>
+        </h2>
+      </Reveal>
 
-      <div className="relative grid gap-8">
-        <div className="pointer-events-none absolute top-0 bottom-0 left-4 w-px bg-[var(--theme-surface-highest)] md:left-1/2 md:-translate-x-1/2"></div>
-        {timeline.map((entry, index) => (
-          <article
-            key={`${entry.date}-${entry.title}`}
-            className={`relative flex ${index % 2 === 1 ? 'md:justify-end' : 'md:justify-start'}`}
-          >
-            <div
-              className={`absolute top-6 left-4 z-10 flex h-10 w-10 -translate-x-1/2 items-center justify-center border-2 bg-[var(--theme-bg)] ${entry.accent} md:left-1/2`}
+      <div className="relative">
+        <div
+          className="pointer-events-none absolute top-2 bottom-2 left-[15px] w-px bg-[var(--theme-outline-variant)] md:left-[19px]"
+          aria-hidden="true"
+        ></div>
+
+        <div className="grid gap-8">
+          {timeline.map((entry, index) => (
+            <Reveal
+              key={`${entry.date}-${entry.title}`}
+              delay={Math.min(index, 3) * 70}
+              className="relative grid grid-cols-[32px_1fr] gap-5 md:grid-cols-[40px_1fr] md:gap-7"
             >
-              <span
-                className="material-symbols-outlined text-sm text-[var(--theme-primary)]"
-                aria-hidden="true"
+              <div
+                className={`relative z-10 mt-1 flex h-8 w-8 items-center justify-center rounded-full border-2 bg-[var(--theme-bg)] md:h-10 md:w-10 ${entry.accent}`}
               >
-                {entry.icon}
-              </span>
-            </div>
-            <div className="relative ml-12 w-full overflow-hidden border border-[rgba(73,72,71,0.22)] bg-[var(--theme-surface)] p-6 md:ml-0 md:w-[calc(50%-2.75rem)]">
-              <div className="grid-pattern-panel pointer-events-none absolute inset-0 opacity-[0.08]"></div>
-              <div className="relative z-10">
-                <time className="font-headline text-[0.62rem] tracking-[0.18em] text-[var(--theme-text-muted)] uppercase">
+                <span
+                  className="material-symbols-outlined text-[1rem] text-[var(--theme-primary)] md:text-[1.15rem]"
+                  aria-hidden="true"
+                >
+                  {entry.icon}
+                </span>
+              </div>
+
+              <article className="rounded-xl border border-[var(--theme-outline-variant)] bg-[var(--theme-surface)] p-6 transition-colors duration-200 hover:border-[var(--theme-outline)] md:p-7">
+                <time className="font-body text-[0.62rem] tracking-[0.16em] text-[var(--theme-primary)] uppercase">
                   {entry.date}
                 </time>
-                <h3 className="font-headline mt-2 text-xl font-bold tracking-[0.02em] uppercase">
+                <h3 className="font-headline mt-2 text-xl font-bold tracking-[-0.02em] text-[var(--theme-text)] md:text-2xl">
                   {entry.title}
                 </h3>
-                <p className="font-headline mt-1 mb-4 text-[0.72rem] tracking-[0.12em] text-[var(--theme-text-muted)] uppercase">
+                <p className="font-body mt-1 text-[0.78rem] tracking-[0.06em] text-[var(--theme-text-muted)]">
                   {entry.org}
                 </p>
-                <ul className="grid gap-3">
+                <ul className="mt-4 grid gap-2.5">
                   {entry.details.map((detail) => (
                     <li
                       key={detail}
-                      className="relative pl-4 text-sm text-[var(--theme-text-muted)] before:absolute before:left-0 before:content-['>']"
+                      className="relative pl-5 text-[0.9rem] leading-relaxed text-[var(--theme-text-muted)] before:absolute before:left-0 before:text-[var(--theme-primary)] before:content-['›']"
                     >
                       {detail}
                     </li>
                   ))}
                 </ul>
                 {entry.credentialUrl && (
-                  <p className="mt-4 text-sm">
-                    <a
-                      href={entry.credentialUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-semibold !text-[var(--theme-primary)] hover:!text-[var(--theme-primary)]/80"
-                      style={{ lineHeight: 1.2 }}
-                    >
-                      View credential
-                    </a>
-                  </p>
+                  <a
+                    href={entry.credentialUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-body mt-4 inline-flex items-center gap-1.5 text-[0.7rem] font-bold tracking-[0.12em] text-[var(--theme-primary)] uppercase transition-colors hover:text-[var(--theme-secondary)]"
+                  >
+                    View credential
+                    <span className="material-symbols-outlined text-[1rem]" aria-hidden="true">
+                      arrow_outward
+                    </span>
+                  </a>
                 )}
-              </div>
-            </div>
-          </article>
-        ))}
+              </article>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   );

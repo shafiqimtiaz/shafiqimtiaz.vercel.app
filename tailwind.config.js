@@ -2,10 +2,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        headline: ['Space Grotesk', 'sans-serif'],
+        headline: ['Bricolage Grotesque', 'ui-sans-serif', 'system-ui', 'sans-serif'],
         body: [
-          'Caskaydia Code',
-          'Fira Code',
+          'JetBrains Mono',
           'SFMono-Regular',
           'Consolas',
           'Liberation Mono',
