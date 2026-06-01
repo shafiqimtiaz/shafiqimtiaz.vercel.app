@@ -6,8 +6,13 @@ export default function TerminalPlayback({ sessionConfig }) {
   const { state, activeCommand, outputLines, executeCommand } = useTerminalPlayback(sessionConfig);
 
   const isExecuting = state === PLAYBACK_STATES.executing;
+  const isRendered = state === PLAYBACK_STATES.rendered;
   const activeAction = actions.find((action) => action.command === activeCommand);
-  const media = state === PLAYBACK_STATES.rendered ? activeAction?.media : null;
+  const media = isRendered ? activeAction?.media : null;
+  const cta = isRendered ? activeAction?.cta : null;
+
+  const scrollToTarget = (id) =>
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
   // Auto-run the first command on mount so the panel is never empty.
   useEffect(() => {
@@ -51,6 +56,15 @@ export default function TerminalPlayback({ sessionConfig }) {
                 loading="lazy"
                 className="mt-2 max-h-56 w-auto rounded border border-[var(--theme-outline-variant)]"
               />
+            )}
+            {cta && (
+              <button
+                type="button"
+                onClick={() => scrollToTarget(cta.target)}
+                className="mt-2 inline-flex w-fit items-center gap-1.5 rounded border border-[var(--theme-primary)] px-3 py-1.5 text-[0.78rem] font-medium text-[var(--theme-primary)] transition-colors hover:bg-[var(--theme-primary)] hover:text-[var(--theme-on-primary)]"
+              >
+                {cta.label}
+              </button>
             )}
           </>
         )}

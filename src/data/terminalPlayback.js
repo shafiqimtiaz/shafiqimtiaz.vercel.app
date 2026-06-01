@@ -85,8 +85,8 @@ export const HOME_TERMINAL_PLAYBACK = {
         '[sudo] password for recruiter: ********',
         '> permission granted ☕',
         '> brewing... I am always down for a coffee chat or a pairing session.',
-        "> ping me — let's build something together.",
       ],
+      cta: { label: "ping me — let's build something →", target: 'contact' },
     },
     {
       id: 'current_status',
