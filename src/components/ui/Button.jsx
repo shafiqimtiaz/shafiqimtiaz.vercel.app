@@ -1,4 +1,5 @@
 import { Link } from 'react-router';
+import useMagnetic from '../../hooks/useMagnetic';
 
 export default function Button({
   variant = 'primary',
@@ -8,6 +9,7 @@ export default function Button({
   children,
   ...props
 }) {
+  const magneticRef = useMagnetic();
   const baseStyles =
     'font-body group/btn relative inline-flex items-center justify-center gap-2.5 rounded-md font-bold uppercase tracking-[0.14em] transition-all duration-200 hover:-translate-y-0.5';
 
@@ -27,7 +29,7 @@ export default function Button({
 
   if (to) {
     return (
-      <Link to={to} className={classes} {...props}>
+      <Link ref={magneticRef} to={to} className={classes} {...props}>
         {children}
       </Link>
     );
@@ -35,14 +37,14 @@ export default function Button({
 
   if (href) {
     return (
-      <a href={href} className={classes} {...props}>
+      <a ref={magneticRef} href={href} className={classes} {...props}>
         {children}
       </a>
     );
   }
 
   return (
-    <button className={classes} {...props}>
+    <button ref={magneticRef} className={classes} {...props}>
       {children}
     </button>
   );

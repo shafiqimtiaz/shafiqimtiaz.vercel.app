@@ -1,7 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router';
-import ThemeToggle from './ThemeToggle';
 import useScrollProgress from '../hooks/useScrollProgress';
+import { scrollToId } from '../lib/scroll';
+import { scrambleText } from '../lib/scramble';
+import { prefersReducedMotion } from '../lib/gsapConfig';
 
 const navSections = [
   { id: 'hero', label: 'HOME', to: '/' },
@@ -15,6 +17,30 @@ const navLinkBase =
 const mobileLinkBase =
   'font-body text-[0.72rem] font-medium uppercase tracking-[0.16em] text-[var(--theme-text-muted)] transition-colors hover:text-[var(--theme-primary)]';
 
+function ScrambleNavLink({ section, active, onNavigate }) {
+  const labelRef = useRef(null);
+  const cancelRef = useRef(null);
+
+  const handleEnter = () => {
+    if (prefersReducedMotion() || !labelRef.current) return;
+    if (cancelRef.current) cancelRef.current();
+    cancelRef.current = scrambleText(labelRef.current, section.label, { duration: 350 });
+  };
+
+  useEffect(() => () => cancelRef.current?.(), []);
+
+  return (
+    <a
+      href={`#${section.id}`}
+      onClick={(e) => onNavigate(e, section.id)}
+      onMouseEnter={handleEnter}
+      className={`${navLinkBase} ${active ? 'text-[var(--theme-primary)] after:absolute after:inset-x-0 after:-bottom-2 after:h-0.5 after:bg-[var(--theme-primary)]' : ''}`}
+    >
+      <span ref={labelRef}>{section.label}</span>
+    </a>
+  );
+}
+
 export default function Navbar() {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -26,10 +52,7 @@ export default function Navbar() {
 
   const scrollToSection = (e, sectionId) => {
     e.preventDefault();
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    scrollToId(sectionId);
     setMenuOpen(false);
   };
 
@@ -60,20 +83,16 @@ export default function Navbar() {
             aria-label="Primary navigation"
           >
             {navSections.map((section) => (
-              <a
+              <ScrambleNavLink
                 key={section.id}
-                href={`#${section.id}`}
-                onClick={(e) => scrollToSection(e, section.id)}
-                className={`${navLinkBase} ${activeSection === section.id ? 'text-[var(--theme-primary)] after:absolute after:inset-x-0 after:-bottom-2 after:h-0.5 after:bg-[var(--theme-primary)]' : ''}`}
-              >
-                {section.label}
-              </a>
+                section={section}
+                active={activeSection === section.id}
+                onNavigate={scrollToSection}
+              />
             ))}
           </nav>
 
           <div className="flex items-center gap-2">
-            <ThemeToggle />
-
             <button
               className="inline-flex h-11 w-11 items-center justify-center border border-[var(--theme-outline-variant)] bg-[var(--theme-surface)] text-[var(--theme-primary)] transition-all duration-200 hover:-translate-y-px hover:border-[var(--theme-primary)] hover:bg-[var(--theme-surface-high)] md:hidden"
               type="button"

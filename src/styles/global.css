@@ -6,7 +6,8 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* Native smooth scroll off — Lenis drives scrolling; scrollToId falls back to
+     scrollIntoView({behavior:'smooth'}) when Lenis is disabled (reduced motion). */
   scroll-padding-top: var(--header-height);
 }
 
@@ -129,10 +130,6 @@ img {
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.04), transparent 45%);
 }
 
-html.theme-light .crt-overlay {
-  opacity: 0.4;
-}
-
 .profile-avatar-card {
   border: 1px solid rgba(73, 72, 71, 0.4);
   background: linear-gradient(165deg, #2a2a2a 0%, #151515 60%, #101010 100%);
@@ -141,16 +138,6 @@ html.theme-light .crt-overlay {
 .profile-avatar-frame {
   border-color: rgba(255, 255, 255, 0.08);
   background: rgba(0, 0, 0, 0.18);
-}
-
-html.theme-light .profile-avatar-card {
-  border: 1px solid rgba(56, 79, 104, 0.5);
-  background: linear-gradient(165deg, #f4f7fa 0%, #e3ebf3 60%, #d8e2ec 100%);
-}
-
-html.theme-light .profile-avatar-frame {
-  border-color: rgba(15, 23, 42, 0.15);
-  background: rgba(255, 255, 255, 0.9);
 }
 
 .grid-pattern-panel {

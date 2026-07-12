@@ -1,5 +1,5 @@
 import { profileStats } from '../../data/stats';
-import { Reveal } from '../../components/ui';
+import { Reveal, CountUp } from '../../components/ui';
 
 export default function ProfileSection() {
   return (
@@ -69,7 +69,7 @@ export default function ProfileSection() {
             <p
               className={`font-headline text-4xl font-extrabold tracking-[-0.03em] ${stat.accent}`}
             >
-              {stat.value}
+              <CountUp value={stat.value} />
             </p>
             <p className="font-body mt-2 text-[0.58rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
               {stat.label}

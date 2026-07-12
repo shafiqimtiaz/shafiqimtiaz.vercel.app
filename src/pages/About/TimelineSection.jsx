@@ -1,7 +1,37 @@
+import { useEffect, useRef } from 'react';
 import { timeline } from '../../data/experience';
 import { Reveal } from '../../components/ui';
+import { gsap, prefersReducedMotion } from '../../lib/gsapConfig';
 
 export default function TimelineSection() {
+  const trackRef = useRef(null);
+  const lineRef = useRef(null);
+
+  useEffect(() => {
+    if (prefersReducedMotion() || !lineRef.current || !trackRef.current) return undefined;
+
+    const tween = gsap.fromTo(
+      lineRef.current,
+      { scaleY: 0 },
+      {
+        scaleY: 1,
+        transformOrigin: 'top center',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: trackRef.current,
+          start: 'top 78%',
+          end: 'bottom 65%',
+          scrub: 0.6,
+        },
+      }
+    );
+
+    return () => {
+      tween.scrollTrigger?.kill();
+      tween.kill();
+    };
+  }, []);
+
   return (
     <section>
       <Reveal as="header" className="mb-12 max-w-3xl">
@@ -13,9 +43,15 @@ export default function TimelineSection() {
         </h2>
       </Reveal>
 
-      <div className="relative">
+      <div ref={trackRef} className="relative">
         <div
           className="pointer-events-none absolute top-2 bottom-2 left-[15px] w-px bg-[var(--theme-outline-variant)] md:left-[19px]"
+          aria-hidden="true"
+        ></div>
+        <div
+          ref={lineRef}
+          className="pointer-events-none absolute top-2 bottom-2 left-[15px] w-px bg-[var(--theme-primary)] shadow-[var(--glow-primary)] md:left-[19px]"
+          style={{ transform: 'scaleY(0)', transformOrigin: 'top center' }}
           aria-hidden="true"
         ></div>
 

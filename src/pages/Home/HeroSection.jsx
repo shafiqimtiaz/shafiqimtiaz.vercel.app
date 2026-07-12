@@ -1,4 +1,4 @@
-import { Button } from '../../components/ui';
+import { Button, DecodeText } from '../../components/ui';
 
 export default function HeroSection() {
   return (
@@ -12,9 +12,14 @@ export default function HeroSection() {
       </div>
 
       <h1 className="font-headline mt-7 text-[clamp(3.2rem,7vw,6rem)] leading-[0.92] font-extrabold tracking-[-0.04em] text-[var(--theme-text)]">
-        Shafiq
+        <DecodeText text="Shafiq" delay={150} duration={550} />
         <br />
-        <span className="text-glow text-[var(--theme-primary)]">Imtiaz</span>
+        <DecodeText
+          text="Imtiaz"
+          delay={350}
+          duration={550}
+          className="text-glow text-[var(--theme-primary)]"
+        />
       </h1>
 
       <p className="font-body mt-6 text-sm tracking-[0.06em] text-[var(--theme-text-muted)]">

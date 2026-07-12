@@ -1,5 +1,5 @@
 import { homeStats } from '../../data/stats';
-import { Reveal } from '../../components/ui';
+import { Reveal, CountUp } from '../../components/ui';
 
 export default function StatsSection() {
   return (
@@ -14,7 +14,7 @@ export default function StatsSection() {
             <div
               className={`font-headline text-[clamp(2.4rem,4.5vw,3.4rem)] leading-none font-extrabold tracking-[-0.03em] ${stat.accent} transition-transform duration-300 group-hover:-translate-y-0.5`}
             >
-              {stat.value}
+              <CountUp value={stat.value} />
             </div>
             <div className="font-body text-[0.64rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
               {stat.label}

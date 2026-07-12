@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import HeroSection from './HeroSection';
 import TerminalSection from './TerminalSection';
 import StatsSection from './StatsSection';
@@ -9,17 +10,42 @@ import PublicRepositoriesSection from '../Projects/PublicRepositoriesSection';
 import ContactFormSection from '../Contact/ContactFormSection';
 import { Reveal } from '../../components/ui';
 import { externalNodes } from '../../data/links';
+import { gsap, prefersReducedMotion } from '../../lib/gsapConfig';
 
 const container = 'mx-auto w-[min(100%-2rem,var(--container-width))]';
 
 export default function Home() {
+  const heroTerminalRef = useRef(null);
+
+  useEffect(() => {
+    if (prefersReducedMotion() || !heroTerminalRef.current) return undefined;
+
+    const tween = gsap.to(heroTerminalRef.current, {
+      yPercent: -7,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '#hero',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 0.8,
+      },
+    });
+
+    return () => {
+      tween.scrollTrigger?.kill();
+      tween.kill();
+    };
+  }, []);
+
   return (
     <main className="pt-[var(--header-height)]">
       {/* Hero */}
       <section id="hero" className="py-16 lg:py-24">
         <div className={`${container} grid gap-12 lg:grid-cols-2 lg:items-center`}>
           <HeroSection />
-          <TerminalSection />
+          <div ref={heroTerminalRef}>
+            <TerminalSection />
+          </div>
         </div>
       </section>
 
