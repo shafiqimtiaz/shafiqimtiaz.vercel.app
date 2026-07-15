@@ -8,7 +8,7 @@ export default function HeroSection() {
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--theme-primary)] opacity-60"></span>
           <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--theme-primary)]"></span>
         </span>
-        Senior Software Engineer · Open to work
+        Senior Software and AI Engineer · Open to work
       </div>
 
       <h1 className="font-headline mt-7 text-[clamp(3.2rem,7vw,6rem)] leading-[0.92] font-extrabold tracking-[-0.04em] text-[var(--theme-text)]">
@@ -23,14 +23,18 @@ export default function HeroSection() {
       </h1>
 
       <p className="font-body mt-6 text-sm tracking-[0.06em] text-[var(--theme-text-muted)]">
-        <span className="text-[var(--theme-primary)]">&gt;</span> AI Platform Infrastructure{'  '}
-        <span className="text-[var(--theme-outline-variant)]">//</span> Enterprise Microservices
+        <span className="text-[var(--theme-primary)]">&gt;</span> AI Platform &amp; Agentic
+        Frameworks{'  '}
+        <span className="text-[var(--theme-outline-variant)]">//</span> Full-Stack Delivery
       </p>
 
       <p className="mt-6 max-w-[36rem] text-base leading-relaxed text-[var(--theme-text-muted)]">
-        I architect LLM integration layers, agentic frameworks, and event-driven systems — and
-        productionize AI features with caching, fallback, and governance. Currently building AI
-        platform infrastructure at Flexspring, serving 2,500+ client configurations.
+        I architect LLM integration layers and agentic frameworks — shipping AI-powered features
+        like embedding-based recommendations, AI Assembly automation, and transaction intelligence
+        into production with caching, fallback, and governance. I own services end-to-end, from
+        Quarkus and Spring Boot backends through React UIs, and lead platform migrations with zero
+        regression. Currently building AI platform infrastructure at Flexspring, serving 2,500+
+        client configurations.
       </p>
 
       <div className="mt-9 flex flex-wrap gap-4">

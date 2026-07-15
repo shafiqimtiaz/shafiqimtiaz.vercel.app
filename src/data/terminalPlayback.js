@@ -13,7 +13,7 @@ export const HOME_TERMINAL_PLAYBACK = {
       command: 'whoami',
       delayMs: DEFAULT_PLAYBACK_DELAY_MS,
       output: [
-        'Senior Software Engineer at Flexspring — building AI platform infrastructure and enterprise microservices.',
+        'Senior Software and AI Engineer at Flexspring — building AI platform infrastructure, agentic frameworks, and enterprise microservices.',
       ],
     },
     {

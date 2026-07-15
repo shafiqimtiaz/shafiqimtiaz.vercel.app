@@ -20,7 +20,9 @@ export default function ProfileSection() {
           </p>
           <p className="mt-5 text-base leading-relaxed text-[var(--theme-text-muted)]">
             I&apos;m a{' '}
-            <span className="font-semibold text-[var(--theme-text)]">Senior Software Engineer</span>{' '}
+            <span className="font-semibold text-[var(--theme-text)]">
+              Senior Software and AI Engineer
+            </span>{' '}
             and{' '}
             <span className="font-semibold text-[var(--theme-primary)]">
               AWS Certified AI Practitioner
@@ -33,11 +35,13 @@ export default function ProfileSection() {
             client configurations.
           </p>
           <p className="mt-4 text-base leading-relaxed text-[var(--theme-text-muted)]">
-            I architect LLM integration layers and agentic frameworks, harden AI features for
-            production with caching, fallback, and governance, and own services end-to-end — from
-            Spring Boot APIs and event-driven consumers through React UIs. I&apos;ve led major
-            platform migrations (Java 8→17, Spring Boot 2→3, React Router v7, Vite) and resolved
-            critical production incidents under live conditions.
+            I architect LLM integration layers and agentic frameworks — shipping AI-powered features
+            like embedding-based field recommendations, AI Assembly automation, and transaction
+            intelligence into production with caching, fallback, and governance. I own services
+            end-to-end, from Quarkus and Spring Boot backends with event-driven consumers through
+            React UIs, and lead platform migrations with zero regression. I also build developer
+            tooling — Chrome extensions, CLI tools, and terminal dashboards — published on npm and
+            the Chrome Web Store.
           </p>
         </Reveal>
 

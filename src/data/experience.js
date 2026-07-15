@@ -81,7 +81,7 @@ export const techStack = [
 export const timeline = [
   {
     date: 'MAY 2026 - PRESENT',
-    title: 'Senior Software Engineer',
+    title: 'Senior Software and AI Engineer',
     org: 'Flexspring | Ottawa, ON',
     accent: 'text-[var(--theme-primary)] border-[var(--theme-primary)]',
     icon: 'rocket_launch',
