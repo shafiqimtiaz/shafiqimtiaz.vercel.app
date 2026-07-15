@@ -50,13 +50,29 @@ Senior Software and AI Engineer with 5+ years shipping production AI features, f
 
 **PROJECTS**
 
-**Clean Bookmarks | TypeScript, Node.js, Chrome MV3 | [github.com/shafiqimtiaz/clean-bookmarks](http://github.com/shafiqimtiaz/clean-bookmarks)**
+**fetch-markdown | TypeScript, Chrome Extension | [github.com/shafiqimtiaz/fetch-markdown](http://github.com/shafiqimtiaz/fetch-markdown)**
 
-* Published on Chrome Web Store (5 releases). AI-powered bookmark organizer using two-pass categorization for content discovery. Supports on-device Gemini Nano and multi-provider AI streaming with Zod validation. Non-destructive with snapshot-and-restore. Live demo: shafiqimtiaz.github.io/clean-bookmarks
+* Converts any web page to clean Markdown with site-adaptive extraction, code-aware formatting, and tracking-param stripping. [Chrome Web Store](https://chromewebstore.google.com/detail/fetch-markdown)
+
+**nexus-ai | Next.js, TypeScript | [github.com/shafiqimtiaz/nexus-ai](http://github.com/shafiqimtiaz/nexus-ai)**
+
+* AI academic organizer unifying announcements, calendar, and resources with agentic chat — integrates Google Classroom, Discord, and Slack. [Live demo](https://nexus-ai-tool.vercel.app)
+
+**diet-workout-plan | React, Vite, Gemini AI | [github.com/shafiqimtiaz/diet-workout-plan](http://github.com/shafiqimtiaz/diet-workout-plan)**
+
+* AI-powered bilingual (English/Bengali) 7-day diet and workout planner with calorie-targeted generation. [Live demo](https://diet-workout-plan.vercel.app)
+
+**pokégent | TypeScript, Node.js, Ink | [github.com/shafiqimtiaz/pokegent](http://github.com/shafiqimtiaz/pokegent)**
+
+* Terminal dashboard visualizing your AI coding ecosystem — agents as Pokémon, MCP servers as TMs/HMs — 100% local, zero telemetry. [npm](https://www.npmjs.com/package/pokegent)
 
 **ctx-handoff | TypeScript, Node.js, Deno Deploy | [github.com/shafiqimtiaz/ctx-handoff](http://github.com/shafiqimtiaz/ctx-handoff)**
 
-* Agent-agnostic CLI for relaying session context via encrypted, ephemeral edge links. Zero-knowledge transport with AES-256-GCM; blobs expire after 24 hours. Optional Gemini distillation. Serverless on Deno Deploy.
+* Encrypted, ephemeral context handoff CLI for AI coding agents — AES-256-GCM, blobs expire in 24h. [npm](https://www.npmjs.com/package/ctx-handoff)
+
+**clean-bookmarks | TypeScript, Node.js, Chrome MV3 | [github.com/shafiqimtiaz/clean-bookmarks](http://github.com/shafiqimtiaz/clean-bookmarks)**
+
+* AI-powered bookmark organizer with two-pass categorization, on-device Gemini Nano, and multi-provider streaming. [Chrome Web Store](https://chromewebstore.google.com/detail/akjmeddnbohjephmppkmifnljehfhkpb) · [Live demo](https://shafiqimtiaz.github.io/clean-bookmarks)
 
 **EDUCATION**
 
