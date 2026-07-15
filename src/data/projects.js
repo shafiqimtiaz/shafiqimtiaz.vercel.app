@@ -63,6 +63,50 @@ export const caseStudies = [
 
 export const publicRepositories = [
   {
+    title: 'fetch-markdown',
+    description:
+      'Chrome extension that converts any web page to clean, structured Markdown. Confidence-scored site detection adapts extraction for blogs, docs, GitHub, and more — with code-aware formatting that preserves code blocks untouched.',
+    repoUrl: 'https://github.com/shafiqimtiaz/fetch-markdown',
+    techStack: ['TypeScript', 'Chrome Extension', 'DOM'],
+  },
+  {
+    title: 'nexus-ai',
+    description:
+      'AI-powered academic organizer that centralises announcements, calendar events, resources, and agentic AI chat into a unified workspace. Integrates Google Classroom, Discord, and Slack.',
+    demoUrl: 'https://nexus-ai-tool.vercel.app/',
+    repoUrl: 'https://github.com/shafiqimtiaz/nexus-ai',
+    techStack: ['Next.js', 'AI Agents', 'OAuth', 'Full-Stack'],
+  },
+  {
+    title: 'diet-workout-plan',
+    description:
+      'AI-powered 7-day diet and workout planner. Set a calorie target, and Google Gemini generates a personalised meal plan and home-gym routine — bilingual in English and Bengali.',
+    demoUrl: 'https://diet-workout-plan.vercel.app/',
+    repoUrl: 'https://github.com/shafiqimtiaz/diet-workout-plan',
+    techStack: ['React', 'Vite', 'Gemini AI', 'Bilingual'],
+  },
+  {
+    title: 'pokégent',
+    description:
+      'Terminal dashboard that scans your machine to show AI coding agents as Pokémon species, MCP servers as TMs/HMs, and token burn as PP. Fully local — zero telemetry, zero network calls.',
+    repoUrl: 'https://github.com/shafiqimtiaz/pokegent',
+    techStack: ['TypeScript', 'Ink', 'Terminal UI', 'Node.js'],
+  },
+  {
+    title: 'ctx-handoff',
+    description:
+      "Agent-agnostic CLI to hand off AI coding-agent sessions between developers via encrypted, ephemeral links. Distills context on your machine and injects it straight into the recipient's agent.",
+    repoUrl: 'https://github.com/shafiqimtiaz/ctx-handoff',
+    techStack: ['TypeScript', 'CLI', 'Encryption', 'Deno'],
+  },
+  {
+    title: 'clean-bookmarks',
+    description:
+      'Chrome extension that transforms a messy bookmark collection into clean, categorised folders with AI. Proposes categories for you to tune, then sorts everything. No backend, no account, no data store.',
+    repoUrl: 'https://github.com/shafiqimtiaz/clean-bookmarks',
+    techStack: ['TypeScript', 'Chrome Extension', 'Browser AI'],
+  },
+  {
     title: 'RecycleVision',
     description:
       'Computer vision application that identifies and categorizes recyclable materials. Built image classification models to improve automated sorting efficiency.',
@@ -70,80 +114,11 @@ export const publicRepositories = [
     techStack: ['Python', 'TensorFlow', 'Computer Vision'],
   },
   {
-    title: 'GenAI for Software Engineering',
-    description:
-      'Automated pipeline leveraging generative AI to assist with software engineering tasks. Investigated prompt engineering to optimize code generation and documentation workflows.',
-    repoUrl: 'https://github.com/shafiqimtiaz/GenAI4SE',
-    techStack: ['Generative AI', 'Python', 'LLMs', 'Prompt Engineering'],
-  },
-  {
-    title: 'Retinal Vessel Extraction',
-    description:
-      'Medical image processing solution to extract continuous blood-vessel networks from retinal fundus images, aiding preliminary diagnosis of ocular diseases.',
-    repoUrl: 'https://github.com/shafiqimtiaz/Retinal-Vessel-Extraction',
-    techStack: ['Python', 'OpenCV', 'Image Processing', 'ML'],
-  },
-  {
-    title: 'Medical Appointment System',
-    description:
-      'Full-stack healthcare platform streamlining scheduling, patient management, and clinic workflows with secure APIs and intuitive interfaces.',
-    demoUrl: 'https://med-spm-app.netlify.app/',
-    repoUrl: 'https://github.com/shafiqimtiaz/Medical-Appointment-System',
-    techStack: ['MERN', 'MongoDB', 'Express', 'React'],
-  },
-  {
-    title: 'BSRM Warehouse Management',
-    description:
-      'Tracking system for industrial stock levels with real-time inventory analytics and RESTful APIs for accurate product and material management.',
-    demoUrl: 'https://bsrm-warehouse-management.netlify.app/',
-    repoUrl: 'https://github.com/shafiqimtiaz/bsrm-warehouse-management',
-    techStack: ['Full-Stack', 'REST APIs', 'Databases'],
-  },
-  {
-    title: 'BSRM Trading E-Commerce',
-    description:
-      'B2B platform with dynamic product catalogs and secure transaction workflows for steel trading, with scalable state management for enterprise order volume.',
-    demoUrl: 'https://bsrm-trading-ecommerce.netlify.app/',
-    repoUrl: 'https://github.com/shafiqimtiaz/bsrm-trading-ecommerce',
-    techStack: ['React', 'Node.js', 'State Management'],
-  },
-  {
-    title: 'GPS Location Fetcher',
-    description:
-      'Android utility that periodically fetches and tracks GPS coordinates for remote field workers, with GPX export and robust state tracking.',
-    demoUrl: 'https://www.youtube.com/watch?v=fXOIVhYaTOk',
-    repoUrl: 'https://github.com/shafiqimtiaz/GPS-Location-App',
-    techStack: ['Java', 'Android SDK', 'Location Services'],
-  },
-  {
-    title: 'MERN Exercise Tracker',
-    description:
-      'Fitness and health management tool to log daily exercises and track routines, with intuitive data models for user progress and history.',
-    demoUrl: 'https://mern-ex-tracker.netlify.app/',
-    repoUrl: 'https://github.com/shafiqimtiaz/mern-exercise-tracker',
-    techStack: ['MERN', 'REST API', 'React'],
-  },
-  {
-    title: 'Movie Watchlist',
-    description:
-      'Front-end application to search, discover, and curate personalized movie watchlists, integrating TMDB/OMDb for rich, real-time data.',
-    demoUrl: 'https://movie-watchlist-imdb.netlify.app/',
-    repoUrl: 'https://github.com/shafiqimtiaz/movie-watchlist',
-    techStack: ['React', 'External APIs', 'Responsive'],
-  },
-  {
-    title: 'Birdhaus',
+    title: 'birdhaus',
     description:
       'Interactive web application focused on a responsive, content-rich experience with a clean, decoupled UI component structure.',
     demoUrl: 'https://birdhaus.netlify.app/',
     repoUrl: 'https://github.com/shafiqimtiaz/birdhaus',
     techStack: ['Frontend', 'UI/UX', 'CSS'],
-  },
-  {
-    title: 'Course Group Assistant',
-    description:
-      'Academic tool to streamline student collaboration and course-group logistics — team formation, task delegation, and centralized project management.',
-    repoUrl: 'https://github.com/shafiqimtiaz/Course-Group-Assistant-CGA',
-    techStack: ['Full-Stack', 'Real-time Sync', 'EdTech'],
   },
 ];

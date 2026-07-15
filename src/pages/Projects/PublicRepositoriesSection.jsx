@@ -12,8 +12,8 @@ export default function PublicRepositoriesSection() {
           Public <span className="text-[var(--theme-tertiary)]">repositories</span>
         </h2>
         <p className="mt-5 text-base leading-relaxed text-[var(--theme-text-muted)]">
-          Personal and academic builds — computer vision, generative AI, and full-stack
-          applications.
+          Developer tooling, browser extensions, and AI-powered utilities — from CLI agents to
+          Chrome extensions.
         </p>
       </Reveal>
 
