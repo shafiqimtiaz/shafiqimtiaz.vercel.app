@@ -53,14 +53,7 @@ export const techStack = [
     accent: 'text-[var(--theme-secondary)]',
     code: '005',
     title: 'Data & Storage',
-    items: [
-      'PostgreSQL / pgvector',
-      'MongoDB',
-      'MySQL',
-      'Redis / Redisson',
-      'Elasticsearch',
-      'ETL Pipelines',
-    ],
+    items: ['PostgreSQL / pgvector', 'MongoDB', 'MySQL', 'Redis / Redisson', 'ETL Pipelines'],
   },
   {
     icon: 'cloud',
@@ -86,23 +79,11 @@ export const timeline = [
     accent: 'text-[var(--theme-primary)] border-[var(--theme-primary)]',
     icon: 'rocket_launch',
     details: [
-      'Hardened platform-wide LLM integration — added tests, resolved SonarQube findings, removed hardcoded API keys for a secure config layer, and established a reusable service adopted across Monitor, Studio, and shared libraries.',
-      'Built an AI-driven field recommendation system for Data Mapping — embedding-based reranking, cosine similarity matching, Redisson caching, LiteLLM fallback, and a debounced/abortable frontend hook with role-based gating.',
-      'Delivered Data Mapping — a self-service specification tool powered by AI field recommendations, replacing manual spreadsheet workflows with enforced read-only governance on Technical Review sign-off.',
-      'Overhauled the flexspring-agent-core installer with MCP setup and skill-registry configuration; built a PostgreSQL-to-MongoDB webhook template migration tool for data-layer consolidation.',
+      'Built AI-driven field recommendation system for Data Mapping with embedding-based reranking, cosine similarity matching, Redisson caching, and LiteLLM fallback. React.js frontend with debounce/abort/retry logic, per-target suggestions, bulk recommendation, and role-based AI gating.',
+      'Hardened platform-wide LLM integration by adding unit tests, resolving SonarQube findings, and replacing hardcoded API keys with a secure config layer reused across Monitor, Studio, and shared libraries.',
+      'Added nested/compound field support with breadcrumb navigation in the Data Mapping Modeler.',
+      "Built a PostgreSQL-to-MongoDB webhook template migration tool for the platform's data-layer consolidation.",
     ],
-  },
-  {
-    date: 'NOV 2025',
-    title: 'AWS Certified AI Practitioner',
-    org: 'Amazon Web Services',
-    accent: 'text-[var(--theme-primary)] border-[var(--theme-primary)]',
-    icon: 'workspace_premium',
-    details: [
-      'Validated practical understanding of AI concepts, AWS AI services, and responsible deployment considerations.',
-      'Credential ID: f33dbc99-4952-4c46-ab20-0e303d253724',
-    ],
-    credentialUrl: 'https://www.credly.com/badges/f33dbc99-4952-4c46-ab20-0e303d253724',
   },
   {
     date: 'MAY 2024 - MAY 2026',
@@ -111,12 +92,16 @@ export const timeline = [
     accent: 'text-[var(--theme-secondary)] border-[var(--theme-secondary)]',
     icon: 'work',
     details: [
-      'Architected flexspring-agent-core — a TypeScript/Node.js agentic AI library integrating LiteLLM for model-agnostic LLM orchestration, with MCP server schemas and Spec-Driven access boundaries for safe tool use.',
-      'Designed and built the Monitor Lifecycle feature end-to-end: Spring Boot REST API, JMS/ActiveMQ consumer for event-driven ingestion, PostgreSQL/MongoDB schema updates, and React UI.',
-      'Led the Spring Boot 3 migration of Flexspring Studio — resolved breaking API changes and deployed to production without regression.',
-      'Shipped Webhook Templates across Engine, Studio, Webhook Core, Webhook Explorer, and Onboard API, with Studio Template ID propagation across distributed services.',
-      'Diagnosed and resolved a critical production database incident — authored idempotent PostgreSQL and MongoDB correction scripts under live conditions.',
-      'Won runner-up and a $1,000 prize at the internal hackathon for a RAG-powered chatbot — seeding the company AI initiative.',
+      'Built flexspring-file-manager from scratch as sole engineer. Standalone Quarkus microservice with multi-region AWS S3 storage (US/EU), MongoDB metadata, per-item permissions, SQS event-driven reconciliation, Sentry observability, and OIDC auth via AWS Cognito. Containerized with Docker. Shipped service, API gateway, and React.js UI to production.',
+      'Designed and implemented Monitor Lifecycle: Spring Boot REST API, JMS/ActiveMQ consumer for event-driven ingestion from Engine, PostgreSQL/MongoDB schema updates, and React.js UI for project and integration-level flows.',
+      'Built Studio AI Analysis feature that generates analysis of integration configurations to surface issues and optimization opportunities using LLM capabilities.',
+      'Shipped Webhook Templates across Engine, Studio, Webhook Core, Webhook Explorer, and Onboard API with Template ID propagation and integration-level filtering.',
+      'Led Spring Boot 3 migration of Flexspring Studio. Updated framework dependencies, resolved breaking API changes, validated end-to-end, deployed to production with no regression. Refactored Jenkinsfile in Webhook Core to improve CI/CD pipeline reliability.',
+      'Delivered Credentials Manager full-stack: Spring Boot REST API, ConnectorHub integration, React.js UI with connector-specific form rendering, client-side field encryption, and automated email dispatch.',
+      'Upgraded Monitor UI to React 18.3, React Router v7, and Vite 7. Migrated data-fetching from react-query to @tanstack/react-query (v5) and upgraded the shared React component library for cross-platform compatibility.',
+      'Wrote unit tests for File Manager covering core operations and permission enforcement. Extended test coverage for skill-installer, routing-builder, and config-generator modules.',
+      'Mentored three team members on Monitor architecture and File Manager internals. Authored internal service documentation and conducted code reviews across Monitor and Studio.',
+      'Won runners-up and $1,000 prize at internal hackathon for a RAG-powered chatbot using Crewdle AI and Flexspring data.',
     ],
   },
   {
@@ -126,31 +111,9 @@ export const timeline = [
     accent: 'text-[var(--theme-tertiary)] border-[var(--theme-tertiary)]',
     icon: 'terminal',
     details: [
-      'Engineered flexspring-file-manager from scratch — a standalone Quarkus microservice with multi-region AWS S3 storage (US/EU), MongoDB metadata, per-item READ/WRITE/DELETE permissions, SQS event reconciliation, Sentry observability, and OIDC auth via AWS Cognito; sole engineer across service, API gateway, and React UI.',
-      'Implemented event-driven S3 ↔ MongoDB synchronisation via AWS SQS notifications, keeping database state consistent independent of API calls.',
-      'Led the Alcatraz Java 8 → 17 and Spring Boot 2 → 3 upgrade — resolved JMS/ActiveMQ and HealthChecker incompatibilities and deployed with no regression.',
-      'Delivered Credentials Manager full-stack: Spring Boot REST API, ConnectorHub integration, React UI with connector-specific forms, client-side field encryption, and automated email dispatch.',
-    ],
-  },
-  {
-    date: 'OCT 2022 - APR 2023',
-    title: 'Director of Sponsorship',
-    org: 'HackConcordia | Montreal, QC',
-    accent: 'text-[var(--theme-secondary)] border-[var(--theme-secondary)]',
-    icon: 'groups',
-    details: [
-      'Organized ConUHacks VII, the largest hackathon in Quebec with 800+ participants from 97 universities.',
-    ],
-  },
-  {
-    date: 'SEP 2022 - APR 2024',
-    title: 'MEng, Software Engineering (Co-op)',
-    org: 'Concordia University | Montreal, QC',
-    accent: 'text-[var(--theme-tertiary)] border-[var(--theme-tertiary)]',
-    icon: 'school',
-    details: [
-      'Graduate studies in software engineering with a co-op focus.',
-      'Strengthened foundations in software architecture, systems thinking, and applied engineering delivery.',
+      'Led Alcatraz Java 8 to 17 and Spring Boot 2 to 3.0.6 upgrades. Resolved JMS/ActiveMQ configuration and HealthChecker incompatibilities from the framework change. Deployed to production with no regression.',
+      'Delivered Monitor Pilot UI redesign: template-based rebuild of authentication flows, navigation, responsive layouts, Dashboard Widgets, and Organization/Execution/Transaction list views with server-side pagination and filtering in React.js with react-table.',
+      'Built Credentials Manager foundation: Spring Boot REST API with ConnectorHub integration and React.js UI for credential list and add/update forms with connector-specific field rendering.',
     ],
   },
   {
@@ -160,9 +123,50 @@ export const timeline = [
     accent: 'text-[var(--theme-tertiary)] border-[var(--theme-tertiary)]',
     icon: 'factory',
     details: [
-      'Built APS Dashboard X (React, Node.js, Java/Spring Boot) for procurement, stock, and shipment scheduling — increasing Material Requirement Planning efficiency by 89% over manual processes.',
-      'Engineered ETL pipelines integrating 40+ supplier systems into PostgreSQL procurement analytics with 100% audit compliance.',
-      'Developed a Python (Scikit-learn, Pandas) forecasting module that reduced overstock by 15%.',
+      'Built APS Dashboard X (React, Node.js, SQLite) for consumables procurement, stock management, and shipment scheduling. Increased Material Requirement Planning efficiency by 89%. Nominated for Young Supply Chain Talent of the Year at IPDC Supply Chain Awards 2019.',
+      'Engineered ETL pipelines integrating 40+ supplier systems into PostgreSQL-based procurement analytics with 100% audit compliance. Developed Python (Scikit-learn, Pandas) ML forecasting module that reduced overstock by 15%.',
+    ],
+  },
+];
+
+export const credentials = [
+  {
+    date: 'NOV 2025',
+    title: 'AWS Certified AI Practitioner',
+    org: 'Amazon Web Services',
+    icon: 'workspace_premium',
+    accent: 'text-[var(--theme-primary)]',
+    details: [
+      'Validated practical understanding of AI concepts, AWS AI services, and responsible deployment considerations.',
+    ],
+    credentialUrl: 'https://www.credly.com/badges/f33dbc99-4952-4c46-ab20-0e303d253724',
+  },
+  {
+    date: '2022 - 2024',
+    title: 'MEng, Software Engineering (Co-op)',
+    org: 'Concordia University | Montreal, QC',
+    icon: 'school',
+    accent: 'text-[var(--theme-secondary)]',
+    details: [
+      'Graduate studies in software engineering with a co-op focus. Strengthened foundations in software architecture, systems thinking, and applied engineering delivery.',
+    ],
+  },
+  {
+    date: '2015 - 2018',
+    title: 'BSc, Electrical & Electronics Engineering',
+    org: 'Islamic University of Technology | Bangladesh',
+    icon: 'school',
+    accent: 'text-[var(--theme-tertiary)]',
+    details: [],
+  },
+  {
+    date: 'OCT 2022 - APR 2023',
+    title: 'Director of Sponsorship',
+    org: 'HackConcordia | Montreal, QC',
+    icon: 'groups',
+    accent: 'text-[var(--theme-primary)]',
+    details: [
+      'Organized ConUHacks VII, the largest hackathon in Quebec with 800+ participants from 97 universities.',
     ],
   },
 ];

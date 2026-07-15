@@ -5,6 +5,7 @@ import StatsSection from './StatsSection';
 import ProfileSection from '../About/ProfileSection';
 import TechStackSection from '../About/TechStackSection';
 import TimelineSection from '../About/TimelineSection';
+import CredentialsSection from '../About/CredentialsSection';
 import CaseStudiesSection from '../Projects/CaseStudiesSection';
 import PublicRepositoriesSection from '../Projects/PublicRepositoriesSection';
 import ContactFormSection from '../Contact/ContactFormSection';
@@ -65,6 +66,7 @@ export default function Home() {
           <ProfileSection />
           <TechStackSection />
           <TimelineSection />
+          <CredentialsSection />
         </div>
       </section>
 
