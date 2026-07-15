@@ -88,7 +88,7 @@ export const caseStudies = [
     ],
     title: 'Transaction Intelligence',
     description:
-      "Redesigned Monitor's transaction detail experience with an intelligent Integration Review card — parsing raw XML, URL query strings, and nested JSON into a structured, searchable Prettified view. Added dark mode, in-card search with &lt;mark&gt; highlighting, responsive breakpoints, and a defensive raw fallback that preserves data when transformation fails.",
+      "Redesigned Monitor's transaction detail experience with an intelligent Integration Review card — parsing raw XML, URL query strings, and nested JSON into a structured, searchable Prettified view. Added dark mode, in-card search highlighting, responsive breakpoints, and a defensive raw fallback that preserves data when transformation fails.",
     tags: ['React', 'XML Parsing', 'UI/UX', 'Dark Mode'],
     link: { label: 'View Résumé', href: '/docs/Shafiq-Imtiaz-Resume.pdf' },
   },
