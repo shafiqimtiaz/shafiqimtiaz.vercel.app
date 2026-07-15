@@ -4,10 +4,9 @@ export const caseStudies = [
     label: 'Product Feature',
     highlights: 'Studio Lifecycle',
     details: [
-      'Lifecycle board with stage-based card rendering and status-aware indicators',
+      'Lifecycle board with stage-based card rendering, status-aware indicators, and streamlined data model',
       'CSC metadata display with dash-as-default fallback',
-      'Requirements modals with placeholder UI behind feature flags',
-      'Streamlined data model — removed planned dates and unused lifecycle complexity',
+      'Requirements modals gated behind feature flags with placeholder UI',
     ],
     title: 'Studio Lifecycle',
     description:
@@ -20,10 +19,9 @@ export const caseStudies = [
     label: 'Transaction Intelligence',
     highlights: 'Integration Review',
     details: [
-      'Prettified transaction view — XML, URL query, and JSON parsed into readable cards',
-      'IntegrationReviewCard with field-level rendering, search highlighting, and raw fallback',
-      'Dark mode support across all transaction detail surfaces',
-      'Responsive two-column layout with sticky detail pane adapted via media queries',
+      'Prettified transaction view — XML, URL query, and JSON parsed into searchable cards with field-level rendering',
+      'IntegrationReviewCard with search highlighting and defensive raw fallback when transformation fails',
+      'Dark mode support and responsive two-column layout with sticky detail pane adapted via media queries',
     ],
     title: 'Transaction Intelligence',
     description:
@@ -36,14 +34,14 @@ export const caseStudies = [
     label: 'AI Platform',
     highlights: 'Data Mapping',
     details: [
-      'AI field recommendations: embedding reranking + cosine similarity',
-      'Redisson caching with LiteLLM fallback',
+      'AI-powered field recommendations per target with bulk suggestion mode',
+      'Cached recommendations with automatic fallback for reliability',
       'Read-only governance enforced on Technical Review sign-off',
     ],
     title: 'Data Mapping',
     description:
-      'A self-service specification tool powered by AI field recommendations — replacing manual, spreadsheet-based mapping workflows. Per-target suggestions, bulk recommendation, and role-based AI gating, with a debounced/abortable frontend hook.',
-    tags: ['LiteLLM', 'Embeddings', 'Redisson', 'React'],
+      'A self-service specification tool powered by AI field recommendations — replacing manual, spreadsheet-based mapping workflows. Per-target suggestions, bulk recommendation, and role-based AI gating with cancellable frontend requests.',
+    tags: ['AI', 'Recommendations', 'Caching', 'React'],
     link: { label: 'View Résumé', href: '/docs/Shafiq-Imtiaz-Resume.pdf' },
   },
   {
@@ -51,31 +49,29 @@ export const caseStudies = [
     label: 'AI Automation',
     highlights: 'AI Assembly Line',
     details: [
-      'AI-based data integration automation — analysis, design, and development pipelines',
-      'AI Simplified view for transaction response analysis with model selection and caching',
-      'Alcatraz AI service integration for LLM-powered transaction insights',
-      'Agora service integrations (SRV-5351, SRV-5349) powering the Assembly pipeline',
-      'Cross-service delivery: Monitor AI views, Data Mapping, Agent Core, Studio Lifecycle',
+      'AI-driven data integration automation across analysis, design, and development phases',
+      'Intelligent transaction analysis with model selection, caching, and LLM-powered insights',
+      'Service integrations powering the end-to-end automated Assembly pipeline',
     ],
     title: 'AI Assembly Line',
     description:
-      "Spearheaded Flexspring's AI Assembly Line — an AI-driven data integration automation platform spanning Monitor, Studio, and the Agent Core library. Delivered AI-powered transaction analysis, Alcatraz LLM integration, Agora service integrations, and foundational contributions to the agentic AI infrastructure that underpins the pipeline.",
-    tags: ['AI Agents', 'LLM Integration', 'Automation', 'Full-Stack'],
+      "Spearheaded Flexspring's AI Assembly Line — an AI-driven data integration automation platform spanning Monitor, Studio, and the agentic AI library. Delivered AI-powered transaction analysis, LLM integration, and foundational infrastructure that underpins the automated pipeline.",
+    tags: ['AI Agents', 'LLM', 'Automation', 'Full-Stack'],
     link: { label: 'View Résumé', href: '/docs/Shafiq-Imtiaz-Resume.pdf' },
   },
   {
     code: '002',
     label: 'AI Infrastructure',
-    highlights: 'flexspring-agent-core',
+    highlights: 'Agent Core Library',
     details: [
-      'Model-agnostic LLM orchestration via LiteLLM',
-      'MCP server schemas + Spec-Driven access boundaries',
+      'Model-agnostic LLM orchestration across multiple providers',
+      'Spec-defined API contracts with controlled tool access boundaries',
       'Reusable agent library adopted across services',
     ],
     title: 'Agent Core',
     description:
-      "The platform's foundational TypeScript/Node.js agentic AI library — integrating LiteLLM for model-agnostic LLM orchestration so agents operate against defined API contracts, with MCP server schemas for safe, scalable tool use.",
-    tags: ['TypeScript', 'LiteLLM', 'MCP', 'Spec-Driven'],
+      "The platform's foundational agentic AI library — integrating model-agnostic LLM orchestration so agents operate against defined API contracts with safe, scalable tool use.",
+    tags: ['TypeScript', 'LLM', 'API Contracts', 'Spec-Driven'],
     link: { label: 'View Résumé', href: '/docs/Shafiq-Imtiaz-Resume.pdf' },
   },
   {
@@ -83,14 +79,14 @@ export const caseStudies = [
     label: 'Microservice Ownership',
     highlights: 'File Manager Service',
     details: [
-      'Sole engineer: Quarkus service + API gateway + React UI',
-      'Multi-region AWS S3 (US/EU) + per-item READ/WRITE/DELETE permissions',
-      'SQS event reconciliation; OIDC auth via AWS Cognito',
+      'Sole engineer across backend service, API gateway, and frontend UI',
+      'Multi-region cloud storage with per-item access permissions',
+      'Event-driven reconciliation and single sign-on authentication',
     ],
     title: 'File Manager',
     description:
-      'Built flexspring-file-manager from scratch — a standalone Quarkus microservice with multi-region AWS S3 storage (US/EU), a MongoDB metadata layer, per-item permissions, SQS event reconciliation, and Sentry observability. Sole engineer across service, API gateway, and React UI.',
-    tags: ['Quarkus', 'AWS S3', 'MongoDB', 'Sentry'],
+      'Built a standalone file management microservice from scratch with multi-region cloud storage, a metadata layer, per-item permissions, event-driven reconciliation, and observability. Sole engineer across backend, API gateway, and frontend.',
+    tags: ['Microservice', 'Cloud Storage', 'Permissions', 'Observability'],
     link: { label: 'View Résumé', href: '/docs/Shafiq-Imtiaz-Resume.pdf' },
   },
   {
@@ -98,14 +94,14 @@ export const caseStudies = [
     label: 'Platform Modernisation',
     highlights: 'Migrations',
     details: [
-      'Led Spring Boot 3 migration of Studio — zero regression',
-      'Java 8 → 17 and Spring Boot 2 → 3 (Alcatraz)',
-      'Monitor UI to React 18.3, React Router v7, Vite',
+      'Led major framework migration of a production service — zero regression',
+      'Multi-stage runtime and framework upgrades across services',
+      'Modernised frontend stack with updated libraries and build tooling',
     ],
     title: 'Platform Modernisation',
     description:
-      "Led Spring Boot 3 / Java 17 migrations for production services and modernised Monitor's front-end stack (React 18.3, React Router v7, Vite) — establishing the runtime foundation for platform-wide LLM integration.",
-    tags: ['Java 17', 'Spring Boot 3', 'React 18', 'Vite'],
+      'Led framework and runtime migrations for production services and modernised the frontend stack — establishing the foundation for platform-wide AI integration.',
+    tags: ['Migration', 'Framework Upgrade', 'Frontend', 'Build Tooling'],
     link: { label: 'View Résumé', href: '/docs/Shafiq-Imtiaz-Resume.pdf' },
   },
 ];
