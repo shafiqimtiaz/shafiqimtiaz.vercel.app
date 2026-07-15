@@ -18,7 +18,7 @@ export default function ProfileSection() {
           <p className="font-body text-[0.66rem] tracking-[0.18em] text-[var(--theme-primary)] uppercase">
             // mission
           </p>
-          <p className="mt-5 text-base leading-relaxed text-[var(--theme-text-muted)]">
+          <p className="mt-4 text-base leading-relaxed text-[var(--theme-text-muted)]">
             I&apos;m a{' '}
             <span className="font-semibold text-[var(--theme-text)]">
               Senior Software and AI Engineer
@@ -26,23 +26,14 @@ export default function ProfileSection() {
             and{' '}
             <span className="font-semibold text-[var(--theme-primary)]">
               AWS Certified AI Practitioner
-            </span>{' '}
-            building production{' '}
-            <span className="font-semibold text-[var(--theme-secondary)]">
-              AI platform infrastructure
-            </span>{' '}
-            and enterprise microservices at Flexspring, a B2B HR integration platform serving 2,500+
-            client configurations.
-          </p>
-          <p className="mt-4 text-base leading-relaxed text-[var(--theme-text-muted)]">
-            I architect LLM integration layers and agentic frameworks — shipping AI-powered features
-            like embedding-based field recommendations, AI Assembly automation, and transaction
-            intelligence into production with caching, fallback, and governance. I own services
-            end-to-end, from Quarkus and Spring Boot backends with event-driven consumers through
-            React UIs, and lead platform migrations with zero regression. I also build developer
-            tooling — Chrome extensions, CLI tools, and terminal dashboards — published on npm and
-            the Chrome Web Store.
-          </p>
+            </span>
+            . I architect LLM integration layers and agentic frameworks — shipping AI features
+            with caching, fallback, and governance. I own services end-to-end, from Quarkus and
+            Spring Boot backends through React UIs, and lead platform migrations with zero
+            regression. I also build developer tooling — Chrome extensions, CLI tools, and
+            terminal dashboards — published on npm and the Chrome Web Store. Currently at{' '}
+            <span className="font-semibold text-[var(--theme-secondary)]">Flexspring</span>,
+            serving 2,500+ client configurations.
         </Reveal>
 
         <Reveal
