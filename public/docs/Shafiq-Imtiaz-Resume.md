@@ -8,7 +8,7 @@ Senior Software and AI Engineer with 5+ years at Flexspring — a B2B HR platfor
 **CORE SKILLS**
 
 * **Languages & Runtime**: JavaScript, TypeScript, Node.js, Java 17, Python (Scikit-learn, Pandas, NumPy)  
-* **Frontend**: React.js (React 18, React Router v7, Vite 7, @tanstack/react-query, React-Table), Chrome Extension Development (Manifest V3)  
+* **Frontend**: React.js (React 18, React Router v7, Vite 7, @tanstack), Chrome Extension Development (Manifest V3)  
 * **Backend & API**: RESTful API Design, Node.js, Spring Boot 3, Spring Cloud Gateway, Quarkus, OpenAPI 3 / Swagger, CLI Development  
 * **Testing & Quality**: Jest, ts-jest, JUnit, Test Automation, Code Review, SonarQube  
 * **Cloud & DevOps**: Docker, Kubernetes, AWS (S3, SQS), Jenkins, CI/CD Pipelines, Release Management, Git, Sentry  
@@ -29,12 +29,12 @@ Senior Software and AI Engineer with 5+ years at Flexspring — a B2B HR platfor
 **Software Engineer | Flexspring | Ottawa, ON | May 2024 \- May 2026**
 
 * Built flexspring-file-manager from scratch as sole engineer. Standalone Quarkus microservice with multi-region AWS S3 storage (US/EU), MongoDB metadata, per-item permissions, SQS event-driven reconciliation, Sentry observability, and OIDC auth via AWS Cognito. Containerized with Docker. Shipped service, API gateway, and React.js UI to production  
-* Designed and implemented Monitor Lifecycle: Spring Boot REST API, JMS/ActiveMQ consumer for event-driven ingestion from Engine, PostgreSQL/MongoDB schema updates, and React.js UI for project and integration-level flows  
+* Designed and implemented Monitor Lifecycle: Spring Boot REST API, JMS/ActiveMQ consumer for event-driven ingestion from Engine, PostgreSQL/MongoDB schema updates, and React UI for project and integration flows  
 * Built Studio AI Analysis feature that generates analysis of integration configurations to surface issues and optimization opportunities using LLM capabilities  
 * Shipped Webhook Templates across Engine, Studio, Webhook Core, Webhook Explorer, and Onboard API with Template ID propagation and integration-level filtering  
 * Led Spring Boot 3 migration of Flexspring Studio. Updated framework dependencies, resolved breaking API changes, validated end-to-end, deployed to production with no regression. Refactored Jenkinsfile in Webhook Core to improve CI/CD pipeline reliability  
 * Delivered Credentials Manager full-stack: Spring Boot REST API, ConnectorHub integration, React.js UI with connector-specific form rendering, client-side field encryption, and automated email dispatch  
-* Upgraded Monitor UI to React 18.3, React Router v7, and Vite 7\. Migrated data-fetching from react-query to @tanstack/react-query (v5) and upgraded the shared React component library for cross-platform compatibility  
+* Upgraded Monitor UI to React 18.3, React Router v7, and Vite 7\. Migrated data-fetching from react-query to @tanstack/react-query (v5) and upgraded the shared React component library for cross-platform compatibility
 
 **Software Engineer Intern | Flexspring | Montreal, QC | May 2023 \- May 2024**
 
