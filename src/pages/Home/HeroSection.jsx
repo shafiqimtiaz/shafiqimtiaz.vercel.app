@@ -29,12 +29,9 @@ export default function HeroSection() {
       </p>
 
       <p className="mt-6 max-w-[36rem] text-base leading-relaxed text-[var(--theme-text-muted)]">
-        I architect LLM integration layers and agentic frameworks — shipping AI-powered features
-        like embedding-based recommendations, AI Assembly automation, and transaction intelligence
-        into production with caching, fallback, and governance. I own services end-to-end, from
-        Quarkus and Spring Boot backends through React UIs, and lead platform migrations with zero
-        regression. Currently building AI platform infrastructure at Flexspring, serving 2,500+
-        client configurations.
+        I own full-stack services and AI platform infrastructure — built File Manager from scratch,
+        architected the agentic AI library, and deliver production AI features with caching,
+        fallback, and governance. Currently at Flexspring, serving 2,500+ client configurations.
       </p>
 
       <div className="mt-9 flex flex-wrap gap-4">

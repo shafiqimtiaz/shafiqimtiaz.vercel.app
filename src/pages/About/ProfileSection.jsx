@@ -27,11 +27,19 @@ export default function ProfileSection() {
             <span className="font-semibold text-[var(--theme-primary)]">
               AWS Certified AI Practitioner
             </span>
-            . I architect LLM integration layers and agentic frameworks — shipping AI features
-            with caching, fallback, and governance. I own services end-to-end, from Quarkus and
-            Spring Boot backends through React UIs, and lead platform migrations with zero
-            regression. I also build developer tooling — Chrome extensions, CLI tools, and
-            terminal dashboards — published on npm and the Chrome Web Store. Currently at{' '}
+            . I own services end-to-end — built File Manager from scratch as sole
+            engineer, a standalone microservice with multi-region cloud storage,
+            event-driven reconciliation, and full-stack UI; I architected the
+            flexspring-agent-core AI library adopted across the platform. I deliver
+            full-stack features across Monitor, Studio, and backend services — Data
+            Mapping, Credentials Manager, Lifecycle, and Webhook Templates spanning five
+            services end-to-end. I architect LLM integration layers and productionize AI
+            features — embedding-based field recommendations, AI Assembly automation, and
+            LLM-powered transaction intelligence — with caching, fallback, and governance.
+            I build developer tooling — Chrome extensions, CLI tools, terminal
+            dashboards — published on npm and the Chrome Web Store. I lead platform
+            migrations with zero regression — Java 8→17, Spring Boot 2→3, React 18 across
+            production services. Currently at{' '}
             <span className="font-semibold text-[var(--theme-secondary)]">Flexspring</span>,
             serving 2,500+ client configurations.
         </Reveal>

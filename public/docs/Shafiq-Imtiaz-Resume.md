@@ -3,7 +3,7 @@
 shafiqimtiaz@gmail.com | [linkedin.com/in/shafiqimtiaz](http://linkedin.com/in/shafiqimtiaz) | [github.com/shafiqimtiaz](http://github.com/shafiqimtiaz) | Ottawa, ON
 
 **PROFESSIONAL SUMMARY**  
-Senior Software and AI Engineer with 5+ years shipping production AI features, full-stack microservices, and platform modernisations in JavaScript, TypeScript, Node.js, and React.js. I architect LLM integration layers and agentic frameworks — and own the end-to-end delivery of the services that run on them. Currently building AI platform infrastructure at Flexspring, serving 2,500+ client configurations.
+Senior Software and AI Engineer at Flexspring — a B2B HR platform with 2,500+ enterprise clients. I build full-stack features end-to-end: Spring Boot microservices, event-driven systems, React UIs. I own the File Manager service end-to-end (built from scratch as sole engineer), architected the platform's agentic AI library, and lead zero-regression migrations. I also deliver production AI features — field recommendations, transaction intelligence, AI Assembly automation — with caching, fallback, and governance. AWS Certified AI Practitioner. Builds Chrome extensions, CLIs, and dashboards on the side.
 
 **CORE SKILLS**
 
