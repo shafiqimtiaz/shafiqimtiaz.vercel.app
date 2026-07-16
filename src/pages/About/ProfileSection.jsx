@@ -23,7 +23,7 @@ export default function ProfileSection() {
             <span className="font-semibold text-[var(--theme-text)]">
               Senior Software and AI Engineer
             </span>{' '}
-            and{' '}
+            with 5+ years and an{' '}
             <span className="font-semibold text-[var(--theme-primary)]">
               AWS Certified AI Practitioner
             </span>
