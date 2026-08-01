@@ -16,36 +16,6 @@ Hero → Terminal → Stats → Projects (Case Studies + Public Repos) → About
 
 Data is entirely static — all content lives in `src/data/` files. No API, no CMS, no state management.
 
-### Directory structure
-
-```
-src/
-├── main.jsx                    # Entry: ReactDOM, BrowserRouter, CSS imports
-├── App.jsx                     # Layout: Navbar → Home → Footer
-├── components/
-│   ├── Navbar.jsx, Footer.jsx
-│   └── ui/                     # Reusable: Button, Reveal, DecodeText, CountUp,
-│                               #   TerminalPanel, TerminalPlayback, SectionHeader
-├── data/                       # ALL content lives here (edit these to update the site)
-│   ├── projects.js             # caseStudies[] + publicRepositories[]
-│   ├── experience.js           # techStack[] + timeline[] + credentials[]
-│   ├── stats.js                # homeStats[] + profileStats[]
-│   ├── links.js                # externalNodes[] + footerLinks[]
-│   ├── contactForm.js          # contactFormFields[]
-│   └── terminalPlayback.js     # CLI session on hero
-├── hooks/                      # useLenis, useInView, useScrollProgress, useMagnetic
-├── lib/                        # gsapConfig, scramble.js, scroll.js
-├── pages/
-│   ├── Home/                   # HeroSection, TerminalSection, StatsSection
-│   ├── About/                  # ProfileSection, TechStackSection, TimelineSection,
-│   │                           #   CredentialsSection
-│   ├── Projects/               # CaseStudiesSection, PublicRepositoriesSection
-│   └── Contact/                # ContactFormSection
-└── styles/
-    ├── theme.css               # CSS vars: colors, shadows, fonts, container
-    └── global.css              # Tailwind import, reset, bg patterns, animations
-```
-
 ### How to update the site
 
 #### Update Career Timeline
@@ -54,7 +24,7 @@ Edit `src/data/experience.js` → `timeline[]`. Each entry: `{date, title, org, 
 
 #### Update Case Studies / Repos
 
-Edit `src/data/projects.js` → `caseStudies[]` (7 entries) and `publicRepositories[]` (8 entries). Case study: `{code, label, highlights, details[3], title, description, tags[], link}`. Repo: `{title, description, repoUrl, demoUrl?, techStack[]}`.
+Edit `src/data/projects.js` → `caseStudies[]` and `publicRepositories[]`. Case study: `{code, label, highlights, details[3], title, description, tags[]}`. Repo: `{title, description, repoUrl, demoUrl?, techStack[]}`.
 
 #### Update Bio / Intro
 
@@ -63,7 +33,7 @@ Also edit `src/pages/Home/HeroSection.jsx` (the `<p>` below the subtitle).
 
 #### Update Resume
 
-Edit `/home/shafiq.imtiaz/Documents/resume/Shafiq-Imtiaz-Resume.md` then cp to `public/docs/Shafiq-Imtiaz-Resume.md`.
+Update `public/docs/Shafiq-Imtiaz-Resume.pdf` (and its `.md` source) — the site links the PDF from the navbar and hero.
 
 #### Update Avatar
 
@@ -95,81 +65,7 @@ Replace `public/docs/developer-avatar.jpg`.
 - Vercel Analytics + Speed Insights wired in App.jsx.
 - No tests in this project.
 
----
-
-### Data schema reference
-
-#### experience.js → `timeline[]`
-
-```
-{ date, title, org, accent, icon, details[], credentialUrl? }
-```
-
-- `accent`: Tailwind class e.g. `text-[var(--theme-primary)] border-[var(--theme-primary)]`
-- `icon`: Material Symbol name (24px, outlined), e.g. `'rocket_launch'`, `'work'`, `'school'`
-- `details[]`: array of strings (displayed as bullet points)
-- `credentialUrl`: optional external link rendered as "View credential"
-
-#### experience.js → `techStack[]`
-
-```
-{ icon, accent, code, title, items[] }
-```
-
-- 6 categories: Languages, AI & LLM, Backend, Frontend, Data & Storage, Cloud & DevOps
-
-#### experience.js → `credentials[]`
-
-```
-{ date, title, org, icon, accent, details[], credentialUrl? }
-```
-
-- 4 entries: certification, 2 education, volunteer work
-
-#### projects.js → `caseStudies[]`
-
-```
-{ code, label, highlights, details[3], title, description, tags[], link }
-```
-
-- `code`: 3-digit string (`'001'`–`'007'`)
-- `label`: category badge text
-- `details[]`: exactly 3 bullet points — feature-based, no code names
-- `link`: `{ label, href }` — always points to résumé PDF
-
-#### projects.js → `publicRepositories[]`
-
-```
-{ title, description, repoUrl, demoUrl?, techStack[] }
-```
-
-- 8 entries, sorted newest → oldest by GitHub creation date
-
-#### stats.js
-
-```
-{ value: string, label: string, accent: string }
-```
-
-- `value`: e.g. `"2,500+"`, `"5+"` — parsed by CountUp
-
-#### links.js
-
-```
-externalNodes: { label, handle, icon, href, accent }
-footerLinks: { label, href }
-```
-
-#### terminalPlayback.js
-
-```
-{ id, session, prompt, label, fallbackOutput, actions[] }
-actions: { id, label, command, delayMs, output[], cta?, media? }
-```
-
----
-
-### CSS theme tokens (`src/styles/theme.css`)
+### Styling conventions
 
 All styling uses these CSS vars — never hardcode hex values.
 

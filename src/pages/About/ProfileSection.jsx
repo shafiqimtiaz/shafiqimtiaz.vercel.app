@@ -19,27 +19,18 @@ export default function ProfileSection() {
             // mission
           </p>
           <p className="mt-4 text-base leading-relaxed text-[var(--theme-text-muted)]">
-            I&apos;m a{' '}
             <span className="font-semibold text-[var(--theme-text)]">
-              Senior Software and AI Engineer
+              I own systems, not tickets.
             </span>{' '}
-            with 5+ years and an{' '}
+            Five years at{' '}
+            <span className="font-semibold text-[var(--theme-secondary)]">Flexspring</span> — a
+            platform running 2,500+ client configurations — taking services from empty repo to
+            production. File Manager alone, Agent Core alone, and the migrations nobody volunteers
+            for. Senior Software and AI Engineer in Ottawa,{' '}
             <span className="font-semibold text-[var(--theme-primary)]">
               AWS Certified AI Practitioner
             </span>
-            . I own services end-to-end — built File Manager from scratch as sole engineer, a
-            standalone microservice with multi-region cloud storage, event-driven reconciliation,
-            and full-stack UI; I architected the flexspring-agent-core AI library adopted across the
-            platform. I deliver full-stack features across Monitor, Studio, and backend services —
-            Data Mapping, Credentials Manager, Lifecycle, and Webhook Templates spanning five
-            services end-to-end. I architect LLM integration layers and productionize AI features —
-            embedding-based field recommendations, AI Assembly automation, and LLM-powered
-            transaction intelligence — with caching, fallback, and governance. I build developer
-            tooling — Chrome extensions, CLI tools, terminal dashboards — published on npm and the
-            Chrome Web Store. I lead platform migrations with zero regression — Java 8→17, Spring
-            Boot 2→3, React 18 across production services. Currently at{' '}
-            <span className="font-semibold text-[var(--theme-secondary)]">Flexspring</span>, serving
-            2,500+ client configurations.
+            .
           </p>
         </Reveal>
 
