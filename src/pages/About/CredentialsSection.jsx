@@ -4,7 +4,7 @@ import { Reveal, ScrambleOnHover } from '../../components/ui';
 export default function CredentialsSection() {
   return (
     <section className="mt-24">
-      <Reveal as="header" className="mb-10 max-w-3xl">
+      <Reveal as="header" className="mb-10">
         <p className="font-body text-[0.7rem] tracking-[0.2em] text-[var(--theme-secondary)] uppercase">
           // Education & Credentials
         </p>

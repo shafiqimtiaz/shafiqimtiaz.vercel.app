@@ -4,7 +4,7 @@ import { Reveal, ScrambleOnHover } from '../../components/ui';
 export default function CaseStudiesSection() {
   return (
     <>
-      <Reveal as="header" className="max-w-3xl">
+      <Reveal as="header">
         <p className="font-body text-[0.7rem] tracking-[0.2em] text-[var(--theme-primary)] uppercase">
           // Selected Work
         </p>
@@ -15,7 +15,7 @@ export default function CaseStudiesSection() {
         >
           Career <span className="text-[var(--theme-primary)]">milestones</span>
         </ScrambleOnHover>
-        <p className="mt-5 text-base leading-relaxed text-[var(--theme-text-muted)]">
+        <p className="mt-5 max-w-3xl text-base leading-relaxed text-[var(--theme-text-muted)]">
           Production work backed by on-the-job delivery — AI platform infrastructure, microservice
           ownership, and major platform modernisation across enterprise systems.
         </p>

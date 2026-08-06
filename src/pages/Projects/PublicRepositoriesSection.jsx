@@ -4,7 +4,7 @@ import { Reveal, ScrambleOnHover } from '../../components/ui';
 export default function PublicRepositoriesSection() {
   return (
     <section className="mt-24">
-      <Reveal as="header" className="max-w-3xl">
+      <Reveal as="header">
         <p className="font-body text-[0.7rem] tracking-[0.2em] text-[var(--theme-tertiary)] uppercase">
           // Open Source
         </p>
@@ -15,7 +15,7 @@ export default function PublicRepositoriesSection() {
         >
           Public <span className="text-[var(--theme-tertiary)]">repositories</span>
         </ScrambleOnHover>
-        <p className="mt-5 text-base leading-relaxed text-[var(--theme-text-muted)]">
+        <p className="mt-5 max-w-3xl text-base leading-relaxed text-[var(--theme-text-muted)]">
           Developer tooling, browser extensions, and AI-powered utilities — from CLI agents to
           Chrome extensions.
         </p>

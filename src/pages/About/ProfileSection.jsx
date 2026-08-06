@@ -4,7 +4,7 @@ import { Reveal, CountUp, ScrambleOnHover } from '../../components/ui';
 export default function ProfileSection() {
   return (
     <section className="mb-24">
-      <Reveal as="header" className="max-w-3xl">
+      <Reveal as="header">
         <p className="font-body text-[0.7rem] tracking-[0.2em] text-[var(--theme-primary)] uppercase">
           // Profile
         </p>

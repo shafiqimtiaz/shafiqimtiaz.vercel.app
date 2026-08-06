@@ -34,7 +34,7 @@ export default function TimelineSection() {
 
   return (
     <section>
-      <Reveal as="header" className="mb-12 max-w-3xl">
+      <Reveal as="header" className="mb-12">
         <p className="font-body text-[0.7rem] tracking-[0.2em] text-[var(--theme-tertiary)] uppercase">
           // Experience Log
         </p>
