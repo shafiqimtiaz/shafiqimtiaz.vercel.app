@@ -47,7 +47,8 @@ export default function CountUp({ value, className = '' }) {
   }
 
   return (
-    <span ref={viewRef} className={className} aria-label={value}>
+    <span ref={viewRef} className={className}>
+      <span className="sr-only">{value}</span>
       <span aria-hidden="true">
         {prefix}
         <span ref={numberRef}>0</span>

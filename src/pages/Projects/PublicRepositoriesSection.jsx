@@ -24,7 +24,7 @@ export default function PublicRepositoriesSection() {
             className="group relative flex h-full flex-col bg-[var(--theme-surface-low)] p-6 transition-colors duration-200 hover:bg-[var(--theme-surface)]"
           >
             <div className="flex items-center justify-between gap-3">
-              <span className="font-body text-[0.6rem] tracking-[0.16em] text-[var(--theme-outline)] uppercase">
+              <span className="font-body text-[0.6rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
                 repo
               </span>
               <span className="font-body text-[0.6rem] tracking-[0.16em] text-[var(--theme-secondary)]">
@@ -44,7 +44,7 @@ export default function PublicRepositoriesSection() {
               {repo.techStack.map((tech) => (
                 <span
                   key={`${repo.title}-${tech}`}
-                  className="font-body text-[0.58rem] tracking-[0.1em] text-[var(--theme-outline)] uppercase"
+                  className="font-body text-[0.58rem] tracking-[0.1em] text-[var(--theme-text-muted)] uppercase"
                 >
                   {tech}
                 </span>

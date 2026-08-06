@@ -90,6 +90,7 @@ export default function ContactFormSection() {
                       id={`contact-${field.name}`}
                       name={field.name}
                       type={field.type}
+                      autoComplete={field.autoComplete}
                       value={formData[field.name]}
                       onChange={handleChange}
                       required={field.required}

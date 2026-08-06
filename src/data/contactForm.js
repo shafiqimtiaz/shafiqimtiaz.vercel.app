@@ -5,6 +5,7 @@ export const contactFormFields = [
     prefix: '~/name $',
     type: 'text',
     placeholder: 'Your name',
+    autoComplete: 'name',
     required: true,
   },
   {
@@ -13,6 +14,7 @@ export const contactFormFields = [
     prefix: '~/email $',
     type: 'email',
     placeholder: 'your.email@example.com',
+    autoComplete: 'email',
     required: true,
   },
   {
