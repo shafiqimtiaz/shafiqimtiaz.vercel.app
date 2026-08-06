@@ -175,8 +175,8 @@ export const publicRepositories = [
   {
     title: 'RecycleVision',
     description:
-      'Image classification for recyclable material sorting — trained TensorFlow models to categorise waste streams and raise the accuracy of automated sorting.',
+      'Waste-sorting mobile app built with a team for the SOEN 6751 HCI course — image recognition classifies waste types, with visual cues and gamification to build sorting confidence.',
     repoUrl: 'https://github.com/shafiqimtiaz/RecycleVision',
-    techStack: ['Python', 'TensorFlow', 'Computer Vision'],
+    techStack: ['JavaScript', 'Mobile App', 'Image Recognition', 'HCI'],
   },
 ];
