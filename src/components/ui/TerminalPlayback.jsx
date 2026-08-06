@@ -37,18 +37,30 @@ export default function TerminalPlayback({ sessionConfig }) {
           </div>
         ) : (
           <>
-            {outputLines.map((line, index) => (
-              <div
-                key={`${line}-${index}`}
-                className={
-                  line.startsWith('>')
-                    ? 'text-[var(--theme-primary)]'
-                    : 'text-[var(--theme-text-muted)]'
-                }
-              >
-                {line || ' '}
-              </div>
-            ))}
+            {outputLines.map((line, index) => {
+              const token = line.startsWith('commit ')
+                ? line.match(/^(commit \S+)(.*)$/)
+                : line.match(/^(\S+\/)(\s*→.*)$/);
+              return (
+                <div
+                  key={`${line}-${index}`}
+                  className={
+                    line.startsWith('>')
+                      ? 'text-[var(--theme-primary)]'
+                      : 'text-[var(--theme-text-muted)]'
+                  }
+                >
+                  {token ? (
+                    <>
+                      <span className="text-[var(--theme-tertiary)]">{token[1]}</span>
+                      {token[2]}
+                    </>
+                  ) : (
+                    line || ' '
+                  )}
+                </div>
+              );
+            })}
             {media?.type === 'gif' && (
               <img
                 src={media.src}
