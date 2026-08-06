@@ -22,8 +22,8 @@ export default function ProfileSection() {
             <span className="font-semibold text-[var(--theme-text)]">
               I own systems, not tickets.
             </span>{' '}
-            Five years at{' '}
-            <span className="font-semibold text-[var(--theme-secondary)]">Flexspring</span> — a
+            Five years of engineering — the last three at{' '}
+            <span className="font-semibold text-[var(--theme-secondary)]">Flexspring</span>, a
             platform running 2,500+ client configurations — taking services from empty repo to
             production. File Manager alone, Agent Core alone, and the migrations nobody volunteers
             for. Senior Software and AI Engineer in Ottawa,{' '}

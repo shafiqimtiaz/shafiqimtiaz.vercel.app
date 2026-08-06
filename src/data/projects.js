@@ -5,7 +5,7 @@ export const caseStudies = [
     highlights: 'File Manager Service',
     title: 'File Manager',
     description:
-      'Primary owner from empty repo to production. S3 has no folders and no cross-key transactions, yet the product needs folder trees, recursive delete, rollup sizes, and inherited permissions — so a materialised tree in MongoDB is kept true by two independent writers.',
+      'Sole engineer from empty repo to production. S3 has no folders and no cross-key transactions, yet the product needs folder trees, recursive delete, rollup sizes, and inherited permissions — so a materialised tree in MongoDB is kept true by two independent writers.',
     details: [
       'S3 event sync repairs Mongo when files land outside the API entirely',
       'EU-region bucket for data-residency clients; roles resolved from Agora',
