@@ -1,5 +1,5 @@
 import { caseStudies } from '../../data/projects';
-import { Reveal } from '../../components/ui';
+import { Reveal, ScrambleOnHover } from '../../components/ui';
 
 export default function CaseStudiesSection() {
   return (
@@ -8,9 +8,13 @@ export default function CaseStudiesSection() {
         <p className="font-body text-[0.7rem] tracking-[0.2em] text-[var(--theme-primary)] uppercase">
           // Selected Work
         </p>
-        <h2 className="font-headline mt-4 text-[clamp(2.4rem,5vw,4rem)] leading-[0.95] font-extrabold tracking-[-0.04em] text-[var(--theme-text)]">
+        <ScrambleOnHover
+          as="h2"
+          reserveWidth
+          className="font-headline mt-4 text-[clamp(2.4rem,5vw,4rem)] leading-[0.95] font-extrabold tracking-[-0.04em] text-[var(--theme-text)]"
+        >
           Career <span className="text-[var(--theme-primary)]">milestones</span>
-        </h2>
+        </ScrambleOnHover>
         <p className="mt-5 text-base leading-relaxed text-[var(--theme-text-muted)]">
           Production work backed by on-the-job delivery — AI platform infrastructure, microservice
           ownership, and major platform modernisation across enterprise systems.

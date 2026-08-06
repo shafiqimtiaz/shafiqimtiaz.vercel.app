@@ -1,5 +1,5 @@
 import { techStack } from '../../data/experience';
-import { Reveal } from '../../components/ui';
+import { Reveal, ScrambleOnHover } from '../../components/ui';
 
 export default function TechStackSection() {
   return (
@@ -12,9 +12,13 @@ export default function TechStackSection() {
           <p className="font-body text-[0.7rem] tracking-[0.2em] text-[var(--theme-secondary)] uppercase">
             // Capabilities
           </p>
-          <h2 className="font-headline mt-4 text-[clamp(2rem,4vw,3rem)] leading-none font-extrabold tracking-[-0.04em] text-[var(--theme-text)]">
+          <ScrambleOnHover
+            as="h2"
+            reserveWidth
+            className="font-headline mt-4 text-[clamp(2rem,4vw,3rem)] leading-none font-extrabold tracking-[-0.04em] text-[var(--theme-text)]"
+          >
             Tech <span className="text-[var(--theme-secondary)]">stack</span>
-          </h2>
+          </ScrambleOnHover>
         </div>
         <div className="font-body inline-flex items-center gap-2 text-[0.62rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
           <span className="h-2 w-2 rounded-full bg-[var(--theme-primary)]"></span>

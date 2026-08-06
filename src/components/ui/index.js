@@ -5,3 +5,4 @@ export { default as SectionHeader } from './SectionHeader';
 export { default as Reveal } from './Reveal';
 export { default as DecodeText } from './DecodeText';
 export { default as CountUp } from './CountUp';
+export { default as ScrambleOnHover } from './ScrambleOnHover';

@@ -1,4 +1,5 @@
 import { Link } from 'react-router';
+import ScrambleOnHover from './ScrambleOnHover';
 
 export default function SectionHeader({ label, title, description, actionLink, className = '' }) {
   return (
@@ -13,9 +14,13 @@ export default function SectionHeader({ label, title, description, actionLink, c
         )}
 
         {title && (
-          <h2 className="font-headline text-[clamp(2rem,3.8vw,3.6rem)] leading-[0.92] font-bold tracking-[-0.05em] text-[var(--theme-text)] uppercase">
+          <ScrambleOnHover
+            as="h2"
+            reserveWidth
+            className="font-headline text-[clamp(2rem,3.8vw,3.6rem)] leading-[0.92] font-bold tracking-[-0.05em] text-[var(--theme-text)] uppercase"
+          >
             {title}
-          </h2>
+          </ScrambleOnHover>
         )}
 
         {description && (

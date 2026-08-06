@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { ScrambleOnHover } from '../../components/ui';
 import HeroSection from './HeroSection';
 import TerminalSection from './TerminalSection';
 import StatsSection from './StatsSection';
@@ -41,7 +42,7 @@ export default function Home() {
   return (
     <main className="pt-[var(--header-height)]">
       {/* Hero */}
-      <section id="hero" className="py-16 lg:py-24">
+      <section id="hero" className="pt-8 pb-16 lg:pt-14 lg:pb-24">
         <div className={`${container} grid gap-12 lg:grid-cols-2 lg:items-center`}>
           <HeroSection />
           <div ref={heroTerminalRef}>
@@ -78,9 +79,13 @@ export default function Home() {
               <p className="font-body text-[0.7rem] tracking-[0.2em] text-[var(--theme-primary)] uppercase">
                 // Open Channel
               </p>
-              <h2 className="font-headline mt-4 text-[clamp(2.4rem,5vw,4rem)] leading-[0.95] font-extrabold tracking-[-0.04em] text-[var(--theme-text)]">
+              <ScrambleOnHover
+                as="h2"
+                reserveWidth
+                className="font-headline mt-4 text-[clamp(2.4rem,5vw,4rem)] leading-[0.95] font-extrabold tracking-[-0.04em] text-[var(--theme-text)]"
+              >
                 Let&apos;s <span className="text-[var(--theme-primary)]">connect</span>
-              </h2>
+              </ScrambleOnHover>
               <p className="mt-5 max-w-[34rem] text-base leading-relaxed text-[var(--theme-text-muted)]">
                 Open to senior engineering roles and collaboration on AI platform infrastructure,
                 backend systems, and cloud modernisation. The form opens your mail app with the

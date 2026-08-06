@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { scrambleText } from '../../lib/scramble';
+import { scrambleTextNodes } from '../../lib/scramble';
 import { prefersReducedMotion } from '../../lib/gsapConfig';
 
 /**
@@ -20,7 +20,7 @@ export default function DecodeText({ text, delay = 0, duration = 600, className 
 
     let cancel = null;
     const timer = setTimeout(() => {
-      cancel = scrambleText(el, text, { duration });
+      cancel = scrambleTextNodes(el, { duration });
     }, delay);
 
     return () => {

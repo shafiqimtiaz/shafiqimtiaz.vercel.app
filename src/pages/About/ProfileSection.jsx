@@ -1,5 +1,5 @@
 import { profileStats } from '../../data/stats';
-import { Reveal, CountUp } from '../../components/ui';
+import { Reveal, CountUp, ScrambleOnHover } from '../../components/ui';
 
 export default function ProfileSection() {
   return (
@@ -8,9 +8,13 @@ export default function ProfileSection() {
         <p className="font-body text-[0.7rem] tracking-[0.2em] text-[var(--theme-primary)] uppercase">
           // Profile
         </p>
-        <h2 className="font-headline mt-4 text-[clamp(2.4rem,5vw,4rem)] leading-[0.95] font-extrabold tracking-[-0.04em] text-[var(--theme-text)]">
+        <ScrambleOnHover
+          as="h2"
+          reserveWidth
+          className="font-headline mt-4 text-[clamp(2.4rem,5vw,4rem)] leading-[0.95] font-extrabold tracking-[-0.04em] text-[var(--theme-text)]"
+        >
           About <span className="text-[var(--theme-primary)]">me</span>
-        </h2>
+        </ScrambleOnHover>
       </Reveal>
 
       <div className="mt-12 grid gap-6 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:items-stretch">
@@ -22,11 +26,15 @@ export default function ProfileSection() {
             <span className="font-semibold text-[var(--theme-text)]">
               I own systems, not tickets.
             </span>{' '}
-            Five years of engineering — the last three at{' '}
-            <span className="font-semibold text-[var(--theme-secondary)]">Flexspring</span>, a
-            platform running 2,500+ client configurations — taking services from empty repo to
-            production. File Manager alone, Agent Core alone, and the migrations nobody volunteers
-            for. Senior Software and AI Engineer in Ottawa,{' '}
+            Senior Software and AI Engineer in Ottawa with five years of engineering experience —
+            the last three at{' '}
+            <span className="font-semibold text-[var(--theme-secondary)]">Flexspring</span>, an
+            enterprise integration platform serving 2,500+ client configurations. I take products
+            from first commit to production, end-to-end: AI platform features (LLM orchestration,
+            recommendation engines, caching, security-hardened integrations), full-stack services
+            (Java, Spring Boot, Quarkus, React, TypeScript), and event-driven data systems
+            (PostgreSQL, MongoDB, Redis). I also lead the platform modernisations others avoid —
+            framework and runtime migrations shipped with zero regression.{' '}
             <span className="font-semibold text-[var(--theme-primary)]">
               AWS Certified AI Practitioner
             </span>

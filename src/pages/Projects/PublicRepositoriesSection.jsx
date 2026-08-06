@@ -1,5 +1,5 @@
 import { publicRepositories } from '../../data/projects';
-import { Reveal } from '../../components/ui';
+import { Reveal, ScrambleOnHover } from '../../components/ui';
 
 export default function PublicRepositoriesSection() {
   return (
@@ -8,9 +8,13 @@ export default function PublicRepositoriesSection() {
         <p className="font-body text-[0.7rem] tracking-[0.2em] text-[var(--theme-tertiary)] uppercase">
           // Open Source
         </p>
-        <h2 className="font-headline mt-4 text-[clamp(2rem,4vw,3rem)] leading-none font-extrabold tracking-[-0.04em] text-[var(--theme-text)]">
+        <ScrambleOnHover
+          as="h2"
+          reserveWidth
+          className="font-headline mt-4 text-[clamp(2rem,4vw,3rem)] leading-none font-extrabold tracking-[-0.04em] text-[var(--theme-text)]"
+        >
           Public <span className="text-[var(--theme-tertiary)]">repositories</span>
-        </h2>
+        </ScrambleOnHover>
         <p className="mt-5 text-base leading-relaxed text-[var(--theme-text-muted)]">
           Developer tooling, browser extensions, and AI-powered utilities — from CLI agents to
           Chrome extensions.

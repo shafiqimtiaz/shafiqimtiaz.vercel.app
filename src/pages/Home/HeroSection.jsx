@@ -1,4 +1,4 @@
-import { Button, DecodeText } from '../../components/ui';
+import { Button, DecodeText, ScrambleOnHover } from '../../components/ui';
 
 export default function HeroSection() {
   return (
@@ -11,7 +11,11 @@ export default function HeroSection() {
         Senior Software and AI Engineer · Open to work
       </div>
 
-      <h1 className="font-headline mt-7 text-[clamp(3.2rem,7vw,6rem)] leading-[0.92] font-extrabold tracking-[-0.04em] text-[var(--theme-text)]">
+      <ScrambleOnHover
+        as="h1"
+        reserveWidth
+        className="font-headline mt-7 text-[clamp(3.2rem,7vw,6rem)] leading-[0.92] font-extrabold tracking-[-0.04em] text-[var(--theme-text)]"
+      >
         <DecodeText text="Shafiq" delay={150} duration={550} />
         <br />
         <DecodeText
@@ -20,7 +24,7 @@ export default function HeroSection() {
           duration={550}
           className="text-glow text-[var(--theme-primary)]"
         />
-      </h1>
+      </ScrambleOnHover>
 
       <p className="font-body mt-6 text-sm tracking-[0.06em] text-[var(--theme-text-muted)]">
         <span className="text-[var(--theme-primary)]">&gt;</span> AI Platform &amp; Agentic
@@ -29,9 +33,9 @@ export default function HeroSection() {
       </p>
 
       <p className="mt-6 max-w-[36rem] text-base leading-relaxed text-[var(--theme-text-muted)]">
-        I own full-stack services and AI platform infrastructure — built File Manager from scratch,
-        architected the agentic AI library, and deliver production AI features with caching,
-        fallback, and governance. Currently at Flexspring, serving 2,500+ client configurations.
+        I own full-stack services and AI platform infrastructure — production AI features with
+        caching, fallback, and governance; agentic developer tooling; and microservices taken from
+        first commit to production. Currently at Flexspring, serving 2,500+ client configurations.
       </p>
 
       <div className="mt-9 flex flex-wrap gap-4">
@@ -83,7 +87,7 @@ export default function HeroSection() {
             Focus
           </dt>
           <dd className="font-headline mt-1 font-semibold text-[var(--theme-text)]">
-            LLM · Java · React
+            TypeScript · React · Java · Spring Boot · AI-Native Development
           </dd>
         </div>
       </dl>

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { timeline } from '../../data/experience';
-import { Reveal } from '../../components/ui';
+import { Reveal, ScrambleOnHover } from '../../components/ui';
 import { gsap, prefersReducedMotion } from '../../lib/gsapConfig';
 
 export default function TimelineSection() {
@@ -38,9 +38,13 @@ export default function TimelineSection() {
         <p className="font-body text-[0.7rem] tracking-[0.2em] text-[var(--theme-tertiary)] uppercase">
           // Experience Log
         </p>
-        <h2 className="font-headline mt-4 text-[clamp(2rem,4vw,3rem)] leading-none font-extrabold tracking-[-0.04em] text-[var(--theme-text)]">
+        <ScrambleOnHover
+          as="h2"
+          reserveWidth
+          className="font-headline mt-4 text-[clamp(2rem,4vw,3rem)] leading-none font-extrabold tracking-[-0.04em] text-[var(--theme-text)]"
+        >
           Career <span className="text-[var(--theme-tertiary)]">timeline</span>
-        </h2>
+        </ScrambleOnHover>
       </Reveal>
 
       <div ref={trackRef} className="relative">

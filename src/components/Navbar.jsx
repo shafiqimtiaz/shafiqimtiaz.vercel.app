@@ -1,15 +1,14 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router';
 import useScrollProgress from '../hooks/useScrollProgress';
 import { scrollToId } from '../lib/scroll';
-import { scrambleText } from '../lib/scramble';
-import { prefersReducedMotion } from '../lib/gsapConfig';
+import { ScrambleOnHover } from './ui';
 
 const navSections = [
-  { id: 'hero', label: 'HOME', to: '/' },
-  { id: 'projects', label: 'PROJECTS', to: '/#projects' },
-  { id: 'about', label: 'ABOUT', to: '/#about' },
-  { id: 'contact', label: 'CONTACT', to: '/#contact' },
+  { id: 'hero', label: 'HOME' },
+  { id: 'projects', label: 'PROJECTS' },
+  { id: 'about', label: 'ABOUT' },
+  { id: 'contact', label: 'CONTACT' },
 ];
 
 const navLinkBase =
@@ -18,26 +17,16 @@ const mobileLinkBase =
   'font-body text-[0.72rem] font-medium uppercase tracking-[0.16em] text-[var(--theme-text-muted)] transition-colors hover:text-[var(--theme-primary)]';
 
 function ScrambleNavLink({ section, active, onNavigate }) {
-  const labelRef = useRef(null);
-  const cancelRef = useRef(null);
-
-  const handleEnter = () => {
-    if (prefersReducedMotion() || !labelRef.current) return;
-    if (cancelRef.current) cancelRef.current();
-    cancelRef.current = scrambleText(labelRef.current, section.label, { duration: 350 });
-  };
-
-  useEffect(() => () => cancelRef.current?.(), []);
-
   return (
-    <a
+    <ScrambleOnHover
+      as="a"
+      reserveWidth
       href={`#${section.id}`}
       onClick={(e) => onNavigate(e, section.id)}
-      onMouseEnter={handleEnter}
       className={`${navLinkBase} ${active ? 'text-[var(--theme-primary)] after:absolute after:inset-x-0 after:-bottom-2 after:h-0.5 after:bg-[var(--theme-primary)]' : ''}`}
     >
-      <span ref={labelRef}>{section.label}</span>
-    </a>
+      <span>{section.label}</span>
+    </ScrambleOnHover>
   );
 }
 
@@ -69,14 +58,16 @@ export default function Navbar() {
       {/* Nav background */}
       <div className="border-b border-[rgba(73,72,71,0.5)] bg-[var(--theme-surface-low)]/95 shadow-[var(--shadow-primary)] backdrop-blur-xl">
         <div className="mx-auto flex min-h-[var(--header-height)] w-[min(100%-2rem,var(--container-width))] items-center gap-5">
-          <Link
+          <ScrambleOnHover
+            as={Link}
+            reserveWidth
             className="font-body text-base font-bold tracking-[-0.01em] text-[var(--theme-text)] transition-colors hover:text-[var(--theme-primary)]"
             to="/"
             onClick={(e) => scrollToSection(e, 'hero')}
           >
             <span className="text-[var(--theme-primary)]">~/</span>shafiq
             <span className="cursor-block text-[var(--theme-primary)]">_</span>
-          </Link>
+          </ScrambleOnHover>
 
           <nav
             className="ml-auto hidden items-center gap-6 md:flex"
@@ -118,14 +109,15 @@ export default function Navbar() {
               aria-label="Mobile navigation"
             >
               {navSections.map((section) => (
-                <a
+                <ScrambleOnHover
                   key={section.id}
+                  as="a"
                   href={`#${section.id}`}
                   onClick={(e) => scrollToSection(e, section.id)}
                   className={`${mobileLinkBase} ${activeSection === section.id ? 'text-[var(--theme-primary)]' : ''}`}
                 >
                   {section.label}
-                </a>
+                </ScrambleOnHover>
               ))}
             </nav>
           </div>
