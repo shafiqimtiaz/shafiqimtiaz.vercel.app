@@ -2,27 +2,59 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Redirecting...</title>
-    <script>
-      var pathSegmentsToKeep = 0;
-      var location = window.location;
-      location.replace(
-        location.protocol +
-          '//' +
-          location.hostname +
-          (location.port ? ':' + location.port : '') +
-          location.pathname
-            .split('/')
-            .slice(0, 1 + pathSegmentsToKeep)
-            .join('/') +
-          '/?/' +
-          location.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/') +
-          (location.search
-            ? '&' + location.search.slice(1).replace(/&/g, '~and~')
-            : '') +
-          location.hash
-      );
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page not found | Shafiq Imtiaz</title>
+    <meta name="robots" content="noindex, follow" />
+    <style>
+      :root {
+        --page-bg: #0a0b0a;
+        --page-surface: #101210;
+        --page-text: #f4f7f3;
+        --page-muted: #9aa39a;
+        --page-primary: #8dff7a;
+        color-scheme: dark;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        display: grid;
+        min-height: 100vh;
+        margin: 0;
+        place-items: center;
+        background: var(--page-bg);
+        color: var(--page-text);
+      }
+
+      main {
+        width: min(100% - 2rem, 42rem);
+        padding: 2rem;
+        border: 1px solid var(--page-primary);
+        background: var(--page-surface);
+      }
+
+      p {
+        color: var(--page-muted);
+        line-height: 1.7;
+      }
+
+      a {
+        display: inline-block;
+        margin-top: 1rem;
+        color: var(--page-primary);
+        font-weight: 700;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <p>404 // ROUTE NOT FOUND</p>
+      <h1>This page does not exist.</h1>
+      <p>The requested URL could not be found. Return to the portfolio homepage.</p>
+      <a href="/">Back to portfolio</a>
+    </main>
+  </body>
 </html>

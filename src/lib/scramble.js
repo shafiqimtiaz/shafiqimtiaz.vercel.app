@@ -56,16 +56,20 @@ export function createWidthStableGlyphPicker(el) {
   probe.style.cssText = 'position:absolute;visibility:hidden;white-space:pre;';
   probe.style.font = style.font;
   document.body.appendChild(probe);
-  const measure = (s) => probe.getBoundingClientRect().width;
+  const measure = (text) => {
+    probe.textContent = text;
+    return probe.getBoundingClientRect().width;
+  };
   const glyphs = GLYPHS.split('');
   const glyphWidths = glyphs.map(measure);
-  const charWidthCache = new Map();
+  const charWidthCache = new Map(
+    [...new Set(el.textContent)].map((character) => [character, measure(character)])
+  );
   probe.remove();
 
   return (text, index) => {
     const original = text[index];
-    if (!charWidthCache.has(original)) charWidthCache.set(original, measure(original));
-    const target = charWidthCache.get(original);
+    const target = charWidthCache.get(original) ?? 0;
     const lo = target * 0.88;
     const hi = target * 1.12;
     let bucket = [];
