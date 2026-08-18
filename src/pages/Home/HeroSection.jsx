@@ -8,7 +8,7 @@ export default function HeroSection() {
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--theme-primary)] opacity-60"></span>
           <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--theme-primary)]"></span>
         </span>
-        Senior Software and AI Engineer · Open to work
+        Principal Software Engineer · Open to work
       </div>
 
       <ScrambleOnHover

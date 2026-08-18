@@ -2,7 +2,7 @@
 
 # Shafiq Imtiaz
 
-Senior Software Engineer &nbsp;·&nbsp; AWS Certified AI Practitioner &nbsp;·&nbsp; Ottawa, ON
+Principal Software Engineer &nbsp;·&nbsp; AWS Certified AI Practitioner &nbsp;·&nbsp; Ottawa, ON
 
 [![Portfolio](https://img.shields.io/badge/🌐_Portfolio-000000?style=flat-square&logo=vercel&logoColor=white)](https://shafiqimtiaz.vercel.app)
 [![LinkedIn](https://img.shields.io/badge/💼_LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/shafiqimtiaz)
@@ -14,20 +14,20 @@ Senior Software Engineer &nbsp;·&nbsp; AWS Certified AI Practitioner &nbsp;·&n
 
 ---
 
-### 👨‍💻 &nbsp;Current Role
+### Current Role
 
-**Senior Software Engineer · [Flexspring](https://flexspring.com)** &nbsp;`May 2026 – Present` &nbsp;·&nbsp; Ottawa, ON
+**Principal Software Engineer · [Flexspring](https://flexspring.com)** &nbsp;`May 2026 – Present` &nbsp;·&nbsp; Ottawa, ON
 _B2B HR integration platform serving 2,500+ client configurations_
 
-- **Data Mapping (AI)** — Built an AI-driven field recommendation system: embedding-based reranking, cosine-similarity matching, Redisson caching, and LiteLLM fallback — shipped as a self-service spec tool replacing manual spreadsheet workflows
-- **LLM integration hardening** — Productionized platform-wide LLM use (unit tests, SonarQube fixes, secret removal → secure config layer) into a reusable service adopted across Monitor, Studio, and shared libraries
-- **`flexspring-agent-core`** — Sole architect of the platform's foundational AI agent library (TypeScript/Node.js + LiteLLM, Spec-Driven Development); overhauled the installer with MCP setup and skill-registry config
-- **Platform modernisation** — Led Spring Boot 3 / Java 17 migrations and modernised Monitor's front-end (React 18.3, React Router v7, Vite)
-- **Hackathon Runner-Up 🏆** — Won a $1,000 prize with a RAG-powered chatbot that seeded the company's ongoing AI initiative
+- **Data Mapping (AI)**: built an AI-driven field recommendation system with embedding-based reranking, cosine-similarity matching, Redisson caching, and LiteLLM fallback. Shipped as a self-service spec tool that replaced manual spreadsheet workflows.
+- **LLM integration hardening**: productionized platform-wide LLM use (unit tests, SonarQube fixes, secret removal → secure config layer) into a reusable service adopted across Monitor, Studio, and shared libraries.
+- **`flexspring-agent-core`**: sole architect of the platform's foundational AI agent library (TypeScript/Node.js + LiteLLM, Spec-Driven Development). Overhauled the installer with MCP setup and skill-registry config.
+- **Platform modernisation**: led Spring Boot 3 / Java 17 migrations and modernised Monitor's front-end (React 18.3, React Router v7, Vite).
+- **Hackathon Runner-Up**: won a $1,000 prize with a RAG-powered chatbot that seeded the company's ongoing AI initiative.
 
 ---
 
-### 🛠️ &nbsp;Tech Stack
+### Tech Stack
 
 | Layer               | Technologies                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -40,17 +40,17 @@ _B2B HR integration platform serving 2,500+ client configurations_
 
 ---
 
-### 🏆 &nbsp;Selected Achievements
+### Selected Achievements
 
-- **AI Platform Foundation** — Designed `flexspring-agent-core`, the platform's AI agent framework with model-agnostic LLM orchestration, Spec-Driven Development, and MCP server integration for safe, scalable tool use
-- **AI Productionization** — Hardened platform-wide LLM integration (caching, fallback, gating) and shipped Data Mapping, replacing manual spreadsheet workflows with AI field recommendations
-- **Microservice Ownership** — Sole engineer on `flexspring-file-manager`: Quarkus service + multi-region AWS S3 (US/EU) + MongoDB metadata + per-item permissions + SQS reconciliation + React UI — greenfield to production
-- **Platform Modernisation** — Spring Boot 2→3 migrations across two production services (Java 8→17) + full Monitor front-end upgrade (React 18.3, React Router v7, Vite)
-- **Production Incident Resolution** — Diagnosed corrupted DB records blocking client integrations; authored idempotent correction scripts across PostgreSQL + MongoDB under live conditions
+- **AI Platform Foundation**: designed `flexspring-agent-core`, the platform's AI agent framework with model-agnostic LLM orchestration, Spec-Driven Development, and MCP server integration for safe, scalable tool use.
+- **AI Productionization**: hardened platform-wide LLM integration (caching, fallback, gating) and shipped Data Mapping, replacing manual spreadsheet workflows with AI field recommendations.
+- **Microservice Ownership**: sole engineer on `flexspring-file-manager`, a Quarkus service with multi-region AWS S3 (US/EU), MongoDB metadata, per-item permissions, SQS reconciliation, and a React UI. Built from greenfield to production.
+- **Platform Modernisation**: Spring Boot 2→3 migrations across two production services (Java 8→17) plus a full Monitor front-end upgrade (React 18.3, React Router v7, Vite).
+- **Production Incident Resolution**: diagnosed corrupted DB records blocking client integrations and authored idempotent correction scripts across PostgreSQL and MongoDB under live conditions.
 
 ---
 
-### 🚀 &nbsp;Featured Projects
+### Featured Projects
 
 | Project                                                                                  | Stack                                   |           |
 | ---------------------------------------------------------------------------------------- | --------------------------------------- | --------- |
@@ -63,7 +63,7 @@ _B2B HR integration platform serving 2,500+ client configurations_
 
 ---
 
-### 🎓 &nbsp;Education & Certifications
+### Education & Certifications
 
 **MEng Software Engineering (Co-op)** · Concordia University, Montreal · `2022–2024`
 **BSc Electrical & Electronics Engineering** · Islamic University of Technology · `2015–2018`
@@ -72,9 +72,9 @@ _B2B HR integration platform serving 2,500+ client configurations_
 
 ---
 
-### 🧩 &nbsp;About This Repository
+### About This Repository
 
-This repo is the source of my portfolio at **[shafiqimtiaz.vercel.app](https://shafiqimtiaz.vercel.app)** — a single-page site with a terminal-inspired aesthetic, dark/light theming, and scroll-reveal motion.
+This repo is the source of my portfolio at **[shafiqimtiaz.vercel.app](https://shafiqimtiaz.vercel.app)**: a single-page site with a terminal-inspired aesthetic, dark/light theming, and scroll-reveal motion.
 
 **Built with** ![React 18](https://img.shields.io/badge/React_18-20232A?style=flat-square&logo=react&logoColor=61DAFB) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white) ![Tailwind v4](https://img.shields.io/badge/Tailwind_v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white) ![React Router v7](https://img.shields.io/badge/React_Router_v7-CA4245?style=flat-square&logo=reactrouter&logoColor=white) · deployed on **Vercel**.
 

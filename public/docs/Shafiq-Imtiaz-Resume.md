@@ -3,7 +3,7 @@
 shafiqimtiaz@gmail.com | [linkedin.com/in/shafiqimtiaz](http://linkedin.com/in/shafiqimtiaz) | [github.com/shafiqimtiaz](http://github.com/shafiqimtiaz) | Ottawa, ON
 
 **PROFESSIONAL SUMMARY**  
-Principal Software Engineer with 5+ years at Flexspring — a B2B HR platform with 2,500+ enterprise clients. I build full-stack features end-to-end: Spring Boot microservices, event-driven systems, React UIs. I own the File Manager service end-to-end (built from scratch as sole engineer), architected the platform's agentic AI library, and lead zero-regression migrations. I also deliver production AI features — field recommendations, transaction intelligence, AI Assembly automation — with caching, fallback, and governance. AWS Certified AI Practitioner. Builds Chrome extensions, CLIs, and dashboards on the side.
+Principal Software Engineer with 5+ years at Flexspring, a B2B HR platform with 2,500+ enterprise clients. I build full-stack features end-to-end: Spring Boot microservices, event-driven systems, React UIs. I own the File Manager service end-to-end (built from scratch as sole engineer), architected the platform's agentic AI library, and lead zero-regression migrations. I also deliver production AI features (field recommendations, transaction intelligence, AI Assembly automation) with caching, fallback, and governance. AWS Certified AI Practitioner. Builds Chrome extensions, CLIs, and dashboards on the side.
 
 **CORE SKILLS**
 
@@ -21,7 +21,7 @@ Principal Software Engineer with 5+ years at Flexspring — a B2B HR platform wi
 **Principal Software Engineer | Flexspring | Ottawa, ON | Aug 2026 \- Present**  
 *B2B content management and delivery platform serving 2,500+ client configurations*
 
-* Promoted to Principal Developer — leading technical direction, architecture decisions, and delivery of Flexspring's AI and integration platform.
+* Promoted to Principal Software Engineer, leading technical direction, architecture decisions, and delivery of Flexspring's AI and integration platform.
 
 **Software and AI Engineer | Flexspring | Ottawa, ON | May 2024 \- Aug 2026**
 
@@ -57,7 +57,7 @@ Principal Software Engineer with 5+ years at Flexspring — a B2B HR platform wi
 
 **nexus-ai | Next.js, TypeScript | [github.com/shafiqimtiaz/nexus-ai](http://github.com/shafiqimtiaz/nexus-ai)**
 
-* AI academic organizer unifying announcements, calendar, and resources with agentic chat — integrates Google Classroom, Discord, and Slack. [Live demo](https://nexus-ai-tool.vercel.app)
+* AI academic organizer that unifies announcements, calendar, and resources with agentic chat and integrates Google Classroom, Discord, and Slack. [Live demo](https://nexus-ai-tool.vercel.app)
 
 **diet-workout-plan | React, Vite, Gemini AI | [github.com/shafiqimtiaz/diet-workout-plan](http://github.com/shafiqimtiaz/diet-workout-plan)**
 
@@ -65,11 +65,11 @@ Principal Software Engineer with 5+ years at Flexspring — a B2B HR platform wi
 
 **pokégent | TypeScript, Node.js, Ink | [github.com/shafiqimtiaz/pokegent](http://github.com/shafiqimtiaz/pokegent)**
 
-* Terminal dashboard visualizing your AI coding ecosystem — agents as Pokémon, MCP servers as TMs/HMs — 100% local, zero telemetry. [npm](https://www.npmjs.com/package/pokegent)
+* Terminal dashboard visualizing your AI coding ecosystem: agents as Pokémon, MCP servers as TMs/HMs. Runs 100% locally with no telemetry. [npm](https://www.npmjs.com/package/pokegent)
 
 **ctx-handoff | TypeScript, Node.js, Deno Deploy | [github.com/shafiqimtiaz/ctx-handoff](http://github.com/shafiqimtiaz/ctx-handoff)**
 
-* Encrypted, ephemeral context handoff CLI for AI coding agents — AES-256-GCM, blobs expire in 24h. [npm](https://www.npmjs.com/package/ctx-handoff)
+* Encrypted, ephemeral context handoff CLI for AI coding agents: AES-256-GCM encryption, blobs expire in 24h. [npm](https://www.npmjs.com/package/ctx-handoff)
 
 **clean-bookmarks | TypeScript, Node.js, Chrome MV3 | [github.com/shafiqimtiaz/clean-bookmarks](http://github.com/shafiqimtiaz/clean-bookmarks)**
 

@@ -79,7 +79,7 @@ export const timeline = [
     accent: 'text-[var(--theme-primary)] border-[var(--theme-primary)]',
     icon: 'workspace_premium',
     details: [
-      'Promoted to Principal Developer — leading technical direction, architecture decisions, and delivery of Flexspring’s AI and integration platform.',
+      'Promoted to Principal Software Engineer — leading technical direction, architecture decisions, and delivery of Flexspring’s AI and integration platform.',
     ],
   },
   {

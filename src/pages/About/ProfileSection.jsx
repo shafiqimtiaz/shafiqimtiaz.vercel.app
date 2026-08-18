@@ -26,8 +26,8 @@ export default function ProfileSection() {
             <span className="font-semibold text-[var(--theme-text)]">
               I own systems, not tickets.
             </span>{' '}
-            Senior Software and AI Engineer in Ottawa with five years of engineering experience —
-            the last three at{' '}
+            Principal Software Engineer in Ottawa with five years of engineering experience — the
+            last three at{' '}
             <span className="font-semibold text-[var(--theme-secondary)]">Flexspring</span>, an
             enterprise integration platform serving 2,500+ client configurations. I take products
             from first commit to production, end-to-end: AI platform features (LLM orchestration,
