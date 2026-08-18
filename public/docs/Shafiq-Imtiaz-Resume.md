@@ -3,7 +3,7 @@
 shafiqimtiaz@gmail.com | [linkedin.com/in/shafiqimtiaz](http://linkedin.com/in/shafiqimtiaz) | [github.com/shafiqimtiaz](http://github.com/shafiqimtiaz) | Ottawa, ON
 
 **PROFESSIONAL SUMMARY**  
-Senior Software and AI Engineer with 5+ years at Flexspring — a B2B HR platform with 2,500+ enterprise clients. I build full-stack features end-to-end: Spring Boot microservices, event-driven systems, React UIs. I own the File Manager service end-to-end (built from scratch as sole engineer), architected the platform's agentic AI library, and lead zero-regression migrations. I also deliver production AI features — field recommendations, transaction intelligence, AI Assembly automation — with caching, fallback, and governance. AWS Certified AI Practitioner. Builds Chrome extensions, CLIs, and dashboards on the side.
+Principal Software Engineer with 5+ years at Flexspring — a B2B HR platform with 2,500+ enterprise clients. I build full-stack features end-to-end: Spring Boot microservices, event-driven systems, React UIs. I own the File Manager service end-to-end (built from scratch as sole engineer), architected the platform's agentic AI library, and lead zero-regression migrations. I also deliver production AI features — field recommendations, transaction intelligence, AI Assembly automation — with caching, fallback, and governance. AWS Certified AI Practitioner. Builds Chrome extensions, CLIs, and dashboards on the side.
 
 **CORE SKILLS**
 
@@ -18,15 +18,16 @@ Senior Software and AI Engineer with 5+ years at Flexspring — a B2B HR platfor
 
 **PROFESSIONAL EXPERIENCE**
 
-**Senior Software and AI Engineer | Flexspring | Ottawa, ON | May 2026 \- Present**  
+**Principal Software Engineer | Flexspring | Ottawa, ON | Aug 2026 \- Present**  
 *B2B content management and delivery platform serving 2,500+ client configurations*
+
+* Promoted to Principal Developer — leading technical direction, architecture decisions, and delivery of Flexspring's AI and integration platform.
+
+**Software and AI Engineer | Flexspring | Ottawa, ON | May 2024 \- Aug 2026**
 
 * Built AI-driven field recommendation system for Data Mapping with embedding-based reranking, cosine similarity matching, Redisson caching, and LiteLLM fallback. React.js frontend with debounce/abort/retry logic, per-target suggestions, bulk recommendation, and role-based AI gating  
 * Hardened platform-wide LLM integration by adding unit tests, resolving SonarQube findings, and replacing hardcoded API keys with a secure config layer reused across Monitor, Studio, and shared libraries  
-* Added nested/compound field support with breadcrumb navigation in the Data Mapping Modeler  
 * Built a PostgreSQL-to-MongoDB webhook template migration tool for the platform's data-layer consolidation
-
-**Software Engineer | Flexspring | Ottawa, ON | May 2024 \- May 2026**
 
 * Built flexspring-file-manager from scratch as sole engineer. Standalone Quarkus microservice with multi-region AWS S3 storage (US/EU), MongoDB metadata, per-item permissions, SQS event-driven reconciliation, Sentry observability, and OIDC auth via AWS Cognito. Containerized with Docker. Shipped service, API gateway, and React.js UI to production  
 * Designed and implemented Monitor Lifecycle: Spring Boot REST API, JMS/ActiveMQ consumer for event-driven ingestion from Engine, PostgreSQL/MongoDB schema updates, and React UI for project and integration flows  

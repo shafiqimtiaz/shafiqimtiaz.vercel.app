@@ -73,27 +73,27 @@ export const techStack = [
 
 export const timeline = [
   {
-    date: 'MAY 2026 - PRESENT',
-    title: 'Senior Software and AI Engineer',
+    date: 'AUG 2026 - PRESENT',
+    title: 'Principal Software Engineer',
+    org: 'Flexspring | Ottawa, ON',
+    accent: 'text-[var(--theme-primary)] border-[var(--theme-primary)]',
+    icon: 'workspace_premium',
+    details: [
+      'Promoted to Principal Developer — leading technical direction, architecture decisions, and delivery of Flexspring’s AI and integration platform.',
+    ],
+  },
+  {
+    date: 'MAY 2024 - AUG 2026',
+    title: 'Software and AI Engineer',
     org: 'Flexspring | Ottawa, ON',
     accent: 'text-[var(--theme-primary)] border-[var(--theme-primary)]',
     icon: 'rocket_launch',
     details: [
       'Built the AI-driven field recommendation system for Data Mapping — embedding-based reranking, cosine similarity matching, Redisson caching, LiteLLM fallback, React frontend with debounce/abort/retry logic, per-target suggestions, bulk recommendation, and role-based AI gating — then made it deterministic: confidence floor raised 0.55 → 0.80, duplicate-safe bulk autofill, hallucinated picks fall back instead of returning.',
       'Overhauled Data Mapping to multi-source mapping with per-source lookups, combined logic, lenient schema parsing, and a full audit UI — from design spec to delivery.',
-      'Added nested/compound field support with OBJECT/ARRAY container types and breadcrumb navigation in the Data Mapping Modeler.',
       'Hardened platform-wide LLM integration — unit tests, SonarQube findings resolved, hardcoded API keys replaced with a secure config layer reused across Monitor, Studio, and shared libraries — and secured Wizard→Studio calls with per-caller bearer tokens.',
       'Shipped client read-only mode and role-based permissions for Data Mapping (MON-3751, MON-3733, MON-3758, MON-3746).',
       "Built the PostgreSQL-to-MongoDB webhook template migration tool for the platform's data-layer consolidation.",
-    ],
-  },
-  {
-    date: 'MAY 2024 - MAY 2026',
-    title: 'Software Engineer',
-    org: 'Flexspring | Ottawa, ON',
-    accent: 'text-[var(--theme-secondary)] border-[var(--theme-secondary)]',
-    icon: 'work',
-    details: [
       'Built flexspring-file-manager from scratch as sole engineer — standalone Quarkus microservice, multi-region AWS S3 (US/EU), MongoDB metadata, per-item permissions, SQS event-driven reconciliation, Sentry observability, and OIDC auth via AWS Cognito, containerized with Docker. Shipped the service, API gateway, and React UI to production.',
       'Designed and implemented Monitor Lifecycle — Spring Boot REST API, JMS/ActiveMQ consumer for event-driven ingestion from Engine, PostgreSQL/MongoDB schema updates, and React UI for project and integration-level flows.',
       'Built Studio AI Analysis — LLM-generated analysis of integration configurations that surfaces issues and optimization opportunities.',
