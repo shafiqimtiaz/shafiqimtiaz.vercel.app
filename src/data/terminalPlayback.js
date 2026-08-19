@@ -3,7 +3,7 @@ export const DEFAULT_PLAYBACK_DELAY_MS = 2000;
 export const HOME_TERMINAL_PLAYBACK = {
   id: 'home',
   session: 'HOME_TERMINAL_PLAYBACK',
-  prompt: 'shafiq@flexspring:~$',
+  prompt: 'shafiq@portfolio:~$',
   label: 'CLI Header',
   fallbackOutput: 'command not found — try one of the suggestions below',
   actions: [

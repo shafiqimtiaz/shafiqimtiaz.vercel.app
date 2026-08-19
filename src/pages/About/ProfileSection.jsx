@@ -26,15 +26,11 @@ export default function ProfileSection() {
             <span className="font-semibold text-[var(--theme-text)]">
               I own systems, not tickets.
             </span>{' '}
-            Principal Software Engineer in Ottawa with five years of engineering experience — the
-            last three at{' '}
-            <span className="font-semibold text-[var(--theme-secondary)]">Flexspring</span>, an
-            enterprise integration platform serving 2,500+ client configurations. I take products
-            from first commit to production, end-to-end: AI platform features (LLM orchestration,
-            recommendation engines, caching, security-hardened integrations), full-stack services
-            (Java, Spring Boot, Quarkus, React, TypeScript), and event-driven data systems
-            (PostgreSQL, MongoDB, Redis). I also lead the platform modernisations others avoid —
-            framework and runtime migrations shipped with zero regression.{' '}
+            Principal Software Engineer in Ottawa with 5+ years of experience. I build full-stack
+            systems and AI platform features from first commit to production, including File
+            Manager, Agent Core, Data Mapping recommendations, Webhook Templates, Monitor and Studio
+            Lifecycle, and Credentials Manager. My stack spans Java, Spring Boot, Quarkus, React,
+            TypeScript, PostgreSQL, MongoDB, Redis, and event-driven systems.{' '}
             <span className="font-semibold text-[var(--theme-primary)]">
               AWS Certified AI Practitioner
             </span>

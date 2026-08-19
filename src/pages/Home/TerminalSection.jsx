@@ -6,7 +6,7 @@ export default function TerminalSection() {
   return (
     <div className="min-w-0">
       <TerminalPanel
-        title="shafiq@flexspring: ~/whoami"
+        title="shafiq@portfolio: ~/whoami"
         bodyClassName="grid gap-0 p-5 text-[0.92rem] md:p-6"
       >
         <TerminalPlayback sessionConfig={HOME_TERMINAL_PLAYBACK} />

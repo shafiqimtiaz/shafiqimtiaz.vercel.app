@@ -1,5 +1,5 @@
 export default function TerminalPanel({
-  title = 'shafiq@flexspring: ~',
+  title = 'shafiq@portfolio: ~',
   className = '',
   bodyClassName = '',
   children,

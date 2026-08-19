@@ -46,7 +46,7 @@ export default function ContactFormSection() {
   return (
     <div className="min-w-0">
       <TerminalPanel
-        title="shafiq@flexspring: ~/contact"
+        title="shafiq@portfolio: ~/contact"
         bodyClassName="grid gap-0 p-6 text-[0.95rem] md:p-7"
       >
         <form className="flex flex-col gap-7" onSubmit={handleSubmit}>
