@@ -1,25 +1,25 @@
-**Shafiq Imtiaz**  
-[**shafiqimtiaz.vercel.app**](https://shafiqimtiaz.vercel.app)  
-shafiqimtiaz@gmail.com | [linkedin.com/in/shafiqimtiaz](http://linkedin.com/in/shafiqimtiaz) | [github.com/shafiqimtiaz](http://github.com/shafiqimtiaz) | Ottawa, ON
+**Shafiq Imtiaz**
+[**shafiqimtiaz.vercel.app**](https://shafiqimtiaz.vercel.app)
+shafiqimtiaz@gmail.com | [linkedin.com/in/shafiqimtiaz](http://linkedin.com/in/shafiqimtiaz) | [github.com/shafiqimtiaz](http://github.com/shafiqimtiaz) | Toronto, ON
 
-**PROFESSIONAL SUMMARY**  
+**PROFESSIONAL SUMMARY**
 Principal Software Engineer with 5+ years of full-stack experience driving architecture and delivery for enterprise B2B platforms. Specializes in scalable microservices, event-driven systems, and production-grade AI solutions. Known for taking end-to-end ownership of complex domains—from building core services from scratch to architecting reusable agentic AI frameworks. Excels at leading zero-regression migrations and shipping intelligent, reliable features. AWS Certified AI Practitioner and active builder of developer tools.
 
 **CORE SKILLS**
 
-* **Languages & Runtime**: JavaScript, TypeScript, Node.js, Java 17, Python  
-* **Frontend**: React.js (React 18, React Router v7, Vite 7, @tanstack), Chrome Extension Development (Manifest V3)  
-* **Backend & API**: RESTful API Design, Node.js, Spring Boot 3, Spring Cloud Gateway, Quarkus, OpenAPI 3 / Swagger, CLI Development  
-* **Testing & Quality**: Jest, ts-jest, JUnit, Test Automation, Code Review, SonarQube  
-* **Cloud & DevOps**: Docker, Kubernetes, AWS (S3, SQS), Jenkins, CI/CD Pipelines, Release Management, Git, Sentry  
-* **Data & Search**: PostgreSQL, MongoDB, MySQL, Redis / Redisson, Data Integration  
+* **Languages & Runtime**: JavaScript, TypeScript, Node.js, Java 17, Python
+* **Frontend**: React.js (React 18, React Router v7, Vite 7, @tanstack), Chrome Extension Development (Manifest V3)
+* **Backend & API**: RESTful API Design, Node.js, Spring Boot 3, Spring Cloud Gateway, Quarkus, OpenAPI 3 / Swagger, CLI Development
+* **Testing & Quality**: Jest, ts-jest, JUnit, Test Automation, Code Review, SonarQube
+* **Cloud & DevOps**: Docker, Kubernetes, AWS (S3, SQS), Jenkins, CI/CD Pipelines, Release Management, Git, Sentry
+* **Data & Search**: PostgreSQL, MongoDB, MySQL, Redis / Redisson, Data Integration
 * **AI & Emerging Tech**: LLM Integration, LiteLLM, Embeddings & Cosine Similarity, Multi-Provider AI Streaming, On-Device AI (Gemini Nano), RAG, AI Safety Guardrails
 * **API & Reliability**: Bearer Authentication, Service Health Checks, API Gateway Configuration, Production Debugging
 * **Architecture & Practices**: Microservices, Event-Driven Architecture, Distributed Systems, Agile, Domain-Driven Design, Mentorship
 
 **PROFESSIONAL EXPERIENCE**
 
-**Principal Software Engineer | Flexspring | Ottawa, ON | Aug 2026 \- Present**  
+**Principal Software Engineer | Flexspring | Toronto, ON | Aug 2026 \- Present**
 *B2B content management and delivery platform serving 2,500+ client configurations*
 
 * Promoted to Principal Software Engineer, leading technical direction, architecture decisions, and delivery of Flexspring's AI and integration platform
@@ -46,10 +46,10 @@ Principal Software Engineer with 5+ years of full-stack experience driving archi
 * Led Alcatraz modernization from Java 8 to Java 17 and Spring Boot 2 to Spring Boot 3, including compatibility and API documentation improvements
 * Contributed to Onboard's template-based solution, shared Monitor/Onboard UI patterns, and File Manager service activation/deactivation
 
-**Full Stack Software Developer | BSRM | Chittagong, Bangladesh | Apr 2019 \- Jun 2021**  
+**Full Stack Software Developer | BSRM | Chittagong, Bangladesh | Apr 2019 \- Jun 2021**
 *One of Bangladesh's largest steel manufacturers*
 
-* Built APS Dashboard X (React, Node.js, SQLite) for consumables procurement, stock management, and shipment scheduling. Increased Material Requirement Planning efficiency by 89%. Nominated for Young Supply Chain Talent of the Year at IPDC Supply Chain Awards 2019  
+* Built APS Dashboard X (React, Node.js, SQLite) for consumables procurement, stock management, and shipment scheduling. Increased Material Requirement Planning efficiency by 89%. Nominated for Young Supply Chain Talent of the Year at IPDC Supply Chain Awards 2019
 * Built a supplier integration platform connecting 40+ vendor systems, delivering real-time inventory tracking, shipment visibility, and audit-compliant reporting dashboards across procurement workflows
 
 **PROJECTS**
@@ -72,7 +72,7 @@ Principal Software Engineer with 5+ years of full-stack experience driving archi
 
 **EDUCATION**
 
-* **MEng Software Engineering (Co-op)** | Concordia University | Montreal, QC | 2022 \- 2024  
+* **MEng Software Engineering (Co-op)** | Concordia University | Montreal, QC | 2022 \- 2024
 * **BSc Electrical and Electronics Engineering** | Islamic University of Technology | Bangladesh | 2015 \- 2018
 
 **CERTIFICATIONS**
@@ -81,5 +81,5 @@ Principal Software Engineer with 5+ years of full-stack experience driving archi
 
 **VOLUNTEER EXPERIENCE**
 
-* **Director of Sponsorship** | HackConcordia | Montreal, QC | Oct 2022 \- Apr 2023  
+* **Director of Sponsorship** | HackConcordia | Montreal, QC | Oct 2022 \- Apr 2023
   * Organized ConUHacks VII, the largest hackathon in Quebec with 800+ participants from 97 universities

@@ -24,7 +24,7 @@ export default function Footer() {
 
         <div className="font-body inline-flex items-center justify-center gap-2 text-[0.66rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase md:justify-end">
           <span className="h-2 w-2 rounded-full bg-[var(--theme-primary)]"></span>
-          Available · Ottawa, ON
+          Available · Toronto, ON
         </div>
       </div>
     </footer>

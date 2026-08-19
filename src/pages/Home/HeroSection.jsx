@@ -73,7 +73,7 @@ export default function HeroSection() {
           <dt className="font-body text-[0.6rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
             Location
           </dt>
-          <dd className="font-headline mt-1 font-semibold text-[var(--theme-text)]">Ottawa, ON</dd>
+          <dd className="font-headline mt-1 font-semibold text-[var(--theme-text)]">Toronto, ON</dd>
         </div>
         <div>
           <dt className="font-body text-[0.6rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">

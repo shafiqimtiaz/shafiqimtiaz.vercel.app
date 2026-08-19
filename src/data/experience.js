@@ -77,7 +77,7 @@ export const timeline = [
   {
     date: 'AUG 2026 - PRESENT',
     title: 'Principal Software Engineer',
-    org: 'Flexspring | Ottawa, ON',
+    org: 'Flexspring | Toronto, ON',
     accent: 'text-[var(--theme-primary)] border-[var(--theme-primary)]',
     icon: 'workspace_premium',
     details: [

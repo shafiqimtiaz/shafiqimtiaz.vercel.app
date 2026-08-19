@@ -26,7 +26,7 @@ export default function ProfileSection() {
             <span className="font-semibold text-[var(--theme-text)]">
               I own systems, not tickets.
             </span>{' '}
-            Principal Software Engineer in Ottawa with 5+ years of experience. I build full-stack
+            Principal Software Engineer in Toronto with 5+ years of experience. I build full-stack
             systems and AI platform features from first commit to production, including File
             Manager, Agent Core, Data Mapping recommendations, Webhook Templates, Monitor and Studio
             Lifecycle, and Credentials Manager. My stack spans Java, Spring Boot, Quarkus, React,
@@ -55,7 +55,7 @@ export default function ProfileSection() {
             />
           </div>
           <div className="font-body relative z-10 mt-3 inline-flex self-start rounded bg-[var(--theme-primary)] px-3 py-1 text-[0.58rem] tracking-[0.13em] text-[var(--theme-on-primary)] uppercase">
-            Ottawa, ON
+            Toronto, ON
           </div>
         </Reveal>
       </div>
