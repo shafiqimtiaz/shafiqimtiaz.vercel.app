@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router';
 import useScrollProgress from '../hooks/useScrollProgress';
 import { scrollToId } from '../lib/scroll';
-import { ScrambleOnHover } from './ui';
+import { Icon, ScrambleOnHover } from './ui';
 
 const navSections = [
   { id: 'hero', label: 'HOME' },
@@ -92,9 +92,7 @@ export default function Navbar() {
               aria-controls="mobile-navigation"
               aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
             >
-              <span className="material-symbols-outlined" aria-hidden="true">
-                {menuOpen ? 'close' : 'menu'}
-              </span>
+              <Icon name={menuOpen ? 'close' : 'menu'} size={22} />
             </button>
           </div>
         </div>

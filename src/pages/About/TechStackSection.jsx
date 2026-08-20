@@ -1,5 +1,5 @@
 import { techStack } from '../../data/experience';
-import { Reveal, ScrambleOnHover } from '../../components/ui';
+import { Icon, Reveal, ScrambleOnHover } from '../../components/ui';
 
 export default function TechStackSection() {
   return (
@@ -34,12 +34,7 @@ export default function TechStackSection() {
             className="group relative flex flex-col bg-[var(--theme-surface-low)] p-7 transition-colors duration-200 hover:bg-[var(--theme-surface)]"
           >
             <div className="flex items-center justify-between gap-4">
-              <span
-                className={`material-symbols-outlined text-[1.6rem] ${category.accent}`}
-                aria-hidden="true"
-              >
-                {category.icon}
-              </span>
+              <Icon name={category.icon} size={25} className={category.accent} />
               <span className="font-body text-[0.62rem] tracking-[0.18em] text-[var(--theme-outline)]">
                 {category.code}
               </span>

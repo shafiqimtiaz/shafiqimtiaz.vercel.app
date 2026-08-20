@@ -1,5 +1,5 @@
 import { caseStudies } from '../../data/projects';
-import { Reveal, ScrambleOnHover } from '../../components/ui';
+import { Icon, Reveal, ScrambleOnHover } from '../../components/ui';
 
 export default function CaseStudiesSection() {
   return (
@@ -75,9 +75,7 @@ export default function CaseStudiesSection() {
                   className="font-body inline-flex items-center gap-2 text-[0.72rem] font-bold tracking-[0.14em] text-[var(--theme-primary)] uppercase transition-colors hover:text-[var(--theme-secondary)]"
                 >
                   {project.link.label}
-                  <span className="material-symbols-outlined text-[1.05rem]" aria-hidden="true">
-                    arrow_outward
-                  </span>
+                  <Icon name="arrow_outward" size={17} />
                 </a>
               </div>
             )}

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TerminalPanel, Button } from '../../components/ui';
+import { TerminalPanel, Button, Icon } from '../../components/ui';
 import { contactFormFields } from '../../data/contactForm';
 
 const CONTACT_RECIPIENT = 'shafiqimtiaz@gmail.com';
@@ -106,9 +106,7 @@ export default function ContactFormSection() {
           <div className="pt-1">
             <Button type="submit" variant="primary" className="min-h-13 w-full px-8 text-[0.72rem]">
               <span>{status === 'opened' ? 'Opening mail app…' : 'Open mail app'}</span>
-              <span className="material-symbols-outlined text-[1.1rem]" aria-hidden="true">
-                send
-              </span>
+              <Icon name="send" size={18} />
             </Button>
 
             {status === 'opened' && (

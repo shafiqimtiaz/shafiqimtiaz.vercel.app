@@ -1,4 +1,4 @@
-import { Button, DecodeText, ScrambleOnHover } from '../../components/ui';
+import { Button, DecodeText, Icon, ScrambleOnHover } from '../../components/ui';
 
 export default function HeroSection() {
   return (
@@ -48,9 +48,7 @@ export default function HeroSection() {
           className="min-h-13 px-6 text-[0.72rem]"
         >
           <span>View Résumé</span>
-          <span className="material-symbols-outlined text-[1.1rem]" aria-hidden="true">
-            description
-          </span>
+          <Icon name="description" size={18} />
         </Button>
         <Button
           variant="ghost"
@@ -59,9 +57,7 @@ export default function HeroSection() {
           aria-label="Download Résumé as Markdown"
           className="min-h-13 w-13 p-0"
         >
-          <span className="material-symbols-outlined" aria-hidden="true">
-            download
-          </span>
+          <Icon name="download" size={24} />
         </Button>
         <Button
           variant="secondary"
@@ -73,9 +69,7 @@ export default function HeroSection() {
           }}
         >
           <span>Get in touch</span>
-          <span className="material-symbols-outlined text-[1.1rem]" aria-hidden="true">
-            arrow_outward
-          </span>
+          <Icon name="arrow_outward" size={18} />
         </Button>
       </div>
 

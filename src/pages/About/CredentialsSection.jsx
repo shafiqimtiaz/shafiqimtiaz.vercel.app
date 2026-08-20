@@ -1,5 +1,5 @@
 import { credentials } from '../../data/experience';
-import { Reveal, ScrambleOnHover } from '../../components/ui';
+import { Icon, Reveal, ScrambleOnHover } from '../../components/ui';
 
 export default function CredentialsSection() {
   return (
@@ -24,12 +24,7 @@ export default function CredentialsSection() {
             className="group relative flex flex-col rounded-xl border border-[var(--theme-outline-variant)] bg-[var(--theme-surface)] p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--theme-outline)]"
           >
             <div className="flex items-center gap-3">
-              <span
-                className={`material-symbols-outlined text-[1.35rem] ${entry.accent}`}
-                aria-hidden="true"
-              >
-                {entry.icon}
-              </span>
+              <Icon name={entry.icon} size={21} className={entry.accent} />
               <time className="font-body text-[0.6rem] tracking-[0.14em] text-[var(--theme-outline)] uppercase">
                 {entry.date}
               </time>
@@ -64,9 +59,7 @@ export default function CredentialsSection() {
                   className="font-body inline-flex items-center gap-1.5 text-[0.66rem] font-bold tracking-[0.12em] text-[var(--theme-primary)] uppercase transition-colors hover:text-[var(--theme-secondary)]"
                 >
                   View credential
-                  <span className="material-symbols-outlined text-[0.95rem]" aria-hidden="true">
-                    arrow_outward
-                  </span>
+                  <Icon name="arrow_outward" size={15} />
                 </a>
               </div>
             )}

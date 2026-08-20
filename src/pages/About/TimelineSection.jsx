@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { timeline } from '../../data/experience';
-import { Reveal, ScrambleOnHover } from '../../components/ui';
+import { Icon, Reveal, ScrambleOnHover } from '../../components/ui';
 import { gsap, prefersReducedMotion } from '../../lib/gsapConfig';
 
 export default function TimelineSection() {
@@ -69,12 +69,7 @@ export default function TimelineSection() {
               <div
                 className={`relative z-10 mt-1 flex h-8 w-8 items-center justify-center rounded-full border-2 bg-[var(--theme-bg)] md:h-10 md:w-10 ${entry.accent}`}
               >
-                <span
-                  className="material-symbols-outlined text-[1rem] text-[var(--theme-primary)] md:text-[1.15rem]"
-                  aria-hidden="true"
-                >
-                  {entry.icon}
-                </span>
+                <Icon name={entry.icon} size={18} className="text-[var(--theme-primary)]" />
               </div>
 
               <article className="rounded-xl border border-[var(--theme-outline-variant)] bg-[var(--theme-surface)] p-6 transition-colors duration-200 hover:border-[var(--theme-outline)] md:p-7">
@@ -105,9 +100,7 @@ export default function TimelineSection() {
                     className="font-body mt-4 inline-flex items-center gap-1.5 text-[0.7rem] font-bold tracking-[0.12em] text-[var(--theme-primary)] uppercase transition-colors hover:text-[var(--theme-secondary)]"
                   >
                     View credential
-                    <span className="material-symbols-outlined text-[1rem]" aria-hidden="true">
-                      arrow_outward
-                    </span>
+                    <Icon name="arrow_outward" size={16} />
                   </a>
                 )}
               </article>

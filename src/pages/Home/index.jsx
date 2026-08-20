@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { ScrambleOnHover } from '../../components/ui';
+import { Icon, ScrambleOnHover } from '../../components/ui';
 import HeroSection from './HeroSection';
 import TerminalSection from './TerminalSection';
 import StatsSection from './StatsSection';
@@ -102,12 +102,7 @@ export default function Home() {
                   rel={node.href.startsWith('http') ? 'noreferrer' : undefined}
                   className="group flex items-center gap-4 rounded-lg border border-[var(--theme-outline-variant)] bg-[var(--theme-surface-low)] px-5 py-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--theme-primary)]"
                 >
-                  <span
-                    className={`material-symbols-outlined text-2xl ${node.accent}`}
-                    aria-hidden="true"
-                  >
-                    {node.icon}
-                  </span>
+                  <Icon name={node.icon} size={24} className={node.accent} />
                   <span className="grid gap-0.5">
                     <span className="font-body text-[0.62rem] tracking-[0.18em] text-[var(--theme-text-muted)] uppercase">
                       {node.label}
@@ -116,12 +111,11 @@ export default function Home() {
                       {node.handle}
                     </span>
                   </span>
-                  <span
-                    className="material-symbols-outlined ml-auto text-[var(--theme-outline)] transition-colors group-hover:text-[var(--theme-primary)]"
-                    aria-hidden="true"
-                  >
-                    arrow_outward
-                  </span>
+                  <Icon
+                    name="arrow_outward"
+                    size={24}
+                    className="ml-auto text-[var(--theme-outline)] transition-colors group-hover:text-[var(--theme-primary)]"
+                  />
                 </a>
               ))}
             </Reveal>

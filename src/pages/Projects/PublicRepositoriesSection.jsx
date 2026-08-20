@@ -1,5 +1,5 @@
 import { publicRepositories } from '../../data/projects';
-import { Reveal, ScrambleOnHover } from '../../components/ui';
+import { Icon, Reveal, ScrambleOnHover } from '../../components/ui';
 
 export default function PublicRepositoriesSection() {
   return (
@@ -62,9 +62,7 @@ export default function PublicRepositoriesSection() {
                 rel="noreferrer"
                 className="font-body inline-flex items-center gap-1.5 text-[0.66rem] font-bold tracking-[0.12em] text-[var(--theme-text)] uppercase transition-colors hover:text-[var(--theme-primary)]"
               >
-                <span className="material-symbols-outlined text-[1rem]" aria-hidden="true">
-                  code
-                </span>
+                <Icon name="code" size={16} />
                 Code
               </a>
               {repo.demoUrl && (
@@ -74,9 +72,7 @@ export default function PublicRepositoriesSection() {
                   rel="noreferrer"
                   className="font-body inline-flex items-center gap-1.5 text-[0.66rem] font-bold tracking-[0.12em] text-[var(--theme-text-muted)] uppercase transition-colors hover:text-[var(--theme-secondary)]"
                 >
-                  <span className="material-symbols-outlined text-[1rem]" aria-hidden="true">
-                    arrow_outward
-                  </span>
+                  <Icon name="arrow_outward" size={16} />
                   Demo
                 </a>
               )}
