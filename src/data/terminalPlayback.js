@@ -1,4 +1,4 @@
-export const DEFAULT_PLAYBACK_DELAY_MS = 2000;
+export const DEFAULT_PLAYBACK_DELAY_MS = 800;
 
 export const HOME_TERMINAL_PLAYBACK = {
   id: 'home',

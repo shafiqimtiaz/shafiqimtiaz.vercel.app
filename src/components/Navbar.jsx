@@ -85,7 +85,7 @@ export default function Navbar() {
 
           <div className="flex items-center gap-2">
             <button
-              className="inline-flex h-11 w-11 items-center justify-center border border-[var(--theme-outline-variant)] bg-[var(--theme-surface)] text-[var(--theme-primary)] transition-all duration-200 hover:-translate-y-px hover:border-[var(--theme-primary)] hover:bg-[var(--theme-surface-high)] md:hidden"
+              className="inline-flex h-11 w-11 items-center justify-center border border-[var(--theme-outline-variant)] bg-[var(--theme-surface)] text-[var(--theme-primary)] transition-[background-color,border-color,translate] duration-200 hover:-translate-y-px hover:border-[var(--theme-primary)] hover:bg-[var(--theme-surface-high)] md:hidden"
               type="button"
               onClick={() => setMenuOpen((open) => !open)}
               aria-expanded={menuOpen}

@@ -11,7 +11,7 @@ export default function Button({
 }) {
   const magneticRef = useMagnetic();
   const baseStyles =
-    'font-body group/btn relative inline-flex items-center justify-center gap-2.5 rounded-md font-bold uppercase tracking-[0.14em] transition-all duration-200 hover:-translate-y-0.5';
+    'font-body group/btn relative inline-flex items-center justify-center gap-2.5 rounded-md font-bold uppercase tracking-[0.14em] transition-[color,background-color,border-color,box-shadow,filter,translate] duration-200 ease-out hover:-translate-y-0.5';
 
   const variants = {
     primary:
