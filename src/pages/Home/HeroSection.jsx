@@ -33,10 +33,10 @@ export default function HeroSection() {
       </p>
 
       <p className="mt-6 max-w-[36rem] text-base leading-relaxed text-[var(--theme-text-muted)]">
-        I take systems from first commit to production, from File Manager and Agent Core to Data
-        Mapping, Webhook Templates, Lifecycle, and Gemini-based video transcription. My work spans
-        event-driven microservices, React interfaces, and production AI with caching, fallback, and
-        governance.
+        I take systems from first commit to production — serving 2,500+ B2B client configurations.
+        From File Manager and Agent Core to Data Mapping, Webhook Templates, Lifecycle, and
+        Gemini-based video transcription. My work spans event-driven microservices, React
+        interfaces, and production AI with caching, fallback, and governance.
       </p>
 
       <div className="mt-9 flex flex-wrap gap-4">

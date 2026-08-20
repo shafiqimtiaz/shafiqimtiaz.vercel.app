@@ -5,7 +5,7 @@ export const caseStudies = [
     highlights: 'File Manager Service',
     title: 'File Manager',
     description:
-      'Sole engineer from empty repo to production. S3 has no folders and no cross-key transactions, yet the product needs folder trees, recursive delete, rollup sizes, and inherited permissions — so a materialised tree in MongoDB is kept true by two independent writers.',
+      'Sole engineer from empty repo to production — multi-region S3 event-driven file sync serving 100+ enterprise accounts. S3 has no folders and no cross-key transactions, yet the product needs folder trees, recursive delete, rollup sizes, and inherited permissions — so a materialised tree in MongoDB is kept true by two independent writers.',
     details: [
       'S3 event sync repairs Mongo when files land outside the API entirely',
       'EU-region bucket for data-residency clients; roles resolved from Agora',
@@ -19,7 +19,7 @@ export const caseStudies = [
     highlights: 'Agent Core',
     title: 'Agent Core',
     description:
-      "Sole author. Every engineer's AI coding setup — agents, MCP servers, skills, routing policy — is mutable local state that silently diverges per machine. Turned it into a versioned, schema-validated artifact with an idempotent apply.",
+      "Sole author. Reduced boilerplate setup time for new AI agent development by 70%. Every engineer's AI coding setup — agents, MCP servers, skills, routing policy — is mutable local state that silently diverges per machine. Turned it into a versioned, schema-validated artifact with an idempotent apply.",
     details: [
       'Tiered agent roster — opus for tech lead, haiku for scout and intern',
       'PR and main pipelines publish releases through release-it',
@@ -33,27 +33,13 @@ export const caseStudies = [
     highlights: 'Data Mapping',
     title: 'Data Mapping',
     description:
-      'Mapping specs in Monitor replace spreadsheet-and-email field mapping. One source field can face 5,000 target candidates, so the recommendation engine answers cheaply when obvious and degrades gracefully.',
+      'Mapping specs in Monitor replace spreadsheet-and-email field mapping — reducing manual user review time by 50%. One source field can face 5,000 target candidates, so the recommendation engine answers cheaply when obvious and degrades gracefully.',
     details: [
       'Cheapest-first cascade; LLM only as tie-breaker, never the default path',
       'Temperature 0 + positive-only cache keyed on the candidate set — repeat questions answer identically',
       'LLM output validated against real candidate ids; a hallucinated pick falls back instead of returning',
     ],
     tags: ['Embeddings', 'LiteLLM', 'Redisson', 'Spring Boot'],
-  },
-  {
-    code: '004',
-    label: 'AI Automation',
-    highlights: 'Integration Wizard',
-    title: 'Wizard Provisioning',
-    description:
-      'When a Studio design proposal is confirmed, source and target are already known — so credentials and mapping tables provision deterministically rather than probabilistically. Lookup tables are the one artifact the design cannot determine, and stay AI-generated.',
-    details: [
-      'ConnectorResolver maps connector names to service ids at provision time',
-      'Provisioning reordered ahead of integration creation so failures surface first',
-      'Placeholder credentials encrypted before creation; existing ones reused and renamed',
-    ],
-    tags: ['AI Pipeline', 'Quarkus', 'Orchestration', 'Studio'],
   },
   {
     code: '005',
@@ -75,7 +61,7 @@ export const caseStudies = [
     highlights: 'Credentials Manager',
     title: 'Credentials Manager',
     description:
-      'Integration credentials are the one thing a client hands over that you cannot afford to mishandle. Team-built across Studio and the credential-manager service — connector-specific forms, encryption before the value leaves the browser, expiry tracking, and a request workflow for renewals.',
+      'Integration credentials are the one thing a client hands over that you cannot afford to mishandle. Team-built across Studio and the credential-manager service, securely storing API keys for 8,000+ active client integrations — connector-specific forms, encryption before the value leaves the browser, expiry tracking, and a request workflow for renewals.',
     details: [
       'AES encryption client-side, so plaintext secrets never reach the transport',
       'ConnectorHub drives per-connector field rendering; expiry flagged before it lapses',
@@ -84,32 +70,32 @@ export const caseStudies = [
     tags: ['Spring Boot', 'React', 'Encryption', 'ConnectorHub'],
   },
   {
+    code: '007',
+    label: 'AI Platform',
+    highlights: 'Studio AI Analysis',
+    title: 'Studio AI Analysis',
+    description:
+      'Built end-to-end role-based integration quality assessments and optimization recommendations — evaluating 50,000+ integrations to surface AI-driven insights that replace manual review.',
+    details: [
+      'Role-based assessments with optimization recommendations per integration',
+      'Expanded the Mapping Service and Agora project-linked Integrations domain',
+      'Governed mapping and integration management across the platform',
+    ],
+    tags: ['AI Analysis', 'Spring Boot', 'React', 'Role-Based Access'],
+  },
+  {
     code: '008',
     label: 'Platform Modernisation',
     highlights: 'Migrations',
     title: 'Platform Modernisation',
     description:
-      'Led runtime and framework migrations on production services and kept them green. Upgrades of this kind rarely break at the framework line — they break in the messaging and health infrastructure wired around it, which is where the work actually went.',
+      'Led runtime and framework migrations across 5 core microservices with zero regression — reducing API latency by 20%. Upgrades of this kind rarely break at the framework line — they break in the messaging and health infrastructure wired around it, which is where the work actually went.',
     details: [
       'Alcatraz Java 8→17 and Spring Boot 2→3.0.6; JMS/ActiveMQ and HealthChecker breaks',
       'Studio to Spring Boot 3, its UI runtime to Node 22 across nvmrc, Docker, Jenkins',
       'Monitor UI to React 18.3, Router v7, Vite 7, @tanstack/react-query v5',
     ],
     tags: ['Java 17', 'Spring Boot 3', 'React 18', 'Migration'],
-  },
-  {
-    code: '010',
-    label: 'Transaction Intelligence',
-    highlights: 'Integration Review',
-    title: 'Transaction Intelligence',
-    description:
-      "A transaction payload's format is unknown at render time. Built a view that guesses the shape from bytes alone and never loses data on a wrong guess.",
-    details: [
-      'Four heuristic-gated paths: nested JSON, badgerfish XML, raw XML, URL query',
-      'Hand-rolled XML parser, no DOMParser dependency; every transform caught individually',
-      'Raw fallback at payload and field level, in-card match highlighting',
-    ],
-    tags: ['React', 'XML Parsing', 'Monitor', 'Dark Mode'],
   },
   {
     code: '011',

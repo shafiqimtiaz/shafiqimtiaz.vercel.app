@@ -27,6 +27,7 @@ export const HOME_TERMINAL_PLAYBACK = {
       output: [
         '> Calm under fire — kept production running while fixing corrupted data under live load.',
         '> Comfortable across the whole stack — backend internals, frontend UIs, and AI systems.',
+        '> Shipped production systems serving 2,500+ B2B client configurations.',
         '> Low ego, high curiosity — AWS AI certified and always learning the next thing.',
       ],
     },

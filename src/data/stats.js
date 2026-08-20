@@ -1,16 +1,16 @@
 export const homeStats = [
-  { value: '5+', label: 'Years Engineering', accent: 'text-[var(--theme-secondary)]' },
-  { value: '4', label: 'Prod Migrations · 0 Regressions', accent: 'text-[var(--theme-tertiary)]' },
-  { value: '2', label: 'Services Owned End-to-End', accent: 'text-[var(--theme-primary)]' },
+  { value: '2,500+', label: 'B2B Client Configurations', accent: 'text-[var(--theme-secondary)]' },
+  { value: '3', label: 'Prod Migrations · 0 Regressions', accent: 'text-[var(--theme-tertiary)]' },
+  { value: '50,000+', label: 'Integrations Evaluated', accent: 'text-[var(--theme-primary)]' },
   { value: 'AWS', label: 'Certified AI Practitioner', accent: 'text-[var(--theme-primary-dim)]' },
 ];
 
 export const profileStats = [
-  { value: '5', label: 'FLAGSHIP FEATURES SHIPPED', accent: 'text-[var(--theme-primary)]' },
-  { value: '5+', label: 'OPEN-SOURCE REPOS', accent: 'text-[var(--theme-secondary)]' },
+  { value: '8,000+', label: 'ACTIVE CLIENT CREDENTIALS', accent: 'text-[var(--theme-primary)]' },
+  { value: '7', label: 'CASE STUDIES SHIPPED', accent: 'text-[var(--theme-secondary)]' },
   {
-    value: '800+',
-    label: 'HACKATHON ORGANIZED (CONUHACKS VII)',
+    value: '$1K',
+    label: 'HACKATHON PRIZE (RAG CHATBOT)',
     accent: 'text-[var(--theme-tertiary)]',
   },
 ];
