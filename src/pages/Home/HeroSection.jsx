@@ -48,7 +48,6 @@ export default function HeroSection() {
           className="min-h-13 px-6 text-[0.72rem]"
         >
           <span>View Résumé</span>
-          <Icon name="description" size={18} />
         </Button>
         <Button
           variant="ghost"
@@ -57,7 +56,7 @@ export default function HeroSection() {
           aria-label="Download Résumé as Markdown"
           className="min-h-13 w-13 p-0"
         >
-          <Icon name="download" size={24} />
+          <Icon name="description" size={24} />
         </Button>
         <Button
           variant="secondary"
