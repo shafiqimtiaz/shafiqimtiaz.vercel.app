@@ -56,7 +56,7 @@ export default function Navbar() {
       </div>
 
       {/* Nav background */}
-      <div className="border-b border-[rgba(73,72,71,0.5)] bg-[var(--theme-surface-low)]/95 shadow-[var(--shadow-primary)] backdrop-blur-xl">
+      <div className="border-b border-[rgba(73,72,71,0.5)] bg-[var(--theme-surface-low)]/95 shadow-[var(--shadow-primary)]">
         <div className="mx-auto flex min-h-[var(--header-height)] w-[min(100%-2rem,var(--container-width))] items-center gap-5">
           <ScrambleOnHover
             as={Link}

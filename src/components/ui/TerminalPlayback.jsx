@@ -61,6 +61,15 @@ export default function TerminalPlayback({ sessionConfig }) {
                 </div>
               );
             })}
+            {media?.type === 'status' && (
+              <div className="mt-2 inline-flex items-center gap-2 self-start rounded-full border border-[var(--theme-outline-variant)] bg-[var(--theme-surface-low)] px-3 py-1.5 text-[0.68rem] font-medium tracking-[0.14em] text-[var(--theme-text-muted)] uppercase">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--theme-primary)] opacity-60"></span>
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--theme-primary)]"></span>
+                </span>
+                {media.label || 'online'}
+              </div>
+            )}
             {media?.type === 'gif' && (
               <img
                 src={media.src}

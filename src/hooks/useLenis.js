@@ -7,7 +7,7 @@ export default function useLenis() {
   useEffect(() => {
     if (prefersReducedMotion()) return undefined;
 
-    const lenis = new Lenis({ lerp: 0.12, smoothWheel: true });
+    const lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
     setLenis(lenis);
     lenis.on('scroll', ScrollTrigger.update);
 

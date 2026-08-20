@@ -53,9 +53,8 @@ export const HOME_TERMINAL_PLAYBACK = {
         '> ☕ brewing — always up for a chat or a pairing session',
       ],
       media: {
-        type: 'gif',
-        src: '/current-status.gif',
-        alt: 'Current status',
+        type: 'status',
+        label: 'online — caffeinated & shipping',
       },
       cta: { label: "ping me — let's build something →", target: 'contact' },
     },
