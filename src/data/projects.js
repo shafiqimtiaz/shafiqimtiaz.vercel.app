@@ -115,6 +115,13 @@ export const caseStudies = [
 
 export const publicRepositories = [
   {
+    title: 'fetch-markdown',
+    description:
+      'Chrome extension that converts any page to clean Markdown. Confidence-scored site detection picks an extraction strategy per page type — blogs, docs, GitHub — while code-aware formatting leaves code blocks byte-identical and tracking params get stripped on the way out.',
+    repoUrl: 'https://github.com/shafiqimtiaz/fetch-markdown',
+    techStack: ['TypeScript', 'Chrome MV3', 'DOM Parsing'],
+  },
+  {
     title: 'nexus-ai',
     description:
       'AI academic organizer that merges Google Classroom, Discord, and Slack into one workspace — announcements, calendar, and resources unified, with agentic chat running over the merged data rather than each source separately.',
