@@ -2,18 +2,17 @@ import { useEffect, useRef } from 'react';
 import { gsap, prefersReducedMotion } from '../lib/gsapConfig';
 
 /**
- * Magnetic hover pull — desktop (fine pointer) only, no-op otherwise.
+ * Uniform hover lift for buttons — desktop (fine pointer) only, no-op otherwise.
  *
- * Uses `gsap.quickTo`: a single, retargetable tween drives the transform
- * on a per-frame basis, so pointer-follow is instant and fluid instead of
- * queueing a new tween per pointermove (the cause of laggy, swimmy magnets).
+ * Deliberately vertical-only and upward-only: it gently pulls the button
+ * straight up as the cursor approaches its top edge, so every hover motion on
+ * the page goes in the SAME direction (up), matching the reveal/rise and card
+ * hover lifts. It never drifts left or right.
  *
- * The element's CSS transitions exclude `transform` (see Button), so GSAP's
- * transform updates are never intercepted by a transition delay.
- * Strength is a small, subtle pull by default — best practice keeps it
- * noticeable but not gimmicky.
+ * Uses `gsap.quickTo` (one retargetable tween, no per-pointermove churn) and is
+ * reduced-motion safe.
  */
-export default function useMagnetic(strength = 0.2) {
+export default function useMagnetic(strength = 0.35) {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -22,20 +21,18 @@ export default function useMagnetic(strength = 0.2) {
       return undefined;
     }
 
-    const xTo = gsap.quickTo(el, 'x', { duration: 0.28, ease: 'power3.out' });
-    const yTo = gsap.quickTo(el, 'y', { duration: 0.28, ease: 'power3.out' });
+    const yTo = gsap.quickTo(el, 'y', { duration: 0.3, ease: 'power3.out' });
 
-    // Quick, deterministic return — no elastic bounce on leave.
-    const snapBack = () => {
-      xTo(0);
-      yTo(0);
-    };
+    const MAX_LIFT_PX = 12; // full lift once the cursor is this far above the button
 
     const onMove = (event) => {
       const rect = el.getBoundingClientRect();
-      xTo((event.clientX - (rect.left + rect.width / 2)) * strength);
-      yTo((event.clientY - (rect.top + rect.height / 2)) * strength);
+      const above = rect.top - event.clientY; // > 0 when the cursor is above the button
+      // Upward only: no (up/down) or (left/right) bidirectionality.
+      yTo(above > 0 ? -Math.min(above, MAX_LIFT_PX) * strength : 0);
     };
+
+    const snapBack = () => yTo(0);
 
     el.addEventListener('pointermove', onMove, { passive: true });
     el.addEventListener('pointerleave', snapBack, { passive: true });
