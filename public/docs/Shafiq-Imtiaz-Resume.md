@@ -4,13 +4,15 @@ shafiqimtiaz@gmail.com | (514) 574-4436 | [linkedin.com/in/shafiqimtiaz](http://
 
 ## Technical Skills
 
-**AI & Automation:** AI Agents, LLM Applications, RAG, MCP, Prompt Engineering, n8n, Embeddings, Evaluation
+**AI & Automation:** AI Agents, LLM Applications, RAG, MCP, Prompt Engineering, n8n, Embeddings, Evaluation, LiteLLM
 
-**Languages:** TypeScript, JavaScript, Java, Python, SQL
+**Languages:** TypeScript, JavaScript, Java 17, Python, SQL
 
-**Frontend & Backend:** React, Next.js, Node.js, Express, Spring Boot, Quarkus, REST, GraphQL
+**Frontend & Backend:** React, Next.js, Node.js, Express, Spring Boot 3, Quarkus, REST, GraphQL, OpenAPI
 
-**Data & Cloud:** PostgreSQL, MongoDB, Redis, Vector Databases, AWS, Docker, Kubernetes, GitHub Actions, CI/CD
+**Data & Cloud:** PostgreSQL, MongoDB, MySQL, Redis, Vector Databases, AWS (S3, SQS), Docker, Kubernetes, GitHub Actions, CI/CD
+
+**Quality & Observability:** Jest, JUnit, Test Automation, Sentry, SonarQube
 
 ## Experience
 
