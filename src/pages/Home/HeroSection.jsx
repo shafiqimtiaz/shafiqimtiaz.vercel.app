@@ -53,6 +53,17 @@ export default function HeroSection() {
           </span>
         </Button>
         <Button
+          variant="ghost"
+          href="/docs/Shafiq-Imtiaz-Resume.md"
+          download
+          aria-label="Download Résumé as Markdown"
+          className="min-h-13 w-13 p-0"
+        >
+          <span className="material-symbols-outlined" aria-hidden="true">
+            download
+          </span>
+        </Button>
+        <Button
           variant="secondary"
           href="#contact"
           className="min-h-13 px-6 text-[0.72rem]"
