@@ -1,51 +1,41 @@
 # Shafiq Imtiaz
+shafiqimtiaz@gmail.com | (514) 574-4436 | Toronto, ON
+linkedin.com/in/shafiqimtiaz | github.com/shafiqimtiaz
 
-shafiqimtiaz@gmail.com | (514) 574-4436 | [linkedin.com/in/shafiqimtiaz](http://linkedin.com/in/shafiqimtiaz) | [github.com/shafiqimtiaz](http://github.com/shafiqimtiaz) | Toronto, ON
+## CORE SKILLS
+- **Languages:** JavaScript, TypeScript, Java 17, Python
+- **Frontend:** React 18, Vite 7, Tanstack, Chrome Extensions (Manifest V3)
+- **Backend:** Node.js, Spring Boot 3, Quarkus, REST APIs, OpenAPI
+- **Data & Cloud:** PostgreSQL, MongoDB, Redis, Docker, Kubernetes, AWS, CI/CD
+- **AI & Architecture:** LLM Integration, RAG, Embeddings, Microservices, Event-Driven Systems
 
-## Technical Skills
+## PROFESSIONAL EXPERIENCE
 
-**AI & Automation:** AI Agents, LLM Applications, RAG, MCP, Prompt Engineering, n8n, Embeddings, Evaluation, LiteLLM
+**Principal Software Engineer** | Flexspring | Toronto, ON | Aug 2026 – Present
+- Promoted to lead technical direction for an AI integration platform serving **2,500+** B2B client configurations.
+- Directed lifecycle-driven provisioning across **3** core services, automating credential setup, reducing manual client onboarding time by **30%**.
 
-**Languages:** TypeScript, JavaScript, Java 17, Python, SQL
+**Software and AI Engineer** | Flexspring | Ottawa, ON | May 2024 – Aug 2026
+- Architected `flexspring-agent-core`, reducing boilerplate setup time for new AI agent development by **70%**.
+- Developed `flexspring-file-manager` as the sole engineer, enabling multi-region event-driven file syncs for **100+** enterprise accounts.
+- Engineered AI based data mapping capabilities, reducing manual user review time by **50%**, improving overall recommendation accuracy.
+- Built Studio AI Analysis to evaluate **50,000+** integrations, providing AI based recommendations.
+- Led the Spring Boot 3 migration for **5** core microservices, reducing API latency by **20%**, ensuring long-term maintainability.
+- Delivered a full-stack Credentials Manager, securely storing 3rd-party API keys for **8000+** active client integrations.
+- Won a **$1,000** hackathon prize for a RAG-powered internal chatbot, making **5 times** the sales lead generation.
 
-**Frontend & Backend:** React, Next.js, Node.js, Express, Spring Boot 3, Quarkus, REST, GraphQL, OpenAPI
+**Software Engineer Intern** | Flexspring | Montreal, QC | May 2023 – May 2024
+- Spearheaded the modernization of **3** legacy services from Java 8 to Java 17, upgrading Spring Boot 2 to Spring Boot 3.
+- Delivered **20+** core UI components for the Monitor Pilot dashboard, improving frontend rendering performance by **40%**.
 
-**Data & Cloud:** PostgreSQL, MongoDB, MySQL, Redis, Vector Databases, AWS (S3, SQS), Docker, Kubernetes, GitHub Actions, CI/CD
+**Full Stack Software Developer** | BSRM | Chittagong, Bangladesh | Apr 2019 – Jun 2021
+- Built a procurement dashboard, increasing Material Requirement Planning efficiency by **89%**.
+- Developed a supplier platform connecting **40+** vendor systems, eliminating manual spreadsheet tracking for the procurement team.
 
-**Quality & Observability:** Jest, JUnit, Test Automation, Sentry, SonarQube
+## EDUCATION
+**MEng Software Engineering (Co-op)** | Concordia University | Montreal, QC | 2022 – 2024
+**BSc Electrical and Electronics Engineering** | Islamic University of Technology | Bangladesh | 2015 – 2018
 
-## Experience
-
-### Principal Software Engineer | Flexspring | Toronto, ON | Aug 2026 – Present
-
-- Lead technical direction for Flexspring's AI and integration platform across 3 product surfaces: Studio, Services, and Wizard.
-- Lead end-to-end provisioning from AI-generated integration designs through credentials and mapping setup.
-
-### Software and AI Engineer | Flexspring | Ottawa, ON | May 2024 – Aug 2026
-
-- Delivered production AI capabilities across Data Mapping, transaction review, video transcription, and platform LLM integrations.
-- Architected `flexspring-agent-core`, a reusable foundation that standardizes AI-agent development across the platform.
-- Built `flexspring-file-manager` from scratch as sole engineer, spanning regional storage, event-driven synchronization, permissions, authentication, observability, and Monitor integration.
-- Built Studio V2 AI Analysis with role-based quality assessments and optimization recommendations; led Spring Boot 3 modernization.
-- Runner-up and $1,000 prize winner for a RAG chatbot built on Crewdle AI and Flexspring data.
-
-### Software Engineer Intern | Flexspring | Montreal, QC | May 2023 – May 2024
-
-- Delivered Monitor Pilot dashboards, authentication, navigation, organization and integration workflows, executions, and transaction details.
-- Built the foundation of Credentials Manager with connector-specific forms, validation, caching, and search optimization.
-- Led Alcatraz modernization from Java 8 to Java 17 and Spring Boot 2 to 3.
-
-### Full Stack Software Developer | BSRM | Chittagong, Bangladesh | Apr 2019 – Jun 2021
-
-- Built APS Dashboard X for procurement, inventory, and shipment scheduling, increasing MRP efficiency by 89%.
-- Built a supplier integration platform connecting 40+ vendor systems and enabling real-time inventory and shipment visibility.
-
-## Education & Certification
-
-- **MEng Software Engineering (Co-op)** | Concordia University | 2022 – 2024
-- **BSc Electrical and Electronics Engineering** | Islamic University of Technology | 2015 – 2018
+## CERTIFICATIONS & VOLUNTEER
 - **AWS Certified AI Practitioner** | Amazon Web Services | Nov 2025
-
-## Community
-
-**Director of Sponsorship, HackConcordia** | Organized ConUHacks VII with 800+ participants from 97 universities.
+- **Director of Sponsorship** | HackConcordia – Secured **$10,000+** in corporate funding, organizing Quebec's largest hackathon with **800+** participants from **97** universities | 2022 – 2023
