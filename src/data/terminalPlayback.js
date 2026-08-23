@@ -25,10 +25,10 @@ export const HOME_TERMINAL_PLAYBACK = {
       command: 'cat why_me.txt',
       delayMs: DEFAULT_PLAYBACK_DELAY_MS,
       output: [
-        '> Calm under fire — kept production running while fixing corrupted data under live load.',
-        '> Comfortable across the whole stack — backend internals, frontend UIs, and AI systems.',
-        '> Shipped production systems serving 2,500+ B2B client configurations.',
-        '> Low ego, high curiosity — AWS AI certified and always learning the next thing.',
+        'I work across backend services, web UIs, and production AI.',
+        'Built systems serving 2,500+ B2B client configurations.',
+        'Improved outcomes: 90% faster integration creation and 50% less manual review.',
+        'I like the hard parts — migrations, integrations, observability, and developer tooling.',
       ],
     },
     {

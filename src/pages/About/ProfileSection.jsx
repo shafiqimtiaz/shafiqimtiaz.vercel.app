@@ -23,18 +23,12 @@ export default function ProfileSection() {
             // mission
           </p>
           <p className="mt-4 text-base leading-relaxed text-[var(--theme-text-muted)]">
-            <span className="font-semibold text-[var(--theme-text)]">
-              I own systems, not tickets.
-            </span>{' '}
-            Principal Software Engineer in Toronto with 5+ years of experience. I build full-stack
-            systems and AI platform features from first commit to production, including File
-            Manager, Agent Core, Data Mapping recommendations, Webhook Templates, Monitor and Studio
-            Lifecycle, and Credentials Manager. My stack spans Java, Spring Boot, Quarkus, React,
-            TypeScript, PostgreSQL, MongoDB, Redis, and event-driven systems.{' '}
-            <span className="font-semibold text-[var(--theme-primary)]">
-              AWS Certified AI Practitioner
-            </span>
-            .
+            I'm a Senior Software Engineer at Flexspring, building backend services, web
+            applications, and AI-enabled developer tooling. My work spans AI agents, RAG, MCP, data
+            mapping, microservice migrations, credentials management, and event-driven file sync for
+            a platform serving 2,500+ B2B client configurations. I work primarily with Java, Spring
+            Boot, TypeScript, React, PostgreSQL, MongoDB, Redis, and AWS, and hold the AWS Certified
+            AI Practitioner certification.
           </p>
         </Reveal>
 

@@ -22,7 +22,7 @@ export default function TechStackSection() {
         </div>
         <div className="font-body inline-flex items-center gap-2 text-[0.62rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
           <span className="h-2 w-2 rounded-full bg-[var(--theme-primary)]"></span>
-          Production-grade
+          Core tools
         </div>
       </Reveal>
 

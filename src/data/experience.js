@@ -70,7 +70,7 @@ export const timeline = [
     details: [
       'Lead technical direction for an AI integration platform serving 2,500+ B2B client configurations across 3 product surfaces.',
       'Lead AI Integration assembly line project to create integrations using AI, Agents, MCP and RAG, reducing integration creation time by 90%.',
-      'Mentoring and leading interns and incoming developers to support their professional growth and seamless integration into the engineering team.',
+      'Mentored interns and incoming developers through onboarding and day-to-day engineering work.',
     ],
   },
   {
@@ -117,9 +117,7 @@ export const credentials = [
     org: 'Amazon Web Services',
     icon: 'workspace_premium',
     accent: 'text-[var(--theme-primary)]',
-    details: [
-      'Validated practical understanding of AI concepts, AWS AI services, and responsible deployment considerations.',
-    ],
+    details: [],
     credentialUrl: 'https://www.credly.com/badges/f33dbc99-4952-4c46-ab20-0e303d253724',
   },
   {
@@ -128,9 +126,7 @@ export const credentials = [
     org: 'Concordia University | Montreal, QC',
     icon: 'school',
     accent: 'text-[var(--theme-secondary)]',
-    details: [
-      'Graduate studies in software engineering with a co-op focus. Strengthened foundations in software architecture, systems thinking, and applied engineering delivery.',
-    ],
+    details: [],
   },
   {
     date: '2015 - 2018',

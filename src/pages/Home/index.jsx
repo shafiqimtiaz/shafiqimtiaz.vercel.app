@@ -87,9 +87,9 @@ export default function Home() {
                 Let&apos;s <span className="text-[var(--theme-primary)]">connect</span>
               </ScrambleOnHover>
               <p className="mt-5 max-w-[34rem] text-base leading-relaxed text-[var(--theme-text-muted)]">
-                Open to senior engineering roles and collaboration on AI platform infrastructure,
-                backend systems, and cloud modernisation. The form opens your mail app with the
-                message ready to send.
+                I'm open to Senior Software Engineer, backend, and full-stack opportunities
+                involving Java, Spring Boot, AI agents, distributed systems, and React. If your team
+                is building integrations, developer tools, or AI-enabled products, send me a note.
               </p>
             </Reveal>
 

@@ -1,25 +1,25 @@
 export const caseStudies = [
   {
     code: '001',
-    label: 'Microservice Ownership',
+    label: 'Backend Systems',
     highlights: 'File Manager Service',
     title: 'File Manager',
     description:
-      'Sole engineer from empty repo to production — multi-region S3 event-driven file sync serving 100+ enterprise accounts. S3 has no folders and no cross-key transactions, yet the product needs folder trees, recursive delete, rollup sizes, and inherited permissions — so a materialised tree in MongoDB is kept true by two independent writers.',
+      'Built as sole engineer across storage, sync, permissions, auth, observability, and monitoring integration for a multi-region event-driven file sync platform.',
     details: [
-      'S3 event sync repairs Mongo when files land outside the API entirely',
-      'EU-region bucket for data-residency clients; roles resolved from Agora',
-      'S3 and SQS readiness probes keep health checks honest',
+      'Designed multi-region file synchronization',
+      'Implemented permissions and authentication',
+      'Integrated observability and monitoring',
     ],
     tags: ['Quarkus', 'AWS S3', 'Event-Driven', 'MongoDB'],
   },
   {
     code: '002',
-    label: 'Developer Tooling',
+    label: 'AI Developer Tooling',
     highlights: 'Agent Core',
     title: 'Agent Core',
     description:
-      "Sole author. Reduced boilerplate setup time for new AI agent development by 70%. Every engineer's AI coding setup — agents, MCP servers, skills, routing policy — is mutable local state that silently diverges per machine. Turned it into a versioned, schema-validated artifact with an idempotent apply.",
+      'Created a reusable AI-agent foundation with TypeScript, Node.js, LLM APIs, MCP, RAG, and embeddings. Standardized agent development across 3 product surfaces and reduced new-agent setup from days to hours.',
     details: [
       'Tiered agent roster — opus for tech lead, haiku for scout and intern',
       'PR and main pipelines publish releases through release-it',
@@ -29,25 +29,24 @@ export const caseStudies = [
   },
   {
     code: '003',
-    label: 'AI Platform',
+    label: 'Applied AI',
     highlights: 'Data Mapping',
     title: 'Data Mapping',
     description:
-      'Mapping specs in Monitor replace spreadsheet-and-email field mapping — reducing manual user review time by 50%. One source field can face 5,000 target candidates, so the recommendation engine answers cheaply when obvious and degrades gracefully.',
+      'Built AI-powered data mapping that reduced manual review time by 50% and improved recommendation accuracy.',
     details: [
-      'Cheapest-first cascade; LLM only as tie-breaker, never the default path',
-      'Temperature 0 + positive-only cache keyed on the candidate set — repeat questions answer identically',
-      'LLM output validated against real candidate ids; a hallucinated pick falls back instead of returning',
+      'AI-powered field mapping',
+      'Reduced manual review time by 50%',
+      'Improved recommendation accuracy',
     ],
     tags: ['Embeddings', 'LiteLLM', 'Redisson', 'Spring Boot'],
   },
   {
     code: '005',
-    label: 'Cross-Service Feature',
+    label: 'Product Integration',
     highlights: 'Webhook Templates',
     title: 'Webhook Templates',
-    description:
-      "A consultant hand-configuring a webhook in Monitor after every deployment is a step that shouldn't exist. Templates now author in Studio and configure themselves in Monitor on deploy — one artifact that five services have to agree on, built across two years.",
+    description: 'Built reusable webhook templates shared between Studio and Monitor.',
     details: [
       'Template ID propagated through Studio, Webhook Core, Explorer, Engine, Onboard',
       'Sync state surfaced at global and per-project level',
@@ -57,39 +56,38 @@ export const caseStudies = [
   },
   {
     code: '006',
-    label: 'Team Feature',
+    label: 'Platform Feature',
     highlights: 'Credentials Manager',
     title: 'Credentials Manager',
     description:
-      'Integration credentials are the one thing a client hands over that you cannot afford to mishandle. Team-built across Studio and the credential-manager service, securely storing API keys for 8,000+ active client integrations — connector-specific forms, encryption before the value leaves the browser, expiry tracking, and a request workflow for renewals.',
+      'Built Credentials Manager for storing third-party API keys across 8,000+ active client integrations.',
     details: [
-      'AES encryption client-side, so plaintext secrets never reach the transport',
-      'ConnectorHub drives per-connector field rendering; expiry flagged before it lapses',
-      'Credential requests notify clients by email and track completion state',
+      'Third-party API key storage',
+      'Credentials Manager delivery',
+      '8,000+ active client integrations',
     ],
     tags: ['Spring Boot', 'React', 'Encryption', 'ConnectorHub'],
   },
   {
     code: '007',
-    label: 'AI Platform',
+    label: 'Applied AI',
     highlights: 'Studio AI Analysis',
     title: 'Studio AI Analysis',
-    description:
-      'Built end-to-end role-based integration quality assessments and optimization recommendations — evaluating 50,000+ integrations to surface AI-driven insights that replace manual review.',
+    description: 'Built AI-based quality assessments in Studio to evaluate 50,000+ integrations.',
     details: [
-      'Role-based assessments with optimization recommendations per integration',
-      'Expanded the Mapping Service and Agora project-linked Integrations domain',
-      'Governed mapping and integration management across the platform',
+      'AI-based quality assessments',
+      '50,000+ integrations evaluated',
+      'Studio analysis delivery',
     ],
     tags: ['AI Analysis', 'Spring Boot', 'React', 'Role-Based Access'],
   },
   {
     code: '008',
-    label: 'Platform Modernisation',
+    label: 'Service Migration',
     highlights: 'Migrations',
     title: 'Platform Modernisation',
     description:
-      'Led runtime and framework migrations across 5 core microservices with zero regression — reducing API latency by 20%. Upgrades of this kind rarely break at the framework line — they break in the messaging and health infrastructure wired around it, which is where the work actually went.',
+      'Modernized 5 core microservices through Java 17 and Spring Boot 3 migration, reducing API latency by 20%.',
     details: [
       'Alcatraz Java 8→17 and Spring Boot 2→3.0.6; JMS/ActiveMQ and HealthChecker breaks',
       'Studio to Spring Boot 3, its UI runtime to Node 22 across nvmrc, Docker, Jenkins',
@@ -99,11 +97,11 @@ export const caseStudies = [
   },
   {
     code: '011',
-    label: 'Product Feature',
+    label: 'Product Delivery',
     highlights: 'Studio Lifecycle',
     title: 'Studio Lifecycle',
     description:
-      'Eight-stage delivery board from sale to live support. The stage vocabulary is owned by another service and was renamed mid-flight, so the board renders a fixed ordered pipeline against labels it neither controls nor can trust to stay stable.',
+      'Built a React delivery board for tracking projects across an eight-stage lifecycle.',
     details: [
       'Phase aliases and tolerant index resolution absorb renamed or unknown stages',
       'Column-level drag-and-drop; requirements shipped behind Flagsmith flags',
