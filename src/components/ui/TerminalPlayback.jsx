@@ -38,25 +38,37 @@ export default function TerminalPlayback({ sessionConfig }) {
         ) : (
           <>
             {outputLines.map((line, index) => {
-              const token = line.startsWith('commit ')
-                ? line.match(/^(commit \S+)(.*)$/)
-                : line.match(/^(\S+\/)(\s*→.*)$/);
+              const structuredLine = typeof line === 'object' && line !== null;
+              const lineText = structuredLine ? line.value : line;
+              const token =
+                !structuredLine && line.startsWith('commit ')
+                  ? line.match(/^(commit \S+)(.*)$/)
+                  : !structuredLine
+                    ? line.match(/^(\S+\/)(\s*→.*)$/)
+                    : null;
               return (
                 <div
-                  key={`${line}-${index}`}
+                  key={`${structuredLine ? line.label : line}-${index}`}
                   className={
-                    line.startsWith('>')
+                    !structuredLine && line.startsWith('>')
                       ? 'text-[var(--theme-primary)]'
                       : 'text-[var(--theme-text-muted)]'
                   }
                 >
-                  {token ? (
+                  {structuredLine ? (
+                    <div className="grid gap-1 sm:grid-cols-[max-content_1fr] sm:gap-x-3">
+                      <span className="font-semibold text-[var(--theme-primary)]">
+                        {line.label}
+                      </span>
+                      <span>{line.value}</span>
+                    </div>
+                  ) : token ? (
                     <>
-                      <span className="text-[var(--theme-tertiary)]">{token[1]}</span>
-                      {token[2]}
+                      <span className="font-semibold text-[var(--theme-tertiary)]">{token[1]}</span>
+                      <span className="text-[var(--theme-text-muted)]">{token[2]}</span>
                     </>
                   ) : (
-                    line || ' '
+                    lineText || ' '
                   )}
                 </div>
               );

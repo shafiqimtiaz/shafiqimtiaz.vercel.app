@@ -25,22 +25,46 @@ export const HOME_TERMINAL_PLAYBACK = {
       command: 'cat why_me.txt',
       delayMs: DEFAULT_PLAYBACK_DELAY_MS,
       output: [
-        'Calm under fire — kept production running while fixing corrupted data under live load.',
-        'Comfortable across the whole stack — backend internals, frontend UIs, and AI systems.',
-        'Shipped production systems serving 2,500+ B2B client configurations.',
-        'Low ego, high curiosity — AWS AI certified and always learning the next thing.',
+        {
+          label: 'Calm under fire',
+          value: 'Kept production running while fixing corrupted data under live load.',
+        },
+        {
+          label: 'Comfortable across the whole stack',
+          value: 'Backend internals, frontend UIs, and AI systems.',
+        },
+        {
+          label: 'Shipped production systems',
+          value: 'Serving 2,500+ B2B client configurations.',
+        },
+        {
+          label: 'Low ego, high curiosity',
+          value: 'AWS AI certified and always learning the next thing.',
+        },
       ],
     },
     {
       id: 'community',
       label: 'Community',
-      command: 'git log --author=shafiq --grep=community',
+      command: 'cat community.md',
       delayMs: DEFAULT_PLAYBACK_DELAY_MS,
       output: [
-        'commit 800c0de — organized ConUHacks VII: 800+ hackers, 97 universities (Quebec\u2019s biggest)',
-        'commit c0ffee1 — runner-up @ Flexspring internal hackathon — RAG chatbot ($1,000)',
-        'commit dec0ded — Director of Sponsorship @ HackConcordia',
-        'commit a9e5c0d — nominated Young Supply Chain Talent of the Year (IPDC Awards 2019)',
+        {
+          label: 'ConUHacks VII',
+          value: "Organized Quebec's biggest hackathon for 800+ hackers from 97 universities.",
+        },
+        {
+          label: 'Flexspring hackathon',
+          value: 'Runner-up with a RAG chatbot and a $1,000 prize.',
+        },
+        {
+          label: 'HackConcordia',
+          value: 'Served as Director of Sponsorship.',
+        },
+        {
+          label: 'IPDC Awards 2019',
+          value: 'Nominated for Young Supply Chain Talent of the Year.',
+        },
         '> I show up for the dev community, not just the codebase.',
       ],
     },
