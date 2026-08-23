@@ -25,5 +25,5 @@ export const externalNodes = [
 export const footerLinks = [
   { label: 'GITHUB', href: 'https://github.com/shafiqimtiaz' },
   { label: 'LINKEDIN', href: 'https://linkedin.com/in/shafiqimtiaz' },
-  { label: 'RÉSUMÉ', href: '/docs/Shafiq-Imtiaz-Resume.pdf' },
+  { label: 'RÉSUMÉ', href: '/docs/Resume-Shafiq-Imtiaz.pdf' },
 ];

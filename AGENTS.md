@@ -33,7 +33,7 @@ Also edit `src/pages/Home/HeroSection.jsx` (the `<p>` below the subtitle).
 
 #### Update Resume
 
-Update `public/docs/Shafiq-Imtiaz-Resume.pdf` (and its `.md` source) — the site links the PDF from the navbar and hero.
+Update `public/docs/Resume-Shafiq-Imtiaz.pdf` (and its `.md` source) — the site links the PDF from the navbar and hero.
 
 #### Update Avatar
 

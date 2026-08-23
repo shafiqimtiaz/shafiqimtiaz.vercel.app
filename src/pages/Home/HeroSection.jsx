@@ -8,7 +8,7 @@ export default function HeroSection() {
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--theme-primary)] opacity-60"></span>
           <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--theme-primary)]"></span>
         </span>
-        Principal Software Engineer · Open to work
+        Senior Software Engineer · Open to work
       </div>
 
       <ScrambleOnHover
@@ -42,7 +42,7 @@ export default function HeroSection() {
       <div className="mt-9 flex flex-wrap gap-4">
         <Button
           variant="primary"
-          href="/docs/Shafiq-Imtiaz-Resume.pdf"
+          href="/docs/Resume-Shafiq-Imtiaz.pdf"
           target="_blank"
           rel="noreferrer"
           className="min-h-13 px-6 text-[0.72rem]"
@@ -51,7 +51,7 @@ export default function HeroSection() {
         </Button>
         <Button
           variant="ghost"
-          href="/docs/Shafiq-Imtiaz-Resume.md"
+          href="/docs/Resume-Shafiq-Imtiaz.md"
           download
           aria-label="Download Résumé as Markdown"
           className="min-h-13 w-13 p-0"

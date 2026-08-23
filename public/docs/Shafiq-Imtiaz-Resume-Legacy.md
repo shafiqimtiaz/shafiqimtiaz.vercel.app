@@ -11,7 +11,7 @@ linkedin.com/in/shafiqimtiaz | github.com/shafiqimtiaz
 
 ## PROFESSIONAL EXPERIENCE
 
-**Principal Software Engineer** | Flexspring | Toronto, ON | Aug 2026 – Present
+**Senior Software Engineer** | Flexspring | Toronto, ON | Aug 2026 – Present
 - Promoted to lead technical direction for an AI integration platform serving **2,500+** B2B client configurations.
 - Directed lifecycle-driven provisioning across **3** core services, automating credential setup, reducing manual client onboarding time by **30%**.
 

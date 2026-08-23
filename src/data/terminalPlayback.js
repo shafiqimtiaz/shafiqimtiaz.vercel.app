@@ -15,7 +15,7 @@ export const HOME_TERMINAL_PLAYBACK = {
       output: [
         'movies/       → sci-fi, thrillers, and anything with a great script',
         'photography/  → street photography — light, composition, candid moments',
-        'cooking/      → bengali comfort classics and weekend experiments',
+        'cooking/      → bangladeshi comfort classics and weekend experiments',
         'coding/       → the hobby that became a career — and still is one',
       ],
     },

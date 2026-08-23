@@ -2,13 +2,13 @@
 
 # Shafiq Imtiaz
 
-Principal Software Engineer &nbsp;·&nbsp; AWS Certified AI Practitioner &nbsp;·&nbsp; Ottawa, ON
+Senior Software Engineer &nbsp;·&nbsp; AWS Certified AI Practitioner &nbsp;·&nbsp; Ottawa, ON
 
 [![Portfolio](https://img.shields.io/badge/🌐_Portfolio-000000?style=flat-square&logo=vercel&logoColor=white)](https://shafiqimtiaz.vercel.app)
 [![LinkedIn](https://img.shields.io/badge/💼_LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/shafiqimtiaz)
 [![GitHub](https://img.shields.io/badge/⌥_GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/shafiqimtiaz)
 [![Email](https://img.shields.io/badge/📧_Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:shafiqimtiaz@gmail.com)
-[![Resume](https://img.shields.io/badge/📄_Resume-BA7517?style=flat-square&logo=adobeacrobatreader&logoColor=white)](https://github.com/shafiqimtiaz/shafiqimtiaz.vercel.app/blob/master/public/docs/Shafiq-Imtiaz-Resume.pdf)
+[![Resume](https://img.shields.io/badge/📄_Resume-BA7517?style=flat-square&logo=adobeacrobatreader&logoColor=white)](https://github.com/shafiqimtiaz/shafiqimtiaz.vercel.app/blob/master/public/docs/Resume-Shafiq-Imtiaz.pdf)
 
 </div>
 
@@ -16,7 +16,7 @@ Principal Software Engineer &nbsp;·&nbsp; AWS Certified AI Practitioner &nbsp;�
 
 ### Current Role
 
-**Principal Software Engineer · [Flexspring](https://flexspring.com)** &nbsp;`May 2026 – Present` &nbsp;·&nbsp; Ottawa, ON
+**Senior Software Engineer · [Flexspring](https://flexspring.com)** &nbsp;`May 2026 – Present` &nbsp;·&nbsp; Ottawa, ON
 _B2B HR integration platform serving 2,500+ client configurations_
 
 - **Data Mapping (AI)**: built an AI-driven field recommendation system with embedding-based reranking, cosine-similarity matching, Redisson caching, and LiteLLM fallback. Shipped as a self-service spec tool that replaced manual spreadsheet workflows.
