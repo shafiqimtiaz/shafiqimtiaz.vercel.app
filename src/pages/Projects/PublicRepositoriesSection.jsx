@@ -16,7 +16,8 @@ export default function PublicRepositoriesSection() {
           Public <span className="text-[var(--theme-tertiary)]">repositories</span>
         </ScrambleOnHover>
         <p className="mt-5 max-w-3xl text-base leading-relaxed text-[var(--theme-text-muted)]">
-          Personal projects across AI tools, browser extensions, developer tooling, and mobile HCI.
+          Open-source projects and experiments across AI tools, browser extensions, developer
+          tooling, and mobile HCI.
         </p>
       </Reveal>
 

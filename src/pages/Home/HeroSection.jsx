@@ -27,16 +27,15 @@ export default function HeroSection() {
       </ScrambleOnHover>
 
       <p className="font-body mt-6 text-sm tracking-[0.06em] text-[var(--theme-text-muted)]">
-        <span className="text-[var(--theme-primary)]">&gt;</span> AI Platform &amp; Agentic
-        Frameworks{'  '}
-        <span className="text-[var(--theme-outline-variant)]">//</span> Full-Stack Delivery
+        <span className="text-[var(--theme-primary)]">&gt;</span> Java · Spring Boot · TypeScript ·
+        React{'  '}
+        <span className="text-[var(--theme-outline-variant)]">//</span> AI &amp; Agents
       </p>
 
       <p className="mt-6 max-w-[36rem] text-base leading-relaxed text-[var(--theme-text-muted)]">
-        Senior Software Engineer building backend services, web applications, and AI-enabled
-        developer tooling with Java, Spring Boot, TypeScript, React, and AWS. At Flexspring, I lead
-        technical direction for an AI integration platform serving 2,500+ B2B client configurations
-        across 3 product surfaces.
+        Senior Software Engineer building AI-enabled backend and web applications with Java, Spring
+        Boot, TypeScript, React, and AWS. At Flexspring, I lead technical direction for an AI
+        integration platform serving 2,500+ B2B client configurations across 3 product surfaces.
       </p>
 
       <div className="mt-9 flex flex-wrap gap-4">

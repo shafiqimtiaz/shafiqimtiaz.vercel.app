@@ -36,13 +36,7 @@ export const techStack = [
     accent: 'text-[var(--theme-primary)]',
     code: '004',
     title: 'Frontend',
-    items: [
-      'React 18',
-      'Next.js',
-      'Vite 7',
-      '@tanstack/react-query',
-      'Chrome Extensions (Manifest V3)',
-    ],
+    items: ['React 18', 'Next.js', 'Vite 7', 'Tanstack', 'Chrome Extensions'],
   },
   {
     icon: 'database',
@@ -70,7 +64,7 @@ export const timeline = [
     details: [
       'Lead technical direction for an AI integration platform serving 2,500+ B2B client configurations across 3 product surfaces.',
       'Lead AI Integration assembly line project to create integrations using AI, Agents, MCP and RAG, reducing integration creation time by 90%.',
-      'Mentored interns and incoming developers through onboarding and day-to-day engineering work.',
+      'Mentoring and leading interns and incoming developers to support their professional growth and seamless integration into the engineering team.',
     ],
   },
   {
@@ -117,7 +111,7 @@ export const credentials = [
     org: 'Amazon Web Services',
     icon: 'workspace_premium',
     accent: 'text-[var(--theme-primary)]',
-    details: [],
+    details: ['AWS Certified AI Practitioner certification.'],
     credentialUrl: 'https://www.credly.com/badges/f33dbc99-4952-4c46-ab20-0e303d253724',
   },
   {
@@ -126,7 +120,7 @@ export const credentials = [
     org: 'Concordia University | Montreal, QC',
     icon: 'school',
     accent: 'text-[var(--theme-secondary)]',
-    details: [],
+    details: ['MEng Software Engineering (Co-op).'],
   },
   {
     date: '2015 - 2018',

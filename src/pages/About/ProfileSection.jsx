@@ -23,12 +23,18 @@ export default function ProfileSection() {
             // mission
           </p>
           <p className="mt-4 text-base leading-relaxed text-[var(--theme-text-muted)]">
-            I'm a Senior Software Engineer at Flexspring, building backend services, web
-            applications, and AI-enabled developer tooling. My work spans AI agents, RAG, MCP, data
-            mapping, microservice migrations, credentials management, and event-driven file sync for
-            a platform serving 2,500+ B2B client configurations. I work primarily with Java, Spring
-            Boot, TypeScript, React, PostgreSQL, MongoDB, Redis, and AWS, and hold the AWS Certified
-            AI Practitioner certification.
+            <span className="font-semibold text-[var(--theme-text)]">
+              I own systems, not tickets.
+            </span>{' '}
+            Senior Software Engineer building backend services, web applications, and AI-enabled
+            developer tooling. At Flexspring, I work across 2,500+ B2B client configurations, with
+            experience in AI agents, RAG, MCP, data mapping, microservice migrations, credentials
+            management, and event-driven file sync. Core technologies include Java, Spring Boot,
+            TypeScript, React, PostgreSQL, MongoDB, Redis, AWS, and AI-native development.{' '}
+            <span className="font-semibold text-[var(--theme-primary)]">
+              AWS Certified AI Practitioner
+            </span>
+            .
           </p>
         </Reveal>
 

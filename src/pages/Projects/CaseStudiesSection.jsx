@@ -13,10 +13,11 @@ export default function CaseStudiesSection() {
           reserveWidth
           className="font-headline mt-4 text-[clamp(2.4rem,5vw,4rem)] leading-[0.95] font-extrabold tracking-[-0.04em] text-[var(--theme-text)]"
         >
-          Professional <span className="text-[var(--theme-primary)]">work</span>
+          Career <span className="text-[var(--theme-primary)]">milestones</span>
         </ScrambleOnHover>
         <p className="mt-5 max-w-3xl text-base leading-relaxed text-[var(--theme-text-muted)]">
-          Selected professional work showing what I built and the result.
+          Selected professional work across AI agents, backend services, microservices, React, and
+          event-driven systems.
         </p>
       </Reveal>
 
