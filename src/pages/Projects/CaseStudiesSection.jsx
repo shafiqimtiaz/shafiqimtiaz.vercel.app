@@ -16,8 +16,8 @@ export default function CaseStudiesSection() {
           Career <span className="text-[var(--theme-primary)]">milestones</span>
         </ScrambleOnHover>
         <p className="mt-5 max-w-3xl text-base leading-relaxed text-[var(--theme-text-muted)]">
-          Selected professional work across AI agents, backend services, microservices, React, and
-          event-driven systems.
+          Full-stack product work spanning React interfaces, APIs, services, AI platforms, data, and
+          event-driven cloud systems.
         </p>
       </Reveal>
 

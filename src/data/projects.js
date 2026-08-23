@@ -1,7 +1,7 @@
 export const caseStudies = [
   {
     code: '001',
-    label: 'Microservice Ownership',
+    label: 'Full-Stack Ownership',
     highlights: 'File Manager Service',
     title: 'File Manager',
     description:
@@ -11,11 +11,11 @@ export const caseStudies = [
       'Regional storage and event-driven sync',
       'Permissions, observability, and Monitor integration',
     ],
-    tags: ['Quarkus', 'AWS S3', 'Event-Driven', 'MongoDB'],
+    tags: ['Node.js', 'AWS S3', 'Event-Driven', 'PostgreSQL'],
   },
   {
     code: '002',
-    label: 'Developer Tooling',
+    label: 'AI Platform Foundation',
     highlights: 'Agent Core',
     title: 'Agent Core',
     description:
@@ -25,7 +25,7 @@ export const caseStudies = [
       'Standardized agent development across 3 product surfaces',
       'Reduced new-agent setup from days to hours',
     ],
-    tags: ['TypeScript', 'CLI', 'Dev Tooling', 'CI/CD'],
+    tags: ['TypeScript', 'MCP', 'RAG', 'LLM APIs'],
   },
   {
     code: '003',
@@ -57,7 +57,7 @@ export const caseStudies = [
   },
   {
     code: '006',
-    label: 'Team Feature',
+    label: 'Full-Stack Delivery',
     highlights: 'Credentials Manager',
     title: 'Credentials Manager',
     description:
@@ -71,7 +71,7 @@ export const caseStudies = [
   },
   {
     code: '007',
-    label: 'AI Platform',
+    label: 'AI Product Platform',
     highlights: 'Studio AI Analysis',
     title: 'Studio AI Analysis',
     description:
@@ -99,7 +99,7 @@ export const caseStudies = [
   },
   {
     code: '011',
-    label: 'Product Feature',
+    label: 'Full-Stack Product',
     highlights: 'Studio Lifecycle',
     title: 'Studio Lifecycle',
     description:

@@ -24,13 +24,13 @@ export default function ProfileSection() {
           </p>
           <p className="mt-4 text-base leading-relaxed text-[var(--theme-text-muted)]">
             <span className="font-semibold text-[var(--theme-text)]">
-              I own systems, not tickets.
+              I own products end to end.
             </span>{' '}
-            Senior Software Engineer building backend services, web applications, and AI-enabled
-            developer tooling. At Flexspring, I work across 2,500+ B2B client configurations, with
-            experience in AI agents, RAG, MCP, data mapping, microservice migrations, credentials
-            management, and event-driven file sync. Core technologies include Java, Spring Boot,
-            TypeScript, React, PostgreSQL, MongoDB, Redis, AWS, and AI-native development.{' '}
+            Senior Software Engineer delivering React user experiences, TypeScript and Java APIs,
+            Spring Boot services, data systems, AWS infrastructure, and production AI workflows. At
+            Flexspring, I lead end-to-end delivery across 2,500+ B2B client configurations, from
+            product flows and systems integration through security, observability, and production
+            support.{' '}
             <span className="font-semibold text-[var(--theme-primary)]">
               AWS Certified AI Practitioner
             </span>

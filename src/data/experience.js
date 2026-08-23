@@ -28,7 +28,7 @@ export const techStack = [
     icon: 'dns',
     accent: 'text-[var(--theme-tertiary)]',
     code: '003',
-    title: 'Backend & Architecture',
+    title: 'Backend & APIs',
     items: ['Node.js', 'Spring Boot 3', 'Quarkus', 'REST APIs', 'GraphQL', 'WebSocket', 'OpenAPI'],
   },
   {
@@ -36,7 +36,7 @@ export const techStack = [
     accent: 'text-[var(--theme-primary)]',
     code: '004',
     title: 'Frontend',
-    items: ['React 18', 'Next.js', 'Vite 7', 'Tanstack', 'Chrome Extensions'],
+    items: ['React 18', 'React Router', 'Next.js', 'Vite 7', 'Responsive UI', 'Chrome Extensions'],
   },
   {
     icon: 'database',
@@ -50,7 +50,7 @@ export const techStack = [
     accent: 'text-[var(--theme-tertiary)]',
     code: '006',
     title: 'Cloud & DevOps',
-    items: ['Docker', 'Kubernetes', 'GitHub Actions', 'CI/CD', 'Jenkins'],
+    items: ['Docker', 'Kubernetes', 'Bitbucket', 'GitHub Actions', 'CI/CD', 'Jenkins'],
   },
 ];
 

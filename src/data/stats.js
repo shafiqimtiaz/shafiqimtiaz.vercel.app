@@ -7,7 +7,7 @@ export const homeStats = [
 
 export const profileStats = [
   { value: '8,000+', label: 'ACTIVE CLIENT CREDENTIALS', accent: 'text-[var(--theme-primary)]' },
-  { value: '7', label: 'CASE STUDIES SHIPPED', accent: 'text-[var(--theme-secondary)]' },
+  { value: '8', label: 'CASE STUDIES SHIPPED', accent: 'text-[var(--theme-secondary)]' },
   {
     value: '$1K',
     label: 'HACKATHON PRIZE (RAG CHATBOT)',
