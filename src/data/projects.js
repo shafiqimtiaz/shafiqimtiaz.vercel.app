@@ -5,11 +5,11 @@ export const caseStudies = [
     highlights: 'File Manager Service',
     title: 'File Manager',
     description:
-      'TypeScript, Node.js, PostgreSQL, AWS S3. Multi-region event-driven file sync platform. Sole engineer across storage, sync, permissions, auth, observability, and monitoring integration.',
+      'TypeScript, Node.js, PostgreSQL, AWS S3. Built from scratch as sole engineer: a production full-stack service with regional storage, event-driven synchronization, permissions, authentication, observability, and Monitor integration.',
     details: [
-      'Storage and sync ownership',
-      'Permissions and authentication',
-      'Observability and monitoring integration',
+      'Sole-engineer service ownership',
+      'Regional storage and event-driven sync',
+      'Permissions, observability, and Monitor integration',
     ],
     tags: ['Quarkus', 'AWS S3', 'Event-Driven', 'MongoDB'],
   },
@@ -19,7 +19,7 @@ export const caseStudies = [
     highlights: 'Agent Core',
     title: 'Agent Core',
     description:
-      'TypeScript, Node.js, LLM APIs, MCP, RAG, Embeddings. Reusable AI-agent foundation standardizing agent development across 3 product surfaces. Reduced new-agent setup from days to hours.',
+      'TypeScript, Node.js, LLM APIs, MCP, RAG, Embeddings. Reusable AI-agent foundation standardizing agent development across 3 product surfaces within the Flexspring ecosystem. Reduced new-agent setup from days to hours.',
     details: [
       'LLM APIs, MCP, RAG, and embeddings',
       'Standardized agent development across 3 product surfaces',
@@ -33,11 +33,11 @@ export const caseStudies = [
     highlights: 'Data Mapping',
     title: 'Data Mapping',
     description:
-      'Engineered AI-powered data mapping, reducing manual review time by 50% and improving recommendation accuracy.',
+      'Built production AI capabilities for Data Mapping and platform LLM integration, reducing manual review time by 50% while improving recommendation quality, reliability, and governance across Monitor and shared libraries.',
     details: [
-      'AI-powered field mapping',
+      'AI-powered mapping recommendations',
       '50% reduction in manual review time',
-      'Improved recommendation accuracy',
+      'AI-assisted review with stronger quality and governance',
     ],
     tags: ['Embeddings', 'LiteLLM', 'Redisson', 'Spring Boot'],
   },
@@ -46,11 +46,12 @@ export const caseStudies = [
     label: 'Cross-Service Feature',
     highlights: 'Webhook Templates',
     title: 'Webhook Templates',
-    description: 'Cross-service feature for reusable webhook templates between Studio and Monitor.',
+    description:
+      'Built core Webhook Template capabilities across Engine, Studio, Monitor, Webhook Core, Webhook Explorer, and Onboard, including shared management, permissions, synchronization, deployment-driven configuration, and migration tooling.',
     details: [
-      'Reusable webhook templates',
-      'Studio and Monitor integration',
-      'Cross-service delivery',
+      'Cross-service template management',
+      'Permissions and synchronization',
+      'Deployment configuration and migration tooling',
     ],
     tags: ['Cross-Service', 'Spring Boot', 'React', 'Webhooks'],
   },
@@ -60,11 +61,11 @@ export const caseStudies = [
     highlights: 'Credentials Manager',
     title: 'Credentials Manager',
     description:
-      'Delivered Credentials Manager storing 3rd-party API keys for 8,000+ active client integrations.',
+      'Delivered Credentials Manager full-stack for 8,000+ active client integrations, spanning API, ConnectorHub integration, React UI, secure field handling, notifications, and request lifecycle management.',
     details: [
-      '3rd-party API key storage',
-      'Credentials Manager delivery',
-      '8,000+ active client integrations',
+      'API, ConnectorHub, and React UI',
+      'Secure field handling and notifications',
+      'Request lifecycle management for 8,000+ integrations',
     ],
     tags: ['Spring Boot', 'React', 'Encryption', 'ConnectorHub'],
   },
@@ -74,11 +75,11 @@ export const caseStudies = [
     highlights: 'Studio AI Analysis',
     title: 'Studio AI Analysis',
     description:
-      'Built Studio AI Analysis to evaluate 50,000+ integrations with AI-based quality assessments.',
+      'Built Studio AI Analysis end-to-end to evaluate 50,000+ integrations through role-based quality assessments and optimization recommendations.',
     details: [
-      'AI-based quality assessments',
+      'Role-based integration assessments',
       '50,000+ integrations evaluated',
-      'Studio AI analysis delivery',
+      'Optimization recommendations',
     ],
     tags: ['AI Analysis', 'Spring Boot', 'React', 'Role-Based Access'],
   },
@@ -102,8 +103,12 @@ export const caseStudies = [
     highlights: 'Studio Lifecycle',
     title: 'Studio Lifecycle',
     description:
-      'React-based delivery board for tracking projects across an eight-stage lifecycle.',
-    details: ['Project delivery tracking', 'React interface', 'Lifecycle visibility'],
+      'Designed and implemented Monitor and Studio Lifecycle across project and integration flows, with an eight-stage delivery lifecycle and lifecycle events stored on the integration entity for traceability and debugging.',
+    details: [
+      'Project and integration lifecycle flows',
+      'Eight-stage delivery lifecycle',
+      'Traceable lifecycle event history',
+    ],
     tags: ['React', 'Feature Flags', 'Studio', 'UI/UX'],
   },
 ];

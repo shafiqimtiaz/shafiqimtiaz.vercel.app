@@ -62,9 +62,10 @@ export const timeline = [
     accent: 'text-[var(--theme-primary)] border-[var(--theme-primary)]',
     icon: 'workspace_premium',
     details: [
-      'Lead technical direction for an AI integration platform serving 2,500+ B2B client configurations across 3 product surfaces.',
-      'Lead AI Integration assembly line project to create integrations using AI, Agents, MCP and RAG, reducing integration creation time by 90%.',
-      'Mentoring and leading interns and incoming developers to support their professional growth and seamless integration into the engineering team.',
+      'Flexspring is a B2B content management and delivery platform serving 2,500+ client configurations.',
+      'Promoted within Flexspring while taking on broader technical leadership, leading architecture decisions and delivery for the AI and integration platform.',
+      'Lead the AI Integration Assembly Line, connecting AI-generated integration design to automated credentials and mapping/lookup-table setup across Studio, Services, and Wizard, reducing integration creation time by 90%.',
+      'Mentor interns and incoming developers while setting technical direction for the team.',
     ],
   },
   {
@@ -74,10 +75,17 @@ export const timeline = [
     accent: 'text-[var(--theme-primary)] border-[var(--theme-primary)]',
     icon: 'rocket_launch',
     details: [
-      'Engineered AI-powered data mapping, reducing manual review time by 50% and improving recommendation accuracy.',
-      'Built Studio AI Analysis to evaluate 50,000+ integrations with AI-based quality assessments.',
-      'Led Spring Boot 3 migration for 5 core microservices, reducing API latency by 20%.',
-      'Delivered Credentials Manager storing 3rd-party API keys for 8,000+ active client integrations.',
+      'Built production AI capabilities for Data Mapping and platform LLM integration, plus AI-assisted transaction-detail views for simpler review, improving recommendation quality, reliability, and governance across Monitor and shared libraries.',
+      'Contributed to AI Assembly / Video Transcription, shipping Gemini-based video transcription that powers Wizard content synchronization.',
+      'Architected and developed flexspring-agent-core, a reusable foundation for standardized AI-agent development across the Flexspring ecosystem.',
+      'Built flexspring-file-manager from scratch as sole engineer, delivering a production full-stack service with regional storage, event-driven synchronization, permissions, authentication, observability, and Monitor integration.',
+      'Designed and implemented Monitor and Studio Lifecycle end-to-end across project and integration flows, storing lifecycle events on the integration entity for traceability and debugging.',
+      "Built Monitor's Service Manager, covering service listings, subscribe/unsubscribe flows, and subscription-based availability gating for File Manager and Approval Manager.",
+      'Built core Webhook Template capabilities across Engine, Studio, Monitor, Webhook Core, Webhook Explorer, and Onboard, including shared management, permissions, synchronization, deployment-driven configuration, and migration tooling.',
+      "Expanded Mapping Service capabilities and designed Agora's project-linked Integrations domain to support governed mapping and integration management.",
+      "Built Studio V2 AI Analysis end-to-end to evaluate 50,000+ integrations through role-based quality assessments and optimization recommendations; led Studio's Spring Boot 3 migration and broader platform modernization, reducing API latency by 20%.",
+      'Delivered Credentials Manager full-stack for 8,000+ active client integrations, including API, ConnectorHub integration, React UI, secure field handling, notifications, and request lifecycle management.',
+      'Runner-up with a $1,000 prize at the internal hackathon for a RAG-powered chatbot built on Crewdle AI and Flexspring data.',
     ],
   },
   {
@@ -87,8 +95,10 @@ export const timeline = [
     accent: 'text-[var(--theme-tertiary)] border-[var(--theme-tertiary)]',
     icon: 'terminal',
     details: [
-      'Modernized 3 legacy services from Java 8 to Java 17, Spring Boot 2 to Spring Boot 3.',
-      'Delivered 20+ core UI components for Monitor Pilot dashboard, improving rendering performance by 40%.',
+      "Delivered 20+ core UI components for Monitor Pilot's template-based UI across authentication, navigation, dashboards, organization and integration summaries, executions, transactions, and transaction details, improving rendering performance by 40%.",
+      'Built the foundation of Monitor Credentials Manager, delivering credential listing and add/update workflows with connector-specific forms, validation, caching, and search optimization.',
+      'Led Alcatraz modernization across 3 legacy services from Java 8 to Java 17 and Spring Boot 2 to Spring Boot 3, including compatibility and API documentation improvements.',
+      "Contributed to Onboard's template-based solution, shared Monitor/Onboard UI patterns, and File Manager service activation/deactivation.",
     ],
   },
   {
@@ -98,8 +108,8 @@ export const timeline = [
     accent: 'text-[var(--theme-tertiary)] border-[var(--theme-tertiary)]',
     icon: 'factory',
     details: [
-      'Built procurement dashboard increasing MRP efficiency by 89%.',
-      'Built supplier integration platform connecting 40+ vendor systems with real-time inventory visibility.',
+      'Built APS Dashboard X with React, Node.js, and SQLite for consumables procurement, stock management, and shipment scheduling, increasing Material Requirement Planning efficiency by 89%; nominated for Young Supply Chain Talent of the Year at the IPDC Supply Chain Awards 2019.',
+      'Built a supplier integration platform connecting 40+ vendor systems, delivering real-time inventory tracking, shipment visibility, and audit-compliant reporting across procurement workflows.',
     ],
   },
 ];
