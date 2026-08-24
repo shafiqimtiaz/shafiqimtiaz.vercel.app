@@ -16,3 +16,11 @@ test('buildAssistantInstructions keeps the assistant within portfolio context', 
   assert.match(instructions, /do not know/);
   assert.match(instructions, /concise/);
 });
+
+test('buildAssistantInstructions requires short direct responses', () => {
+  const instructions = buildAssistantInstructions();
+
+  assert.match(instructions, /1-3 short sentences or up to 3 bullets/);
+  assert.match(instructions, /under 80 words/);
+  assert.match(instructions, /Lead with the answer/);
+});

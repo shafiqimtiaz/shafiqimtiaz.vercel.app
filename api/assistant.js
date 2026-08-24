@@ -27,6 +27,7 @@ export default async function handler(request, response) {
     const google = createGoogleGenerativeAI({ apiKey: token });
     const result = streamText({
       model: google(model),
+      maxOutputTokens: 160,
       system: buildAssistantInstructions(),
       messages,
     });

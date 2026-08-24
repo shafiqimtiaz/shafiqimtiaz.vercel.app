@@ -75,14 +75,14 @@ export default function AssistantChat() {
   };
 
   return (
-    <div className="fixed right-4 bottom-4 z-50 flex flex-col items-end sm:right-6 sm:bottom-6">
+    <div className="fixed right-2 bottom-4 z-50 flex flex-col items-end sm:right-6 sm:bottom-6">
       {isOpen && (
         <section
           aria-label="Shafiq's AI Assistant"
           className={`mb-3 flex flex-col overflow-hidden rounded-xl border border-[var(--theme-outline-variant)] bg-[var(--theme-surface-low)] shadow-[0_18px_48px_color-mix(in_srgb,var(--theme-bg)_78%,transparent)] ${
             isExpanded
-              ? 'h-[min(48rem,calc(100vh-3rem))] w-[min(48rem,calc(100vw-1rem))]'
-              : 'h-[min(38rem,calc(100vh-7rem))] w-[min(34rem,calc(100vw-1rem))]'
+              ? 'h-[min(48rem,calc(100vh-var(--header-height)-6rem))] w-[min(48rem,calc(100vw-1rem))]'
+              : 'h-[min(38rem,calc(100vh-7rem))] w-[min(23rem,calc(100vw-2rem))]'
           }`}
         >
           <header className="flex items-center justify-between border-b border-[var(--theme-outline-variant)] px-4 py-3">
