@@ -56,11 +56,12 @@ export default function TerminalPlayback({ sessionConfig }) {
                   }
                 >
                   {structuredLine ? (
-                    <div className="grid gap-1 sm:grid-cols-[max-content_1fr] sm:gap-x-3">
+                    <div>
                       <span className="font-semibold text-[var(--theme-primary)]">
                         {line.label}
                       </span>
-                      <span>{line.value}</span>
+                      <span className="mx-1 text-[var(--theme-outline)]">→</span>
+                      <span className="text-[var(--theme-text-muted)]">{line.value}</span>
                     </div>
                   ) : token ? (
                     <>
