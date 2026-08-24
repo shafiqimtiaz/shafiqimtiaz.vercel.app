@@ -3,6 +3,42 @@ import { TerminalPanel, Button, Icon } from '../../components/ui';
 import { contactFormFields } from '../../data/contactForm';
 
 const CONTACT_FORM_ENDPOINT = import.meta.env.VITE_CONTACT_FORM_ENDPOINT;
+const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
+
+const getRecaptchaToken = () =>
+  new Promise((resolve, reject) => {
+    if (!RECAPTCHA_SITE_KEY) {
+      reject(new Error('Missing reCAPTCHA site key'));
+      return;
+    }
+
+    const execute = () => {
+      if (!window.grecaptcha) {
+        reject(new Error('reCAPTCHA failed to load'));
+        return;
+      }
+
+      window.grecaptcha.ready(() => {
+        window.grecaptcha
+          .execute(RECAPTCHA_SITE_KEY, { action: 'submit' })
+          .then(resolve)
+          .catch(reject);
+      });
+    };
+
+    if (window.grecaptcha) {
+      execute();
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.src = `https://www.google.com/recaptcha/api.js?render=${encodeURIComponent(RECAPTCHA_SITE_KEY)}`;
+    script.async = true;
+    script.defer = true;
+    script.onload = execute;
+    script.onerror = () => reject(new Error('reCAPTCHA failed to load'));
+    document.head.appendChild(script);
+  });
 
 export default function ContactFormSection() {
   const initialFormData = contactFormFields.reduce(
@@ -40,6 +76,7 @@ export default function ContactFormSection() {
     setStatus('sending');
 
     try {
+      const recaptchaToken = await getRecaptchaToken();
       const response = await fetch(CONTACT_FORM_ENDPOINT, {
         method: 'POST',
         headers: {
@@ -51,6 +88,7 @@ export default function ContactFormSection() {
           email,
           message,
           _subject: `Portfolio contact — ${name}`,
+          'g-recaptcha-response': recaptchaToken,
         }),
       });
 
