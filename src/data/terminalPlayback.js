@@ -8,6 +8,19 @@ export const HOME_TERMINAL_PLAYBACK = {
   fallbackOutput: 'command not found — try one of the suggestions below',
   actions: [
     {
+      id: 'current_status',
+      label: 'Current Status',
+      command: 'cat current_status',
+      delayMs: DEFAULT_PLAYBACK_DELAY_MS,
+      output: ['> status: online, caffeinated, and shipping — ping me below to chat or pair.'],
+      media: {
+        type: 'gif',
+        src: '/current-status.gif',
+        alt: 'Current status',
+      },
+      cta: { label: "ping me — let's build something →", target: 'contact' },
+    },
+    {
       id: 'hobbies',
       label: 'What I Like',
       command: 'ls ~/hobbies/',
@@ -67,22 +80,6 @@ export const HOME_TERMINAL_PLAYBACK = {
         },
         '> I show up for the dev community, not just the codebase.',
       ],
-    },
-    {
-      id: 'current_status',
-      label: '📟 Current Status',
-      command: 'cat current_status',
-      delayMs: DEFAULT_PLAYBACK_DELAY_MS,
-      output: [
-        '> status: online, caffeinated, and shipping 🚀',
-        '> ☕ brewing — always up for a chat or a pairing session',
-      ],
-      media: {
-        type: 'gif',
-        src: '/current-status.gif',
-        alt: 'Current status',
-      },
-      cta: { label: "ping me — let's build something →", target: 'contact' },
     },
   ],
 };
