@@ -46,7 +46,7 @@ export default function HeroSection() {
           href="/docs/Resume-Shafiq-Imtiaz.pdf"
           target="_blank"
           rel="noreferrer"
-          className="min-h-13 px-6 text-[0.72rem]"
+          className="min-h-13 px-6 text-[0.72rem] transition-all hover:-translate-y-0.5"
         >
           <span>View Résumé</span>
         </Button>
@@ -55,14 +55,14 @@ export default function HeroSection() {
           href="/docs/Resume-Shafiq-Imtiaz.md"
           download
           aria-label="Download Résumé as Markdown"
-          className="min-h-13 w-13 p-0"
+          className="min-h-13 w-13 p-0 transition-all hover:-translate-y-0.5"
         >
           <Icon name="description" size={24} />
         </Button>
         <Button
           variant="secondary"
           href="#contact"
-          className="min-h-13 px-6 text-[0.72rem]"
+          className="min-h-13 px-6 text-[0.72rem] transition-all hover:-translate-y-0.5"
           onClick={(e) => {
             e.preventDefault();
             document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
