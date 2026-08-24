@@ -9,7 +9,6 @@ import TimelineSection from '../About/TimelineSection';
 import CredentialsSection from '../About/CredentialsSection';
 import CaseStudiesSection from '../Projects/CaseStudiesSection';
 import PublicRepositoriesSection from '../Projects/PublicRepositoriesSection';
-import ContactFormSection from '../Contact/ContactFormSection';
 import { Reveal } from '../../components/ui';
 import { externalNodes } from '../../data/links';
 import { gsap, prefersReducedMotion } from '../../lib/gsapConfig';
@@ -74,56 +73,50 @@ export default function Home() {
       {/* Contact */}
       <section id="contact" className="py-24 md:py-28">
         <div className={`${container} grid gap-12 lg:grid-cols-2 lg:items-start`}>
-          <div className="flex flex-col gap-8">
-            <Reveal>
-              <p className="font-body text-[0.7rem] tracking-[0.2em] text-[var(--theme-primary)] uppercase">
-                // Open Channel
-              </p>
-              <ScrambleOnHover
-                as="h2"
-                reserveWidth
-                className="font-headline mt-4 text-[clamp(2.4rem,5vw,4rem)] leading-[0.95] font-extrabold tracking-[-0.04em] text-[var(--theme-text)]"
+          <Reveal>
+            <p className="font-body text-[0.7rem] tracking-[0.2em] text-[var(--theme-primary)] uppercase">
+              // Open Channel
+            </p>
+            <ScrambleOnHover
+              as="h2"
+              reserveWidth
+              className="font-headline mt-4 text-[clamp(2.4rem,5vw,4rem)] leading-[0.95] font-extrabold tracking-[-0.04em] text-[var(--theme-text)]"
+            >
+              Let&apos;s <span className="text-[var(--theme-primary)]">connect</span>
+            </ScrambleOnHover>
+            <p className="mt-5 max-w-[34rem] text-base leading-relaxed text-[var(--theme-text-muted)]">
+              Open to Senior Software Engineer and Senior Full-Stack Engineer roles where I can
+              build end-to-end products and practical AI capabilities with React, TypeScript, Java,
+              Spring Boot, AWS, and distributed systems. The form opens your mail app with the
+              message ready to send.
+            </p>
+          </Reveal>
+
+          <Reveal delay={120} className="grid gap-3">
+            {externalNodes.map((node) => (
+              <a
+                key={node.label}
+                href={node.href}
+                target={node.href.startsWith('http') ? '_blank' : undefined}
+                rel={node.href.startsWith('http') ? 'noreferrer' : undefined}
+                className="group flex items-center gap-4 rounded-lg border border-[var(--theme-outline-variant)] bg-[var(--theme-surface-low)] px-5 py-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--theme-primary)]"
               >
-                Let&apos;s <span className="text-[var(--theme-primary)]">connect</span>
-              </ScrambleOnHover>
-              <p className="mt-5 max-w-[34rem] text-base leading-relaxed text-[var(--theme-text-muted)]">
-                Open to Senior Software Engineer and Senior Full-Stack Engineer roles where I can
-                build end-to-end products and practical AI capabilities with React, TypeScript,
-                Java, Spring Boot, AWS, and distributed systems. The form opens your mail app with
-                the message ready to send.
-              </p>
-            </Reveal>
-
-            <Reveal delay={120} className="grid gap-3">
-              {externalNodes.map((node) => (
-                <a
-                  key={node.label}
-                  href={node.href}
-                  target={node.href.startsWith('http') ? '_blank' : undefined}
-                  rel={node.href.startsWith('http') ? 'noreferrer' : undefined}
-                  className="group flex items-center gap-4 rounded-lg border border-[var(--theme-outline-variant)] bg-[var(--theme-surface-low)] px-5 py-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--theme-primary)]"
-                >
-                  <Icon name={node.icon} size={24} className={node.accent} />
-                  <span className="grid gap-0.5">
-                    <span className="font-body text-[0.62rem] tracking-[0.18em] text-[var(--theme-text-muted)] uppercase">
-                      {node.label}
-                    </span>
-                    <span className="font-headline text-sm font-semibold text-[var(--theme-text)]">
-                      {node.handle}
-                    </span>
+                <Icon name={node.icon} size={24} className={node.accent} />
+                <span className="grid gap-0.5">
+                  <span className="font-body text-[0.62rem] tracking-[0.18em] text-[var(--theme-text-muted)] uppercase">
+                    {node.label}
                   </span>
-                  <Icon
-                    name="arrow_outward"
-                    size={24}
-                    className="ml-auto text-[var(--theme-outline)] transition-colors group-hover:text-[var(--theme-primary)]"
-                  />
-                </a>
-              ))}
-            </Reveal>
-          </div>
-
-          <Reveal delay={80}>
-            <ContactFormSection />
+                  <span className="font-headline text-sm font-semibold text-[var(--theme-text)]">
+                    {node.handle}
+                  </span>
+                </span>
+                <Icon
+                  name="arrow_outward"
+                  size={24}
+                  className="ml-auto text-[var(--theme-outline)] transition-colors group-hover:text-[var(--theme-primary)]"
+                />
+              </a>
+            ))}
           </Reveal>
         </div>
       </section>
