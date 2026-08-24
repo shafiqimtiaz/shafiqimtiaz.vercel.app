@@ -18,7 +18,7 @@ export const HOME_TERMINAL_PLAYBACK = {
         src: '/current-status.gif',
         alt: 'Current status',
       },
-      cta: { label: "ping me — let's build something →", target: 'contact' },
+      cta: { label: "ping me — let's build something", target: 'contact' },
     },
     {
       id: 'hobbies',

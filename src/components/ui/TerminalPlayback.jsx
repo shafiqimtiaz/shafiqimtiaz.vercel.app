@@ -86,7 +86,7 @@ export default function TerminalPlayback({ sessionConfig }) {
               <button
                 type="button"
                 onClick={() => scrollToTarget(cta.target)}
-                className="mt-2 inline-flex w-fit items-center gap-1.5 rounded border border-[var(--theme-primary)] px-3 py-1.5 text-[0.78rem] font-medium text-[var(--theme-primary)] transition-colors hover:bg-[var(--theme-primary)] hover:text-[var(--theme-on-primary)]"
+                className="mt-2 inline-flex w-fit items-center gap-1.5 rounded border border-[var(--theme-primary)] px-3 py-1.5 text-[0.78rem] font-medium text-[var(--theme-primary)] shadow-[var(--glow-primary)] transition-colors hover:bg-[var(--theme-primary)] hover:text-[var(--theme-on-primary)]"
               >
                 {cta.label}
               </button>
