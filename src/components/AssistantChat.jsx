@@ -73,7 +73,7 @@ export default function AssistantChat() {
           <header className="flex items-center justify-between border-b border-[var(--theme-outline-variant)] px-4 py-3">
             <div className="flex items-center gap-2.5">
               <span className="grid h-8 w-8 place-items-center rounded-full bg-[var(--theme-primary)] text-[var(--theme-on-primary)]">
-                <Icon name="smart_toy" size={18} />
+                <Icon name="sparkle" size={18} />
               </span>
               <div>
                 <h2 className="font-headline text-sm font-semibold text-[var(--theme-text)]">
@@ -166,12 +166,12 @@ export default function AssistantChat() {
       <button
         type="button"
         onClick={() => setIsOpen((current) => !current)}
+        aria-label={`${isOpen ? 'Close' : 'Open'} Shafiq's AI Assistant`}
         aria-expanded={isOpen}
         aria-controls="assistant-message"
-        className="group font-body flex min-h-13 items-center gap-2 rounded-full border border-[var(--theme-primary)] bg-[var(--theme-primary)] px-4 text-[0.66rem] font-bold tracking-[0.1em] text-[var(--theme-on-primary)] uppercase shadow-[var(--shadow-primary)] transition-all hover:-translate-y-0.5 hover:brightness-105"
+        className="grid h-13 w-13 place-items-center rounded-full border border-[var(--theme-primary)] bg-[var(--theme-primary)] text-[var(--theme-on-primary)] shadow-[var(--shadow-primary)] transition-all hover:-translate-y-0.5 hover:brightness-105"
       >
-        <Icon name="smart_toy" size={19} />
-        <span className="hidden sm:inline">Shafiq&apos;s AI Assistant</span>
+        <Icon name="sparkle" size={20} />
       </button>
     </div>
   );
