@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Icon } from './ui';
+import AssistantMarkdown from './AssistantMarkdown';
 import { appendAssistantText } from '../lib/assistantChat';
 
 const suggestions = [
@@ -21,6 +22,7 @@ export default function AssistantChat() {
   const [messages, setMessages] = useState([]);
   const [draft, setDraft] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
   const [error, setError] = useState('');
 
   const sendMessage = async (message) => {
@@ -77,7 +79,11 @@ export default function AssistantChat() {
       {isOpen && (
         <section
           aria-label="Shafiq's AI Assistant"
-          className="mb-3 flex h-[min(38rem,calc(100vh-7rem))] w-[min(23rem,calc(100vw-2rem))] flex-col overflow-hidden rounded-xl border border-[var(--theme-outline-variant)] bg-[var(--theme-surface-low)] shadow-[0_18px_48px_color-mix(in_srgb,var(--theme-bg)_78%,transparent)]"
+          className={`mb-3 flex flex-col overflow-hidden rounded-xl border border-[var(--theme-outline-variant)] bg-[var(--theme-surface-low)] shadow-[0_18px_48px_color-mix(in_srgb,var(--theme-bg)_78%,transparent)] ${
+            isExpanded
+              ? 'h-[min(48rem,calc(100vh-3rem))] w-[min(48rem,calc(100vw-1rem))]'
+              : 'h-[min(38rem,calc(100vh-7rem))] w-[min(34rem,calc(100vw-1rem))]'
+          }`}
         >
           <header className="flex items-center justify-between border-b border-[var(--theme-outline-variant)] px-4 py-3">
             <div className="flex items-center gap-2.5">
@@ -93,17 +99,30 @@ export default function AssistantChat() {
                 </p>
               </div>
             </div>
-            <button
-              type="button"
-              onClick={() => setIsOpen(false)}
-              aria-label="Close assistant"
-              className="grid h-8 w-8 place-items-center rounded-md text-[var(--theme-text-muted)] transition-all hover:-translate-y-0.5 hover:bg-[var(--theme-surface)] hover:text-[var(--theme-text)]"
-            >
-              <Icon name="close" size={18} />
-            </button>
+            <div className="flex items-center gap-1">
+              <button
+                type="button"
+                onClick={() => setIsExpanded((current) => !current)}
+                aria-label={isExpanded ? 'Restore assistant size' : 'Expand assistant'}
+                className="grid h-8 w-8 place-items-center rounded-md text-[var(--theme-text-muted)] transition-all hover:-translate-y-0.5 hover:bg-[var(--theme-surface)] hover:text-[var(--theme-text)]"
+              >
+                <Icon name={isExpanded ? 'minimize' : 'maximize'} size={17} />
+              </button>
+              <button
+                type="button"
+                onClick={() => setIsOpen(false)}
+                aria-label="Close assistant"
+                className="grid h-8 w-8 place-items-center rounded-md text-[var(--theme-text-muted)] transition-all hover:-translate-y-0.5 hover:bg-[var(--theme-surface)] hover:text-[var(--theme-text)]"
+              >
+                <Icon name="close" size={18} />
+              </button>
+            </div>
           </header>
 
-          <div className="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-4">
+          <div
+            data-lenis-prevent
+            className="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto overscroll-contain p-4"
+          >
             {messages.length === 0 ? (
               <>
                 <p className="text-sm leading-relaxed text-[var(--theme-text-muted)]">
@@ -127,13 +146,21 @@ export default function AssistantChat() {
               messages.map((message, index) => (
                 <div
                   key={`${message.role}-${index}`}
-                  className={`max-w-[90%] rounded-lg px-3 py-2.5 text-sm leading-relaxed whitespace-pre-wrap ${
+                  className={`max-w-[94%] rounded-lg px-4 py-3 text-[0.9rem] leading-7 break-words ${
                     message.role === 'user'
                       ? 'ml-auto bg-[var(--theme-primary)] text-[var(--theme-on-primary)]'
-                      : 'border border-[var(--theme-outline-variant)] bg-[var(--theme-surface)] text-[var(--theme-text-muted)]'
+                      : 'border border-[var(--theme-outline-variant)] bg-[var(--theme-surface)] text-[var(--theme-text)]'
                   }`}
                 >
-                  {message.content || <span className="animate-pulse">Thinking…</span>}
+                  {message.content ? (
+                    message.role === 'assistant' ? (
+                      <AssistantMarkdown content={message.content} />
+                    ) : (
+                      <span className="whitespace-pre-wrap">{message.content}</span>
+                    )
+                  ) : (
+                    <span className="animate-pulse">Thinking…</span>
+                  )}
                 </div>
               ))
             )}
