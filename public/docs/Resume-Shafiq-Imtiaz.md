@@ -1,5 +1,5 @@
 # Shafiq Imtiaz
-shafiqimtiaz@gmail.com | (514) 574-4436 | Ottawa, ON | linkedin.com/in/shafiqimtiaz
+shafiqimtiaz@gmail.com | (514) 574-4436 | Toronto, ON | linkedin.com/in/shafiqimtiaz
 
 ## Core Skills
 
