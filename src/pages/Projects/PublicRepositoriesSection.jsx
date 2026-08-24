@@ -1,7 +1,32 @@
+import { useEffect, useRef } from 'react';
 import { publicRepositories } from '../../data/projects';
 import { Icon, Reveal, ScrambleOnHover } from '../../components/ui';
+import { gsap, prefersReducedMotion } from '../../lib/gsapConfig';
 
 export default function PublicRepositoriesSection() {
+  const gridRef = useRef(null);
+
+  useEffect(() => {
+    if (prefersReducedMotion() || !gridRef.current) return undefined;
+
+    const context = gsap.context(() => {
+      gsap.from('[data-scroll-card]', {
+        opacity: 0,
+        y: 36,
+        duration: 0.65,
+        stagger: 0.08,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: gridRef.current,
+          start: 'top 84%',
+          toggleActions: 'play none none none',
+        },
+      });
+    }, gridRef);
+
+    return () => context.revert();
+  }, []);
+
   return (
     <section className="mt-24">
       <Reveal as="header">
@@ -21,10 +46,14 @@ export default function PublicRepositoriesSection() {
         </p>
       </Reveal>
 
-      <div className="mt-10 grid gap-px overflow-hidden rounded-xl border border-[var(--theme-outline-variant)] bg-[var(--theme-outline-variant)] sm:grid-cols-2 xl:grid-cols-3">
+      <div
+        ref={gridRef}
+        className="mt-10 grid gap-px overflow-hidden rounded-xl border border-[var(--theme-outline-variant)] bg-[var(--theme-outline-variant)] sm:grid-cols-2 xl:grid-cols-3"
+      >
         {publicRepositories.map((repo, index) => (
           <article
             key={repo.title}
+            data-scroll-card=""
             className="group relative flex h-full flex-col bg-[var(--theme-surface-low)] p-6 transition-colors duration-200 hover:bg-[var(--theme-surface)]"
           >
             <div className="flex items-center justify-between gap-3">

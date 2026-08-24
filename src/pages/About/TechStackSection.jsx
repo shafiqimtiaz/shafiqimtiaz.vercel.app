@@ -1,7 +1,32 @@
+import { useEffect, useRef } from 'react';
 import { techStack } from '../../data/experience';
 import { Icon, Reveal, ScrambleOnHover } from '../../components/ui';
+import { gsap, prefersReducedMotion } from '../../lib/gsapConfig';
 
 export default function TechStackSection() {
+  const gridRef = useRef(null);
+
+  useEffect(() => {
+    if (prefersReducedMotion() || !gridRef.current) return undefined;
+
+    const context = gsap.context(() => {
+      gsap.from('[data-scroll-card]', {
+        opacity: 0,
+        y: 32,
+        duration: 0.6,
+        stagger: 0.08,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: gridRef.current,
+          start: 'top 84%',
+          toggleActions: 'play none none none',
+        },
+      });
+    }, gridRef);
+
+    return () => context.revert();
+  }, []);
+
   return (
     <section className="mb-24">
       <Reveal
@@ -26,11 +51,14 @@ export default function TechStackSection() {
         </div>
       </Reveal>
 
-      <div className="grid gap-px overflow-hidden rounded-xl border border-[var(--theme-outline-variant)] bg-[var(--theme-outline-variant)] md:grid-cols-2 xl:grid-cols-3">
-        {techStack.map((category, i) => (
-          <Reveal
+      <div
+        ref={gridRef}
+        className="grid gap-px overflow-hidden rounded-xl border border-[var(--theme-outline-variant)] bg-[var(--theme-outline-variant)] md:grid-cols-2 xl:grid-cols-3"
+      >
+        {techStack.map((category) => (
+          <article
             key={category.title}
-            delay={(i % 3) * 80}
+            data-scroll-card=""
             className="group relative flex flex-col bg-[var(--theme-surface-low)] p-7 transition-colors duration-200 hover:bg-[var(--theme-surface)]"
           >
             <div className="flex items-center justify-between gap-4">
@@ -52,7 +80,7 @@ export default function TechStackSection() {
                 </li>
               ))}
             </ul>
-          </Reveal>
+          </article>
         ))}
       </div>
     </section>
