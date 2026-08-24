@@ -14,7 +14,7 @@ Let visitors ask concise questions about Shafiq's professional background, exper
 ## Architecture
 
 - The React chat component sends the current conversation to a Vercel serverless endpoint.
-- The endpoint uses the AI SDK with AI Gateway model `deepseek/deepseek-v4-flash-0731`.
+- The endpoint uses the AI SDK with the AI Gateway model supplied by `VERCEL_AI_MODEL`; its initial value is `meta/muse-spark-1.2-contributor`.
 - It reads `VERCEL_AI_TOKEN` exclusively from the server environment and explicitly passes it to the AI Gateway client. The browser never receives this value.
 - The assistant's system instruction is generated from the portfolio's existing static experience, project, and credential data. It answers only from this published context and says when the portfolio does not contain the answer.
 
@@ -33,5 +33,5 @@ Let visitors ask concise questions about Shafiq's professional background, exper
 
 ## Configuration
 
-- Add `VERCEL_AI_TOKEN` in Vercel for Production, Preview, and Development.
+- Add `VERCEL_AI_TOKEN` and `VERCEL_AI_MODEL=meta/muse-spark-1.2-contributor` in Vercel for Production, Preview, and Development.
 - Add a tracked environment example that documents the variable name without a value.
