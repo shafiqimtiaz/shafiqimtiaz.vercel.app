@@ -5,3 +5,9 @@ export function appendAssistantText(messages, text) {
       : message
   );
 }
+
+export function scrollAssistantToBottom(container) {
+  if (!container) return;
+
+  container.scrollTop = container.scrollHeight;
+}

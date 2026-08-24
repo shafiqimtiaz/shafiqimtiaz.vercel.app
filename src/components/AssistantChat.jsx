@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Icon } from './ui';
 import AssistantMarkdown from './AssistantMarkdown';
-import { appendAssistantText } from '../lib/assistantChat';
+import { appendAssistantText, scrollAssistantToBottom } from '../lib/assistantChat';
 
 const suggestions = [
   'What has Shafiq built?',
@@ -24,6 +24,13 @@ export default function AssistantChat() {
   const [isLoading, setIsLoading] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [error, setError] = useState('');
+  const messagesContainerRef = useRef(null);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    scrollAssistantToBottom(messagesContainerRef.current);
+  }, [error, isLoading, isOpen, messages]);
 
   const sendMessage = async (message) => {
     const content = message.trim();
@@ -120,6 +127,7 @@ export default function AssistantChat() {
           </header>
 
           <div
+            ref={messagesContainerRef}
             data-lenis-prevent
             className="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto overscroll-contain p-4"
           >
@@ -183,6 +191,7 @@ export default function AssistantChat() {
                 value={draft}
                 onChange={(event) => setDraft(event.target.value)}
                 placeholder="Ask a question…"
+                autoComplete="off"
                 disabled={isLoading}
                 className="font-body min-w-0 flex-1 bg-transparent py-3 text-sm text-[var(--theme-text)] outline-none placeholder:text-[var(--theme-outline)] disabled:cursor-not-allowed"
               />

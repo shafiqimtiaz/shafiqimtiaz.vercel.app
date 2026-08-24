@@ -1,5 +1,10 @@
 {
   "version": 2,
+  "functions": {
+    "api/assistant.js": {
+      "includeFiles": ["public/docs/Resume-Shafiq-Imtiaz.md"]
+    }
+  },
   "routes": [
     {
       "handle": "filesystem"
