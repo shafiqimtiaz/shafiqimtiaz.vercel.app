@@ -64,7 +64,7 @@ export default function AssistantChat() {
   };
 
   return (
-    <div className="fixed right-4 bottom-4 z-50 sm:right-6 sm:bottom-6">
+    <div className="fixed right-4 bottom-4 z-50 flex flex-col items-end sm:right-6 sm:bottom-6">
       {isOpen && (
         <section
           aria-label="Shafiq's AI Assistant"
