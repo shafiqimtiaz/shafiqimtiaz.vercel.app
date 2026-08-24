@@ -1,4 +1,5 @@
-import { createGateway, streamText } from 'ai';
+import { createGoogleGenerativeAI } from '@ai-sdk/google';
+import { streamText } from 'ai';
 import { buildAssistantInstructions } from '../src/lib/assistantContext.js';
 import { validateAssistantMessages } from '../src/lib/assistantRequest.js';
 
@@ -9,8 +10,8 @@ export default async function handler(request, response) {
     return response.status(405).json({ error: 'Method not allowed.' });
   }
 
-  const token = process.env.AI_GATEWAY_API_KEY;
-  const model = process.env.AI_GATEWAY_MODEL;
+  const token = process.env.GOOGLE_GENERATIVE_AI_API_KEY;
+  const model = process.env.GOOGLE_GENERATIVE_AI_MODEL || 'gemini-2.5-flash-lite';
 
   if (!token || !model) {
     return response.status(503).json({ error: 'Assistant configuration is unavailable.' });
@@ -23,9 +24,9 @@ export default async function handler(request, response) {
       return response.status(400).json({ error });
     }
 
-    const gateway = createGateway({ apiKey: token });
+    const google = createGoogleGenerativeAI({ apiKey: token });
     const result = streamText({
-      model: gateway(model),
+      model: google(model),
       system: buildAssistantInstructions(),
       messages,
     });
