@@ -4,23 +4,23 @@ import { validateAssistantMessages } from '../src/lib/assistantRequest.js';
 
 export const maxDuration = 30;
 
-export default async function handler(request) {
+export default async function handler(request, response) {
   if (request.method !== 'POST') {
-    return Response.json({ error: 'Method not allowed.' }, { status: 405 });
+    return response.status(405).json({ error: 'Method not allowed.' });
   }
 
-  const token = process.env.VERCEL_AI_TOKEN;
-  const model = process.env.VERCEL_AI_MODEL;
+  const token = process.env.AI_GATEWAY_API_KEY;
+  const model = process.env.AI_GATEWAY_MODEL;
 
   if (!token || !model) {
-    return Response.json({ error: 'Assistant configuration is unavailable.' }, { status: 503 });
+    return response.status(503).json({ error: 'Assistant configuration is unavailable.' });
   }
 
   try {
-    const { messages, error } = validateAssistantMessages((await request.json()).messages);
+    const { messages, error } = validateAssistantMessages(request.body?.messages);
 
     if (error) {
-      return Response.json({ error }, { status: 400 });
+      return response.status(400).json({ error });
     }
 
     const gateway = createGateway({ apiKey: token });
@@ -30,11 +30,10 @@ export default async function handler(request) {
       messages,
     });
 
-    return result.toTextStreamResponse();
+    return result.pipeTextStreamToResponse(response);
   } catch {
-    return Response.json(
-      { error: 'Shafiq’s AI Assistant is unavailable right now. Please try again shortly.' },
-      { status: 500 }
-    );
+    return response
+      .status(500)
+      .json({ error: 'Shafiq’s AI Assistant is unavailable right now. Please try again shortly.' });
   }
 }

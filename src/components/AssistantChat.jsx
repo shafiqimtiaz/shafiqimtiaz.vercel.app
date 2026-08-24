@@ -33,10 +33,14 @@ export default function AssistantChat() {
     setError('');
     setIsLoading(true);
 
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 30000);
+
     try {
       const response = await fetch('/api/assistant', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        signal: controller.signal,
         body: JSON.stringify({ messages: nextMessages }),
       });
 
@@ -57,8 +61,13 @@ export default function AssistantChat() {
       }
     } catch (requestError) {
       setMessages(nextMessages);
-      setError(requestError.message || 'The assistant could not respond.');
+      setError(
+        requestError.name === 'AbortError'
+          ? 'The assistant timed out. Please try again.'
+          : requestError.message || 'The assistant could not respond.'
+      );
     } finally {
+      window.clearTimeout(timeout);
       setIsLoading(false);
     }
   };
