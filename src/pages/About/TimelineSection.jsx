@@ -60,52 +60,64 @@ export default function TimelineSection() {
         ></div>
 
         <div className="grid gap-8">
-          {timeline.map((entry, index) => (
-            <Reveal
-              key={`${entry.date}-${entry.title}`}
-              delay={Math.min(index, 3) * 70}
-              className="relative grid grid-cols-[32px_1fr] gap-5 md:grid-cols-[40px_1fr] md:gap-7"
-            >
-              <div
-                className={`relative z-10 mt-1 flex h-8 w-8 items-center justify-center rounded-full border-2 bg-[var(--theme-bg)] md:h-10 md:w-10 ${entry.accent}`}
-              >
-                <Icon name={entry.icon} size={18} className="text-[var(--theme-primary)]" />
-              </div>
+          {timeline.map((entry, index) => {
+            const [company, ...location] = entry.org.split(' | ');
 
-              <article className="rounded-xl border border-[var(--theme-outline-variant)] bg-[var(--theme-surface)] p-6 transition-colors duration-200 hover:border-[var(--theme-outline)] md:p-7">
-                <time className="font-body text-[0.62rem] tracking-[0.16em] text-[var(--theme-primary)] uppercase">
-                  {entry.date}
-                </time>
-                <h3 className="font-headline mt-2 text-xl font-bold tracking-[-0.02em] text-[var(--theme-text)] md:text-2xl">
-                  {entry.title}
-                </h3>
-                <p className="font-body mt-1 text-[0.78rem] tracking-[0.06em] text-[var(--theme-text-muted)]">
-                  {entry.org}
-                </p>
-                <ul className="mt-4 grid gap-2.5">
-                  {entry.details.map((detail) => (
-                    <li
-                      key={detail}
-                      className="relative pl-5 text-[0.9rem] leading-relaxed text-[var(--theme-text-muted)] before:absolute before:left-0 before:text-[var(--theme-primary)] before:content-['›']"
+            return (
+              <Reveal
+                key={`${entry.date}-${entry.title}`}
+                delay={Math.min(index, 3) * 70}
+                className="relative grid grid-cols-[32px_1fr] gap-5 md:grid-cols-[40px_1fr] md:gap-7"
+              >
+                <div
+                  className={`relative z-10 mt-1 flex h-8 w-8 items-center justify-center rounded-full border-2 bg-[var(--theme-bg)] md:h-10 md:w-10 ${entry.accent}`}
+                >
+                  <Icon name={entry.icon} size={18} className="text-[var(--theme-primary)]" />
+                </div>
+
+                <article className="rounded-xl border border-[var(--theme-outline-variant)] bg-[var(--theme-surface)] p-6 transition-colors duration-200 hover:border-[var(--theme-outline)] md:p-7">
+                  <time className="font-body text-[0.62rem] tracking-[0.16em] text-[var(--theme-primary)] uppercase">
+                    {entry.date}
+                  </time>
+                  <h3 className="font-headline mt-2 text-xl font-bold tracking-[-0.02em] text-[var(--theme-text)] md:text-2xl">
+                    {entry.title}
+                  </h3>
+                  <p className="font-body mt-1 text-[0.78rem] tracking-[0.06em] text-[var(--theme-text-muted)]">
+                    <a
+                      href={entry.orgUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition-colors hover:text-[var(--theme-secondary)]"
                     >
-                      {detail}
-                    </li>
-                  ))}
-                </ul>
-                {entry.credentialUrl && (
-                  <a
-                    href={entry.credentialUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-body mt-4 inline-flex items-center gap-1.5 text-[0.7rem] font-bold tracking-[0.12em] text-[var(--theme-primary)] uppercase transition-colors hover:text-[var(--theme-secondary)]"
-                  >
-                    View credential
-                    <Icon name="arrow_outward" size={16} />
-                  </a>
-                )}
-              </article>
-            </Reveal>
-          ))}
+                      {company}
+                    </a>
+                    {location.length > 0 && ` | ${location.join(' | ')}`}
+                  </p>
+                  <ul className="mt-4 grid gap-2.5">
+                    {entry.details.map((detail) => (
+                      <li
+                        key={detail}
+                        className="relative pl-5 text-[0.9rem] leading-relaxed text-[var(--theme-text-muted)] before:absolute before:left-0 before:text-[var(--theme-primary)] before:content-['›']"
+                      >
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
+                  {entry.credentialUrl && (
+                    <a
+                      href={entry.credentialUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-body mt-4 inline-flex items-center gap-1.5 text-[0.7rem] font-bold tracking-[0.12em] text-[var(--theme-primary)] uppercase transition-colors hover:text-[var(--theme-secondary)]"
+                    >
+                      View credential
+                      <Icon name="arrow_outward" size={16} />
+                    </a>
+                  )}
+                </article>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>

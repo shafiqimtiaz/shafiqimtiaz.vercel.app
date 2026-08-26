@@ -58,6 +58,10 @@ test('timeline publishes the current Flexspring role titles', () => {
   assert.equal(timeline[0].org, 'Flexspring | Remote | Toronto, ON');
   assert.equal(timeline[1].org, 'Flexspring | Remote | Ottawa, ON');
   assert.equal(timeline[2].org, 'Flexspring | Remote | Montreal, QC');
+  assert.equal(timeline[0].orgUrl, 'https://www.flexspring.com/');
+  assert.equal(timeline[1].orgUrl, 'https://www.flexspring.com/');
+  assert.equal(timeline[2].orgUrl, 'https://www.flexspring.com/');
+  assert.equal(timeline[3].orgUrl, 'https://bsrm.com/');
   assert.doesNotMatch(
     timeline[0].details.join(' '),
     /Flexspring is a B2B content management and delivery platform serving 2,500\+ client configurations\./
