@@ -26,11 +26,11 @@ export default function ProfileSection() {
             <span className="font-semibold text-[var(--theme-text)]">
               I own products end to end.
             </span>{' '}
-            Senior Software Engineer - Principal delivering React user experiences, TypeScript and
-            Java APIs, Spring Boot services, data systems, AWS infrastructure, and production AI
-            workflows. At Flexspring, I lead end-to-end delivery across 2,500+ B2B client
-            configurations, from product flows and systems integration through security,
-            observability, and production support.{' '}
+            Senior Software Engineer delivering React user experiences, TypeScript and Java APIs,
+            Spring Boot services, data systems, AWS infrastructure, and production AI workflows. At
+            Flexspring, I lead end-to-end delivery across 2,500+ B2B client configurations, from
+            product flows and systems integration through security, observability, and production
+            support.{' '}
             <span className="font-semibold text-[var(--theme-primary)]">
               AWS Certified AI Practitioner
             </span>

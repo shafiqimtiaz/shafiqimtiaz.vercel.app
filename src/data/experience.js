@@ -62,7 +62,6 @@ export const timeline = [
     accent: 'text-[var(--theme-primary)] border-[var(--theme-primary)]',
     icon: 'workspace_premium',
     details: [
-      'Flexspring is a B2B content management and delivery platform serving 2,500+ client configurations.',
       'Promoted to Senior Software Engineer - Principal in August 2026 while taking on broader technical leadership for the AI and integration platform.',
       'Lead the AI Integration Assembly Line, connecting AI-generated integration design to automated credentials and mapping/lookup-table setup across Studio, Services, and Wizard, reducing integration creation time by 90%.',
       'Mentor interns and incoming developers while setting technical direction for the team.',

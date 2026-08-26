@@ -55,6 +55,10 @@ test('buildAssistantInstructions includes the public resume context', () => {
 test('timeline publishes the current Flexspring role titles', () => {
   assert.equal(timeline[0].title, 'Senior Software Engineer - Principal');
   assert.equal(timeline[1].title, 'Software Engineer - R&D and AI');
+  assert.doesNotMatch(
+    timeline[0].details.join(' '),
+    /Flexspring is a B2B content management and delivery platform serving 2,500\+ client configurations\./
+  );
 });
 
 test('Nexus AI publishes its Kaggle write-up', () => {
