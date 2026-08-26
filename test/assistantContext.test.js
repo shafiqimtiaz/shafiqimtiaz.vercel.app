@@ -73,3 +73,26 @@ test('Nexus AI publishes its Kaggle write-up', () => {
     'https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/new-writeup-1783377933664'
   );
 });
+
+test('public repositories are ordered by portfolio impact', () => {
+  assert.deepEqual(
+    publicRepositories.map(({ title }) => title),
+    [
+      'nexus-ai',
+      'shafiqimtiaz.vercel.app',
+      'ctx-handoff',
+      'clean-bookmarks',
+      'pokégent',
+      'fetch-markdown',
+      'diet-workout-plan',
+    ]
+  );
+});
+
+test('portfolio repository publishes its live project links', () => {
+  const portfolio = publicRepositories.find(({ title }) => title === 'shafiqimtiaz.vercel.app');
+
+  assert.ok(portfolio);
+  assert.equal(portfolio.repoUrl, 'https://github.com/shafiqimtiaz/shafiqimtiaz.vercel.app');
+  assert.equal(portfolio.demoUrl, 'https://shafiqimtiaz.vercel.app/');
+});

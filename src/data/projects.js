@@ -115,12 +115,6 @@ export const caseStudies = [
 
 export const publicRepositories = [
   {
-    title: 'fetch-markdown',
-    description: 'Chrome extension converting webpages to clean Markdown.',
-    repoUrl: 'https://github.com/shafiqimtiaz/fetch-markdown',
-    techStack: ['TypeScript', 'Chrome MV3', 'DOM Parsing'],
-  },
-  {
     title: 'nexus-ai',
     description:
       'Agent-first academic workspace unifying Google Classroom, Discord, Slack, and Google Calendar.',
@@ -131,18 +125,12 @@ export const publicRepositories = [
     techStack: ['Gemini', 'Vercel AI SDK', 'MCP', 'Google Calendar'],
   },
   {
-    title: 'diet-workout-plan',
-    description: 'Google Gemini meal and workout generator with bilingual English/Bengali output.',
-    demoUrl: 'https://diet-workout-plan.vercel.app/',
-    repoUrl: 'https://github.com/shafiqimtiaz/diet-workout-plan',
-    techStack: ['React', 'Vite', 'Gemini AI', 'Bilingual'],
-  },
-  {
-    title: 'pokégent',
+    title: 'shafiqimtiaz.vercel.app',
     description:
-      'Terminal dashboard mapping a local AI coding setup to Pokémon: agents as species, MCP servers as TMs/HMs, and token usage as PP.',
-    repoUrl: 'https://github.com/shafiqimtiaz/pokegent',
-    techStack: ['TypeScript', 'Ink', 'Node.js', 'CLI'],
+      'Personal portfolio with an AI assistant, animated case studies, and a terminal-inspired interface.',
+    demoUrl: 'https://shafiqimtiaz.vercel.app/',
+    repoUrl: 'https://github.com/shafiqimtiaz/shafiqimtiaz.vercel.app',
+    techStack: ['React', 'Vite', 'Tailwind CSS', 'AI Assistant'],
   },
   {
     title: 'ctx-handoff',
@@ -157,9 +145,23 @@ export const publicRepositories = [
     techStack: ['TypeScript', 'Chrome MV3', 'Gemini Nano', 'On-Device AI'],
   },
   {
-    title: 'RecycleVision',
-    description: 'Team-built waste-sorting mobile HCI project using image recognition.',
-    repoUrl: 'https://github.com/shafiqimtiaz/RecycleVision',
-    techStack: ['JavaScript', 'Mobile App', 'Image Recognition', 'HCI'],
+    title: 'pokégent',
+    description:
+      'Terminal dashboard mapping a local AI coding setup to Pokémon: agents as species, MCP servers as TMs/HMs, and token usage as PP.',
+    repoUrl: 'https://github.com/shafiqimtiaz/pokegent',
+    techStack: ['TypeScript', 'Ink', 'Node.js', 'CLI'],
+  },
+  {
+    title: 'fetch-markdown',
+    description: 'Chrome extension converting webpages to clean Markdown.',
+    repoUrl: 'https://github.com/shafiqimtiaz/fetch-markdown',
+    techStack: ['TypeScript', 'Chrome MV3', 'DOM Parsing'],
+  },
+  {
+    title: 'diet-workout-plan',
+    description: 'Google Gemini meal and workout generator with bilingual English/Bengali output.',
+    demoUrl: 'https://diet-workout-plan.vercel.app/',
+    repoUrl: 'https://github.com/shafiqimtiaz/diet-workout-plan',
+    techStack: ['React', 'Vite', 'Gemini AI', 'Bilingual'],
   },
 ];
