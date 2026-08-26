@@ -87,7 +87,7 @@ export default function TimelineSection() {
                       href={entry.orgUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="transition-colors hover:text-[var(--theme-secondary)]"
+                      className="underline decoration-[var(--theme-outline)] decoration-dotted underline-offset-4 transition-colors hover:text-[var(--theme-secondary)] hover:decoration-[var(--theme-secondary)]"
                     >
                       {company}
                     </a>
