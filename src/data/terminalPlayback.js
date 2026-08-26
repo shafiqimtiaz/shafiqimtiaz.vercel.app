@@ -12,7 +12,7 @@ export const HOME_TERMINAL_PLAYBACK = {
       label: 'Current Status',
       command: 'cat current_status',
       delayMs: DEFAULT_PLAYBACK_DELAY_MS,
-      output: ['> status: online, caffeinated, and shipping — ping me below to chat or pair.'],
+      output: ['> status: online, caffeinated, and shipping 🚀.'],
       media: {
         type: 'gif',
         src: '/current-status.gif',

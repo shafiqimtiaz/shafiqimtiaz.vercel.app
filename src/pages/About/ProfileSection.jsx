@@ -63,11 +63,13 @@ export default function ProfileSection() {
       <div className="mt-6 grid gap-px overflow-hidden rounded-xl border border-[var(--theme-outline-variant)] bg-[var(--theme-outline-variant)] sm:grid-cols-3">
         {profileStats.map((stat) => (
           <article key={stat.label} className="bg-[var(--theme-surface-low)] px-6 py-6">
-            <p
+            <ScrambleOnHover
+              as="p"
+              reserveWidth
               className={`font-headline text-4xl font-extrabold tracking-[-0.03em] ${stat.accent}`}
             >
               <CountUp value={stat.value} />
-            </p>
+            </ScrambleOnHover>
             <p className="font-body mt-2 text-[0.58rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
               {stat.label}
             </p>
