@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { buildAssistantInstructions } from '../src/lib/assistantContext.js';
+import { timeline } from '../src/data/experience.js';
+import { publicRepositories } from '../src/data/projects.js';
 
 test('buildAssistantInstructions includes published portfolio facts', () => {
   const instructions = buildAssistantInstructions();
@@ -45,7 +47,22 @@ test('buildAssistantInstructions includes the public resume context', () => {
   const instructions = buildAssistantInstructions();
 
   assert.match(instructions, /Published resume:/);
-  assert.match(instructions, /Senior Software Engineer \| Flexspring/);
+  assert.match(instructions, /Senior Software Engineer - Principal \| Flexspring/);
   assert.match(instructions, /2,500\+/);
   assert.match(instructions, /RAG Chatbot/);
+});
+
+test('timeline publishes the current Flexspring role titles', () => {
+  assert.equal(timeline[0].title, 'Senior Software Engineer - Principal');
+  assert.equal(timeline[1].title, 'Software Engineer - R&D and AI');
+});
+
+test('Nexus AI publishes its Kaggle write-up', () => {
+  const nexus = publicRepositories.find(({ title }) => title === 'nexus-ai');
+
+  assert.ok(nexus);
+  assert.equal(
+    nexus.writeUpUrl,
+    'https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/new-writeup-1783377933664'
+  );
 });

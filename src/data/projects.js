@@ -122,10 +122,13 @@ export const publicRepositories = [
   },
   {
     title: 'nexus-ai',
-    description: 'AI academic organizer combining Google Classroom, Discord, and Slack.',
+    description:
+      'Agent-first academic workspace unifying Google Classroom, Discord, Slack, and Google Calendar.',
     demoUrl: 'https://nexus-ai-tool.vercel.app/',
+    writeUpUrl:
+      'https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/new-writeup-1783377933664',
     repoUrl: 'https://github.com/shafiqimtiaz/nexus-ai',
-    techStack: ['Next.js', 'AI Agents', 'OAuth', 'Full-Stack'],
+    techStack: ['Gemini', 'Vercel AI SDK', 'MCP', 'Google Calendar'],
   },
   {
     title: 'diet-workout-plan',

@@ -8,7 +8,7 @@ export default function HeroSection() {
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--theme-primary)] opacity-60"></span>
           <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--theme-primary)]"></span>
         </span>
-        Senior Software Engineer
+        Senior Software Engineer - Principal
         <span className="hidden sm:inline"> · Full-Stack &amp; AI Platforms</span>
       </div>
 
@@ -34,8 +34,8 @@ export default function HeroSection() {
       </p>
 
       <p className="mt-6 max-w-[36rem] text-base leading-relaxed text-[var(--theme-text-muted)]">
-        Senior Software Engineer delivering full-stack products from React interfaces and
-        TypeScript/Java APIs through data, AWS, event-driven workflows, and production AI
+        Senior Software Engineer - Principal delivering full-stack products from React interfaces
+        and TypeScript/Java APIs through data, AWS, event-driven workflows, and production AI
         capabilities. At Flexspring, I lead technical direction for an integration platform serving
         2,500+ B2B client configurations across 3 product surfaces.
       </p>

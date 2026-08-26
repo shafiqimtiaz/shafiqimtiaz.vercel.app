@@ -57,20 +57,20 @@ export const techStack = [
 export const timeline = [
   {
     date: 'AUG 2026 - PRESENT',
-    title: 'Senior Software Engineer',
+    title: 'Senior Software Engineer - Principal',
     org: 'Flexspring | Toronto, ON',
     accent: 'text-[var(--theme-primary)] border-[var(--theme-primary)]',
     icon: 'workspace_premium',
     details: [
       'Flexspring is a B2B content management and delivery platform serving 2,500+ client configurations.',
-      'Promoted within Flexspring while taking on broader technical leadership, leading architecture decisions and delivery for the AI and integration platform.',
+      'Promoted to Senior Software Engineer - Principal in August 2026 while taking on broader technical leadership for the AI and integration platform.',
       'Lead the AI Integration Assembly Line, connecting AI-generated integration design to automated credentials and mapping/lookup-table setup across Studio, Services, and Wizard, reducing integration creation time by 90%.',
       'Mentor interns and incoming developers while setting technical direction for the team.',
     ],
   },
   {
     date: 'MAY 2024 - AUG 2026',
-    title: 'Software and AI Engineer',
+    title: 'Software Engineer - R&D and AI',
     org: 'Flexspring | Ottawa, ON',
     accent: 'text-[var(--theme-primary)] border-[var(--theme-primary)]',
     icon: 'rocket_launch',

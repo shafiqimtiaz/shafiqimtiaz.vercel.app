@@ -105,6 +105,17 @@ export default function PublicRepositoriesSection() {
                   Demo
                 </a>
               )}
+              {repo.writeUpUrl && (
+                <a
+                  href={repo.writeUpUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-body inline-flex items-center gap-1.5 text-[0.66rem] font-bold tracking-[0.12em] text-[var(--theme-text-muted)] uppercase transition-colors hover:text-[var(--theme-tertiary)]"
+                >
+                  <Icon name="description" size={16} />
+                  Write-up
+                </a>
+              )}
             </div>
           </article>
         ))}
