@@ -69,9 +69,11 @@ body::after {
   color: var(--theme-on-primary);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 button,
