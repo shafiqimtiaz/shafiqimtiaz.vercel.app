@@ -58,7 +58,7 @@ export const timeline = [
   {
     date: 'AUG 2026 - PRESENT',
     title: 'Senior Software Engineer - Principal',
-    org: 'Flexspring | Toronto, ON',
+    org: 'Flexspring | Remote | Toronto, ON',
     accent: 'text-[var(--theme-primary)] border-[var(--theme-primary)]',
     icon: 'workspace_premium',
     details: [
@@ -70,7 +70,7 @@ export const timeline = [
   {
     date: 'MAY 2024 - AUG 2026',
     title: 'Software Engineer - R&D and AI',
-    org: 'Flexspring | Ottawa, ON',
+    org: 'Flexspring | Remote | Ottawa, ON',
     accent: 'text-[var(--theme-primary)] border-[var(--theme-primary)]',
     icon: 'rocket_launch',
     details: [
@@ -90,7 +90,7 @@ export const timeline = [
   {
     date: 'MAY 2023 - MAY 2024',
     title: 'Software Engineer Intern',
-    org: 'Flexspring | Montreal, QC',
+    org: 'Flexspring | Remote | Montreal, QC',
     accent: 'text-[var(--theme-tertiary)] border-[var(--theme-tertiary)]',
     icon: 'terminal',
     details: [
