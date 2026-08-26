@@ -1,32 +1,7 @@
-import { useEffect, useRef } from 'react';
 import { caseStudies } from '../../data/projects';
 import { Icon, Reveal, ScrambleOnHover } from '../../components/ui';
-import { gsap, prefersReducedMotion } from '../../lib/gsapConfig';
 
 export default function CaseStudiesSection() {
-  const gridRef = useRef(null);
-
-  useEffect(() => {
-    if (prefersReducedMotion() || !gridRef.current) return undefined;
-
-    const context = gsap.context(() => {
-      gsap.from('[data-scroll-card]', {
-        opacity: 0,
-        y: 48,
-        duration: 0.75,
-        stagger: 0.12,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: gridRef.current,
-          start: 'top 82%',
-          toggleActions: 'play none none none',
-        },
-      });
-    }, gridRef);
-
-    return () => context.revert();
-  }, []);
-
   return (
     <>
       <Reveal as="header">
@@ -46,11 +21,11 @@ export default function CaseStudiesSection() {
         </p>
       </Reveal>
 
-      <div ref={gridRef} className="mt-12 grid gap-6 md:grid-cols-2">
-        {caseStudies.map((project) => (
-          <article
+      <div className="mt-12 grid gap-6 md:grid-cols-2">
+        {caseStudies.map((project, i) => (
+          <Reveal
             key={project.title}
-            data-scroll-card=""
+            delay={(i % 2) * 110}
             className="group relative flex flex-col overflow-hidden rounded-xl border border-[var(--theme-outline-variant)] bg-[var(--theme-surface)] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--theme-primary)] hover:shadow-[var(--shadow-primary)] md:p-8"
           >
             <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-[linear-gradient(90deg,transparent,var(--theme-primary),transparent)] opacity-0 transition-opacity duration-300 group-hover:opacity-80"></div>
@@ -104,7 +79,7 @@ export default function CaseStudiesSection() {
                 </a>
               </div>
             )}
-          </article>
+          </Reveal>
         ))}
       </div>
     </>

@@ -1,32 +1,7 @@
-import { useEffect, useRef } from 'react';
 import { credentials } from '../../data/experience';
 import { Icon, Reveal, ScrambleOnHover } from '../../components/ui';
-import { gsap, prefersReducedMotion } from '../../lib/gsapConfig';
 
 export default function CredentialsSection() {
-  const gridRef = useRef(null);
-
-  useEffect(() => {
-    if (prefersReducedMotion() || !gridRef.current) return undefined;
-
-    const context = gsap.context(() => {
-      gsap.from('[data-scroll-card]', {
-        opacity: 0,
-        y: 28,
-        duration: 0.6,
-        stagger: 0.1,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: gridRef.current,
-          start: 'top 84%',
-          toggleActions: 'play none none none',
-        },
-      });
-    }, gridRef);
-
-    return () => context.revert();
-  }, []);
-
   return (
     <section className="mt-24">
       <Reveal as="header" className="mb-10">
@@ -42,11 +17,10 @@ export default function CredentialsSection() {
         </ScrambleOnHover>
       </Reveal>
 
-      <div ref={gridRef} className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {credentials.map((entry) => (
-          <article
+          <Reveal
             key={`${entry.date}-${entry.title}`}
-            data-scroll-card=""
             className="group relative flex flex-col rounded-xl border border-[var(--theme-outline-variant)] bg-[var(--theme-surface)] p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--theme-outline)]"
           >
             <div className="flex items-center gap-3">
@@ -89,7 +63,7 @@ export default function CredentialsSection() {
                 </a>
               </div>
             )}
-          </article>
+          </Reveal>
         ))}
       </div>
     </section>
