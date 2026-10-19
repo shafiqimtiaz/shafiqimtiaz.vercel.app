@@ -8,31 +8,6 @@ export const HOME_TERMINAL_PLAYBACK = {
   fallbackOutput: 'command not found — try one of the suggestions below',
   actions: [
     {
-      id: 'current_status',
-      label: 'Current Status',
-      command: 'cat current_status',
-      delayMs: DEFAULT_PLAYBACK_DELAY_MS,
-      output: ['> status: online, caffeinated, and shipping 🚀.'],
-      media: {
-        type: 'gif',
-        src: '/current-status.gif',
-        alt: 'Current status',
-      },
-      cta: { label: "ping me — let's build something", target: 'contact' },
-    },
-    {
-      id: 'hobbies',
-      label: 'What I Like',
-      command: 'ls ~/hobbies/',
-      delayMs: DEFAULT_PLAYBACK_DELAY_MS,
-      output: [
-        'movies/       → sci-fi, thrillers, and anything with a great script',
-        'photography/  → street photography — light, composition, candid moments',
-        'cooking/      → bangladeshi comfort classics and weekend experiments',
-        'coding/       → the hobby that became a career — and still is one',
-      ],
-    },
-    {
       id: 'why_me',
       label: 'Why Hire Me',
       command: 'cat why_me.txt',
@@ -54,6 +29,18 @@ export const HOME_TERMINAL_PLAYBACK = {
           label: 'Low ego, high curiosity',
           value: 'AWS AI certified and always learning the next thing.',
         },
+      ],
+    },
+    {
+      id: 'hobbies',
+      label: 'What I Like',
+      command: 'ls ~/hobbies/',
+      delayMs: DEFAULT_PLAYBACK_DELAY_MS,
+      output: [
+        'movies/       → sci-fi, thrillers, and anything with a great script',
+        'photography/  → street photography — light, composition, candid moments',
+        'cooking/      → bangladeshi comfort classics and weekend experiments',
+        'coding/       → the hobby that became a career — and still is one',
       ],
     },
     {
@@ -80,6 +67,19 @@ export const HOME_TERMINAL_PLAYBACK = {
         },
         '> I show up for the dev community, not just the codebase.',
       ],
+    },
+    {
+      id: 'current_status',
+      label: 'Current Status',
+      command: 'cat current_status',
+      delayMs: DEFAULT_PLAYBACK_DELAY_MS,
+      output: ['> status: online, caffeinated, and shipping 🚀.'],
+      media: {
+        type: 'gif',
+        src: '/current-status.gif',
+        alt: 'Current status',
+      },
+      cta: { label: "ping me — let's build something", target: 'contact' },
     },
   ],
 };

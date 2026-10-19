@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import useTerminalPlayback, { PLAYBACK_STATES } from '../../hooks/useTerminalPlayback';
 
 export default function TerminalPlayback({ sessionConfig }) {
@@ -13,12 +12,6 @@ export default function TerminalPlayback({ sessionConfig }) {
 
   const scrollToTarget = (id) =>
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-
-  // Auto-run the first command on mount so the panel is never empty.
-  useEffect(() => {
-    if (actions.length > 0) executeCommand(actions[0].command);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return (
     <div className="grid gap-4">

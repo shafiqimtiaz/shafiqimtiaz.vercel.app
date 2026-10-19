@@ -62,11 +62,7 @@ export default function useTerminalPlayback(sessionConfig) {
     [actionLookup, clearTimer, fallbackOutput]
   );
 
-  useEffect(() => {
-    if (actions[0]) executeCommand(actions[0].command);
-
-    return clearTimer;
-  }, [actions, clearTimer, executeCommand]);
+  useEffect(() => clearTimer, [clearTimer]);
 
   return {
     actions,
