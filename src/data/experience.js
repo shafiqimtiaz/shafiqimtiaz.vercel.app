@@ -75,10 +75,10 @@ export const timeline = [
     details: [
       'Promoted to Senior Software Engineer - Principal in August 2026 while taking on broader technical leadership for the AI and integration platform.',
       'Lead the AI Integration Assembly Line, connecting AI-generated integration design to automated credentials and mapping/lookup-table setup across Studio, Services, and Wizard, reducing integration creation time by 90%.',
-      'Mentor interns and incoming developers while setting technical direction for the team.',
       'Released Agent Core to the team as a shared Claude plugin with a review step before every commit and pinned MCP server versions, and hardened the Wizard API with per-caller bearer tokens, credential masking, a model per step and LLM cost tracking.',
       'Built Local Stack, a one-command local environment for the whole platform with per-service logs and a terminal dashboard with saved service profiles.',
       'Now moving every Wizard AI step to a new Wizard AI Server on LangChain and LangGraph, with requirements generation running on LangChain with LangSmith tracing and BPMN generation next.',
+      'Mentor interns and incoming developers while setting technical direction for the team.',
     ],
   },
   {
