@@ -1,9 +1,12 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { timeline } from '../../data/experience';
 import { Icon, Reveal, ScrambleOnHover } from '../../components/ui';
 import { gsap, prefersReducedMotion } from '../../lib/gsapConfig';
 
+const VISIBLE_DETAILS = 3;
+
 export default function TimelineSection() {
+  const [expanded, setExpanded] = useState(() => new Set());
   const trackRef = useRef(null);
   const lineRef = useRef(null);
 
@@ -62,10 +65,23 @@ export default function TimelineSection() {
         <div className="grid gap-8">
           {timeline.map((entry, index) => {
             const [company, ...location] = entry.org.split(' | ');
+            const entryKey = `${entry.date}-${entry.title}`;
+            const isExpanded = expanded.has(entryKey);
+            const hiddenCount = entry.details.length - VISIBLE_DETAILS;
+            const shownDetails = isExpanded
+              ? entry.details
+              : entry.details.slice(0, VISIBLE_DETAILS);
+            const toggle = () =>
+              setExpanded((current) => {
+                const next = new Set(current);
+                if (next.has(entryKey)) next.delete(entryKey);
+                else next.add(entryKey);
+                return next;
+              });
 
             return (
               <Reveal
-                key={`${entry.date}-${entry.title}`}
+                key={entryKey}
                 delay={Math.min(index, 3) * 70}
                 className="relative grid grid-cols-[32px_minmax(0,1fr)] gap-5 md:grid-cols-[40px_minmax(0,1fr)] md:gap-7"
               >
@@ -93,8 +109,8 @@ export default function TimelineSection() {
                     </a>
                     {location.length > 0 && ` | ${location.join(' | ')}`}
                   </p>
-                  <ul className="mt-4 grid gap-2.5">
-                    {entry.details.map((detail) => (
+                  <ul id={`timeline-details-${index}`} className="mt-4 grid gap-2.5">
+                    {shownDetails.map((detail) => (
                       <li
                         key={detail}
                         className="relative pl-5 text-[0.9rem] leading-relaxed text-[var(--theme-text-muted)] before:absolute before:left-0 before:text-[var(--theme-primary)] before:content-['›']"
@@ -103,6 +119,22 @@ export default function TimelineSection() {
                       </li>
                     ))}
                   </ul>
+                  {hiddenCount > 1 && (
+                    <button
+                      type="button"
+                      onClick={toggle}
+                      aria-expanded={isExpanded}
+                      aria-controls={`timeline-details-${index}`}
+                      className="font-body mt-4 inline-flex min-h-11 items-center gap-2 text-[0.72rem] font-bold tracking-[0.12em] text-[var(--theme-primary)] uppercase transition-colors hover:text-[var(--theme-secondary)]"
+                    >
+                      {isExpanded ? 'Show less' : `Show ${hiddenCount} more`}
+                      <Icon
+                        name="plus"
+                        size={16}
+                        className={`transition-transform duration-200 ${isExpanded ? 'rotate-45' : ''}`}
+                      />
+                    </button>
+                  )}
                   {entry.credentialUrl && (
                     <a
                       href={entry.credentialUrl}
