@@ -1,62 +1,160 @@
 export const caseStudies = [
   {
     code: '001',
-    label: 'Full-Stack Ownership',
-    highlights: 'File Manager Service',
-    title: 'File Manager',
-    description:
-      'TypeScript, Node.js, PostgreSQL, AWS S3. Built from scratch as sole engineer: a production full-stack service with regional storage, event-driven synchronization, permissions, authentication, observability, and Monitor integration.',
-    details: [
-      'Sole-engineer service ownership',
-      'Regional storage and event-driven sync',
-      'Permissions, observability, and Monitor integration',
-    ],
-    tags: ['Node.js', 'AWS S3', 'Event-Driven', 'PostgreSQL'],
-  },
-  {
-    code: '002',
     label: 'AI Platform Foundation',
     highlights: 'Agent Core',
     title: 'Agent Core',
     description:
-      'TypeScript, Node.js, LLM APIs, MCP, RAG, Embeddings. Reusable AI-agent foundation standardizing agent development across 3 product surfaces within the Flexspring ecosystem. Reduced new-agent setup from days to hours.',
+      "Flexspring's base library for AI agents, built on LiteLLM and Spec Driven Development and coordinating Claude Code with the company stack across 3 product surfaces. Reduced new-agent setup from days to hours. v0.4.x made it Claude Code only, with its own model (Opus, Sonnet or Haiku) for each agent role, and in October 2026 it shipped as a shared Claude plugin for the team.",
     details: [
-      'LLM APIs, MCP, RAG, and embeddings',
-      'Standardized agent development across 3 product surfaces',
-      'Reduced new-agent setup from days to hours',
+      'Claude Code orchestration with a model per agent role',
+      'Tests grown from 81 to 132, with CI/CD and releases',
+      'Shared Claude plugin released to the team',
     ],
-    tags: ['TypeScript', 'MCP', 'RAG', 'LLM APIs'],
+    tags: ['Claude Code', 'LiteLLM', 'Spec Driven Development', 'TypeScript'],
+  },
+  {
+    code: '002',
+    label: 'AI Product Platform',
+    highlights: 'AI Integration Wizard',
+    title: 'AI Integration Wizard',
+    description:
+      'Led the AI Integration Assembly Line, from content sync of Google Drive documents and videos with Whisper transcription, to automatic setup of credentials, mapping tables and lookup tables from AI output. Data Mapping candidates come from synced content, people review them in Studio, and the generated BPMN is checked against the accepted tables. Shipped Wizard API 1.4 to 1.17.',
+    details: [
+      'AI output turned into credentials, mapping and lookup tables',
+      'A model per step, fewer tokens, and LLM cost tracking',
+      'Per-caller bearer tokens and credential masking',
+    ],
+    tags: ['LLM APIs', 'Whisper', 'BPMN', 'Cost Tracking'],
   },
   {
     code: '003',
     label: 'AI Platform',
-    highlights: 'Data Mapping',
-    title: 'Data Mapping',
+    highlights: 'AI Field Recommendations',
+    title: 'AI Field Recommendations',
     description:
-      'Built production AI capabilities for Data Mapping and platform LLM integration, reducing manual review time by 50% while improving recommendation quality, reliability, and governance across Monitor and shared libraries.',
+      'AI field suggestions for Monitor Data Mapping, built on embeddings and reranking with LiteLLM as a fallback and Redis caching, reducing manual review time by 50%. Made the output the same on every run, raised the confidence threshold from 0.55 to 0.80, and added AI import of whole workbooks.',
     details: [
-      'AI-powered mapping recommendations',
-      '50% reduction in manual review time',
-      'AI-assisted review with stronger quality and governance',
+      'Embeddings and reranking, LiteLLM fallback, Redis cache',
+      'Deterministic output, confidence threshold 0.55 to 0.80',
+      'AI import of whole workbooks',
     ],
-    tags: ['Embeddings', 'LiteLLM', 'Redisson', 'Spring Boot'],
+    tags: ['Embeddings', 'Reranking', 'LiteLLM', 'Redis'],
+  },
+  {
+    code: '004',
+    label: 'AI Product Platform',
+    highlights: 'Studio AI Analysis',
+    title: 'Studio AI Analysis',
+    description:
+      'Built Studio AI Analysis end-to-end to evaluate 50,000+ integrations: AI review of BPMN processes on Amazon Bedrock with a prompt for each persona and blocking when sensitive data is present. In 2026 added Blueprints analysis and risk and impact checks before deployment.',
+    details: [
+      'Persona-specific BPMN review on Bedrock',
+      'Sensitive-data blocking',
+      'Blueprints analysis and pre-deployment risk checks',
+    ],
+    tags: ['Amazon Bedrock', 'BPMN', 'Spring Boot', 'React'],
   },
   {
     code: '005',
+    label: 'Full-Stack Product',
+    highlights: 'Mapping Service',
+    title: 'Mapping Service',
+    description:
+      'The full data mapping experience in Monitor and Studio: approval and sign-off flows with role-based permissions, mappings with several sources, change-request and support workflows, fields pre-set from blueprints, templates, re-import, and API gateway routes.',
+    details: [
+      'Approval, sign-off and role-based permissions',
+      'Multi-source mappings and change requests',
+      'Blueprint presets, templates and re-import',
+    ],
+    tags: ['Spring Boot', 'React', 'API Gateway', 'Permissions'],
+  },
+  {
+    code: '006',
     label: 'Cross-Service Feature',
     highlights: 'Webhook Templates',
     title: 'Webhook Templates',
     description:
-      'Built core Webhook Template capabilities across Engine, Studio, Monitor, Webhook Core, Webhook Explorer, and Onboard, including shared management, permissions, synchronization, deployment-driven configuration, and migration tooling.',
+      'Built Webhook Templates across Webhook Explorer, the Modeler, Studio and Monitor, including shared management, synchronization, deployment-driven configuration, and migration tooling. Moved template data from PostgreSQL to MongoDB, replaced the Super Admin requirement with project-level permissions, and in 2026 split templates into Global and Internal.',
     details: [
-      'Cross-service template management',
-      'Permissions and synchronization',
-      'Deployment configuration and migration tooling',
+      'PostgreSQL to MongoDB data migration',
+      'Project-level permissions instead of Super Admin',
+      'Global and Internal template split',
     ],
-    tags: ['Cross-Service', 'Spring Boot', 'React', 'Webhooks'],
+    tags: ['Cross-Service', 'MongoDB', 'Spring Boot', 'React'],
   },
   {
-    code: '006',
+    code: '007',
+    label: 'Full-Stack Product',
+    highlights: 'Studio Lifecycle',
+    title: 'Studio Lifecycle',
+    description:
+      'Designed and implemented Monitor and Studio Lifecycle across project and integration flows, with an eight-stage delivery lifecycle and lifecycle events stored on the integration entity for traceability and debugging. Migrated existing data and built the Lifecycle Dashboard and the Assembly Line boards.',
+    details: [
+      'Eight-stage delivery lifecycle',
+      'Existing data migrated into lifecycle tracking',
+      'Lifecycle Dashboard and Assembly Line boards',
+    ],
+    tags: ['React', 'Feature Flags', 'Studio', 'Dashboards'],
+  },
+  {
+    code: '008',
+    label: 'Platform Feature',
+    highlights: 'Integration Snapshots',
+    title: 'Integration Snapshots',
+    description:
+      'Every integration change is saved to Bitbucket with its secrets encrypted, and users compare and restore versions from a History tab.',
+    details: [
+      'Version history stored in Bitbucket',
+      'Secrets encrypted in every snapshot',
+      'Compare and restore from a History tab',
+    ],
+    tags: ['Bitbucket', 'Encryption', 'Versioning', 'React'],
+  },
+  {
+    code: '009',
+    label: 'Product & Upgrades',
+    highlights: 'Monitor Reports',
+    title: 'Monitor Reports',
+    description:
+      'Built an Account Performance report with return on investment and a transaction failure report with CSV export, and upgraded Monitor to React 18.3, Vite 7 and TanStack Query, replacing Hotjar with OpenReplay.',
+    details: [
+      'Account Performance report with return on investment',
+      'Transaction failure report with CSV export',
+      'React 18.3, Vite 7, TanStack Query, OpenReplay',
+    ],
+    tags: ['React 18', 'Vite 7', 'TanStack Query', 'Reporting'],
+  },
+  {
+    code: '010',
+    label: 'Full-Stack Ownership',
+    highlights: 'File Manager Service',
+    title: 'File Manager',
+    description:
+      'TypeScript, Node.js, PostgreSQL, AWS S3. Built from scratch as sole engineer: a production full-stack service with regional storage, event-driven synchronization, permissions, authentication, observability, and Monitor integration. Later reworked the permissions logic so changes apply to every subfolder, added whole-folder download through KrakenD, and S3 and SQS health checks with critical production tests.',
+    details: [
+      'Sole-engineer service ownership',
+      'Permissions that cascade to every subfolder',
+      'Whole-folder download, S3 and SQS health checks',
+    ],
+    tags: ['Node.js', 'AWS S3', 'SQS', 'KrakenD'],
+  },
+  {
+    code: '011',
+    label: 'Platform Modernisation',
+    highlights: 'Migrations',
+    title: 'Platform Modernisation',
+    description:
+      'Led the Spring Boot 3 migration for 5 core microservices, reducing API latency by 20%. Moved Studio to Spring Boot 3 with Redis, faster MongoDB queries, Swagger docs, Node 22, and a Mitigation Dashboard.',
+    details: [
+      'Java 8 to Java 17, Spring Boot 2 to Spring Boot 3',
+      'Redis, faster MongoDB queries, Node 22',
+      '20% API latency reduction',
+    ],
+    tags: ['Java 17', 'Spring Boot 3', 'Redis', 'Migration'],
+  },
+  {
+    code: '012',
     label: 'Full-Stack Delivery',
     highlights: 'Credentials Manager',
     title: 'Credentials Manager',
@@ -68,48 +166,6 @@ export const caseStudies = [
       'Request lifecycle management for 8,000+ integrations',
     ],
     tags: ['Spring Boot', 'React', 'Encryption', 'ConnectorHub'],
-  },
-  {
-    code: '007',
-    label: 'AI Product Platform',
-    highlights: 'Studio AI Analysis',
-    title: 'Studio AI Analysis',
-    description:
-      'Built Studio AI Analysis end-to-end to evaluate 50,000+ integrations through role-based quality assessments and optimization recommendations.',
-    details: [
-      'Role-based integration assessments',
-      '50,000+ integrations evaluated',
-      'Optimization recommendations',
-    ],
-    tags: ['AI Analysis', 'Spring Boot', 'React', 'Role-Based Access'],
-  },
-  {
-    code: '008',
-    label: 'Platform Modernisation',
-    highlights: 'Migrations',
-    title: 'Platform Modernisation',
-    description:
-      'Led Spring Boot 3 migration for 5 core microservices, reducing API latency by 20%.',
-    details: [
-      'Java 8 to Java 17 modernization',
-      'Spring Boot 2 to Spring Boot 3',
-      '20% API latency reduction',
-    ],
-    tags: ['Java 17', 'Spring Boot 3', 'React 18', 'Migration'],
-  },
-  {
-    code: '011',
-    label: 'Full-Stack Product',
-    highlights: 'Studio Lifecycle',
-    title: 'Studio Lifecycle',
-    description:
-      'Designed and implemented Monitor and Studio Lifecycle across project and integration flows, with an eight-stage delivery lifecycle and lifecycle events stored on the integration entity for traceability and debugging.',
-    details: [
-      'Project and integration lifecycle flows',
-      'Eight-stage delivery lifecycle',
-      'Traceable lifecycle event history',
-    ],
-    tags: ['React', 'Feature Flags', 'Studio', 'UI/UX'],
   },
 ];
 

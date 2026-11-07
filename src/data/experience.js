@@ -73,6 +73,7 @@ export const timeline = [
       'Promoted to Senior Software Engineer - Principal in August 2026 while taking on broader technical leadership for the AI and integration platform.',
       'Lead the AI Integration Assembly Line, connecting AI-generated integration design to automated credentials and mapping/lookup-table setup across Studio, Services, and Wizard, reducing integration creation time by 90%.',
       'Mentor interns and incoming developers while setting technical direction for the team.',
+      'Released Agent Core to the team as a shared Claude plugin, and hardened the Wizard API with per-caller bearer tokens, credential masking, a model per step and LLM cost tracking.',
     ],
   },
   {
@@ -92,6 +93,7 @@ export const timeline = [
       'Built core Webhook Template capabilities across Engine, Studio, Monitor, Webhook Core, Webhook Explorer, and Onboard, including shared management, permissions, synchronization, deployment-driven configuration, and migration tooling.',
       "Expanded Mapping Service capabilities and designed Agora's project-linked Integrations domain to support governed mapping and integration management.",
       "Built Studio V2 AI Analysis end-to-end to evaluate 50,000+ integrations through role-based quality assessments and optimization recommendations; led Studio's Spring Boot 3 migration and broader platform modernization, reducing API latency by 20%.",
+      'Built Integration Snapshots, saving every integration change to Bitbucket with encrypted secrets and a History tab to compare and restore versions, plus Monitor Account Performance and transaction failure reports.',
       'Delivered Credentials Manager full-stack for 8,000+ active client integrations, including API, ConnectorHub integration, React UI, secure field handling, notifications, and request lifecycle management.',
       'Runner-up with a $1,000 prize at the internal hackathon for a RAG-powered chatbot built on Crewdle AI and Flexspring data.',
     ],
