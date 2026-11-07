@@ -31,6 +31,7 @@ shafiqimtiaz@gmail.com | (514) 574-4436 | Toronto, ON | linkedin.com/in/shafiqim
 - Migrated **5** core microservices to Spring Boot 3, improving API latency by **20%**.
 - Built Credentials Manager for securely managing third-party API credentials across **8,000+** active client integrations.
 - Built Integration Snapshots (Bitbucket version history with encrypted secrets) and Webhook Templates across Webhook Explorer, the Modeler, Studio and Monitor, moving template data from PostgreSQL to MongoDB.
+- Runner-up with a **$1,000** prize at the internal hackathon for a RAG chatbot built on Crewdle AI and Flexspring data, with embeddings and vector search.
 
 ### Software Engineer Intern | Flexspring | Remote | Montreal, QC | May 2023 – May 2024
 
