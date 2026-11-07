@@ -19,7 +19,7 @@ export default function ProfileSection() {
 
       <div className="mt-12 grid gap-6 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:items-stretch">
         <Reveal className="relative overflow-hidden rounded-xl border-l-2 border-[var(--theme-primary)] bg-[var(--theme-surface-low)] p-7 md:p-9">
-          <p className="font-body text-[0.66rem] tracking-[0.18em] text-[var(--theme-primary)] uppercase">
+          <p className="font-body text-[0.72rem] tracking-[0.18em] text-[var(--theme-primary)] uppercase">
             // mission
           </p>
           <p className="mt-4 text-base leading-relaxed text-[var(--theme-text-muted)]">
@@ -42,7 +42,7 @@ export default function ProfileSection() {
           delay={120}
           className="profile-avatar-card relative flex flex-col overflow-hidden rounded-xl p-5"
         >
-          <div className="font-body relative z-10 text-[0.58rem] tracking-[0.18em] text-[var(--theme-primary)] uppercase">
+          <div className="font-body relative z-10 text-[0.7rem] tracking-[0.18em] text-[var(--theme-primary)] uppercase">
             ./avatar
           </div>
           <div className="profile-avatar-frame relative z-10 mt-4 min-h-[230px] flex-1 overflow-hidden rounded-lg border">
@@ -54,7 +54,7 @@ export default function ProfileSection() {
               decoding="async"
             />
           </div>
-          <div className="font-body relative z-10 mt-3 inline-flex self-start rounded bg-[var(--theme-primary)] px-3 py-1 text-[0.58rem] tracking-[0.13em] text-[var(--theme-on-primary)] uppercase">
+          <div className="font-body relative z-10 mt-3 inline-flex self-start rounded bg-[var(--theme-primary)] px-3 py-1 text-[0.7rem] tracking-[0.13em] text-[var(--theme-on-primary)] uppercase">
             Toronto, ON
           </div>
         </Reveal>
@@ -70,7 +70,7 @@ export default function ProfileSection() {
             >
               <CountUp value={stat.value} />
             </ScrambleOnHover>
-            <p className="font-body mt-2 text-[0.58rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
+            <p className="font-body mt-2 text-[0.7rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
               {stat.label}
             </p>
           </article>

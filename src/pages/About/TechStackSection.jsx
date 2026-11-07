@@ -20,7 +20,7 @@ export default function TechStackSection() {
             Tech <span className="text-[var(--theme-secondary)]">stack</span>
           </ScrambleOnHover>
         </div>
-        <div className="font-body inline-flex items-center gap-2 text-[0.62rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
+        <div className="font-body inline-flex items-center gap-2 text-[0.7rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
           <span className="h-2 w-2 rounded-full bg-[var(--theme-primary)]"></span>
           Production-grade
         </div>
@@ -35,7 +35,7 @@ export default function TechStackSection() {
           >
             <div className="flex items-center justify-between gap-4">
               <Icon name={category.icon} size={25} className={category.accent} />
-              <span className="font-body text-[0.62rem] tracking-[0.18em] text-[var(--theme-outline)]">
+              <span className="font-body text-[0.7rem] tracking-[0.18em] text-[var(--theme-text-muted)]">
                 {category.code}
               </span>
             </div>

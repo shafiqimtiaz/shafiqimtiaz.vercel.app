@@ -28,10 +28,10 @@ export default function PublicRepositoriesSection() {
             className="group relative flex h-full flex-col bg-[var(--theme-surface-low)] p-6 transition-colors duration-200 hover:bg-[var(--theme-surface)]"
           >
             <div className="flex items-center justify-between gap-3">
-              <span className="font-body text-[0.6rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
+              <span className="font-body text-[0.7rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
                 {repo.repoUrl ? 'repo' : 'live'}
               </span>
-              <span className="font-body text-[0.6rem] tracking-[0.16em] text-[var(--theme-secondary)]">
+              <span className="font-body text-[0.7rem] tracking-[0.16em] text-[var(--theme-secondary)]">
                 {String(index + 1).padStart(2, '0')}
               </span>
             </div>
@@ -48,7 +48,7 @@ export default function PublicRepositoriesSection() {
               {repo.techStack.map((tech) => (
                 <span
                   key={`${repo.title}-${tech}`}
-                  className="font-body text-[0.58rem] tracking-[0.1em] text-[var(--theme-text-muted)] uppercase"
+                  className="font-body text-[0.7rem] tracking-[0.1em] text-[var(--theme-text-muted)] uppercase"
                 >
                   {tech}
                 </span>
@@ -61,7 +61,7 @@ export default function PublicRepositoriesSection() {
                   href={repo.repoUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="font-body inline-flex items-center gap-1.5 text-[0.66rem] font-bold tracking-[0.12em] text-[var(--theme-text)] uppercase transition-colors hover:text-[var(--theme-primary)]"
+                  className="font-body inline-flex items-center gap-1.5 text-[0.72rem] font-bold tracking-[0.12em] text-[var(--theme-text)] uppercase transition-colors hover:text-[var(--theme-primary)]"
                 >
                   <Icon name="code" size={16} />
                   Code
@@ -72,7 +72,7 @@ export default function PublicRepositoriesSection() {
                   href={repo.demoUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="font-body inline-flex items-center gap-1.5 text-[0.66rem] font-bold tracking-[0.12em] text-[var(--theme-text-muted)] uppercase transition-colors hover:text-[var(--theme-secondary)]"
+                  className="font-body inline-flex items-center gap-1.5 text-[0.72rem] font-bold tracking-[0.12em] text-[var(--theme-text-muted)] uppercase transition-colors hover:text-[var(--theme-secondary)]"
                 >
                   <Icon name="arrow_outward" size={16} />
                   Demo
@@ -83,7 +83,7 @@ export default function PublicRepositoriesSection() {
                   href={repo.storeUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="font-body inline-flex items-center gap-1.5 text-[0.66rem] font-bold tracking-[0.12em] text-[var(--theme-text-muted)] uppercase transition-colors hover:text-[var(--theme-primary)]"
+                  className="font-body inline-flex items-center gap-1.5 text-[0.72rem] font-bold tracking-[0.12em] text-[var(--theme-text-muted)] uppercase transition-colors hover:text-[var(--theme-primary)]"
                 >
                   <Icon name="download" size={16} />
                   Install
@@ -94,7 +94,7 @@ export default function PublicRepositoriesSection() {
                   href={repo.writeUpUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="font-body inline-flex items-center gap-1.5 text-[0.66rem] font-bold tracking-[0.12em] text-[var(--theme-text-muted)] uppercase transition-colors hover:text-[var(--theme-tertiary)]"
+                  className="font-body inline-flex items-center gap-1.5 text-[0.72rem] font-bold tracking-[0.12em] text-[var(--theme-text-muted)] uppercase transition-colors hover:text-[var(--theme-tertiary)]"
                 >
                   <Icon name="description" size={16} />
                   Write-up

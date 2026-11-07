@@ -121,7 +121,7 @@ export default function ContactFormSection() {
                 </label>
 
                 <div
-                  className={`flex gap-2 border-b border-[var(--theme-outline-variant)] transition-colors focus-within:border-[var(--theme-primary)] ${
+                  className={`flex gap-2 border-b border-[var(--theme-outline)] transition-colors focus-within:border-[var(--theme-primary)] ${
                     isTextarea ? 'items-start' : 'items-center'
                   }`}
                 >
@@ -153,7 +153,7 @@ export default function ContactFormSection() {
                       onChange={handleChange}
                       required={field.required}
                       placeholder={field.placeholder}
-                      className="font-body w-full border-none bg-transparent py-2 text-[var(--theme-text)] outline-none placeholder:text-[var(--theme-outline)] focus:ring-0 focus:outline-none"
+                      className="font-body min-h-11 w-full border-none bg-transparent py-2.5 text-[var(--theme-text)] outline-none placeholder:text-[var(--theme-outline)] focus:ring-0 focus:outline-none"
                     />
                   )}
                 </div>

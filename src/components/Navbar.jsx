@@ -12,7 +12,7 @@ const navSections = [
 ];
 
 const navLinkBase =
-  'font-body relative text-[0.68rem] font-medium uppercase tracking-[0.16em] text-[var(--theme-text-muted)] transition-colors hover:text-[var(--theme-primary)]';
+  'font-body relative text-[0.72rem] font-medium uppercase tracking-[0.16em] text-[var(--theme-text-muted)] transition-colors hover:text-[var(--theme-primary)]';
 const mobileLinkBase =
   'font-body text-[0.72rem] font-medium uppercase tracking-[0.16em] text-[var(--theme-text-muted)] transition-colors hover:text-[var(--theme-primary)]';
 
@@ -50,8 +50,8 @@ export default function Navbar() {
       {/* Progress bar */}
       <div className="absolute inset-x-0 top-0 h-[2px] bg-[var(--theme-surface-high)]">
         <div
-          className="h-full bg-[var(--theme-primary)] transition-all duration-150"
-          style={{ width: `${progress}%` }}
+          className="h-full origin-left bg-[var(--theme-primary)] transition-transform duration-150"
+          style={{ transform: `scaleX(${progress / 100})` }}
         />
       </div>
 

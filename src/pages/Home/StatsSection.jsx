@@ -17,7 +17,7 @@ export default function StatsSection() {
             >
               <CountUp value={stat.value} />
             </ScrambleOnHover>
-            <div className="font-body text-[0.64rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
+            <div className="font-body text-[0.72rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
               {stat.label}
             </div>
           </Reveal>

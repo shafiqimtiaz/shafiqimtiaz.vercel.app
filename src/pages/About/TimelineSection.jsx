@@ -67,7 +67,7 @@ export default function TimelineSection() {
               <Reveal
                 key={`${entry.date}-${entry.title}`}
                 delay={Math.min(index, 3) * 70}
-                className="relative grid grid-cols-[32px_1fr] gap-5 md:grid-cols-[40px_1fr] md:gap-7"
+                className="relative grid grid-cols-[32px_minmax(0,1fr)] gap-5 md:grid-cols-[40px_minmax(0,1fr)] md:gap-7"
               >
                 <div
                   className={`relative z-10 mt-1 flex h-8 w-8 items-center justify-center rounded-full border-2 bg-[var(--theme-bg)] md:h-10 md:w-10 ${entry.accent}`}
@@ -75,8 +75,8 @@ export default function TimelineSection() {
                   <Icon name={entry.icon} size={18} className="text-[var(--theme-primary)]" />
                 </div>
 
-                <article className="rounded-xl border border-[var(--theme-outline-variant)] bg-[var(--theme-surface)] p-6 transition-colors duration-200 hover:border-[var(--theme-outline)] md:p-7">
-                  <time className="font-body text-[0.62rem] tracking-[0.16em] text-[var(--theme-primary)] uppercase">
+                <article className="min-w-0 rounded-xl border border-[var(--theme-outline-variant)] bg-[var(--theme-surface)] p-6 transition-colors duration-200 hover:border-[var(--theme-outline)] md:p-7">
+                  <time className="font-body text-[0.7rem] tracking-[0.16em] text-[var(--theme-primary)] uppercase">
                     {entry.date}
                   </time>
                   <h3 className="font-headline mt-2 text-xl font-bold tracking-[-0.02em] text-[var(--theme-text)] md:text-2xl">

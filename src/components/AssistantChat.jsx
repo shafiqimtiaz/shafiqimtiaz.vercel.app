@@ -101,7 +101,7 @@ export default function AssistantChat() {
                 <h2 className="font-headline text-sm font-semibold text-[var(--theme-text)]">
                   Shafiq&apos;s AI Assistant
                 </h2>
-                <p className="font-body text-[0.6rem] tracking-[0.12em] text-[var(--theme-primary)] uppercase">
+                <p className="font-body text-[0.7rem] tracking-[0.12em] text-[var(--theme-primary)] uppercase">
                   Portfolio guide
                 </p>
               </div>
@@ -111,7 +111,7 @@ export default function AssistantChat() {
                 type="button"
                 onClick={() => setIsExpanded((current) => !current)}
                 aria-label={isExpanded ? 'Restore assistant size' : 'Expand assistant'}
-                className="grid h-8 w-8 place-items-center rounded-md text-[var(--theme-text-muted)] transition-all hover:-translate-y-0.5 hover:bg-[var(--theme-surface)] hover:text-[var(--theme-text)]"
+                className="grid h-8 w-8 place-items-center rounded-md text-[var(--theme-text-muted)] transition-[color,background-color,border-color,box-shadow,transform,opacity,filter] hover:-translate-y-0.5 hover:bg-[var(--theme-surface)] hover:text-[var(--theme-text)]"
               >
                 <Icon name={isExpanded ? 'minimize' : 'maximize'} size={17} />
               </button>
@@ -119,7 +119,7 @@ export default function AssistantChat() {
                 type="button"
                 onClick={() => setIsOpen(false)}
                 aria-label="Close assistant"
-                className="grid h-8 w-8 place-items-center rounded-md text-[var(--theme-text-muted)] transition-all hover:-translate-y-0.5 hover:bg-[var(--theme-surface)] hover:text-[var(--theme-text)]"
+                className="grid h-8 w-8 place-items-center rounded-md text-[var(--theme-text-muted)] transition-[color,background-color,border-color,box-shadow,transform,opacity,filter] hover:-translate-y-0.5 hover:bg-[var(--theme-surface)] hover:text-[var(--theme-text)]"
               >
                 <Icon name="close" size={18} />
               </button>
@@ -143,7 +143,7 @@ export default function AssistantChat() {
                       type="button"
                       disabled={isLoading}
                       onClick={() => sendMessage(suggestion)}
-                      className="font-body rounded-md border border-[var(--theme-outline-variant)] px-3 py-2 text-left text-[0.68rem] leading-relaxed text-[var(--theme-text-muted)] transition-all hover:-translate-y-0.5 hover:border-[var(--theme-primary)] hover:text-[var(--theme-text)] disabled:cursor-not-allowed disabled:opacity-50"
+                      className="font-body rounded-md border border-[var(--theme-outline-variant)] px-3 py-2 text-left text-[0.72rem] leading-relaxed text-[var(--theme-text-muted)] transition-[color,background-color,border-color,box-shadow,transform,opacity,filter] hover:-translate-y-0.5 hover:border-[var(--theme-primary)] hover:text-[var(--theme-text)] disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       {suggestion}
                     </button>
@@ -199,7 +199,7 @@ export default function AssistantChat() {
                 type="submit"
                 disabled={!draft.trim() || isLoading}
                 aria-label="Send message"
-                className="grid h-8 w-8 place-items-center rounded-md bg-[var(--theme-primary)] text-[var(--theme-on-primary)] transition-all hover:-translate-y-0.5 hover:brightness-105 disabled:cursor-not-allowed disabled:opacity-45"
+                className="grid h-8 w-8 place-items-center rounded-md bg-[var(--theme-primary)] text-[var(--theme-on-primary)] transition-[color,background-color,border-color,box-shadow,transform,opacity,filter] hover:-translate-y-0.5 hover:brightness-105 disabled:cursor-not-allowed disabled:opacity-45"
               >
                 <Icon name="send" size={17} />
               </button>
@@ -214,7 +214,7 @@ export default function AssistantChat() {
         aria-label={`${isOpen ? 'Close' : 'Open'} Shafiq's AI Assistant`}
         aria-expanded={isOpen}
         aria-controls="assistant-message"
-        className="grid h-13 w-13 place-items-center rounded-full border border-[var(--theme-primary)] bg-[var(--theme-primary)] text-[var(--theme-on-primary)] shadow-[var(--shadow-primary)] transition-all hover:-translate-y-0.5 hover:brightness-105"
+        className="grid h-13 w-13 place-items-center rounded-full border border-[var(--theme-primary)] bg-[var(--theme-primary)] text-[var(--theme-on-primary)] shadow-[var(--shadow-primary)] transition-[color,background-color,border-color,box-shadow,transform,opacity,filter] hover:-translate-y-0.5 hover:brightness-105"
       >
         <Icon name="sparkle" size={20} />
       </button>
