@@ -5,13 +5,13 @@ export const caseStudies = [
     highlights: 'Agent Core',
     title: 'Agent Core',
     description:
-      "Flexspring's base library for AI agents, built on LiteLLM and Spec Driven Development and coordinating Claude Code with the company stack across 3 product surfaces. Reduced new-agent setup from days to hours. v0.4.x made it Claude Code only, with its own model (Opus, Sonnet or Haiku) for each agent role, and in October 2026 it shipped as a shared Claude plugin for the team.",
+      "Designed and built Flexspring's base library for AI agents in March 2026, with LiteLLM, Spec Driven Development and a layer that coordinates Claude Code across 3 product surfaces, reducing new-agent setup from days to hours. Rebuilt the installer with MCP setup, a skill registry and releases, then made it Claude Code only with an agent roster that picks Opus, Sonnet or Haiku per role. In October 2026 it shipped as a shared Claude plugin with a review step before every commit and pinned MCP server versions.",
     details: [
       'Claude Code orchestration with a model per agent role',
-      'Tests grown from 81 to 132, with CI/CD and releases',
-      'Shared Claude plugin released to the team',
+      'Tests grown from 81 to 132 over v0.4.0 to v0.4.3',
+      'CI/CD with Nexus publishing and a shared team plugin',
     ],
-    tags: ['Claude Code', 'LiteLLM', 'Spec Driven Development', 'TypeScript'],
+    tags: ['Claude Code', 'LiteLLM', 'MCP', 'Spec Driven Development'],
   },
   {
     code: '002',
@@ -29,6 +29,20 @@ export const caseStudies = [
   },
   {
     code: '003',
+    label: 'Developer Experience',
+    highlights: 'Local Stack',
+    title: 'Local Stack',
+    description:
+      'A one-command local development environment for the whole platform, built in September and October 2026: the AI project, Mapping Service, File Manager, Workflow Approval, Webhook Explorer and Billing Manager, with per-service logs and a terminal dashboard with a live theme, guided onboarding and saved service profiles. Added optional S3 and SQS endpoint overrides so File Manager runs locally.',
+    details: [
+      'One command starts the platform locally',
+      'Terminal dashboard with saved service profiles',
+      'Per-service logs and onboarding-driven setup',
+    ],
+    tags: ['Developer Tooling', 'Terminal Dashboard', 'Onboarding', 'AWS S3'],
+  },
+  {
+    code: '004',
     label: 'AI Platform',
     highlights: 'AI Field Recommendations',
     title: 'AI Field Recommendations',
@@ -42,7 +56,7 @@ export const caseStudies = [
     tags: ['Embeddings', 'Reranking', 'LiteLLM', 'Redis'],
   },
   {
-    code: '004',
+    code: '005',
     label: 'AI Product Platform',
     highlights: 'Studio AI Analysis',
     title: 'Studio AI Analysis',
@@ -56,7 +70,7 @@ export const caseStudies = [
     tags: ['Amazon Bedrock', 'BPMN', 'Spring Boot', 'React'],
   },
   {
-    code: '005',
+    code: '006',
     label: 'Full-Stack Product',
     highlights: 'Mapping Service',
     title: 'Mapping Service',
@@ -70,7 +84,7 @@ export const caseStudies = [
     tags: ['Spring Boot', 'React', 'API Gateway', 'Permissions'],
   },
   {
-    code: '006',
+    code: '007',
     label: 'Cross-Service Feature',
     highlights: 'Webhook Templates',
     title: 'Webhook Templates',
@@ -84,7 +98,7 @@ export const caseStudies = [
     tags: ['Cross-Service', 'MongoDB', 'Spring Boot', 'React'],
   },
   {
-    code: '007',
+    code: '008',
     label: 'Full-Stack Product',
     highlights: 'Studio Lifecycle',
     title: 'Studio Lifecycle',
@@ -98,7 +112,7 @@ export const caseStudies = [
     tags: ['React', 'Feature Flags', 'Studio', 'Dashboards'],
   },
   {
-    code: '008',
+    code: '009',
     label: 'Platform Feature',
     highlights: 'Integration Snapshots',
     title: 'Integration Snapshots',
@@ -112,7 +126,7 @@ export const caseStudies = [
     tags: ['Bitbucket', 'Encryption', 'Versioning', 'React'],
   },
   {
-    code: '009',
+    code: '010',
     label: 'Product & Upgrades',
     highlights: 'Monitor Reports',
     title: 'Monitor Reports',
@@ -126,7 +140,7 @@ export const caseStudies = [
     tags: ['React 18', 'Vite 7', 'TanStack Query', 'Reporting'],
   },
   {
-    code: '010',
+    code: '011',
     label: 'Full-Stack Ownership',
     highlights: 'File Manager Service',
     title: 'File Manager',
@@ -140,7 +154,7 @@ export const caseStudies = [
     tags: ['Node.js', 'AWS S3', 'SQS', 'KrakenD'],
   },
   {
-    code: '011',
+    code: '012',
     label: 'Platform Modernisation',
     highlights: 'Migrations',
     title: 'Platform Modernisation',
@@ -154,7 +168,7 @@ export const caseStudies = [
     tags: ['Java 17', 'Spring Boot 3', 'Redis', 'Migration'],
   },
   {
-    code: '012',
+    code: '013',
     label: 'Full-Stack Delivery',
     highlights: 'Credentials Manager',
     title: 'Credentials Manager',
