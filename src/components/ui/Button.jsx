@@ -23,7 +23,7 @@ export default function Button({
     info: 'bg-[var(--theme-secondary)] text-[var(--theme-on-secondary)] hover:brightness-105 hover:shadow-[0_0_28px_color-mix(in_srgb,var(--theme-secondary)_30%,transparent)]',
   };
 
-  const sizing = className.includes('min-h-') ? '' : 'min-h-12 px-5 text-[0.66rem]';
+  const sizing = className.includes('min-h-') ? '' : 'min-h-12 px-5 text-[0.72rem]';
   const classes = [baseStyles, variants[variant], sizing, className].filter(Boolean).join(' ');
 
   if (to) {

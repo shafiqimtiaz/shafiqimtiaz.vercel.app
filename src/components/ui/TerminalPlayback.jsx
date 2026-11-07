@@ -90,7 +90,7 @@ export default function TerminalPlayback({ sessionConfig }) {
 
       {/* Suggestions — always visible for discoverability */}
       <div className="grid gap-2">
-        <p className="font-body text-[0.6rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
+        <p className="font-body text-[0.7rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
           // run a command
         </p>
         <div className="grid gap-2 sm:grid-cols-2">
@@ -102,7 +102,7 @@ export default function TerminalPlayback({ sessionConfig }) {
                 key={action.id}
                 aria-pressed={isActive}
                 onClick={() => executeCommand(action.command)}
-                className={`rounded border px-3 py-2 text-left text-[0.66rem] tracking-[0.08em] uppercase transition-colors focus-visible:border-[var(--theme-primary)] focus-visible:outline-none ${
+                className={`min-h-11 rounded border px-3 py-2 text-left text-[0.72rem] tracking-[0.08em] uppercase transition-colors focus-visible:border-[var(--theme-primary)] ${
                   isActive
                     ? 'border-[var(--theme-primary)] bg-[var(--theme-surface-high)] text-[var(--theme-primary)]'
                     : 'border-[var(--theme-outline-variant)] text-[var(--theme-text-muted)] hover:border-[var(--theme-primary)] hover:text-[var(--theme-primary)]'

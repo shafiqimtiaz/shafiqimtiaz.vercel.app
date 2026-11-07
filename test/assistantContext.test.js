@@ -49,7 +49,7 @@ test('buildAssistantInstructions includes the public resume context', () => {
   assert.match(instructions, /Published resume:/);
   assert.match(instructions, /Senior Software Engineer - Principal \| Flexspring/);
   assert.match(instructions, /2,500\+/);
-  assert.match(instructions, /RAG Chatbot/);
+  assert.match(instructions, /KemonPoray - Professor and University Ratings for Bangladesh/);
 });
 
 test('timeline publishes the current Flexspring role titles', () => {
@@ -82,7 +82,9 @@ test('public repositories are ordered by portfolio impact', () => {
   assert.deepEqual(
     publicRepositories.map(({ title }) => title),
     [
+      'KemonPoray',
       'nexus-ai',
+      'dash-reader',
       'shafiqimtiaz.vercel.app',
       'ctx-handoff',
       'clean-bookmarks',

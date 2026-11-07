@@ -3,7 +3,7 @@ import { Button, DecodeText, Icon, ScrambleOnHover } from '../../components/ui';
 export default function HeroSection() {
   return (
     <div className="rise min-w-0">
-      <div className="font-body inline-flex items-center gap-2.5 rounded-full border border-[var(--theme-outline-variant)] bg-[var(--theme-surface-low)] px-4 py-1.5 text-[0.68rem] tracking-[0.14em] text-[var(--theme-text-muted)] uppercase">
+      <div className="font-body inline-flex items-center gap-2.5 rounded-full border border-[var(--theme-outline-variant)] bg-[var(--theme-surface-low)] px-4 py-1.5 text-[0.72rem] tracking-[0.14em] text-[var(--theme-text-muted)] uppercase">
         <span className="relative flex h-2 w-2">
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--theme-primary)] opacity-60"></span>
           <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--theme-primary)]"></span>
@@ -46,7 +46,7 @@ export default function HeroSection() {
           href="/docs/Resume-Shafiq-Imtiaz.pdf"
           target="_blank"
           rel="noreferrer"
-          className="min-h-13 px-6 text-[0.72rem] transition-all hover:-translate-y-0.5"
+          className="min-h-13 px-6 text-[0.72rem] transition-[color,background-color,border-color,box-shadow,transform,opacity,filter] hover:-translate-y-0.5"
         >
           <span>View Résumé</span>
         </Button>
@@ -55,14 +55,14 @@ export default function HeroSection() {
           href="/docs/Resume-Shafiq-Imtiaz.md"
           download
           aria-label="Download Résumé as Markdown"
-          className="min-h-13 w-13 p-0 transition-all hover:-translate-y-0.5"
+          className="min-h-13 w-13 p-0 transition-[color,background-color,border-color,box-shadow,transform,opacity,filter] hover:-translate-y-0.5"
         >
           <Icon name="description" size={24} />
         </Button>
         <Button
           variant="secondary"
           href="#contact"
-          className="min-h-13 px-6 text-[0.72rem] transition-all hover:-translate-y-0.5"
+          className="min-h-13 px-6 text-[0.72rem] transition-[color,background-color,border-color,box-shadow,transform,opacity,filter] hover:-translate-y-0.5"
           onClick={(e) => {
             e.preventDefault();
             document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
@@ -75,13 +75,13 @@ export default function HeroSection() {
 
       <dl className="mt-10 flex flex-wrap gap-x-8 gap-y-4 border-t border-[var(--theme-outline-variant)] pt-6 text-sm">
         <div>
-          <dt className="font-body text-[0.6rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
+          <dt className="font-body text-[0.7rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
             Location
           </dt>
           <dd className="font-headline mt-1 font-semibold text-[var(--theme-text)]">Toronto, ON</dd>
         </div>
         <div>
-          <dt className="font-body text-[0.6rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
+          <dt className="font-body text-[0.7rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
             Certified
           </dt>
           <dd className="font-headline mt-1 font-semibold text-[var(--theme-text)]">
@@ -89,7 +89,7 @@ export default function HeroSection() {
           </dd>
         </div>
         <div>
-          <dt className="font-body text-[0.6rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
+          <dt className="font-body text-[0.7rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
             Focus
           </dt>
           <dd className="font-headline mt-1 font-semibold text-[var(--theme-text)]">

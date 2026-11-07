@@ -26,15 +26,15 @@ export default function CaseStudiesSection() {
           <Reveal
             key={project.title}
             delay={(i % 2) * 110}
-            className="group relative flex flex-col overflow-hidden rounded-xl border border-[var(--theme-outline-variant)] bg-[var(--theme-surface)] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--theme-primary)] hover:shadow-[var(--shadow-primary)] md:p-8"
+            className="group relative flex flex-col overflow-hidden rounded-xl border border-[var(--theme-outline-variant)] bg-[var(--theme-surface)] p-7 transition-[color,background-color,border-color,box-shadow,transform,opacity,filter] duration-300 hover:-translate-y-1 hover:border-[var(--theme-primary)] hover:shadow-[var(--shadow-primary)] md:p-8"
           >
             <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-[linear-gradient(90deg,transparent,var(--theme-primary),transparent)] opacity-0 transition-opacity duration-300 group-hover:opacity-80"></div>
 
             <div className="flex items-center justify-between gap-4">
-              <span className="font-body inline-flex rounded-full border border-[var(--theme-outline-variant)] px-3 py-1 text-[0.62rem] tracking-[0.16em] text-[var(--theme-secondary)] uppercase">
+              <span className="font-body inline-flex rounded-full border border-[var(--theme-outline-variant)] px-3 py-1 text-[0.7rem] tracking-[0.16em] text-[var(--theme-secondary)] uppercase">
                 {project.label}
               </span>
-              <span className="font-body text-[0.7rem] tracking-[0.18em] text-[var(--theme-outline)]">
+              <span className="font-body text-[0.7rem] tracking-[0.18em] text-[var(--theme-text-muted)]">
                 {project.code}
               </span>
             </div>
@@ -59,7 +59,7 @@ export default function CaseStudiesSection() {
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="font-body rounded bg-[var(--theme-surface-high)] px-2.5 py-1 text-[0.62rem] tracking-[0.1em] text-[var(--theme-text-muted)] uppercase"
+                  className="font-body rounded bg-[var(--theme-surface-high)] px-2.5 py-1 text-[0.7rem] tracking-[0.1em] text-[var(--theme-text-muted)] uppercase"
                 >
                   {tag}
                 </span>

@@ -21,11 +21,11 @@ export default function CredentialsSection() {
         {credentials.map((entry) => (
           <Reveal
             key={`${entry.date}-${entry.title}`}
-            className="group relative flex flex-col rounded-xl border border-[var(--theme-outline-variant)] bg-[var(--theme-surface)] p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--theme-outline)]"
+            className="group relative flex flex-col rounded-xl border border-[var(--theme-outline-variant)] bg-[var(--theme-surface)] p-6 transition-[color,background-color,border-color,box-shadow,transform,opacity,filter] duration-200 hover:-translate-y-0.5 hover:border-[var(--theme-outline)]"
           >
             <div className="flex items-center gap-3">
               <Icon name={entry.icon} size={21} className={entry.accent} />
-              <time className="font-body text-[0.6rem] tracking-[0.14em] text-[var(--theme-outline)] uppercase">
+              <time className="font-body text-[0.7rem] tracking-[0.14em] text-[var(--theme-text-muted)] uppercase">
                 {entry.date}
               </time>
             </div>
@@ -56,7 +56,7 @@ export default function CredentialsSection() {
                   href={entry.credentialUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-body inline-flex items-center gap-1.5 text-[0.66rem] font-bold tracking-[0.12em] text-[var(--theme-primary)] uppercase transition-colors hover:text-[var(--theme-secondary)]"
+                  className="font-body inline-flex items-center gap-1.5 text-[0.72rem] font-bold tracking-[0.12em] text-[var(--theme-primary)] uppercase transition-colors hover:text-[var(--theme-secondary)]"
                 >
                   View credential
                   <Icon name="arrow_outward" size={15} />

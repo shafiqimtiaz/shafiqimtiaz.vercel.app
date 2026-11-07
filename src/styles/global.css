@@ -1,8 +1,18 @@
+/* Hallmark · built: the project · redesign: polish · genre: modern-minimal · theme: the project's own (terminal green on near-black, Bricolage Grotesque and JetBrains Mono)
+ * job: hire · polish only: the system and the layout stay; the eyebrows, tracked-caps labels and accented heading words are the owner's look and stay by request · v2.0.0 */
+/* Hallmark · waive 81 · .crt-overlay is a sheen over the live terminal, not an empty picture · the terminal panels keep the owner's CRT look */
+/* Hallmark · waive 3 · the tech stack tiles each list real tools under their icon · the owner keeps the six-tile stack grid */
+/* Hallmark · waive 71 · each h2 sits under its own // eyebrow label · the owner keeps the terminal eyebrow above every section heading */
 @config '../../tailwind.config.js';
 @import 'tailwindcss';
 
 * {
   box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: clip;
 }
 
 html {
@@ -87,6 +97,32 @@ button {
   cursor: pointer;
 }
 
+/* Keyboard focus: instant, 3:1 or better on every surface. */
+:focus-visible {
+  outline: 2px solid var(--theme-primary);
+  outline-offset: 3px;
+  /* Tailwind's colour transitions include outline-color; the ring must appear instantly. */
+  transition-property:
+    color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow,
+    transform, filter;
+}
+
+/* Buttons and links press on click. */
+a:not(.reveal):active,
+button:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -116,17 +152,22 @@ img {
 }
 
 .crt-overlay {
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.04), transparent 45%);
+  background: linear-gradient(160deg, var(--overlay-sheen), transparent 45%);
 }
 
 .profile-avatar-card {
-  border: 1px solid rgba(73, 72, 71, 0.4);
-  background: linear-gradient(165deg, #2a2a2a 0%, #151515 60%, #101010 100%);
+  border: 1px solid var(--avatar-card-border);
+  background: linear-gradient(
+    165deg,
+    var(--avatar-card-from) 0%,
+    var(--avatar-card-mid) 60%,
+    var(--avatar-card-to) 100%
+  );
 }
 
 .profile-avatar-frame {
-  border-color: rgba(255, 255, 255, 0.08);
-  background: rgba(0, 0, 0, 0.18);
+  border-color: var(--avatar-frame-border);
+  background: var(--avatar-frame-bg);
 }
 
 .grid-pattern-panel {
@@ -136,8 +177,8 @@ img {
 
 .matrix-grid {
   background-image:
-    linear-gradient(to right, rgba(156, 255, 147, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(156, 255, 147, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, var(--matrix-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--matrix-line) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
@@ -151,8 +192,8 @@ img {
   animation: blink 1.1s step-end infinite;
 }
 
-/* Scroll-reveal — toggled by useInView */
-.reveal {
+/* Scroll-reveal, toggled by useInView; hidden only once the script has marked <html class="js">. */
+.js .reveal {
   opacity: 0;
   transform: translateY(14px);
   transition:
@@ -161,7 +202,7 @@ img {
   transition-delay: var(--reveal-delay, 0ms);
 }
 
-.reveal.is-visible {
+.js .reveal.is-visible {
   opacity: 1;
   transform: none;
 }
