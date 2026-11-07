@@ -36,21 +36,28 @@ export const techStack = [
     accent: 'text-[var(--theme-primary)]',
     code: '004',
     title: 'Frontend',
-    items: ['React 18', 'React Router', 'Next.js', 'Vite 7', 'Responsive UI', 'Chrome Extensions'],
+    items: [
+      'React 19',
+      'React Router',
+      'Next.js 16',
+      'Vite 7',
+      'Responsive UI',
+      'Chrome Extensions (MV3)',
+    ],
   },
   {
     icon: 'database',
     accent: 'text-[var(--theme-secondary)]',
     code: '005',
     title: 'Data & Cloud',
-    items: ['PostgreSQL', 'MongoDB', 'Redis', 'AWS (S3, SQS)'],
+    items: ['PostgreSQL', 'Neon', 'Drizzle ORM', 'MongoDB', 'Redis', 'Upstash', 'AWS (S3, SQS)'],
   },
   {
     icon: 'cloud',
     accent: 'text-[var(--theme-tertiary)]',
     code: '006',
     title: 'Cloud & DevOps',
-    items: ['Docker', 'Kubernetes', 'Bitbucket', 'GitHub Actions', 'CI/CD', 'Jenkins'],
+    items: ['Docker', 'Kubernetes', 'Bitbucket', 'GitHub Actions', 'Vercel', 'CI/CD', 'Jenkins'],
   },
 ];
 

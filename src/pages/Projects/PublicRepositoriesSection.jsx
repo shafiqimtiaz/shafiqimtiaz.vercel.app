@@ -6,18 +6,18 @@ export default function PublicRepositoriesSection() {
     <section className="mt-24">
       <Reveal as="header">
         <p className="font-body text-[0.7rem] tracking-[0.2em] text-[var(--theme-tertiary)] uppercase">
-          // Open Source
+          // Shipped & Open Source
         </p>
         <ScrambleOnHover
           as="h2"
           reserveWidth
           className="font-headline mt-4 text-[clamp(2rem,4vw,3rem)] leading-none font-extrabold tracking-[-0.04em] text-[var(--theme-text)]"
         >
-          Public <span className="text-[var(--theme-tertiary)]">repositories</span>
+          Side <span className="text-[var(--theme-tertiary)]">projects</span>
         </ScrambleOnHover>
         <p className="mt-5 max-w-3xl text-base leading-relaxed text-[var(--theme-text-muted)]">
-          Open-source projects and experiments across AI tools, browser extensions, developer
-          tooling, and mobile HCI.
+          Shipped products, open-source projects, and experiments across AI tools, Chrome
+          extensions, and developer tooling.
         </p>
       </Reveal>
 
@@ -29,7 +29,7 @@ export default function PublicRepositoriesSection() {
           >
             <div className="flex items-center justify-between gap-3">
               <span className="font-body text-[0.6rem] tracking-[0.16em] text-[var(--theme-text-muted)] uppercase">
-                repo
+                {repo.repoUrl ? 'repo' : 'live'}
               </span>
               <span className="font-body text-[0.6rem] tracking-[0.16em] text-[var(--theme-secondary)]">
                 {String(index + 1).padStart(2, '0')}
@@ -56,15 +56,17 @@ export default function PublicRepositoriesSection() {
             </div>
 
             <div className="mt-6 flex flex-wrap items-center gap-4 border-t border-[var(--theme-outline-variant)] pt-4">
-              <a
-                href={repo.repoUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="font-body inline-flex items-center gap-1.5 text-[0.66rem] font-bold tracking-[0.12em] text-[var(--theme-text)] uppercase transition-colors hover:text-[var(--theme-primary)]"
-              >
-                <Icon name="code" size={16} />
-                Code
-              </a>
+              {repo.repoUrl && (
+                <a
+                  href={repo.repoUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-body inline-flex items-center gap-1.5 text-[0.66rem] font-bold tracking-[0.12em] text-[var(--theme-text)] uppercase transition-colors hover:text-[var(--theme-primary)]"
+                >
+                  <Icon name="code" size={16} />
+                  Code
+                </a>
+              )}
               {repo.demoUrl && (
                 <a
                   href={repo.demoUrl}
@@ -74,6 +76,17 @@ export default function PublicRepositoriesSection() {
                 >
                   <Icon name="arrow_outward" size={16} />
                   Demo
+                </a>
+              )}
+              {repo.storeUrl && (
+                <a
+                  href={repo.storeUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-body inline-flex items-center gap-1.5 text-[0.66rem] font-bold tracking-[0.12em] text-[var(--theme-text-muted)] uppercase transition-colors hover:text-[var(--theme-primary)]"
+                >
+                  <Icon name="download" size={16} />
+                  Install
                 </a>
               )}
               {repo.writeUpUrl && (

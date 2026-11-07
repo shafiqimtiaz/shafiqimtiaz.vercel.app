@@ -82,7 +82,9 @@ test('public repositories are ordered by portfolio impact', () => {
   assert.deepEqual(
     publicRepositories.map(({ title }) => title),
     [
+      'KemonPoray',
       'nexus-ai',
+      'dash-reader',
       'shafiqimtiaz.vercel.app',
       'ctx-handoff',
       'clean-bookmarks',

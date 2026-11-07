@@ -44,6 +44,18 @@ export const HOME_TERMINAL_PLAYBACK = {
       ],
     },
     {
+      id: 'shipped',
+      label: 'Side Projects',
+      command: 'ls ~/shipped/',
+      delayMs: DEFAULT_PLAYBACK_DELAY_MS,
+      output: [
+        'kemonporay/      → anonymous professor ratings for Bangladesh, 21,000+ professors',
+        'dash-reader/     → RSVP speed reading for Chrome, on the Web Store',
+        'fetch-markdown/  → any page to clean Markdown, fully on-device',
+        'clean-bookmarks/ → bookmark trees organized by on-device AI',
+      ],
+    },
+    {
       id: 'community',
       label: 'Community',
       command: 'cat community.md',

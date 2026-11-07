@@ -115,6 +115,13 @@ export const caseStudies = [
 
 export const publicRepositories = [
   {
+    title: 'KemonPoray',
+    description:
+      'Anonymous professor and university ratings for Bangladesh (কেমন পড়ায়?): a catalogue of 180+ universities and 21,000+ professors, Google sign-in with one permanent affiliation, rating limits, and AI-screened written reviews.',
+    demoUrl: 'https://www.kemonporay.com/',
+    techStack: ['Next.js 16', 'PostgreSQL', 'Drizzle ORM', 'Upstash Redis'],
+  },
+  {
     title: 'nexus-ai',
     description:
       'Agent-first academic workspace unifying Google Classroom, Discord, Slack, and Google Calendar.',
@@ -123,6 +130,15 @@ export const publicRepositories = [
       'https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/new-writeup-1783377933664',
     repoUrl: 'https://github.com/shafiqimtiaz/nexus-ai',
     techStack: ['Gemini', 'Vercel AI SDK', 'MCP', 'Google Calendar'],
+  },
+  {
+    title: 'dash-reader',
+    description:
+      'Chrome extension for RSVP speed reading: one word at a time at a fixed point, with punctuation-aware timing, multi-word chunks, and read-aloud.',
+    demoUrl: 'https://shafiqimtiaz.github.io/dash-reader/',
+    storeUrl: 'https://chromewebstore.google.com/detail/mbbngcffdgincdjlpkekhhppeaappaee',
+    repoUrl: 'https://github.com/shafiqimtiaz/dash-reader',
+    techStack: ['TypeScript', 'Chrome MV3', 'Text-to-Speech', 'RSVP'],
   },
   {
     title: 'shafiqimtiaz.vercel.app',
@@ -141,6 +157,8 @@ export const publicRepositories = [
   {
     title: 'clean-bookmarks',
     description: 'Chrome extension organizing bookmark trees with on-device AI.',
+    demoUrl: 'https://shafiqimtiaz.github.io/clean-bookmarks/',
+    storeUrl: 'https://chromewebstore.google.com/detail/akjmeddnbohjephmppkmifnljehfhkpb',
     repoUrl: 'https://github.com/shafiqimtiaz/clean-bookmarks',
     techStack: ['TypeScript', 'Chrome MV3', 'Gemini Nano', 'On-Device AI'],
   },
@@ -153,9 +171,12 @@ export const publicRepositories = [
   },
   {
     title: 'fetch-markdown',
-    description: 'Chrome extension converting webpages to clean Markdown.',
+    description:
+      'Chrome extension turning a page, selection, link, or image into clean Markdown, processed entirely on-device.',
+    demoUrl: 'https://shafiqimtiaz.github.io/fetch-markdown/',
+    storeUrl: 'https://chromewebstore.google.com/detail/akijdplhjdijpcjkgkhhnlhhjopldoml',
     repoUrl: 'https://github.com/shafiqimtiaz/fetch-markdown',
-    techStack: ['TypeScript', 'Chrome MV3', 'DOM Parsing'],
+    techStack: ['JavaScript', 'Chrome MV3', 'DOM Parsing'],
   },
   {
     title: 'diet-workout-plan',

@@ -49,7 +49,7 @@ ${formatItems(timeline)}
 Case studies:
 ${formatItems(caseStudies)}
 
-Public repositories:
+Side projects (KemonPoray is closed-source; the rest are public repositories):
 ${formatItems(publicRepositories)}
 
 Technical skills:
