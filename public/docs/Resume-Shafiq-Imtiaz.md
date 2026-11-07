@@ -44,15 +44,15 @@ shafiqimtiaz@gmail.com | (514) 574-4436 | Toronto, ON | linkedin.com/in/shafiqim
 
 ## Professional Projects
 
+**KemonPoray - Professor and University Ratings for Bangladesh (Personal Project)** | Next.js 16, React 19, TypeScript, PostgreSQL (Neon), Drizzle ORM, Upstash Redis, Google OpenID Connect, OpenRouter | [kemonporay.com](https://www.kemonporay.com/)
+
+- Built and run an anonymous professor and university rating site covering **180+** universities and **21,000+** professors, with Google sign-in and one permanent university and department assignment enforced by a database trigger.
+- Enforced rating limits of **15** professor ratings per year and **6** outside the student's department, screened written reviews of up to **500** words through OpenRouter before publishing, and slowed bulk scraping with per-address budgets and same-origin checks.
+
 **Nexus AI — Personal Academic Concierge (Personal Project)** | Gemini, Vercel AI SDK, Google Classroom MCP, Discord, Slack, Google Calendar | [Kaggle write-up](https://www.kaggle.com/competitions/vibecoding-agents-capstone-project/writeups/new-writeup-1783377933664)
 
 - Designed and built an agent-first academic workspace that unifies Google Classroom, Discord, Slack, and Google Calendar, converting fragmented announcements, deadlines, and study blocks into structured actions.
 - Implemented a conversational Gemini agent with the Vercel AI SDK, a local in-repo Google Classroom MCP server, browser-session tools for Discord and Slack, and two-way Google Calendar synchronization to extract exam dates, generate multi-day study plans, and write them directly to Google Calendar.
-
-**RAG Chatbot** | Crewdle AI, Embeddings, Vector Search, RAG
-
-- Developed an internal RAG-based chatbot with embeddings and vector search.
-- Runner-up in a $1,000 hackathon and improved sales lead generation compared to manual processes.
 
 ## Education
 
