@@ -26,6 +26,8 @@ shafiqimtiaz@gmail.com | (514) 574-4436 | Toronto, ON | linkedin.com/in/shafiqim
 
 - Engineered AI field recommendations for data mapping with embeddings, reranking, a LiteLLM fallback and Redis caching, raising the confidence threshold from **0.55** to **0.80** and reducing manual review time by **50%**.
 - Developed Studio AI Analysis on Amazon Bedrock to evaluate **50,000+** integrations, with a prompt per persona and blocking when sensitive data is present.
+- Built Agent Core, Flexspring's base library for AI agents (Claude Code, LiteLLM, MCP, Spec Driven Development), reducing new-agent setup from days to hours, with a model per agent role (Opus, Sonnet or Haiku), tests grown from **81** to **132**, and CI/CD with Nexus publishing.
+- Built File Manager as the sole engineer: a multi-region, event-driven file synchronization service on Node.js, PostgreSQL and AWS S3, owning storage, permissions, authentication, observability, and monitoring integration.
 - Migrated **5** core microservices to Spring Boot 3, improving API latency by **20%**.
 - Built Credentials Manager for securely managing third-party API credentials across **8,000+** active client integrations.
 - Built Integration Snapshots (Bitbucket version history with encrypted secrets) and Webhook Templates across Webhook Explorer, the Modeler, Studio and Monitor, moving template data from PostgreSQL to MongoDB.
@@ -46,15 +48,6 @@ shafiqimtiaz@gmail.com | (514) 574-4436 | Toronto, ON | linkedin.com/in/shafiqim
 
 - Designed and built an agent-first academic workspace that unifies Google Classroom, Discord, Slack, and Google Calendar, converting fragmented announcements, deadlines, and study blocks into structured actions.
 - Implemented a conversational Gemini agent with the Vercel AI SDK, a local in-repo Google Classroom MCP server, browser-session tools for Discord and Slack, and two-way Google Calendar synchronization to extract exam dates, generate multi-day study plans, and write them directly to Google Calendar.
-
-**Flexspring-agent-core** | TypeScript, Claude Code, LiteLLM, MCP, Spec Driven Development
-
-- Built Flexspring's base library for AI agents, standardizing development across 3 product surfaces and reducing new-agent setup time from days to hours.
-- Made it Claude Code only with a model per agent role (Opus, Sonnet or Haiku), grew tests from **81** to **132**, and set up CI/CD with Nexus publishing.
-
-**Flexspring-file-manager** | TypeScript, Node.js, PostgreSQL, AWS S3
-
-- Built a multi-region event-driven file synchronization platform as the sole engineer, owning storage, synchronization, permissions, authentication, observability, and monitoring integration.
 
 **RAG Chatbot** | Crewdle AI, Embeddings, Vector Search, RAG
 
