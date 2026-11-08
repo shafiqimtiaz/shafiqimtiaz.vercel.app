@@ -729,6 +729,7 @@ main {
 .end {
   padding-top: 144px;
   padding-bottom: 56px;
+  container-type: inline-size;
 }
 .end .q {
   font:
@@ -739,10 +740,12 @@ main {
 }
 .mail {
   display: inline-block;
-  max-width: 100%;
-  overflow-wrap: anywhere;
+  white-space: nowrap;
   font-weight: 800;
-  font-size: clamp(26px, 7.4vw, 124px);
+  /* Display letterforms at every size keep the address ~9.9em wide, so sizing it
+     to the column keeps it on one line. */
+  font-variation-settings: 'opsz' 96;
+  font-size: min(124px, 100cqi / 10.2);
   letter-spacing: -0.055em;
   line-height: 0.95;
   text-decoration: none;
