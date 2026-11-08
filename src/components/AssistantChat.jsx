@@ -386,15 +386,12 @@ export default function AssistantChat() {
         type="button"
         onClick={() => setIsOpen(true)}
         hidden={isOpen}
-        aria-label="Any questions? Ask the AI assistant about Shafiq"
+        aria-label="Any Questions? Ask the AI assistant about Shafiq"
         aria-haspopup="dialog"
         className="mono fixed right-4 bottom-4 z-50 inline-flex min-h-12 items-center gap-2.5 rounded-full border border-white/15 bg-[rgba(14,17,15,0.82)] py-2 pr-5 pl-4 text-[13px] text-[var(--fg)] shadow-[0_20px_50px_-20px_rgba(0,0,0,0.9)] backdrop-blur-xl transition-[border-color,transform] hover:-translate-y-0.5 hover:border-[var(--acc)] sm:right-6 sm:bottom-6"
       >
-        <span className="relative flex h-2 w-2">
-          <span className="absolute inset-0 animate-ping rounded-full bg-[var(--acc)] opacity-60" />
-          <span className="relative h-2 w-2 rounded-full bg-[var(--acc)]" />
-        </span>
-        Any questions?
+        <Icon name="sparkle" size={18} className="text-[var(--acc)]" />
+        Any Questions?
       </button>
     </>
   );
