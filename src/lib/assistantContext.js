@@ -8,6 +8,21 @@ const resumeContext = readFileSync(
   'utf8'
 ).trim();
 
+const readOptional = (url) => {
+  try {
+    return readFileSync(url, 'utf8')
+      .replace(/<!--[\s\S]*?-->/g, '')
+      .trim();
+  } catch {
+    return '';
+  }
+};
+
+// Written by Shafiq for questions no other source answers.
+const notesContext = readOptional(new URL('../data/notes.md', import.meta.url));
+// Fetched at build time by scripts/build-knowledge.js.
+const generatedKnowledge = readOptional(new URL('../data/knowledge.generated.md', import.meta.url));
+
 const publishedContact = externalNodes
   .map(({ label, handle }) => `- ${label}: ${handle}`)
   .join('\n');
@@ -55,5 +70,19 @@ Technical skills:
 ${formatItems(techStack)}
 
 Credentials:
-${formatItems(credentials)}`;
+${formatItems(credentials)}${
+    notesContext
+      ? `
+
+Notes from Shafiq:
+${notesContext}`
+      : ''
+  }${
+    generatedKnowledge
+      ? `
+
+Public sources fetched when the site was built (READMEs and web pages). Use them for details about his projects; if they disagree with the résumé, trust the résumé:
+${generatedKnowledge}`
+      : ''
+  }`;
 }

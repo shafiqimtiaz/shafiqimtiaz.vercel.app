@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run lint && vite build",
+    "build": "npm run lint && node scripts/build-knowledge.js && vite build",
     "preview": "vite preview",
     "format": "prettier --write .",
     "lint": "prettier --write .",

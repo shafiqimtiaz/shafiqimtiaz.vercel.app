@@ -103,3 +103,7 @@ test('portfolio repository publishes its live project links', () => {
   assert.equal(portfolio.repoUrl, 'https://github.com/shafiqimtiaz/shafiqimtiaz.vercel.app');
   assert.equal(portfolio.demoUrl, 'https://shafiqimtiaz.vercel.app/');
 });
+
+test('buildAssistantInstructions leaves out the notes template comment', () => {
+  assert.doesNotMatch(buildAssistantInstructions(), /HTML comments like this one are ignored/);
+});
