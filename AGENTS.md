@@ -11,25 +11,17 @@
 
 ### Architecture
 
-Single-page SPA. One page (`src/pages/Home/index.jsx`) assembles all sections:
-Hero → Terminal → Stats → Projects (Case Studies + Public Repos) → About (Profile + Tech Stack + Timeline + Credentials) → Contact.
-
-Data is entirely static — all content lives in `src/data/` files. No API, no CMS, no state management.
+Single-page site. `src/pages/Portfolio.jsx` holds all sections; `src/lib/flexforge.js` runs the scroll-driven particle film (lazy-loaded three.js) and the number count-up. `src/styles/portfolio.css` holds the page styles. The AI assistant (`src/components/AssistantChat.jsx` + `api/assistant.js`) answers from `src/data/` and the résumé Markdown.
 
 ### How to update the site
 
-#### Update Career Timeline
+#### Update page copy and metrics
 
-Edit `src/data/experience.js` → `timeline[]`. Each entry: `{date, title, org, accent, icon, details[], credentialUrl?}`. Also has `techStack[]` and `credentials[]`.
+Edit `src/pages/Portfolio.jsx` (FlexForge chapters, `heroStats`, `why`, `work`, `experience`). Keep the same facts in `src/data/` and the résumé so the assistant and PDF agree with the page.
 
-#### Update Case Studies / Repos
+#### Update the particle film
 
-Edit `src/data/projects.js` → `caseStudies[]` and `publicRepositories[]`. Case study: `{code, label, highlights, details[3], title, description, tags[]}`. Repo: `{title, description, repoUrl, demoUrl?, techStack[]}`.
-
-#### Update Bio / Intro
-
-Edit `src/pages/About/ProfileSection.jsx` (first `<p>` after `// mission`).
-Also edit `src/pages/Home/HeroSection.jsx` (the `<p>` below the subtitle).
+Each chapter in `Portfolio.jsx` carries `data-s="<n>"`; `build()` in `src/lib/flexforge.js` returns one shape per chapter in the same order.
 
 #### Update Resume
 
@@ -46,135 +38,12 @@ Replace `public/docs/developer-avatar.jpg`.
 
 ### Styling conventions
 
-- Tailwind CSS v4 + CSS vars from `theme.css`
-- Dark-only theme (`color-scheme: dark`)
-- Fonts: `Bricolage Grotesque` (headline), `JetBrains Mono` (body)
-- Animation: GSAP + ScrollTrigger + Lenis (smooth scroll)
-- Colors use CSS var tokens: `--theme-primary`, `--theme-secondary`, `--theme-tertiary`, `--theme-text`, `--theme-text-muted`, `--theme-surface`, `--theme-surface-low`, `--theme-outline-variant`, `--theme-bg`
-
-### Component patterns
-
-- `Reveal` wraps sections for scroll-triggered fade/slide-up animation
-- `Button` is polymorphic (a/Link/button) with 5 variants
-- `CountUp` animates stat numbers (handles "2,500+" format)
-- All section components are default exports, imported in `Home/index.jsx`
+- Page styles live in `src/styles/portfolio.css`; tokens are the `:root` variables at its top (`--acc` brand green, `--peach`, `--butter`, `--sky`, `--rose`).
+- Bricolage Grotesque for headings and body, JetBrains Mono for numbers and labels.
+- Colour carries meaning (data types, agents, requirement kinds); avoid purple or indigo, cyan glows and decorative gradients. Gradient text is used only on "2 hours" and the email.
+- Every animation has a `prefers-reduced-motion` fallback.
 
 ### Notes
 
-- React Router v7 is installed but only used for Link/location in Navbar. Site is a single page.
-- Vercel Analytics + Speed Insights wired in App.jsx.
-- No tests in this project.
-
-### Styling conventions
-
-All styling uses these CSS vars — never hardcode hex values.
-
-| Token                     | Value      | Usage                                   |
-| ------------------------- | ---------- | --------------------------------------- |
-| `--theme-bg`              | `#0a0b0a`  | Page background                         |
-| `--theme-surface-low`     | `#101210`  | Card backgrounds, section bg            |
-| `--theme-surface`         | `#161916`  | Card hover states                       |
-| `--theme-surface-high`    | `#1d201d`  | Elevated surfaces, tag pills            |
-| `--theme-text`            | `#f4f7f3`  | Primary text                            |
-| `--theme-text-muted`      | `#9aa39a`  | Body copy, descriptions                 |
-| `--theme-outline`         | `#6f766f`  | Borders on hover                        |
-| `--theme-outline-variant` | `#3c423c`  | Default borders, dividers               |
-| `--theme-primary`         | `#8dff7a`  | Primary accent (green), highlights      |
-| `--theme-primary-dim`     | `#16d65a`  | Dimmed primary                          |
-| `--theme-secondary`       | `#4fd6ff`  | Secondary accent (cyan)                 |
-| `--theme-tertiary`        | `#ffce6b`  | Tertiary accent (amber)                 |
-| `--theme-error-dim`       | `#ff6b4a`  | Error states                            |
-| `--theme-on-primary`      | `#03160a`  | Text on primary bg                      |
-| `--theme-on-secondary`    | `#03161a`  | Text on secondary bg                    |
-| `--theme-on-tertiary`     | `#1a1304`  | Text on tertiary bg                     |
-| `--shadow-primary`        | green glow | Primary shadow with green tint          |
-| `--glow-primary`          | green glow | Text glow, timeline accent              |
-| `--container-width`       | `1180px`   | Max page width                          |
-| `--header-height`         | `84px`     | Navbar height (used for scroll-padding) |
-
-**Fonts**: `--font-headline` = Bricolage Grotesque, `--font-body` = JetBrains Mono.  
-**Transitions**: `--transition-fast` (180ms), `--transition-base` (320ms).
-
----
-
-### Component reference
-
-#### Button
-
-```jsx
-<Button variant="primary|secondary|orange|ghost|info" href? to? className? />
-```
-
-- **Polymorphic**: `to` → `<Link>`, `href` → `<a>`, neither → `<button>`
-- **5 variants**: `primary` (green), `secondary` (outline), `orange` (amber), `ghost` (subtle surface), `info` (cyan)
-- Uses `useMagnetic` for hover pull effect
-- Default: `min-h-12`, `px-5`, `text-[0.66rem]`, `uppercase`, `tracking-[0.14em]`
-
-#### Reveal
-
-```jsx
-<Reveal as="div|header|article" delay={0} className? />
-```
-
-- Scroll-triggered fade + slide-up (22px). Uses `useInView` IntersectionObserver.
-- `delay` in ms: applies `--reveal-delay` CSS var for staggered animations
-- `as`: renders as any HTML tag (default `<div>`)
-
-#### CountUp
-
-```jsx
-<CountUp value="2,500+" className? />
-```
-
-- Parses `<prefix><number><suffix>` — e.g. `"2,500+"` → prefix `""`, number `2500`, suffix `"+"`
-- Animated with GSAP (`power3.out`, 1.4s). Respects `prefers-reduced-motion`.
-- Renders `aria-label={value}` for screen readers
-
-#### DecodeText
-
-```jsx
-<DecodeText text="Shafiq" delay={150} duration={550} className? />
-```
-
-- Scrambles text from random glyphs on mount. Accessible: real text in `aria-label`.
-- Respects `prefers-reduced-motion` (renders text immediately)
-
-#### SectionHeader
-
-```jsx
-<SectionHeader label? title? description? actionLink? className? />
-```
-
-- `actionLink`: `{ label, href? | to? }` — renders external `<a>` or internal `<Link>`
-
-#### TerminalPanel
-
-```
-Windowed shell container: red/yellow/green traffic-light dots, CRT scanline overlay, border
-```
-
-#### TerminalPlayback
-
-```
-Interactive CLI: shows suggestions → user clicks → executes with delay → renders output
-```
-
----
-
-### Animation system
-
-| Technology               | Purpose                                                            |
-| ------------------------ | ------------------------------------------------------------------ |
-| **GSAP + ScrollTrigger** | Scroll-triggered animations (timeline line-reveal, count-up)       |
-| **Lenis**                | Smooth scrolling (`lerp: 0.12`), synced with GSAP ScrollTrigger    |
-| **`Reveal` component**   | Fade + slide-up on enter viewport (CSS transition, 0.7s ease-out)  |
-| **`.rise` class**        | Staggered hero entrance on page load (keyframes, 5 children)       |
-| **`scramble.js`**        | DecodeText scramble animation on mount                             |
-| **`useMagnetic`**        | GSAP magnetic hover on fine-pointer devices (Button, Navbar links) |
-| **`useInView`**          | IntersectionObserver → `{ref, inView}` used by Reveal, CountUp     |
-| **`useScrollProgress`**  | Scroll % + active section hash tracking (Navbar progress bar)      |
-
-**Reduced motion**: `prefersReducedMotion()` checks `window.matchMedia`. All animations skip when true — `Reveal` becomes visible immediately, `CountUp` shows static value, `DecodeText` renders instantly, Lenis is disabled.
-
-**Tailwind breakpoints**: `sm:640`, `md:768`, `lg:1024`, `xl:1280`.  
-**Grid**: `<section>` → `<div className="container">` (max-width: `--container-width`, centered).
+- The particle engine is lazy-loaded from `Portfolio.jsx` so three.js never blocks first paint.
+- `src/styles/theme.css` still supplies the `--theme-*` variables the assistant chat uses.
