@@ -1,9 +1,9 @@
 import * as THREE from 'three';
 import Lenis from 'lenis';
 
-// Scroll-driven particle film for the FlexForge story. Each [data-s] marker in `root`
+// Scroll-driven particle film for the case study. Each [data-s] marker in `root`
 // is a stage; particles morph between one shape per stage as its marker crosses mid-screen.
-export function initFlexForge({ canvas, root, solid, index }) {
+export function initStory({ canvas, root, solid, index }) {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const small = innerWidth < 900;
   const N = small ? 5000 : 8500;

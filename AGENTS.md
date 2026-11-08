@@ -11,17 +11,17 @@
 
 ### Architecture
 
-Single-page site. `src/pages/Portfolio.jsx` holds all sections; `src/lib/flexforge.js` runs the scroll-driven particle film (lazy-loaded three.js) and the number count-up. `src/styles/portfolio.css` holds the page styles. The AI assistant (`src/components/AssistantChat.jsx` + `api/assistant.js`) answers from `src/data/` and the résumé Markdown.
+Single-page site. `src/pages/Portfolio.jsx` holds all sections; `src/lib/story.js` runs the scroll-driven particle film (lazy-loaded three.js) and the number count-up. `src/styles/portfolio.css` holds the page styles. The AI assistant (`src/components/AssistantChat.jsx` + `api/assistant.js`) answers from `src/data/` and the résumé Markdown.
 
 ### How to update the site
 
 #### Update page copy and metrics
 
-Edit `src/pages/Portfolio.jsx` (FlexForge chapters, `heroStats`, `why`, `work`, `experience`). Keep the same facts in `src/data/` and the résumé so the assistant and PDF agree with the page.
+Edit `src/pages/Portfolio.jsx` (case study chapters, `heroStats`, `why`, `work`, `experience`). Keep the same facts in `src/data/` and the résumé so the assistant and PDF agree with the page.
 
 #### Update the particle film
 
-Each chapter in `Portfolio.jsx` carries `data-s="<n>"`; `build()` in `src/lib/flexforge.js` returns one shape per chapter in the same order.
+Each chapter in `Portfolio.jsx` carries `data-s="<n>"`; `build()` in `src/lib/story.js` returns one shape per chapter in the same order.
 
 #### Update Resume
 

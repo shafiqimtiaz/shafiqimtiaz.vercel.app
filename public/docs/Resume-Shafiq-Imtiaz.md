@@ -14,29 +14,29 @@ shafiqimtiaz@gmail.com | (514) 574-4436 | Toronto, ON | linkedin.com/in/shafiqim
 ### Senior Software Engineer - Principal | Flexspring | Remote | Toronto, ON | Aug 2026 – Present
 
 - Promoted to Senior Software Engineer - Principal in August 2026.
-- Designed and drive **FlexForge**, a multi-agent AI system that turns a client's documents into a working HR integration, cutting setup from **2 weeks to 2 hours (99%)** across **2,500+** B2B client configurations.
-- Added cost tracking, per-step model selection and security hardening to FlexForge's AI services.
-- Released Agent Core to the team as a shared Claude Code plugin with a review step before every commit and pinned MCP server versions.
-- Built Local Stack, a one-command local environment for the whole platform with per-service logs and a terminal dashboard with saved service profiles.
-- Designed FlexForge's agentic architecture, in which AI agents plan, build and check their own work before a specialist reviews it.
+- Designed and drive an agentic integration builder: a multi-agent AI system that turns a client's documents into a working HR integration, cutting setup from **2 weeks to 2 hours (99%)** across **2,500+** B2B client configurations.
+- Added cost tracking, per-step model selection and security hardening to its AI services.
+- Released a Claude Code team plugin with agents, MCP servers and skills: new-agent setup from days to hours.
+- Built a one-command dev stack with a terminal UI for the whole platform, replacing hand-built Docker setups.
+- Designed its agentic architecture, in which AI agents plan, build and check their own work before a specialist reviews it.
 - Used Claude Code as an AI coding agent for professional development and Codex for personal development.
 - Mentored interns and incoming developers through onboarding, technical guidance, and code reviews.
 
 ### Software Engineer - R&D and AI | Flexspring | Remote | Ottawa, ON | May 2024 – Aug 2026
 
 - Engineered AI field recommendations for data mapping with embeddings, reranking, a LiteLLM fallback and Redis caching, raising the confidence threshold from **0.55** to **0.80** and reducing manual review time by **50%**.
-- Developed AI Integration Analysis on Amazon Bedrock to evaluate **50,000+** integrations, with persona-based review and sensitive-data blocking.
-- Built Agent Core, Flexspring's base library for AI agents (Claude Code, LiteLLM, MCP, Spec Driven Development), reducing new-agent setup from days to hours, with a model per agent role (Opus, Sonnet or Haiku), tests grown from **81** to **132**, and CI/CD with Nexus publishing.
+- Built an AI integration review on Amazon Bedrock to evaluate **50,000+** integrations, with persona-based review and sensitive-data blocking.
+- Built the team's base library for AI agents (Claude Code, LiteLLM, MCP, Spec Driven Development), reducing new-agent setup from days to hours, with a model per agent role (Opus, Sonnet or Haiku), tests grown from **81** to **132**, and CI/CD with Nexus publishing.
 - Built File Manager as the sole engineer: a multi-region, event-driven file synchronization service on Node.js, PostgreSQL and AWS S3, owning storage, permissions, authentication, observability, and monitoring integration.
 - Migrated **5** core microservices to Spring Boot 3, improving API latency by **20%**.
 - Built Credentials Manager for securely managing third-party API credentials across **8,000+** active client integrations.
-- Built Integration Snapshots (Bitbucket version history with encrypted secrets) and Webhook Templates across Webhook Explorer, the Modeler, Studio and Monitor, moving template data from PostgreSQL to MongoDB.
-- Runner-up with a **$1,000** prize at the internal hackathon for a RAG chatbot built on Crewdle AI and Flexspring data, with embeddings and vector search.
+- Built integration version history with encrypted secrets, and webhook templates across the platform's apps, moving template data from PostgreSQL to MongoDB.
+- Runner-up with a **$1,000** prize at the internal hackathon for a RAG chatbot built on company data, with embeddings and vector search.
 
 ### Software Engineer Intern | Flexspring | Remote | Montreal, QC | May 2023 – May 2024
 
 - Modernized **3** legacy services from Java 8 to Java 17 and Spring Boot 2 to Spring Boot 3.
-- Delivered **20+** reusable UI components for Monitor Pilot dashboard, improving rendering performance by **40%**.
+- Delivered **20+** reusable UI components for the customer dashboard, improving rendering performance by **40%**.
 
 ### Full Stack Software Developer | BSRM | Chittagong, Bangladesh | Apr 2019 – Jun 2021
 

@@ -5,12 +5,12 @@ import { validateAssistantMessages } from '../src/lib/assistantRequest.js';
 test('validateAssistantMessages returns bounded model messages', () => {
   assert.deepEqual(
     validateAssistantMessages([
-      { role: 'user', content: 'Tell me about Agent Core.' },
+      { role: 'user', content: 'Tell me about his AI work.' },
       { role: 'assistant', content: 'It is a reusable AI-agent foundation.' },
     ]),
     {
       messages: [
-        { role: 'user', content: 'Tell me about Agent Core.' },
+        { role: 'user', content: 'Tell me about his AI work.' },
         { role: 'assistant', content: 'It is a reusable AI-agent foundation.' },
       ],
     }
