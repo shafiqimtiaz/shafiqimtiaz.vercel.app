@@ -1,6 +1,10 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { appendAssistantText, scrollAssistantToBottom } from '../src/lib/assistantChat.js';
+import {
+  appendAssistantText,
+  parseStoredMessages,
+  scrollAssistantToBottom,
+} from '../src/lib/assistantChat.js';
 
 test('appendAssistantText appends streamed text to the pending assistant reply', () => {
   const messages = [
@@ -24,4 +28,20 @@ test('scrollAssistantToBottom moves the message viewport to its content end', ()
 
 test('scrollAssistantToBottom ignores an unavailable viewport', () => {
   assert.doesNotThrow(() => scrollAssistantToBottom(null));
+});
+
+test('parseStoredMessages keeps only valid, non-empty messages', () => {
+  const raw = JSON.stringify([
+    { role: 'user', content: 'Hi' },
+    { role: 'assistant', content: '' },
+    { role: 'system', content: 'x' },
+    { role: 'assistant', content: 'Hello' },
+  ]);
+
+  assert.deepEqual(parseStoredMessages(raw), [
+    { role: 'user', content: 'Hi' },
+    { role: 'assistant', content: 'Hello' },
+  ]);
+  assert.deepEqual(parseStoredMessages('not json'), []);
+  assert.deepEqual(parseStoredMessages(null), []);
 });

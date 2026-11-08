@@ -11,3 +11,20 @@ export function scrollAssistantToBottom(container) {
 
   container.scrollTop = container.scrollHeight;
 }
+
+export function parseStoredMessages(raw) {
+  try {
+    const messages = JSON.parse(raw);
+
+    return Array.isArray(messages)
+      ? messages.filter(
+          (message) =>
+            (message?.role === 'user' || message?.role === 'assistant') &&
+            typeof message.content === 'string' &&
+            message.content
+        )
+      : [];
+  } catch {
+    return [];
+  }
+}

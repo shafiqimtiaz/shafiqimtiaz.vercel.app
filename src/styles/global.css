@@ -51,3 +51,10 @@ img {
     transition-duration: 0.01ms !important;
   }
 }
+
+@keyframes assistant-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+}

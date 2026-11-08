@@ -1,6 +1,7 @@
 import { HugeiconsIcon } from '@hugeicons/react';
 import {
   AiBrain01Icon,
+  ArrowUp02Icon,
   ArrowUpRight01Icon,
   BrowserIcon,
   Certificate01Icon,
@@ -17,10 +18,12 @@ import {
   Minimize01Icon,
   NetworkIcon,
   PlusSignIcon,
+  RefreshIcon,
   Rocket01Icon,
   SendIcon,
   ServerStack01Icon,
   SparklesIcon,
+  StopIcon,
   TerminalIcon,
   UserGroupIcon,
   XIcon,
@@ -30,6 +33,9 @@ import {
 const iconMap = {
   arrow_outward: ArrowUpRight01Icon,
   send: SendIcon,
+  arrow_up: ArrowUp02Icon,
+  stop: StopIcon,
+  refresh: RefreshIcon,
   description: FileTextIcon,
   code: CodeIcon,
   download: Download04Icon,
