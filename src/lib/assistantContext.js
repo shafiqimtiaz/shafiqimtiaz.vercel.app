@@ -9,7 +9,6 @@ const resumeContext = readFileSync(
 ).trim();
 
 const publishedContact = externalNodes
-  .filter(({ label }) => label === 'Email' || label === 'LinkedIn')
   .map(({ label, handle }) => `- ${label}: ${handle}`)
   .join('\n');
 

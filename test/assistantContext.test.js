@@ -33,6 +33,7 @@ test('buildAssistantInstructions includes published contact options', () => {
   assert.match(instructions, /portfolio contact section/i);
   assert.match(instructions, /shafiqimtiaz@gmail\.com/);
   assert.match(instructions, /linkedin\.com\/in\/shafiqimtiaz/);
+  assert.match(instructions, /github\.com\/shafiqimtiaz/);
   assert.match(instructions, /do not repeat the phone number/i);
 });
 
