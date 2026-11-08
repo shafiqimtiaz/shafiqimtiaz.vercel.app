@@ -15,17 +15,17 @@ export const caseStudies = [
   },
   {
     code: '002',
-    label: 'AI Product Platform',
-    highlights: 'AI Integration Wizard',
-    title: 'AI Integration Wizard',
+    label: 'Agentic AI Platform',
+    highlights: 'FlexForge',
+    title: 'FlexForge',
     description:
-      'Led the AI Integration Assembly Line, from content sync of Google Drive documents and videos with Whisper transcription, to automatic setup of credentials, mapping tables and lookup tables from AI output. Data Mapping candidates come from synced content, people review them in Studio, and the generated BPMN is checked against the accepted tables. Shipped Wizard API 1.4 to 1.17.',
+      'Designed and drive FlexForge end to end: a multi-agent AI system that reads everything a client shares, turns it into structured requirements that specialists accept or reject, then builds the credentials, data mappings and integration process. Integration setup went from 2 weeks to 2 hours, 99% less, across 2,500+ client configurations.',
     details: [
-      'AI output turned into credentials, mapping and lookup tables',
-      'A model per step, fewer tokens, and LLM cost tracking',
-      'Per-caller bearer tokens and credential masking',
+      'Multi-agent system that plans, builds and checks its own work',
+      'Integration setup from 2 weeks to 2 hours (99%)',
+      'Specialists accept or reject every requirement',
     ],
-    tags: ['LLM APIs', 'Whisper', 'BPMN', 'Cost Tracking'],
+    tags: ['Multi-Agent', 'LLM APIs', 'RAG', 'Cost Tracking'],
   },
   {
     code: '003',
@@ -58,16 +58,16 @@ export const caseStudies = [
   {
     code: '005',
     label: 'AI Product Platform',
-    highlights: 'Studio AI Analysis',
-    title: 'Studio AI Analysis',
+    highlights: 'AI Integration Analysis',
+    title: 'AI Integration Analysis',
     description:
-      'Built Studio AI Analysis end-to-end to evaluate 50,000+ integrations: AI review of BPMN processes on Amazon Bedrock with a prompt for each persona and blocking when sensitive data is present. In 2026 added Blueprints analysis and risk and impact checks before deployment.',
+      'Built AI Integration Analysis end-to-end to evaluate 50,000+ integrations: AI review of integration processes on Amazon Bedrock with a prompt for each persona and blocking when sensitive data is present. In 2026 added Blueprints analysis and risk and impact checks before deployment.',
     details: [
-      'Persona-specific BPMN review on Bedrock',
+      'Persona-specific review on Bedrock',
       'Sensitive-data blocking',
       'Blueprints analysis and pre-deployment risk checks',
     ],
-    tags: ['Amazon Bedrock', 'BPMN', 'Spring Boot', 'React'],
+    tags: ['Amazon Bedrock', 'Guardrails', 'Spring Boot', 'React'],
   },
   {
     code: '006',

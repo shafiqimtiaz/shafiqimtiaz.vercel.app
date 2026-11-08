@@ -1,8 +1,8 @@
 :root {
   color-scheme: dark;
   --font-headline: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
-  --font-body: 'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-  --theme-bg: #0a0b0a;
+  --font-body: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --theme-bg: #090b0a;
   --theme-surface-lowest: #050605;
   --theme-surface-low: #101210;
   --theme-surface: #161916;
@@ -12,7 +12,7 @@
   --theme-text-muted: #9aa39a;
   --theme-outline: #6f766f;
   --theme-outline-variant: #3c423c;
-  --theme-primary: #8dff7a;
+  --theme-primary: #a8e6a1;
   --theme-primary-dim: #16d65a;
   --theme-secondary: #4fd6ff;
   --theme-tertiary: #ffce6b;

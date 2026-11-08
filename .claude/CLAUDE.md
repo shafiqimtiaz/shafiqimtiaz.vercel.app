@@ -17,18 +17,15 @@ npm run preview    # Preview production build locally
 
 ## Architecture
 
-**Stack**: React 18 + Vite + Tailwind CSS v4 + React Router v7
+**Stack**: React 18 + Vite + Tailwind CSS v4 (used by the assistant chat) + three.js + Lenis
 
 **Key Files**:
 
-- [src/App.jsx](src/App.jsx) - Route definitions with shared Navbar/Footer shell
-- [src/main.jsx](src/main.jsx) - Entry point, wraps app in BrowserRouter
-- [src/hooks/useTheme.js](src/hooks/useTheme.js) - Theme state management (localStorage persisted)
-- [src/styles/theme.css](src/styles/theme.css) - CSS custom properties for dark/light themes
-- [src/styles/global.css](src/styles/global.css) - Tailwind imports + base styles + decorative overlays (CRT scanlines, grid patterns)
+- [src/pages/Portfolio.jsx](src/pages/Portfolio.jsx) - The whole one-page site: FlexForge story chapters, Why me, Also built, More work, Experience, Contact
+- [src/lib/flexforge.js](src/lib/flexforge.js) - Scroll-driven three.js particle film (one shape per `[data-s]` chapter) and number count-up; lazy-loaded
+- [src/styles/portfolio.css](src/styles/portfolio.css) - Page styles: pastel palette led by brand green `#a8e6a1`, Bricolage Grotesque + JetBrains Mono
+- [src/components/AssistantChat.jsx](src/components/AssistantChat.jsx) - AI assistant widget backed by [api/assistant.js](api/assistant.js)
+- [src/data/](src/data/) - Content the assistant answers from (keep in sync with the page and résumé)
+- [public/docs/](public/docs/) - Résumé PDF (single page) and Markdown source
 
-**Routing**: Client-side routing with react-router. GitHub Pages SPA redirect script in [index.html](index.html) handles 404 fallbacks.
-
-**Theming**: Dark mode default. `useTheme` hook toggles `theme-light` class on `<html>`. All colors use CSS custom properties from theme.css.
-
-**Static Projects**: Legacy vanilla JS projects live in [public/projects/](public/projects/) and are served directly.
+**Content rules**: FlexForge copy says what it achieves, never how it works internally (NDA). Headline metric is 2 weeks to 2 hours (99%); use it consistently across the page, `src/data/` and the résumé.

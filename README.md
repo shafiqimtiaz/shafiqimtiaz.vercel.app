@@ -74,9 +74,9 @@ _B2B HR integration platform serving 2,500+ client configurations_
 
 ### About This Repository
 
-This repo is the source of my portfolio at **[shafiqimtiaz.vercel.app](https://shafiqimtiaz.vercel.app)**: a single-page site with a terminal-inspired aesthetic, dark/light theming, and scroll-reveal motion.
+This repo is the source of my portfolio at **[shafiqimtiaz.vercel.app](https://shafiqimtiaz.vercel.app)**: a single-page site that tells the FlexForge story as a scroll-driven three.js particle film, followed by my work, each with its number.
 
-**Built with** ![React 18](https://img.shields.io/badge/React_18-20232A?style=flat-square&logo=react&logoColor=61DAFB) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white) ![Tailwind v4](https://img.shields.io/badge/Tailwind_v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white) ![React Router v7](https://img.shields.io/badge/React_Router_v7-CA4245?style=flat-square&logo=reactrouter&logoColor=white) · deployed on **Vercel**.
+**Built with** ![React 18](https://img.shields.io/badge/React_18-20232A?style=flat-square&logo=react&logoColor=61DAFB) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white) ![Tailwind v4](https://img.shields.io/badge/Tailwind_v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white) ![three.js](https://img.shields.io/badge/three.js-000000?style=flat-square&logo=threedotjs&logoColor=white) · deployed on **Vercel**.
 
 ```bash
 npm install      # install dependencies
@@ -87,9 +87,9 @@ npm run preview  # preview the production build
 
 ```
 src/
-├─ pages/        # Home composes Hero / Projects / About / Contact sections
-├─ components/   # Navbar, Footer, and reusable ui/ primitives
-├─ data/         # content (experience, projects, stats) — single source of truth
-├─ hooks/        # useTheme, useScrollProgress, useInView
-└─ styles/       # theme.css (design tokens) + global.css
+├─ pages/        # Portfolio.jsx, the whole one-page site
+├─ components/   # AssistantChat and the Icon primitive
+├─ lib/          # flexforge.js particle engine, assistant helpers
+├─ data/         # content the AI assistant answers from
+└─ styles/       # portfolio.css (page), theme.css + global.css (assistant)
 ```

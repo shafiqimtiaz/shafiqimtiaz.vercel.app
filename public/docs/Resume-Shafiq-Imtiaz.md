@@ -3,7 +3,7 @@ shafiqimtiaz@gmail.com | (514) 574-4436 | Toronto, ON | linkedin.com/in/shafiqim
 
 ## Core Skills
 
-- **AI Engineering:** LLM Integration, RAG, MCP, Embeddings, Reranking, Vector Databases, Agent Workflows, LangChain, LangGraph, LangSmith, LiteLLM, Amazon Bedrock, Claude Code, Function Calling, AI Evaluation, AI Observability, Structured Output
+- **AI Engineering:** Agentic AI, Multi-Agent Systems, LLM Integration, RAG, MCP, Embeddings, Reranking, Vector Databases, Agent Workflows, LangChain, LangGraph, LangSmith, LiteLLM, Amazon Bedrock, Claude Code, Function Calling, AI Evaluation, AI Observability, Structured Output
 - **Languages:** TypeScript, JavaScript, Java 17, Python, SQL
 - **Backend:** Node.js, Spring Boot 3, Quarkus, REST APIs, GraphQL, WebSocket, OpenAPI
 - **Frontend:** React 18, Next.js, Vite 7, TanStack Query, Chrome Extensions
@@ -14,18 +14,18 @@ shafiqimtiaz@gmail.com | (514) 574-4436 | Toronto, ON | linkedin.com/in/shafiqim
 ### Senior Software Engineer - Principal | Flexspring | Remote | Toronto, ON | Aug 2026 – Present
 
 - Promoted to Senior Software Engineer - Principal in August 2026.
-- Lead the AI Integration Assembly Line across **2,500+** B2B client configurations: the Wizard turns synced Google Drive documents and videos (Whisper transcription) into credentials, mapping tables and lookup tables, reducing integration creation time by **90%**.
-- Hardened the Wizard API (releases 1.4 to 1.17) with per-caller bearer tokens, credential masking, a model per step and LLM cost tracking.
+- Designed and drive **FlexForge**, a multi-agent AI system that turns a client's documents into a working HR integration, cutting setup from **2 weeks to 2 hours (99%)** across **2,500+** B2B client configurations.
+- Added cost tracking, per-step model selection and security hardening to FlexForge's AI services.
 - Released Agent Core to the team as a shared Claude Code plugin with a review step before every commit and pinned MCP server versions.
 - Built Local Stack, a one-command local environment for the whole platform with per-service logs and a terminal dashboard with saved service profiles.
-- Moving every Wizard AI step to a new Wizard AI Server on LangChain and LangGraph, with LangSmith tracing.
+- Designed FlexForge's agentic architecture, in which AI agents plan, build and check their own work before a specialist reviews it.
 - Used Claude Code as an AI coding agent for professional development and Codex for personal development.
 - Mentored interns and incoming developers through onboarding, technical guidance, and code reviews.
 
 ### Software Engineer - R&D and AI | Flexspring | Remote | Ottawa, ON | May 2024 – Aug 2026
 
 - Engineered AI field recommendations for data mapping with embeddings, reranking, a LiteLLM fallback and Redis caching, raising the confidence threshold from **0.55** to **0.80** and reducing manual review time by **50%**.
-- Developed Studio AI Analysis on Amazon Bedrock to evaluate **50,000+** integrations, with a prompt per persona and blocking when sensitive data is present.
+- Developed AI Integration Analysis on Amazon Bedrock to evaluate **50,000+** integrations, with persona-based review and sensitive-data blocking.
 - Built Agent Core, Flexspring's base library for AI agents (Claude Code, LiteLLM, MCP, Spec Driven Development), reducing new-agent setup from days to hours, with a model per agent role (Opus, Sonnet or Haiku), tests grown from **81** to **132**, and CI/CD with Nexus publishing.
 - Built File Manager as the sole engineer: a multi-region, event-driven file synchronization service on Node.js, PostgreSQL and AWS S3, owning storage, permissions, authentication, observability, and monitoring integration.
 - Migrated **5** core microservices to Spring Boot 3, improving API latency by **20%**.

@@ -1,89 +1,14 @@
-/* Hallmark · built: the project · redesign: polish · genre: modern-minimal · theme: the project's own (terminal green on near-black, Bricolage Grotesque and JetBrains Mono)
- * job: hire · polish only: the system and the layout stay; the eyebrows, tracked-caps labels and accented heading words are the owner's look and stay by request · v2.0.0 */
-/* Hallmark · waive 81 · .crt-overlay is a sheen over the live terminal, not an empty picture · the terminal panels keep the owner's CRT look */
-/* Hallmark · waive 3 · the tech stack tiles each list real tools under their icon · the owner keeps the six-tile stack grid */
-/* Hallmark · waive 71 · each h2 sits under its own // eyebrow label · the owner keeps the terminal eyebrow above every section heading */
 @config '../../tailwind.config.js';
 @import 'tailwindcss';
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html,
 body {
-  overflow-x: clip;
-}
-
-html {
-  /* Native smooth scroll off — Lenis drives scrolling; scrollToId falls back to
-     scrollIntoView({behavior:'smooth'}) when Lenis is disabled (reduced motion). */
-  scroll-padding-top: var(--header-height);
-}
-
-body {
-  margin: 0;
   min-width: 320px;
-  font-family: var(--font-body);
-  background: var(--theme-bg);
-  color: var(--theme-text);
-  line-height: 1.6;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-}
-
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(
-      ellipse 80% 50% at 50% -10%,
-      color-mix(in srgb, var(--theme-primary) 10%, transparent),
-      transparent 60%
-    ),
-    radial-gradient(
-      circle at 85% 100%,
-      color-mix(in srgb, var(--theme-secondary) 7%, transparent),
-      transparent 45%
-    );
-  pointer-events: none;
-  z-index: -2;
-}
-
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image:
-    linear-gradient(color-mix(in srgb, var(--theme-outline) 50%, transparent) 1px, transparent 1px),
-    linear-gradient(
-      90deg,
-      color-mix(in srgb, var(--theme-outline) 50%, transparent) 1px,
-      transparent 1px
-    );
-  background-size: 64px 64px;
-  -webkit-mask-image: radial-gradient(ellipse 100% 80% at 50% 0%, black, transparent 75%);
-  mask-image: radial-gradient(ellipse 100% 80% at 50% 0%, black, transparent 75%);
-  opacity: 0.05;
-  pointer-events: none;
-  z-index: -1;
-}
-
-#root {
-  min-height: 100vh;
-}
-
-::selection {
-  background: var(--theme-primary);
-  color: var(--theme-on-primary);
-}
-
-@layer base {
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
 }
 
 button,
@@ -95,32 +20,6 @@ select {
 
 button {
   cursor: pointer;
-}
-
-/* Keyboard focus: instant, 3:1 or better on every surface. */
-:focus-visible {
-  outline: 2px solid var(--theme-primary);
-  outline-offset: 3px;
-  /* Tailwind's colour transitions include outline-color; the ring must appear instantly. */
-  transition-property:
-    color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow,
-    transform, filter;
-}
-
-/* Buttons and links press on click. */
-a:not(.reveal):active,
-button:active {
-  transform: translateY(1px) scale(0.98);
-}
-
-h1,
-h2,
-h3 {
-  text-wrap: balance;
-}
-
-p {
-  text-wrap: pretty;
 }
 
 img {
@@ -136,143 +35,10 @@ img {
   font-family: var(--font-body);
 }
 
-.on-primary-text,
-.on-primary-text * {
-  color: var(--theme-on-primary) !important;
-}
-
-.on-secondary-text,
-.on-secondary-text * {
-  color: var(--theme-on-secondary) !important;
-}
-
-.on-blue-text,
-.on-blue-text * {
-  color: var(--theme-on-secondary) !important;
-}
-
-.crt-overlay {
-  background: linear-gradient(160deg, var(--overlay-sheen), transparent 45%);
-}
-
-.profile-avatar-card {
-  border: 1px solid var(--avatar-card-border);
-  background: linear-gradient(
-    165deg,
-    var(--avatar-card-from) 0%,
-    var(--avatar-card-mid) 60%,
-    var(--avatar-card-to) 100%
-  );
-}
-
-.profile-avatar-frame {
-  border-color: var(--avatar-frame-border);
-  background: var(--avatar-frame-bg);
-}
-
-.grid-pattern-panel {
-  background-image: radial-gradient(circle, var(--theme-outline-variant) 1px, transparent 1px);
-  background-size: 20px 20px;
-}
-
-.matrix-grid {
-  background-image:
-    linear-gradient(to right, var(--matrix-line) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--matrix-line) 1px, transparent 1px);
-  background-size: 20px 20px;
-}
-
-.case-row > summary {
-  list-style: none;
-}
-
-.case-row > summary::-webkit-details-marker {
-  display: none;
-}
-
-.case-row-toggle {
-  transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.case-row[open] .case-row-toggle {
-  transform: rotate(45deg);
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
-
-.cursor-block {
-  animation: blink 1.1s step-end infinite;
-}
-
-/* Scroll-reveal, toggled by useInView; hidden only once the script has marked <html class="js">. */
-.js .reveal {
-  opacity: 0;
-  transform: translateY(14px);
-  transition:
-    opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
-  transition-delay: var(--reveal-delay, 0ms);
-}
-
-.js .reveal.is-visible {
-  opacity: 1;
-  transform: none;
-}
-
-/* Staggered hero entrance on load */
-@keyframes rise-in {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-.rise > * {
-  opacity: 0;
-  animation: rise-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-.rise > *:nth-child(1) {
-  animation-delay: 0.05s;
-}
-.rise > *:nth-child(2) {
-  animation-delay: 0.15s;
-}
-.rise > *:nth-child(3) {
-  animation-delay: 0.25s;
-}
-.rise > *:nth-child(4) {
-  animation-delay: 0.35s;
-}
-.rise > *:nth-child(5) {
-  animation-delay: 0.45s;
-}
-.rise > *:nth-child(6) {
-  animation-delay: 0.55s;
-}
-
-.text-glow {
-  text-shadow: 0 0 24px color-mix(in srgb, var(--theme-primary) 35%, transparent);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-  .rise > * {
-    opacity: 1;
-    animation: none;
-  }
+/* Keyboard focus: instant, in the brand green. */
+:focus-visible {
+  outline: 2px solid var(--theme-primary);
+  outline-offset: 3px;
 }
 
 @media (prefers-reduced-motion: reduce) {
