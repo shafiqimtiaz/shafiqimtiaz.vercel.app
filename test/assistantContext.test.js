@@ -7,7 +7,7 @@ import { publicRepositories } from '../src/data/projects.js';
 test('buildAssistantInstructions includes published portfolio facts', () => {
   const instructions = buildAssistantInstructions();
 
-  assert.match(instructions, /Agent Core/);
+  assert.match(instructions, /Claude Code Team Plugin/);
   assert.match(instructions, /AWS Certified AI Practitioner/);
   assert.match(instructions, /Shafiq's public portfolio/);
 });

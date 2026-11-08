@@ -30,7 +30,7 @@ const why = [
     title: 'Agent systems',
     text: 'Multi-agent orchestration, tool use, MCP, Claude Code plugins.',
     stat: '2 wks → 2 hrs',
-    note: 'FlexForge',
+    note: 'agentic integration builder',
   },
   {
     title: 'Retrieval',
@@ -60,7 +60,7 @@ const work = [
     note: 'manual review time',
   },
   {
-    title: 'AI Integration Analysis',
+    title: 'AI integration review',
     text: 'Persona-based AI review of integrations that blocks sensitive data.',
     stat: '50,000+',
     note: 'integrations reviewed',
@@ -96,12 +96,12 @@ const experience = [
   {
     when: '2026 to now',
     title: 'Principal engineer',
-    text: 'Flexspring, Toronto. FlexForge, Agent Core, Local Stack.',
+    text: 'Flexspring, Toronto. Agentic integration builder, Claude Code team plugin, dev stack.',
   },
   {
     when: '2024 to 2026',
     title: 'R&D and AI',
-    text: 'Flexspring, Ottawa. AI analysis, AI recommendations, Agent Core.',
+    text: 'Flexspring, Ottawa. AI integration review, AI recommendations, agent foundation.',
   },
   {
     when: '2023 to 2024',
@@ -154,10 +154,10 @@ export default function Portfolio() {
     let stopCount = null;
     let cancelled = false;
     // three.js is large, so the film loads after the page has painted.
-    import('../lib/flexforge').then(({ initFlexForge, initCountUp }) => {
+    import('../lib/story').then(({ initStory, initCountUp }) => {
       if (cancelled) return;
       try {
-        ff = initFlexForge({
+        ff = initStory({
           canvas: canvasRef.current,
           root: storyRef.current,
           solid: solidRef.current,
@@ -219,7 +219,7 @@ export default function Portfolio() {
           onTransitionEnd={() => setLoading(101)}
         >
           <div className="c">{loading}</div>
-          <div className="l">loading FlexForge</div>
+          <div className="l">loading</div>
         </div>
       )}
 
@@ -228,7 +228,7 @@ export default function Portfolio() {
           <b>SI</b>Shafiq Imtiaz
         </a>
         <nav aria-label="Primary">
-          <a href="#s1">FlexForge</a>
+          <a href="#s1">Case study</a>
           <a href="#why">Why me</a>
           <a href="#work">Work</a>
           <a href="#contact">Contact</a>
@@ -246,7 +246,7 @@ export default function Portfolio() {
       </header>
       <div className="sheet" id="sheet" hidden={!menuOpen}>
         <nav aria-label="Mobile" onClickCapture={() => setMenuOpen(false)}>
-          <a href="#s1">FlexForge</a>
+          <a href="#s1">Case study</a>
           <a href="#why">Why me</a>
           <a href="#more">Also built</a>
           <a href="#work">Work</a>
@@ -256,7 +256,7 @@ export default function Portfolio() {
         <p>shafiqimtiaz@gmail.com</p>
       </div>
 
-      <nav className="idx" aria-label="FlexForge chapters" ref={indexRef}>
+      <nav className="idx" aria-label="Case study chapters" ref={indexRef}>
         {chapters.map((c, i) => (
           <a key={c.id} href={`#${c.id}`} data-i={i}>
             <span>{c.label}</span>
@@ -275,7 +275,8 @@ export default function Portfolio() {
                 <p>
                   I design agent systems that do weeks of expert work in hours.{' '}
                   <span>
-                    Most recently FlexForge: two weeks of integration setup, now two hours.
+                    Most recently an agentic integration builder: two weeks of integration setup,
+                    now two hours.
                   </span>
                 </p>
               </div>
@@ -296,7 +297,7 @@ export default function Portfolio() {
           <div className="stage r" id="s1" data-s="1">
             <div className="copy">
               <div className="k">
-                <b>FlexForge</b>
+                <b>Agentic Integration Builder</b>
                 <span>01 / the problem</span>
               </div>
               <h2>Every integration began with weeks of reading.</h2>
@@ -326,13 +327,13 @@ export default function Portfolio() {
           <div className="stage" id="s2" data-s="2">
             <div className="copy">
               <div className="k">
-                <b>FlexForge</b>
+                <b>Case study</b>
                 <span>02 / understanding</span>
               </div>
               <h2>So I built a system that reads all of it.</h2>
               <p>
-                FlexForge takes in everything a client shares, organises it into searchable
-                knowledge, and turns it into structured requirements.
+                It takes in everything a client shares, organises it into searchable knowledge, and
+                turns it into structured requirements.
               </p>
               <Stat
                 to={2500}
@@ -347,7 +348,7 @@ export default function Portfolio() {
           <div className="stage r" id="s3" data-s="3">
             <div className="copy">
               <div className="k">
-                <b>FlexForge</b>
+                <b>Case study</b>
                 <span>03 / agentic by design</span>
               </div>
               <h2>Too big for one prompt, so it works as a team.</h2>
@@ -362,7 +363,7 @@ export default function Portfolio() {
           <div className="stage" id="s4" data-s="4">
             <div className="copy">
               <div className="k">
-                <b>FlexForge</b>
+                <b>Case study</b>
                 <span>04 / people stay in control</span>
               </div>
               <h2>Specialists decide. Agents do the rest.</h2>
@@ -391,7 +392,7 @@ export default function Portfolio() {
           <div className="stage r" id="s5" data-s="5">
             <div className="copy">
               <div className="k">
-                <b>FlexForge</b>
+                <b>Case study</b>
                 <span>05 / build</span>
               </div>
               <h2>Then it builds the integration.</h2>
@@ -418,7 +419,7 @@ export default function Portfolio() {
 
           <div className="result" id="s6" data-s="6">
             <div className="k">
-              <b>FlexForge</b>
+              <b>Case study</b>
               <span>06 / result</span>
             </div>
             <div className="big">
@@ -432,8 +433,8 @@ export default function Portfolio() {
                 </span>{' '}
                 less setup time
               </strong>{' '}
-              per integration, on a platform serving 2,500+ client configurations. I designed
-              FlexForge and drive it end to end.
+              per integration, on a platform serving 2,500+ client configurations. I designed it and
+              drive it end to end.
             </p>
           </div>
         </section>
@@ -469,7 +470,7 @@ export default function Portfolio() {
             <div className="duo">
               <article>
                 <div className="k">
-                  <b>Flexspring Agent Core</b>
+                  <b>Claude Code team plugin</b>
                   <span>Claude Code plugin</span>
                 </div>
                 <h3>Claude Code, fluent in Flexspring.</h3>
@@ -490,7 +491,7 @@ export default function Portfolio() {
               </article>
               <article>
                 <div className="k">
-                  <b>Local Stack + Stack TUI</b>
+                  <b>One-command dev stack</b>
                   <span>Docker, OpenTUI</span>
                 </div>
                 <h3>The whole platform, one command.</h3>

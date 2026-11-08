@@ -2,24 +2,24 @@ export const caseStudies = [
   {
     code: '001',
     label: 'AI Platform Foundation',
-    highlights: 'Agent Core',
-    title: 'Agent Core',
+    highlights: 'Claude Code Team Plugin',
+    title: 'Claude Code Team Plugin',
     description:
-      "Designed and built Flexspring's base library for AI agents in March 2026, with LiteLLM, Spec Driven Development and a layer that coordinates Claude Code across 3 product surfaces, reducing new-agent setup from days to hours. Rebuilt the installer with MCP setup, a skill registry and releases, then made it Claude Code only with an agent roster that picks Opus, Sonnet or Haiku per role. In October 2026 it shipped as a shared Claude plugin with a review step before every commit and pinned MCP server versions.",
+      "Designed and built my team's base library for AI agents, packaged as a shared Claude Code plugin with agents, MCP servers and skills. New-agent setup went from days to hours, with a model chosen per agent role.",
     details: [
       'Claude Code orchestration with a model per agent role',
-      'Tests grown from 81 to 132 over v0.4.0 to v0.4.3',
-      'CI/CD with Nexus publishing and a shared team plugin',
+      'Tests grown from 81 to 132 (+63%)',
+      'CI/CD and versioned releases',
     ],
     tags: ['Claude Code', 'LiteLLM', 'MCP', 'Spec Driven Development'],
   },
   {
     code: '002',
     label: 'Agentic AI Platform',
-    highlights: 'FlexForge',
-    title: 'FlexForge',
+    highlights: 'Agentic Integration Builder',
+    title: 'Agentic Integration Builder',
     description:
-      'Designed and drive FlexForge end to end: a multi-agent AI system that reads everything a client shares, turns it into structured requirements that specialists accept or reject, then builds the credentials, data mappings and integration process. Integration setup went from 2 weeks to 2 hours, 99% less, across 2,500+ client configurations.',
+      'Designed and drive end to end a multi-agent AI system that reads everything a client shares, turns it into structured requirements that specialists accept or reject, then builds the credentials, data mappings and integration process. Integration setup went from 2 weeks to 2 hours, 99% less, across 2,500+ client configurations.',
     details: [
       'Multi-agent system that plans, builds and checks its own work',
       'Integration setup from 2 weeks to 2 hours (99%)',
@@ -30,16 +30,16 @@ export const caseStudies = [
   {
     code: '003',
     label: 'Developer Experience',
-    highlights: 'Local Stack',
-    title: 'Local Stack',
+    highlights: 'One-Command Dev Stack',
+    title: 'One-Command Dev Stack',
     description:
-      'A one-command local development environment for the whole platform, built in September and October 2026: the AI project, Mapping Service, File Manager, Workflow Approval, Webhook Explorer and Billing Manager, with per-service logs and a terminal dashboard with a live theme, guided onboarding and saved service profiles. Added optional S3 and SQS endpoint overrides so File Manager runs locally.',
+      'A one-command local development environment for the whole platform, with per-service logs and a terminal UI built on OpenTUI with guided onboarding and saved service profiles. Replaced hand-built Docker setups for new engineers.',
     details: [
       'One command starts the platform locally',
-      'Terminal dashboard with saved service profiles',
-      'Per-service logs and onboarding-driven setup',
+      'Terminal UI with saved service profiles',
+      'Per-service logs and guided onboarding',
     ],
-    tags: ['Developer Tooling', 'Terminal Dashboard', 'Onboarding', 'AWS S3'],
+    tags: ['Docker Compose', 'Terminal UI', 'Developer Tooling', 'Onboarding'],
   },
   {
     code: '004',
@@ -47,9 +47,9 @@ export const caseStudies = [
     highlights: 'AI Field Recommendations',
     title: 'AI Field Recommendations',
     description:
-      'AI field suggestions for Monitor Data Mapping, built on embeddings and reranking with LiteLLM as a fallback and Redis caching, reducing manual review time by 50%. Made the output the same on every run, raised the confidence threshold from 0.55 to 0.80, and added AI import of whole workbooks.',
+      'AI field suggestions for data mapping, built on embeddings and reranking with an LLM fallback and caching, reducing manual review time by 50%. Made the output the same on every run, raised the confidence threshold from 0.55 to 0.80, and added AI import of whole workbooks.',
     details: [
-      'Embeddings and reranking, LiteLLM fallback, Redis cache',
+      'Embeddings and reranking with an LLM fallback',
       'Deterministic output, confidence threshold 0.55 to 0.80',
       'AI import of whole workbooks',
     ],
@@ -58,28 +58,28 @@ export const caseStudies = [
   {
     code: '005',
     label: 'AI Product Platform',
-    highlights: 'AI Integration Analysis',
-    title: 'AI Integration Analysis',
+    highlights: 'AI Integration Review',
+    title: 'AI Integration Review',
     description:
-      'Built AI Integration Analysis end-to-end to evaluate 50,000+ integrations: AI review of integration processes on Amazon Bedrock with a prompt for each persona and blocking when sensitive data is present. In 2026 added Blueprints analysis and risk and impact checks before deployment.',
+      'Built end to end an AI review of integration processes on Amazon Bedrock that evaluated 50,000+ integrations, with persona-based prompts and blocking when sensitive data is present. Later added pre-deployment risk and impact checks.',
     details: [
-      'Persona-specific review on Bedrock',
+      'Persona-based review on Amazon Bedrock',
       'Sensitive-data blocking',
-      'Blueprints analysis and pre-deployment risk checks',
+      'Pre-deployment risk and impact checks',
     ],
     tags: ['Amazon Bedrock', 'Guardrails', 'Spring Boot', 'React'],
   },
   {
     code: '006',
     label: 'Full-Stack Product',
-    highlights: 'Mapping Service',
-    title: 'Mapping Service',
+    highlights: 'Data Mapping Service',
+    title: 'Data Mapping Service',
     description:
-      'The full data mapping experience in Monitor and Studio: approval and sign-off flows with role-based permissions, mappings with several sources, change-request and support workflows, fields pre-set from blueprints, templates, re-import, and API gateway routes.',
+      "The full data mapping experience across the platform's web apps: approval and sign-off flows with role-based permissions, mappings with several sources, change requests, templates and re-import.",
     details: [
       'Approval, sign-off and role-based permissions',
       'Multi-source mappings and change requests',
-      'Blueprint presets, templates and re-import',
+      'Templates and re-import',
     ],
     tags: ['Spring Boot', 'React', 'API Gateway', 'Permissions'],
   },
@@ -89,77 +89,77 @@ export const caseStudies = [
     highlights: 'Webhook Templates',
     title: 'Webhook Templates',
     description:
-      'Built Webhook Templates across Webhook Explorer, the Modeler, Studio and Monitor, including shared management, synchronization, deployment-driven configuration, and migration tooling. Moved template data from PostgreSQL to MongoDB, replaced the Super Admin requirement with project-level permissions, and in 2026 split templates into Global and Internal.',
+      "Built webhook templates across the platform's designer, runtime and customer apps, including shared management, synchronization and migration tooling. Moved template data from PostgreSQL to MongoDB and replaced admin-only access with project-level permissions.",
     details: [
       'PostgreSQL to MongoDB data migration',
-      'Project-level permissions instead of Super Admin',
-      'Global and Internal template split',
+      'Project-level permissions instead of admin-only',
+      'Global and internal template split',
     ],
     tags: ['Cross-Service', 'MongoDB', 'Spring Boot', 'React'],
   },
   {
     code: '008',
     label: 'Full-Stack Product',
-    highlights: 'Studio Lifecycle',
-    title: 'Studio Lifecycle',
+    highlights: 'Integration Lifecycle',
+    title: 'Integration Lifecycle',
     description:
-      'Designed and implemented Monitor and Studio Lifecycle across project and integration flows, with an eight-stage delivery lifecycle and lifecycle events stored on the integration entity for traceability and debugging. Migrated existing data and built the Lifecycle Dashboard and the Assembly Line boards.',
+      'Designed and implemented lifecycle tracking across project and integration flows, with an eight-stage delivery lifecycle and events stored for traceability and debugging. Migrated existing data and built the lifecycle dashboards.',
     details: [
       'Eight-stage delivery lifecycle',
       'Existing data migrated into lifecycle tracking',
-      'Lifecycle Dashboard and Assembly Line boards',
+      'Lifecycle dashboards',
     ],
-    tags: ['React', 'Feature Flags', 'Studio', 'Dashboards'],
+    tags: ['React', 'Feature Flags', 'Dashboards', 'Spring Boot'],
   },
   {
     code: '009',
     label: 'Platform Feature',
-    highlights: 'Integration Snapshots',
-    title: 'Integration Snapshots',
+    highlights: 'Integration Version History',
+    title: 'Integration Version History',
     description:
-      'Every integration change is saved to Bitbucket with its secrets encrypted, and users compare and restore versions from a History tab.',
+      'Every integration change is versioned with its secrets encrypted, and users compare and restore versions from a history view.',
     details: [
-      'Version history stored in Bitbucket',
-      'Secrets encrypted in every snapshot',
-      'Compare and restore from a History tab',
+      'Versioned history of every change',
+      'Secrets encrypted in every version',
+      'Compare and restore from a history view',
     ],
-    tags: ['Bitbucket', 'Encryption', 'Versioning', 'React'],
+    tags: ['Versioning', 'Encryption', 'React', 'Spring Boot'],
   },
   {
     code: '010',
     label: 'Product & Upgrades',
-    highlights: 'Monitor Reports',
-    title: 'Monitor Reports',
+    highlights: 'Customer Reports',
+    title: 'Customer Reports',
     description:
-      'Built an Account Performance report with return on investment and a transaction failure report with CSV export, and upgraded Monitor to React 18.3, Vite 7 and TanStack Query, replacing Hotjar with OpenReplay.',
+      'Built an account performance report with return on investment and a transaction failure report with CSV export, and upgraded the customer app to React 18.3, Vite 7 and TanStack Query.',
     details: [
-      'Account Performance report with return on investment',
+      'Account performance report with return on investment',
       'Transaction failure report with CSV export',
-      'React 18.3, Vite 7, TanStack Query, OpenReplay',
+      'React 18.3, Vite 7, TanStack Query',
     ],
     tags: ['React 18', 'Vite 7', 'TanStack Query', 'Reporting'],
   },
   {
     code: '011',
     label: 'Full-Stack Ownership',
-    highlights: 'File Manager Service',
+    highlights: 'File Manager',
     title: 'File Manager',
     description:
-      'TypeScript, Node.js, PostgreSQL, AWS S3. Built from scratch as sole engineer: a production full-stack service with regional storage, event-driven synchronization, permissions, authentication, observability, and Monitor integration. Later reworked the permissions logic so changes apply to every subfolder, added whole-folder download through KrakenD, and S3 and SQS health checks with critical production tests.',
+      'TypeScript, Node.js, PostgreSQL, AWS S3. Built from scratch as the sole engineer: a production file service with regional storage, event-driven synchronization, permissions, authentication and observability. Later made permissions cascade to every subfolder and added whole-folder download and health checks.',
     details: [
       'Sole-engineer service ownership',
       'Permissions that cascade to every subfolder',
       'Whole-folder download, S3 and SQS health checks',
     ],
-    tags: ['Node.js', 'AWS S3', 'SQS', 'KrakenD'],
+    tags: ['Node.js', 'AWS S3', 'SQS', 'PostgreSQL'],
   },
   {
     code: '012',
     label: 'Platform Modernisation',
-    highlights: 'Migrations',
+    highlights: 'Platform Modernisation',
     title: 'Platform Modernisation',
     description:
-      'Led the Spring Boot 3 migration for 5 core microservices, reducing API latency by 20%. Moved Studio to Spring Boot 3 with Redis, faster MongoDB queries, Swagger docs, Node 22, and a Mitigation Dashboard.',
+      'Led the Spring Boot 3 migration for 5 core microservices, reducing API latency by 20%, with Redis caching, faster MongoDB queries, API docs and Node 22.',
     details: [
       'Java 8 to Java 17, Spring Boot 2 to Spring Boot 3',
       'Redis, faster MongoDB queries, Node 22',
@@ -173,13 +173,13 @@ export const caseStudies = [
     highlights: 'Credentials Manager',
     title: 'Credentials Manager',
     description:
-      'Delivered Credentials Manager full-stack for 8,000+ active client integrations, spanning API, ConnectorHub integration, React UI, secure field handling, notifications, and request lifecycle management.',
+      'Delivered a credentials manager full-stack for 8,000+ active client integrations: API, connector integration, React UI, secure field handling, notifications and request lifecycle management.',
     details: [
-      'API, ConnectorHub, and React UI',
+      'API, connector integration and React UI',
       'Secure field handling and notifications',
       'Request lifecycle management for 8,000+ integrations',
     ],
-    tags: ['Spring Boot', 'React', 'Encryption', 'ConnectorHub'],
+    tags: ['Spring Boot', 'React', 'Encryption', 'Security'],
   },
 ];
 

@@ -20,9 +20,9 @@ Senior Software Engineer &nbsp;·&nbsp; AWS Certified AI Practitioner &nbsp;·&n
 _B2B HR integration platform serving 2,500+ client configurations_
 
 - **Data Mapping (AI)**: built an AI-driven field recommendation system with embedding-based reranking, cosine-similarity matching, Redisson caching, and LiteLLM fallback. Shipped as a self-service spec tool that replaced manual spreadsheet workflows.
-- **LLM integration hardening**: productionized platform-wide LLM use (unit tests, SonarQube fixes, secret removal → secure config layer) into a reusable service adopted across Monitor, Studio, and shared libraries.
+- **LLM integration hardening**: productionized platform-wide LLM use (unit tests, SonarQube fixes, secret removal → secure config layer) into a reusable service adopted across the platform's apps, and shared libraries.
 - **`flexspring-agent-core`**: sole architect of the platform's foundational AI agent library (TypeScript/Node.js + LiteLLM, Spec-Driven Development). Overhauled the installer with MCP setup and skill-registry config.
-- **Platform modernisation**: led Spring Boot 3 / Java 17 migrations and modernised Monitor's front-end (React 18.3, React Router v7, Vite).
+- **Platform modernisation**: led Spring Boot 3 / Java 17 migrations and modernised the customer app's front-end (React 18.3, React Router v7, Vite).
 - **Hackathon Runner-Up**: won a $1,000 prize with a RAG-powered chatbot that seeded the company's ongoing AI initiative.
 
 ---
@@ -45,7 +45,7 @@ _B2B HR integration platform serving 2,500+ client configurations_
 - **AI Platform Foundation**: designed `flexspring-agent-core`, the platform's AI agent framework with model-agnostic LLM orchestration, Spec-Driven Development, and MCP server integration for safe, scalable tool use.
 - **AI Productionization**: hardened platform-wide LLM integration (caching, fallback, gating) and shipped Data Mapping, replacing manual spreadsheet workflows with AI field recommendations.
 - **Microservice Ownership**: sole engineer on `flexspring-file-manager`, a Quarkus service with multi-region AWS S3 (US/EU), MongoDB metadata, per-item permissions, SQS reconciliation, and a React UI. Built from greenfield to production.
-- **Platform Modernisation**: Spring Boot 2→3 migrations across two production services (Java 8→17) plus a full Monitor front-end upgrade (React 18.3, React Router v7, Vite).
+- **Platform Modernisation**: Spring Boot 2→3 migrations across two production services (Java 8→17) plus a full customer-app front-end upgrade (React 18.3, React Router v7, Vite).
 - **Production Incident Resolution**: diagnosed corrupted DB records blocking client integrations and authored idempotent correction scripts across PostgreSQL and MongoDB under live conditions.
 
 ---
@@ -74,7 +74,7 @@ _B2B HR integration platform serving 2,500+ client configurations_
 
 ### About This Repository
 
-This repo is the source of my portfolio at **[shafiqimtiaz.vercel.app](https://shafiqimtiaz.vercel.app)**: a single-page site that tells the FlexForge story as a scroll-driven three.js particle film, followed by my work, each with its number.
+This repo is the source of my portfolio at **[shafiqimtiaz.vercel.app](https://shafiqimtiaz.vercel.app)**: a single-page site that tells an agentic AI case study as a scroll-driven three.js particle film, followed by my work, each with its number.
 
 **Built with** ![React 18](https://img.shields.io/badge/React_18-20232A?style=flat-square&logo=react&logoColor=61DAFB) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white) ![Tailwind v4](https://img.shields.io/badge/Tailwind_v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white) ![three.js](https://img.shields.io/badge/three.js-000000?style=flat-square&logo=threedotjs&logoColor=white) · deployed on **Vercel**.
 
@@ -89,7 +89,7 @@ npm run preview  # preview the production build
 src/
 ├─ pages/        # Portfolio.jsx, the whole one-page site
 ├─ components/   # AssistantChat and the Icon primitive
-├─ lib/          # flexforge.js particle engine, assistant helpers
+├─ lib/          # story.js particle engine, assistant helpers
 ├─ data/         # content the AI assistant answers from
 └─ styles/       # portfolio.css (page), theme.css + global.css (assistant)
 ```

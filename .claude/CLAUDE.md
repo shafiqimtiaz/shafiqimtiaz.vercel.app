@@ -21,11 +21,11 @@ npm run preview    # Preview production build locally
 
 **Key Files**:
 
-- [src/pages/Portfolio.jsx](src/pages/Portfolio.jsx) - The whole one-page site: FlexForge story chapters, Why me, Also built, More work, Experience, Contact
-- [src/lib/flexforge.js](src/lib/flexforge.js) - Scroll-driven three.js particle film (one shape per `[data-s]` chapter) and number count-up; lazy-loaded
+- [src/pages/Portfolio.jsx](src/pages/Portfolio.jsx) - The whole one-page site: case study chapters, Why me, Also built, More work, Experience, Contact
+- [src/lib/story.js](src/lib/story.js) - Scroll-driven three.js particle film (one shape per `[data-s]` chapter) and number count-up; lazy-loaded
 - [src/styles/portfolio.css](src/styles/portfolio.css) - Page styles: pastel palette led by brand green `#a8e6a1`, Bricolage Grotesque + JetBrains Mono
 - [src/components/AssistantChat.jsx](src/components/AssistantChat.jsx) - AI assistant widget backed by [api/assistant.js](api/assistant.js)
 - [src/data/](src/data/) - Content the assistant answers from (keep in sync with the page and résumé)
 - [public/docs/](public/docs/) - Résumé PDF (single page) and Markdown source
 
-**Content rules**: FlexForge copy says what it achieves, never how it works internally (NDA). Headline metric is 2 weeks to 2 hours (99%); use it consistently across the page, `src/data/` and the résumé.
+**Content rules** (NDA): never use Flexspring's internal product or code names, client names, or describe how internal systems work. Use descriptive titles: Agentic Integration Builder, Claude Code team plugin, one-command dev stack, AI integration review. Metrics are fine; the headline is 2 weeks to 2 hours (99%). Keep the page, `src/data/` and the résumé consistent.
