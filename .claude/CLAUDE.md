@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Personal portfolio website deployed as a Cloudflare Worker (`shafiq-portfolio`)
+Personal portfolio website deployed as a Cloudflare Worker (`portfolio`)
 
 ## Build Commands
 

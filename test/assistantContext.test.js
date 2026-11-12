@@ -94,7 +94,7 @@ test('public repositories are ordered by portfolio impact', () => {
       'KemonPoray',
       'nexus-ai',
       'dash-reader',
-      'shafiq-portfolio',
+      'portfolio',
       'ctx-handoff',
       'clean-bookmarks',
       'pokégent',
@@ -105,11 +105,11 @@ test('public repositories are ordered by portfolio impact', () => {
 });
 
 test('portfolio repository publishes its live project links', () => {
-  const portfolio = publicRepositories.find(({ title }) => title === 'shafiq-portfolio');
+  const portfolio = publicRepositories.find(({ title }) => title === 'portfolio');
 
   assert.ok(portfolio);
-  assert.equal(portfolio.repoUrl, 'https://github.com/shafiqimtiaz/shafiq-portfolio');
-  assert.equal(portfolio.demoUrl, 'https://shafiq-portfolio.shafiqimtiaz.workers.dev/');
+  assert.equal(portfolio.repoUrl, 'https://github.com/shafiqimtiaz/portfolio');
+  assert.equal(portfolio.demoUrl, 'https://portfolio.shafiqimtiaz.workers.dev/');
 });
 
 test('buildAssistantInstructions leaves out the notes template comment', () => {

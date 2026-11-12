@@ -1,4 +1,4 @@
-## shafiq-portfolio — Portfolio Site Guide
+## portfolio — Portfolio Site Guide
 
 ### Build & Dev
 
