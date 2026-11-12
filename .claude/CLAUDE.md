@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Personal portfolio website deployed on Vercel at https://shafiqimtiaz.vercel.app/
+Personal portfolio website deployed as a Cloudflare Worker (`shafiq-portfolio`)
 
 ## Build Commands
 
@@ -24,7 +24,7 @@ npm run preview    # Preview production build locally
 - [src/pages/Portfolio.jsx](src/pages/Portfolio.jsx) - The whole one-page site: case study chapters, Why me, Also built, More work, Experience, Contact
 - [src/lib/story.js](src/lib/story.js) - Scroll-driven three.js particle film (one shape per `[data-s]` chapter) and number count-up; lazy-loaded
 - [src/styles/portfolio.css](src/styles/portfolio.css) - Page styles: pastel palette led by brand green `#a8e6a1`, Bricolage Grotesque + JetBrains Mono
-- [src/components/AssistantChat.jsx](src/components/AssistantChat.jsx) - AI assistant widget backed by [api/assistant.js](api/assistant.js)
+- [src/components/AssistantChat.jsx](src/components/AssistantChat.jsx) - AI assistant widget backed by [worker/assistant.js](worker/assistant.js) (Cloudflare Worker, `wrangler.jsonc`; `npm run deploy`)
 - [src/data/](src/data/) - Content the assistant answers from (keep in sync with the page and résumé)
 - [src/data/notes.md](src/data/notes.md) - Shafiq's own public notes for the assistant
 - [scripts/build-knowledge.js](scripts/build-knowledge.js) - Runs in `npm run build`: fetches public GitHub READMEs, the Kaggle write-up and kemonporay.com into `src/data/knowledge.generated.md` (gitignored) for the assistant. Optional `GITHUB_TOKEN` avoids GitHub rate limits

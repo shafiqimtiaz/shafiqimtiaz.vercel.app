@@ -1,11 +1,19 @@
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import { buildAssistantInstructions } from '../src/lib/assistantContext.js';
 import { timeline } from '../src/data/experience.js';
 import { publicRepositories } from '../src/data/projects.js';
 
+const read = (path) => readFileSync(new URL(path, import.meta.url), 'utf8');
+const sources = {
+  resume: read('../public/docs/Resume-Shafiq-Imtiaz.md'),
+  notes: read('../src/data/notes.md'),
+  knowledge: '',
+};
+
 test('buildAssistantInstructions includes published portfolio facts', () => {
-  const instructions = buildAssistantInstructions();
+  const instructions = buildAssistantInstructions(sources);
 
   assert.match(instructions, /Claude Code Team Plugin/);
   assert.match(instructions, /AWS Certified AI Practitioner/);
@@ -13,14 +21,14 @@ test('buildAssistantInstructions includes published portfolio facts', () => {
 });
 
 test('buildAssistantInstructions keeps the assistant within portfolio context', () => {
-  const instructions = buildAssistantInstructions();
+  const instructions = buildAssistantInstructions(sources);
 
   assert.match(instructions, /do not know/);
   assert.match(instructions, /concise/);
 });
 
 test('buildAssistantInstructions requires short direct responses', () => {
-  const instructions = buildAssistantInstructions();
+  const instructions = buildAssistantInstructions(sources);
 
   assert.match(instructions, /1-3 short sentences or up to 3 bullets/);
   assert.match(instructions, /under 80 words/);
@@ -28,7 +36,7 @@ test('buildAssistantInstructions requires short direct responses', () => {
 });
 
 test('buildAssistantInstructions includes published contact options', () => {
-  const instructions = buildAssistantInstructions();
+  const instructions = buildAssistantInstructions(sources);
 
   assert.match(instructions, /portfolio contact section/i);
   assert.match(instructions, /shafiqimtiaz@gmail\.com/);
@@ -38,14 +46,14 @@ test('buildAssistantInstructions includes published contact options', () => {
 });
 
 test('buildAssistantInstructions distinguishes contact facts from availability', () => {
-  const instructions = buildAssistantInstructions();
+  const instructions = buildAssistantInstructions(sources);
 
   assert.match(instructions, /published contact options may be shared/i);
   assert.match(instructions, /do not invent current availability/i);
 });
 
 test('buildAssistantInstructions includes the public resume context', () => {
-  const instructions = buildAssistantInstructions();
+  const instructions = buildAssistantInstructions(sources);
 
   assert.match(instructions, /Published resume:/);
   assert.match(instructions, /Senior Software Engineer - Principal \| Flexspring/);
@@ -86,7 +94,7 @@ test('public repositories are ordered by portfolio impact', () => {
       'KemonPoray',
       'nexus-ai',
       'dash-reader',
-      'shafiqimtiaz.vercel.app',
+      'shafiq-portfolio',
       'ctx-handoff',
       'clean-bookmarks',
       'pokégent',
@@ -97,13 +105,16 @@ test('public repositories are ordered by portfolio impact', () => {
 });
 
 test('portfolio repository publishes its live project links', () => {
-  const portfolio = publicRepositories.find(({ title }) => title === 'shafiqimtiaz.vercel.app');
+  const portfolio = publicRepositories.find(({ title }) => title === 'shafiq-portfolio');
 
   assert.ok(portfolio);
-  assert.equal(portfolio.repoUrl, 'https://github.com/shafiqimtiaz/shafiqimtiaz.vercel.app');
-  assert.equal(portfolio.demoUrl, 'https://shafiqimtiaz.vercel.app/');
+  assert.equal(portfolio.repoUrl, 'https://github.com/shafiqimtiaz/shafiq-portfolio');
+  assert.equal(portfolio.demoUrl, 'https://shafiq-portfolio.shafiqimtiaz.workers.dev/');
 });
 
 test('buildAssistantInstructions leaves out the notes template comment', () => {
-  assert.doesNotMatch(buildAssistantInstructions(), /HTML comments like this one are ignored/);
+  assert.doesNotMatch(
+    buildAssistantInstructions(sources),
+    /HTML comments like this one are ignored/
+  );
 });

@@ -211,11 +211,11 @@ export const publicRepositories = [
     techStack: ['TypeScript', 'Chrome MV3', 'Text-to-Speech', 'RSVP'],
   },
   {
-    title: 'shafiqimtiaz.vercel.app',
+    title: 'shafiq-portfolio',
     description:
       'Personal portfolio with an AI assistant, animated case studies, and a terminal-inspired interface.',
-    demoUrl: 'https://shafiqimtiaz.vercel.app/',
-    repoUrl: 'https://github.com/shafiqimtiaz/shafiqimtiaz.vercel.app',
+    demoUrl: 'https://shafiq-portfolio.shafiqimtiaz.workers.dev/',
+    repoUrl: 'https://github.com/shafiqimtiaz/shafiq-portfolio',
     techStack: ['React', 'Vite', 'Tailwind CSS', 'AI Assistant'],
   },
   {

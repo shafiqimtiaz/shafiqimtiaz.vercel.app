@@ -1,4 +1,4 @@
-## shafiqimtiaz.vercel.app — Portfolio Site Guide
+## shafiq-portfolio — Portfolio Site Guide
 
 ### Build & Dev
 
@@ -11,7 +11,7 @@
 
 ### Architecture
 
-Single-page site. `src/pages/Portfolio.jsx` holds all sections; `src/lib/story.js` runs the scroll-driven particle film (lazy-loaded three.js) and the number count-up. `src/styles/portfolio.css` holds the page styles. The AI assistant (`src/components/AssistantChat.jsx` + `api/assistant.js`) answers from `src/data/` and the résumé Markdown.
+Single-page site. `src/pages/Portfolio.jsx` holds all sections; `src/lib/story.js` runs the scroll-driven particle film (lazy-loaded three.js) and the number count-up. `src/styles/portfolio.css` holds the page styles. The AI assistant (`src/components/AssistantChat.jsx` + `worker/assistant.js`, served by the Cloudflare Worker in `worker/index.js`) answers from `src/data/` and the résumé Markdown.
 
 ### How to update the site
 
