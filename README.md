@@ -4,11 +4,11 @@
 
 Senior Software Engineer &nbsp;·&nbsp; AWS Certified AI Practitioner &nbsp;·&nbsp; Ottawa, ON
 
-[![Portfolio](https://img.shields.io/badge/🌐_Portfolio-000000?style=flat-square&logo=vercel&logoColor=white)](https://shafiqimtiaz.vercel.app)
+[![Portfolio](https://img.shields.io/badge/🌐_Portfolio-000000?style=flat-square&logo=cloudflare&logoColor=white)](https://portfolio.shafiqimtiaz.workers.dev/)
 [![LinkedIn](https://img.shields.io/badge/💼_LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/shafiqimtiaz)
 [![GitHub](https://img.shields.io/badge/⌥_GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/shafiqimtiaz)
 [![Email](https://img.shields.io/badge/📧_Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:shafiqimtiaz@gmail.com)
-[![Resume](https://img.shields.io/badge/📄_Resume-BA7517?style=flat-square&logo=adobeacrobatreader&logoColor=white)](https://github.com/shafiqimtiaz/shafiqimtiaz.vercel.app/blob/master/public/docs/Resume-Shafiq-Imtiaz.pdf)
+[![Resume](https://img.shields.io/badge/📄_Resume-BA7517?style=flat-square&logo=adobeacrobatreader&logoColor=white)](https://portfolio.shafiqimtiaz.workers.dev/docs/Resume-Shafiq-Imtiaz.pdf)
 
 </div>
 
@@ -54,9 +54,9 @@ _B2B HR integration platform serving 2,500+ client configurations_
 
 | Project                                                                                  | Stack                                   |           |
 | ---------------------------------------------------------------------------------------- | --------------------------------------- | --------- |
-| [flexspring-agent-core](https://shafiqimtiaz.vercel.app/#projects)                       | TypeScript · Node.js · LiteLLM · MCP    | `private` |
-| [Data Mapping](https://shafiqimtiaz.vercel.app/#projects)                                | LiteLLM · Embeddings · Redisson · React | `private` |
-| [flexspring-file-manager](https://shafiqimtiaz.vercel.app/#projects)                     | Quarkus · AWS S3 · MongoDB · React      | `private` |
+| [flexspring-agent-core](https://portfolio.shafiqimtiaz.workers.dev/#projects)                       | TypeScript · Node.js · LiteLLM · MCP    | `private` |
+| [Data Mapping](https://portfolio.shafiqimtiaz.workers.dev/#projects)                                | LiteLLM · Embeddings · Redisson · React | `private` |
+| [flexspring-file-manager](https://portfolio.shafiqimtiaz.workers.dev/#projects)                     | Quarkus · AWS S3 · MongoDB · React      | `private` |
 | [RecycleVision](https://github.com/shafiqimtiaz/RecycleVision)                           | Python · TensorFlow · Computer Vision   |           |
 | [GenAI4SE](https://github.com/shafiqimtiaz/GenAI4SE)                                     | Python · LLMs · Prompt Engineering      |           |
 | [Medical Appointment System](https://github.com/shafiqimtiaz/Medical-Appointment-System) | MERN · MongoDB · React                  |           |
@@ -74,9 +74,9 @@ _B2B HR integration platform serving 2,500+ client configurations_
 
 ### About This Repository
 
-This repo is the source of my portfolio at **[shafiqimtiaz.vercel.app](https://shafiqimtiaz.vercel.app)**: a single-page site that tells an agentic AI case study as a scroll-driven three.js particle film, followed by my work, each with its number.
+This repo is the source of my portfolio at **[portfolio.shafiqimtiaz.workers.dev](https://portfolio.shafiqimtiaz.workers.dev/)**: a single-page site that tells an agentic AI case study as a scroll-driven three.js particle film, followed by my work, each with its number.
 
-**Built with** ![React 18](https://img.shields.io/badge/React_18-20232A?style=flat-square&logo=react&logoColor=61DAFB) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white) ![Tailwind v4](https://img.shields.io/badge/Tailwind_v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white) ![three.js](https://img.shields.io/badge/three.js-000000?style=flat-square&logo=threedotjs&logoColor=white) · deployed on **Vercel**.
+**Built with** ![React 18](https://img.shields.io/badge/React_18-20232A?style=flat-square&logo=react&logoColor=61DAFB) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white) ![Tailwind v4](https://img.shields.io/badge/Tailwind_v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white) ![three.js](https://img.shields.io/badge/three.js-000000?style=flat-square&logo=threedotjs&logoColor=white) · deployed on **Cloudflare Workers**.
 
 ```bash
 npm install      # install dependencies
