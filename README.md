@@ -2,7 +2,7 @@
 
 # Shafiq Imtiaz
 
-Senior Software Engineer &nbsp;·&nbsp; AWS Certified AI Practitioner &nbsp;·&nbsp; Ottawa, ON
+Senior Software Engineer &nbsp;·&nbsp; AWS Certified AI Practitioner &nbsp;·&nbsp; Toronto, ON
 
 [![Portfolio](https://img.shields.io/badge/🌐_Portfolio-000000?style=flat-square&logo=cloudflare&logoColor=white)](https://portfolio.shafiqimtiaz.workers.dev/)
 [![LinkedIn](https://img.shields.io/badge/💼_LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/shafiqimtiaz)
@@ -16,7 +16,7 @@ Senior Software Engineer &nbsp;·&nbsp; AWS Certified AI Practitioner &nbsp;·&n
 
 ### Current Role
 
-**Senior Software Engineer · [Flexspring](https://flexspring.com)** &nbsp;`May 2026 – Present` &nbsp;·&nbsp; Ottawa, ON
+**Senior Software Engineer · [Flexspring](https://flexspring.com)** &nbsp;`May 2026 – Present` &nbsp;·&nbsp; Toronto, ON
 _B2B HR integration platform serving 2,500+ client configurations_
 
 - **Data Mapping (AI)**: built an AI-driven field recommendation system with embedding-based reranking, cosine-similarity matching, Redisson caching, and LiteLLM fallback. Shipped as a self-service spec tool that replaced manual spreadsheet workflows.
